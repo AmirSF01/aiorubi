@@ -13,6 +13,7 @@ from .forwarded_from_type import ForwardedFromType
 from .message_sender_type import MessageSenderType
 from .metadata_type import MetadataType
 from .poll_status import PollStatus
+from .poll_type import PollType
 from .update_endpoint_status_type import UpdateEndpointStatusType
 from .update_endpoint_type import UpdateEndpointType
 from .update_type import UpdateType
@@ -33,6 +34,7 @@ __all__ = (
     "MessageSenderType",
     "MetadataType",
     "PollStatus",
+    "PollType",
     "UpdateEndpointStatusType",
     "UpdateEndpointType",
     "UpdateType",
