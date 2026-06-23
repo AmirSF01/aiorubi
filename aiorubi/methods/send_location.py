@@ -31,13 +31,13 @@ class SendLocation(RubikaMethod[MessageID]):
             __pydantic__self__,
             *,
             chat_id: str,
-            latitude: str,
-            longitude: str,
+            latitude: str | float,
+            longitude: str | float,
             reply_to_message_id: str | None = None,
             disable_notification: bool | None = None,
             inline_keypad: Keypad | None = None,
             chat_keypad: Keypad | None = None,
-            chat_keypad_type: ChatKeypadType | str | None = None,
+            chat_keypad_type: ChatKeypadType | None = None,
             **__pydantic_kwargs: Any,
         ) -> None:
             super().__init__(
