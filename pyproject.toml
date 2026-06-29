@@ -74,6 +74,20 @@ i18n = [
     "Babel>=2.13.0,<3",
 ]
 
+docs = [
+    "Sphinx~=8.0.2",
+    "sphinx-intl~=2.2.0",
+    "sphinx-autobuild~=2024.9.3",
+    "sphinx-copybutton~=0.5.2",
+    "furo~=2024.8.6",
+    "Sphinx-Substitution-Extensions~=2024.8.6",
+    "towncrier~=24.8.0",
+    "pygments~=2.18.0",
+    "pymdown-extensions~=10.3",
+    "markdown-include~=0.8.1",
+    "sphinxcontrib-towncrier~=0.4.0a0",
+]
+
 [dependency-groups]
 dev = [
     "ruff~=0.15",
