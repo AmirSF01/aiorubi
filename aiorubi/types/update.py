@@ -5,11 +5,11 @@ from typing import TYPE_CHECKING, Any, cast
 
 from ..utils.mypy_hacks import lru_cache
 from .base import RubikaObject
+from .removed_message import RemovedMessage
 from .custom import DateTime
 
 if TYPE_CHECKING:
     from .message import Message
-    from .removed_message import RemovedMessage
     from .inline_message import InlineMessage
 
 
@@ -29,9 +29,9 @@ class Update(RubikaObject):
     updated_message: Message | None = None
     """*Optional*. New version of a message that is known to the bot and was edited."""
     removed_message: RemovedMessage | None = Field(None, alias="removed_message_id")
+    """*Optional*. Identifier of the message that was removed. Parsed from removed_message_id."""
     inline_message: InlineMessage | None = None
     """Inline message event (button click / inline interaction)."""
-    """*Optional*. Identifier of the message that was removed. Parsed from removed_message_id."""
     update_time: DateTime | None = None
     """Unix timestamp of when the update was received."""
 
