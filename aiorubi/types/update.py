@@ -78,23 +78,13 @@ class Update(RubikaObject):
         return self
 
     def __hash__(self) -> int:
-        """
-        Generate a unique hash for this update.
-
-        - NewMessage: chat_id + message_id are sufficient (each message has a unique ID)
-        - UpdatedMessage: chat_id + message_id + update_time are needed (same message can be edited multiple times)
-        - RemovedMessage: chat_id + message_id are sufficient (each message is removed only once)
-        - Fallback: chat_id + type + update_time for unknown update types
-        """
-        if self.new_message:
-            return hash((type(self), self.type, self.chat_id, self.new_message.message_id))
-        if self.updated_message:
-            return hash((type(self), self.type, self.chat_id, self.updated_message.message_id, self.update_time))
-        if self.removed_message:
-            return hash((type(self), self.type, self.chat_id, self.removed_message.message_id))
-        if self.inline_message:
-            return hash((type(self), self.type, self.chat_id, self.inline_message.message_id))
-        return hash((type(self), self.type, self.chat_id, self.update_time))
+        return hash((
+            type(self),
+            self.type,
+            self.chat_id,
+            self.message_id,
+            self.update_time,
+        ))
 
     @property
     def message_id(self) -> str | None:
