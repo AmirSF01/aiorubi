@@ -6,6 +6,8 @@ from typing import TYPE_CHECKING, Any, cast
 from ..utils.mypy_hacks import lru_cache
 from .base import RubikaObject
 from .removed_message import RemovedMessage
+from .started_bot import StartedBot
+from .stopped_bot import StoppedBot
 from .custom import DateTime
 
 if TYPE_CHECKING:
@@ -32,6 +34,10 @@ class Update(RubikaObject):
     """*Optional*. Identifier of the message that was removed. Parsed from removed_message_id."""
     inline_message: InlineMessage | None = None
     """Inline message event (button click / inline interaction)."""
+    started_bot: StartedBot | None = None
+    """*Optional*. Present when the user has started/unblocked the bot."""
+    stopped_bot: StoppedBot | None = None
+    """*Optional*. Present when the user has stopped/blocked the bot."""
     update_time: DateTime | None = None
     """Unix timestamp of when the update was received."""
 
@@ -68,13 +74,19 @@ class Update(RubikaObject):
 
     @model_validator(mode="after")
     def resolve_events(self) -> "Update":
-        if self.new_message:
+        if self.type == "NewMessage":
             object.__setattr__(self.new_message, 'chat_id', self.chat_id)
-        if self.updated_message:
+        elif self.type == "UpdatedMessage":
             object.__setattr__(self.updated_message, 'chat_id', self.chat_id)
-        if self.removed_message:
+        elif self.type == "RemovedMessage":
             object.__setattr__(self.removed_message, 'chat_id', self.chat_id)
         # NOTE: inline_message already contains chat_id from API. no injection needed
+
+        elif self.type == "StartedBot" and self.started_bot is None:
+            object.__setattr__(self, 'started_bot', StartedBot(chat_id=self.chat_id))
+        elif self.type == "StoppedBot" and self.stopped_bot is None:
+            object.__setattr__(self, 'stopped_bot', StoppedBot(chat_id=self.chat_id))
+
         return self
 
     def __hash__(self) -> int:
@@ -106,6 +118,8 @@ class Update(RubikaObject):
             "UpdatedMessage": "updated_message",
             "RemovedMessage": "removed_message",
             "InlineMessage": "inline_message",
+            "StartedBot": "started_bot",
+            "StoppedBot": "stopped_bot",
         }
         event = _type_map.get(self.type)
         if event is None:
