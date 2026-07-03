@@ -4,6 +4,7 @@ from pydantic import Field, field_validator, model_validator
 from typing import TYPE_CHECKING, Any, cast
 
 from ..utils.mypy_hacks import lru_cache
+from ..enums import UpdateType
 from .base import RubikaObject
 from .removed_message import RemovedMessage
 from .started_bot import StartedBot
@@ -22,7 +23,7 @@ class Update(RubikaObject):
     Source: https://rubika.ir/botapi/models#update
     """
 
-    type: str
+    type: UpdateType
     """The type of update (e.g., NewMessage, EditMessage, RemoveMessage)."""
     chat_id: str
     """Unique identifier for the chat where the update occurred."""
@@ -33,7 +34,7 @@ class Update(RubikaObject):
     removed_message: RemovedMessage | None = Field(None, alias="removed_message_id")
     """*Optional*. Identifier of the message that was removed. Parsed from removed_message_id."""
     inline_message: InlineMessage | None = None
-    """Inline message event (button click / inline interaction)."""
+    """*Optional*. Inline message event (button click / inline interaction)."""
     started_bot: StartedBot | None = None
     """*Optional*. Present when the user has started/unblocked the bot."""
     stopped_bot: StoppedBot | None = None
@@ -45,7 +46,7 @@ class Update(RubikaObject):
         def __init__(
             __pydantic__self__,
             *,
-            type: str,
+            type: UpdateType,
             chat_id: str,
             new_message: Message | None = None,
             updated_message: Message | None = None,
@@ -74,17 +75,17 @@ class Update(RubikaObject):
 
     @model_validator(mode="after")
     def resolve_events(self) -> "Update":
-        if self.type == "NewMessage":
+        if self.type == UpdateType.NEW_MESSAGE:
             object.__setattr__(self.new_message, 'chat_id', self.chat_id)
-        elif self.type == "UpdatedMessage":
+        elif self.type == UpdateType.UPDATED_MESSAGE:
             object.__setattr__(self.updated_message, 'chat_id', self.chat_id)
-        elif self.type == "RemovedMessage":
+        elif self.type == UpdateType.REMOVED_MESSAGE:
             object.__setattr__(self.removed_message, 'chat_id', self.chat_id)
         # NOTE: inline_message already contains chat_id from API. no injection needed
 
-        elif self.type == "StartedBot" and self.started_bot is None:
+        elif self.type == UpdateType.STARTED_BOT:
             object.__setattr__(self, 'started_bot', StartedBot(chat_id=self.chat_id))
-        elif self.type == "StoppedBot" and self.stopped_bot is None:
+        elif self.type == UpdateType.STOPPED_BOT:
             object.__setattr__(self, 'stopped_bot', StoppedBot(chat_id=self.chat_id))
 
         return self
@@ -114,12 +115,12 @@ class Update(RubikaObject):
     @lru_cache()
     def event_type(self) -> str:
         _type_map = {
-            "NewMessage": "new_message",
-            "UpdatedMessage": "updated_message",
-            "RemovedMessage": "removed_message",
-            "InlineMessage": "inline_message",
-            "StartedBot": "started_bot",
-            "StoppedBot": "stopped_bot",
+            UpdateType.NEW_MESSAGE: "new_message",
+            UpdateType.UPDATED_MESSAGE: "updated_message",
+            UpdateType.REMOVED_MESSAGE: "removed_message",
+            UpdateType.INLINE_MESSAGE: "inline_message",
+            UpdateType.STARTED_BOT: "started_bot",
+            UpdateType.STOPPED_BOT: "stopped_bot",
         }
         event = _type_map.get(self.type)
         if event is None:
