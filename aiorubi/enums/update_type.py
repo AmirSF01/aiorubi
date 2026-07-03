@@ -11,5 +11,9 @@ class UpdateType(str, Enum):
     NEW_MESSAGE = "NewMessage"
     UPDATED_MESSAGE = "UpdatedMessage"
     REMOVED_MESSAGE = "RemovedMessage"
+
+    INLINE_MESSAGE = "InlineMessage"
+    """Added for abstraction (not in official API)."""
+
     STARTED_BOT = "StartedBot"
     STOPPED_BOT = "StoppedBot"
