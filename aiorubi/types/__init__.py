@@ -38,6 +38,8 @@ from .update import Update
 from .response_parameters import ResponseParameters
 from .input_file import InputFile
 from .update_endpoint_status import UpdateEndpointsStatus
+from .started_bot import StartedBot
+from .stopped_bot import StoppedBot
 
 from .message_id import MessageID
 
@@ -81,7 +83,9 @@ __all__ = [
     "ResponseParameters",
     "InputFile",
     "MessageID",
-    "UpdateEndpointsStatus"
+    "UpdateEndpointsStatus",
+    "StartedBot",
+    "StoppedBot"
 ]
 
 
