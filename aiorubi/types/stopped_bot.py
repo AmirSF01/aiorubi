@@ -28,10 +28,3 @@ class StoppedBot(RubikaObject):
                 chat_id=chat_id,
                 **__pydantic_kwargs,
             )
-
-    def get_chat(self) -> GetChat:
-        from aiorubi.methods import GetChat
-
-        return GetChat(
-            chat_id=self.chat_id
-        ).as_(self._bot)
