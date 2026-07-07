@@ -1,7 +1,7 @@
 # aiorubi
 
 <p align="center">
-  <img src="docs/_static/logo.png" alt="aiorubi Logo" width="180">
+  <img src="https://raw.githubusercontent.com/AmirSF01/aiorubi/main/docs/_static/logo.png" alt="aiorubi Logo" width="180">
 </p>
 <p align="center">
     <em><strong>aiorubi</strong> is a modern and fully asynchronous library for <a href="https://rubika.ir/botapi">Rubika Bot API</a> written in Python 3.10+ using <a href="https://docs.python.org/3/library/asyncio.html">asyncio</a> and <a href="https://github.com/aio-libs/aiohttp">aiohttp</a>.</em>
