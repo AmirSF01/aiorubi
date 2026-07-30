@@ -4,7 +4,6 @@ import io
 import pathlib
 from collections.abc import AsyncGenerator, AsyncIterator
 from contextlib import asynccontextmanager
-from importlib.metadata import metadata
 from types import TracebackType
 from typing import (
     Any,
@@ -30,6 +29,7 @@ from ..methods import (
     GetMe,
     GetUpdates,
     RequestSendFile,
+    SendFile,
     SendMessage,
     SendContact,
     SendPoll,
@@ -46,6 +46,7 @@ from ..methods import (
 from ..types import (
     BotInfo,
     DownloadUrl,
+    File,
     GetUpdatesResponse,
     MessageID,
     Chat,
@@ -57,6 +58,7 @@ from ..types import (
 )
 from ..enums import (
     ChatKeypadType,
+    FileType,
     UpdateEndpointType,
     PollType
 )
@@ -175,8 +177,8 @@ class Bot:
         self,
         url: str,
         file: InputFile,
-        timeout: int = 30,
-    ) -> dict[str, Any]:
+        request_timeout: int | None = None,
+    ) -> File:
         """
         Internal method to upload files to Rubika's storage.
         """
@@ -184,7 +186,7 @@ class Bot:
             url=url,
             file=file,
             bot=self,
-            timeout=timeout
+            timeout=request_timeout
         )
 
     async def get_me(
@@ -321,12 +323,53 @@ class Bot:
 
     async def request_send_file(
         self,
-        type: str,
+        type: FileType,
         request_timeout: int | None = None,
     ):
         call = RequestSendFile(
             type=type
         )
+        return await self(call, request_timeout=request_timeout)
+
+    async def send_file(
+        self,
+        chat_id: str,
+        file: str | InputFile,
+        file_type: FileType = FileType.FILE,
+        text: str | None = None,
+        reply_to_message_id: str | None = None,
+        metadata: MetaData | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        request_timeout: int | None = None,
+    ) -> MessageID:
+        """
+        Send a file, either by referencing an existing file_id or uploading a new InputFile.
+
+        Note: `file_type` is only used when uploading a new file (InputFile).
+        It is ignored when `file` is a file_id (str).
+        """
+
+        if isinstance(file, str):
+            file_id = file
+        else:
+            upload_url = (await self.request_send_file(file_type, request_timeout)).upload_url
+            file_id = (await self.upload_file(upload_url, file, request_timeout)).file_id
+
+        call = SendFile(
+            chat_id=chat_id,
+            file_id=file_id,
+            text=text,
+            reply_to_message_id=reply_to_message_id,
+            metadata=metadata,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+        )
+
         return await self(call, request_timeout=request_timeout)
 
     async def send_message(
