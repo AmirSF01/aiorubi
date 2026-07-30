@@ -208,7 +208,7 @@ class AiohttpSession(BaseSession):
         """
         session = await self.create_session()
 
-        form = FormData()
+        form = FormData(quote_fields=False)
         form.add_field(
             'file',
             file.read(bot),
