@@ -14,6 +14,7 @@ from typing_extensions import Self
 from aiorubi.__meta__ import __version__
 from aiorubi.exceptions import RubikaNetworkError
 from aiorubi.methods.base import RubikaType
+from aiorubi.methods import UploadFile
 
 from .base import BaseSession
 
@@ -197,12 +198,12 @@ class AiohttpSession(BaseSession):
                 yield chunk
 
     async def upload_file(
-            self,
-            url: str,
-            file: InputFile,
-            bot: Bot,
-            timeout: int = 30
-    ) -> dict[str, Any]:
+        self,
+        url: str,
+        file: InputFile,
+        bot: Bot,
+        timeout: int | None = None,
+    ) -> RubikaType:
         """
         Uploads a file to Rubika's storage using the provided upload_url.
         """
@@ -215,23 +216,27 @@ class AiohttpSession(BaseSession):
             filename=file.filename or "file",
             content_type='application/octet-stream'
         )
+        method = UploadFile()
 
         try:
             async with session.post(
-                    url,
-                    data=form,
-                    timeout=timeout
+                url,
+                data=form,
+                timeout=self.timeout if timeout is None else timeout
             ) as resp:
-                if resp.status != 200:
-                    raw_result = await resp.text()
-                    raise RubikaNetworkError(
-                        message=f"Upload failed with status {resp.status}: {raw_result}"
-                    )
-                return await resp.json()
+                raw_result = await resp.text()
         except asyncio.TimeoutError as e:
-            raise RubikaNetworkError(message="Upload timeout error") from e
+            raise RubikaNetworkError(method=method, message="Upload timeout error") from e
         except ClientError as e:
-            raise RubikaNetworkError(message=f"Upload ClientError: {e}") from e
+            raise RubikaNetworkError(method=method, message=f"Upload ClientError: {e}") from e
+
+        response = self.check_response(
+            bot=bot,
+            method=method,
+            status_code=resp.status,
+            content=raw_result,
+        )
+        return cast(RubikaType, response.result)
 
     async def __aenter__(self) -> Self:
         await self.create_session()

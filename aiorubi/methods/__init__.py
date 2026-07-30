@@ -18,6 +18,7 @@ from .send_poll import SendPoll
 from .set_commands import SetCommands
 from .unban_chat_member import UnbanChatMember
 from .update_bot_endpoints import UpdateBotEndpoints
+from .upload_file import UploadFile
 
 __all__ = (
     "BanChatMember",
@@ -42,4 +43,5 @@ __all__ = (
     "SetCommands",
     "UnbanChatMember",
     "UpdateBotEndpoints",
+    "UploadFile",
 )
