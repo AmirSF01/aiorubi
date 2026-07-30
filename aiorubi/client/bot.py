@@ -626,36 +626,3 @@ class Bot:
             user_id=user_id,
         )
         return await self(call, request_timeout=request_timeout)
-
-    async def send_file(
-        self,
-        chat_id: str,
-        file: InputFile | str,
-        *,
-        file_type: FileType = FileType.FILE,
-        caption: str | None = None,
-        reply_to_message_id: str | None = None,
-        metadata: MetaData | None = None,
-        disable_notification: bool | None = None,
-        inline_keypad: Keypad | None = None,
-        chat_keypad: Keypad | None = None,
-        chat_keypad_type: ChatKeypadType | None = None,
-        request_timeout: int | None = None,
-    ) -> MessageID:
-
-        upload_url = await self.request_send_file(file_type, request_timeout)
-        result = await self.upload_file(upload_url.upload_url, file, request_timeout)
-        file_id = result["data"]["file_id"]
-        
-        call = SendFile(
-            chat_id=chat_id,
-            file_id=file_id,
-            text=caption,
-            reply_to_message_id=reply_to_message_id,
-            metadata=metadata,
-            disable_notification=disable_notification,
-            inline_keypad=inline_keypad,
-            chat_keypad=chat_keypad,
-            chat_keypad_type=chat_keypad_type,
-        )
-        return await self(call, request_timeout=request_timeout)
