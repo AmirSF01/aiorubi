@@ -372,6 +372,181 @@ class Bot:
 
         return await self(call, request_timeout=request_timeout)
 
+    async def send_gif(
+        self,
+        chat_id: str,
+        gif: str | InputFile,
+        text: str | None = None,
+        reply_to_message_id: str | None = None,
+        metadata: MetaData | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        request_timeout: int | None = None,
+    ) -> MessageID:
+        """
+        Send a gif, either by referencing an existing file_id or uploading a new InputFile.
+
+        Note:
+            When using a `file_id`, the file will be sent as a gif **only if** it was originally
+            uploaded as a gif type; otherwise, it will be sent as its original type instead.
+        """
+
+        return await self.send_file(
+            chat_id=chat_id,
+            file=gif,
+            file_type=FileType.GIF,
+            text=text,
+            reply_to_message_id=reply_to_message_id,
+            metadata=metadata,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            request_timeout=request_timeout
+        )
+
+    async def send_image(
+        self,
+        chat_id: str,
+        image: str | InputFile,
+        text: str | None = None,
+        reply_to_message_id: str | None = None,
+        metadata: MetaData | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        request_timeout: int | None = None,
+    ) -> MessageID:
+        """
+        Send an image, either by referencing an existing file_id or uploading a new InputFile.
+
+        Note:
+            When using a `file_id`, the file will be sent as an image **only if** it was originally
+            uploaded as an image type; otherwise, it will be sent as its original type instead.
+        """
+
+        return await self.send_file(
+            chat_id=chat_id,
+            file=image,
+            file_type=FileType.IMAGE,
+            text=text,
+            reply_to_message_id=reply_to_message_id,
+            metadata=metadata,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            request_timeout=request_timeout
+        )
+
+    async def send_music(
+        self,
+        chat_id: str,
+        music: str | InputFile,
+        text: str | None = None,
+        reply_to_message_id: str | None = None,
+        metadata: MetaData | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        request_timeout: int | None = None,
+    ) -> MessageID:
+        """
+        Send music, either by referencing an existing file_id or uploading a new InputFile.
+
+        Note:
+            When using a `file_id`, the file will be sent as music **only if** it was originally
+            uploaded as a music type; otherwise, it will be sent as its original type instead.
+        """
+
+        return await self.send_file(
+            chat_id=chat_id,
+            file=music,
+            file_type=FileType.MUSIC,
+            text=text,
+            reply_to_message_id=reply_to_message_id,
+            metadata=metadata,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            request_timeout=request_timeout
+        )
+
+    async def send_video(
+        self,
+        chat_id: str,
+        video: str | InputFile,
+        text: str | None = None,
+        reply_to_message_id: str | None = None,
+        metadata: MetaData | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        request_timeout: int | None = None,
+    ) -> MessageID:
+        """
+        Send a video, either by referencing an existing file_id or uploading a new InputFile.
+
+        Note:
+            When using a `file_id`, the file will be sent as a video **only if** it was originally
+            uploaded as a video type; otherwise, it will be sent as its original type instead.
+        """
+
+        return await self.send_file(
+            chat_id=chat_id,
+            file=video,
+            file_type=FileType.VIDEO,
+            text=text,
+            reply_to_message_id=reply_to_message_id,
+            metadata=metadata,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            request_timeout=request_timeout
+        )
+
+    async def send_voice(
+        self,
+        chat_id: str,
+        voice: str | InputFile,
+        text: str | None = None,
+        reply_to_message_id: str | None = None,
+        metadata: MetaData | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        request_timeout: int | None = None,
+    ) -> MessageID:
+        """
+        Send a voice, either by referencing an existing file_id or uploading a new InputFile.
+
+        Note:
+            When using a `file_id`, the file will be sent as a voice **only if** it was originally
+            uploaded as a voice type; otherwise, it will be sent as its original type instead.
+        """
+
+        return await self.send_file(
+            chat_id=chat_id,
+            file=voice,
+            file_type=FileType.VOICE,
+            text=text,
+            reply_to_message_id=reply_to_message_id,
+            metadata=metadata,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            request_timeout=request_timeout
+        )
+
     async def send_message(
         self,
         chat_id: str,
