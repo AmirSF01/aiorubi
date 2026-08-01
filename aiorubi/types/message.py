@@ -9,15 +9,19 @@ if TYPE_CHECKING:
     from ..methods import (
         SendMessage
     )
+
     from .aux_data import AuxData
     from .file import File
     from .forwarded_from import ForwardedFrom
     from .forwarded_no_link import ForwardedNoLink
+    from .keypad import Keypad
     from .location import Location
     from .sticker import Sticker
     from .contact_message import ContactMessage
     from .poll import Poll
     from .metadata import MetaData
+
+    from ..enums import ChatKeypadType
 
 
 class Message(RubikaObject):
@@ -106,9 +110,14 @@ class Message(RubikaObject):
                 **__pydantic_kwargs,
             )
 
-    def answer(
+    def reply(
         self,
         text: str,
+        metadata: MetaData | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
         **kwargs: Any
     ) -> SendMessage:
         from aiorubi.methods import SendMessage
@@ -120,6 +129,41 @@ class Message(RubikaObject):
         return SendMessage(
             chat_id=self.chat_id,
             text=text,
+            reply_to_message_id=self.message_id,
+            metadata=metadata,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            **kwargs
+        ).as_(self._bot)
+
+    def answer(
+        self,
+        text: str,
+        reply_to_message_id: str | None = None,
+        metadata: MetaData | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        **kwargs: Any
+    ) -> SendMessage:
+        from aiorubi.methods import SendMessage
+
+        assert self.chat_id is not None, (
+            "This method can be used only if chat_id is present in the message."
+        )
+
+        return SendMessage(
+            chat_id=self.chat_id,
+            text=text,
+            reply_to_message_id=reply_to_message_id,
+            metadata=metadata,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
             **kwargs
         ).as_(self._bot)
 
