@@ -73,6 +73,16 @@ class Update(RubikaObject):
             return data
 
         data = data.copy()
+
+        # Stage 1: unwrap the {"update": {...}} envelope, if present.
+        if isinstance(data.get("update"), dict):
+            data = data["update"].copy()
+
+        # Stage 2: bare inline-message payloads have no "type"/"chat_id" at all.
+        if data.get("type") is None and isinstance(data.get("inline_message"), dict):
+            data["type"] = UpdateType.INLINE_MESSAGE
+            data.setdefault("chat_id", data["inline_message"].get("chat_id"))
+
         chat_id = data.get("chat_id")
         raw_type = data.get("type")
 
@@ -83,9 +93,9 @@ class Update(RubikaObject):
                 nested["chat_id"] = chat_id
                 data[key] = nested
 
-        if data.get("removed_message_id") is not None:
+        if (removed_message_id := data.pop("removed_message_id", None)) is not None:
             data["removed_message"] = {
-                "message_id": data["removed_message_id"],
+                "message_id": removed_message_id,
                 "chat_id": chat_id,
             }
 

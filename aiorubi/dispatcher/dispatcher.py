@@ -193,18 +193,7 @@ class Dispatcher(Router):
         :param update:
         :param kwargs:
         """
-        if "inline_message" in update:
-            parsed_update = Update.model_validate(
-                {
-                    "type": "InlineMessage",
-                    "chat_id": update["inline_message"]["chat_id"],
-                    "inline_message": update["inline_message"],
-                },
-                context={"bot": bot},
-            )
-        else:
-            # Rubika wraps the update in a {"update": {...}} envelope
-            parsed_update = Update.model_validate(update["update"], context={"bot": bot})
+        parsed_update = Update.model_validate(update, context={"bot": bot})
         return await self._feed_webhook_update(bot=bot, update=parsed_update, **kwargs)
 
     @classmethod
@@ -461,7 +450,7 @@ class Dispatcher(Router):
         **kwargs: Any,
     ) -> RubikaMethod[RubikaType] | None:
         if not isinstance(update, Update):  # Allow to use raw updates
-            update = Update.model_validate(update["update"], context={"bot": bot})
+            update = Update.model_validate(update, context={"bot": bot})
 
         ctx = contextvars.copy_context()
         loop = asyncio.get_running_loop()
