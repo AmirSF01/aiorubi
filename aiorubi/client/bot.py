@@ -90,7 +90,7 @@ class Bot:
         if default is None:
             default = DefaultBotProperties()
 
-        self.session = session
+        self.session: AiohttpSession = session
 
         self.default = default
 

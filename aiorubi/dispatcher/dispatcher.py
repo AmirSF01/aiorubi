@@ -210,7 +210,8 @@ class Dispatcher(Router):
         So you may not worry that the polling will stop working.
         """
         backoff = Backoff(config=backoff_config)
-        initial_offset_id = f"{int(time.time()):08x}{'0' * 16}"
+        timestamp = (await bot.session.get_server_timestamp()) or int(time.time())
+        initial_offset_id = f"{timestamp:08x}{'0' * 16}"
         get_updates = GetUpdates(offset_id=initial_offset_id, limit=limit)
         kwargs = {}
         if bot.session.timeout:

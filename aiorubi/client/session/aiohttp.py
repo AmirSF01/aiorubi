@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import asyncio
 import ssl
+import email.utils
 from collections.abc import AsyncGenerator, Iterable
 from typing import TYPE_CHECKING, Any, cast
 
@@ -237,6 +238,24 @@ class AiohttpSession(BaseSession):
             content=raw_result,
         )
         return cast(RubikaType, response.result)
+
+    async def get_server_timestamp(self) -> int | None:
+        session = await self.create_session()
+        url = self.api.api_url('-', '-')
+
+        try:
+            async with session.head(url, timeout=5) as resp:
+                date_header = resp.headers.get('Date')
+                if not date_header:
+                    return None
+
+                time_tuple = email.utils.parsedate_tz(date_header)
+                if not time_tuple:
+                    return None
+
+                return int(email.utils.mktime_tz(time_tuple))
+        except Exception:
+            return None
 
     async def __aenter__(self) -> Self:
         await self.create_session()
