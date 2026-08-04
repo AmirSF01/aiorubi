@@ -111,11 +111,17 @@ class BaseRequestHandler(ABC):
         if not paths:
             raise ValueError(f"{self.__class__.__name__}.register requires at least one path")
 
+        if self._handle_open not in app.on_startup:
+            app.on_startup.append(self._handle_open)
+
         if self._handle_close not in app.on_shutdown:
             app.on_shutdown.append(self._handle_close)
 
         for path in paths:
             app.router.add_route("POST", path, self.handle, **kwargs)
+
+    async def _handle_open(self, *a: Any, **kw: Any) -> None:
+        pass
 
     async def _handle_close(self, *a: Any, **kw: Any) -> None:
         await self.close()
@@ -214,6 +220,9 @@ class SimpleRequestHandler(BaseRequestHandler):
         """
         await self.bot.session.close()
 
+    async def _handle_open(self, *a: Any, **kw: Any) -> None:
+        await self.bot.me()
+
     async def resolve_bot(self, request: web.Request) -> Bot:
         return self.bot
 
@@ -274,5 +283,7 @@ class TokenBasedRequestHandler(BaseRequestHandler):
         """
         token = request.match_info["bot_token"]
         if token not in self.bots:
-            self.bots[token] = Bot(token=token, **self.bot_settings)
+            bot = Bot(token=token, **self.bot_settings)
+            await bot.me()
+            self.bots[token] = bot
         return self.bots[token]
