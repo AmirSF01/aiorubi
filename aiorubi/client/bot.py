@@ -117,8 +117,14 @@ class Bot:
         """
         Get bot ID
 
-        :return:
+        :raises RuntimeError: If bot information has not been loaded yet.
         """
+        if self._me is None:
+            raise RuntimeError(
+                "Bot ID is not available yet. "
+                "Call 'await bot.me()' first to load the bot information."
+            )
+
         return self._me.bot_id
 
     @asynccontextmanager
