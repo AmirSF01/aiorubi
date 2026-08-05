@@ -138,7 +138,7 @@ class AiohttpSession(BaseSession):
             # https://docs.aiohttp.org/en/stable/client_advanced.html#graceful-shutdown
             await asyncio.sleep(0.25)
 
-    def build_form_data(self, bot: Bot, method: RubikaMethod[RubikaType]) -> dict[str, Any]:
+    def build_payload(self, bot: Bot, method: RubikaMethod[RubikaType]) -> dict[str, Any]:
         return {
             key: prepared_value
             for key, value in method.model_dump(exclude_none=True).items()
@@ -154,7 +154,7 @@ class AiohttpSession(BaseSession):
         session = await self.create_session()
 
         url = self.api.api_url(token=bot.token, method=method.__api_method__)
-        payload = self.build_form_data(bot=bot, method=method)
+        payload = self.build_payload(bot=bot, method=method)
 
         try:
             async with session.post(
