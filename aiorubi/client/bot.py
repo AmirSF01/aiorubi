@@ -151,6 +151,53 @@ class Bot:
             self._me = await self.get_me()
         return self._me
 
+    @classmethod
+    async def __download_file_binary_io(
+        cls, destination: BinaryIO, seek: bool, stream: AsyncGenerator[bytes, None]
+    ) -> BinaryIO:
+        async for chunk in stream:
+            destination.write(chunk)
+            destination.flush()
+        if seek is True:
+            destination.seek(0)
+        return destination
+
+    @classmethod
+    async def __download_file(
+        cls, destination: str | pathlib.Path, stream: AsyncGenerator[bytes, None]
+    ) -> None:
+        async with aiofiles.open(destination, "wb") as f:
+            async for chunk in stream:
+                await f.write(chunk)
+
+    async def download_file(
+        self,
+        url: str,
+        destination: BinaryIO | pathlib.Path | str | None = None,
+        timeout: int = 30,
+        chunk_size: int = 65536,
+        seek: bool = True,
+    ) -> BinaryIO | None:
+        if destination is None:
+            destination = io.BytesIO()
+
+        stream = self.session.stream_content(
+            url=url,
+            timeout=timeout,
+            chunk_size=chunk_size,
+            raise_for_status=True,
+        )
+
+        try:
+            if isinstance(destination, (str, pathlib.Path)):
+                await self.__download_file(destination=destination, stream=stream)
+                return None
+            return await self.__download_file_binary_io(
+                destination=destination, seek=seek, stream=stream
+            )
+        finally:
+            await stream.aclose()
+
     async def __call__(self, method: RubikaMethod[T], request_timeout: int | None = None) -> T:
         """
         Call API method
