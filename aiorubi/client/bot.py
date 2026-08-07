@@ -45,6 +45,7 @@ from ..methods import (
 )
 from ..types import (
     BotInfo,
+    Downloadable,
     DownloadUrl,
     File,
     GetUpdatesResponse,
@@ -197,6 +198,41 @@ class Bot:
             )
         finally:
             await stream.aclose()
+
+    async def download(
+        self,
+        file: str | Downloadable,
+        destination: BinaryIO | pathlib.Path | str | None = None,
+        timeout: int = 30,
+        chunk_size: int = 65536,
+        seek: bool = True,
+    ) -> BinaryIO | None:
+        """
+        Download file by file_id or Downloadable object to destination.
+
+        If you want to automatically create destination (:class:`io.BytesIO`) use default
+        value of destination and handle result of this method.
+
+        :param file: file_id or Downloadable object
+        :param destination: Filename, file path or instance of :class:`io.IOBase`. For e.g. :class:`io.BytesIO`, defaults to None
+        :param timeout: Total timeout in seconds, defaults to 30
+        :param chunk_size: File chunks size, defaults to 64 kb
+        :param seek: Go to start of file when downloading is finished. Used only for destination with :class:`typing.BinaryIO` type, defaults to True
+        """
+        if isinstance(file, str):
+            file_id = file
+        else:
+            # type is ignored in due to:
+            # Incompatible types in assignment (expression has type "Any | None", variable has type "str")
+            file_id = getattr(file, "file_id", None)  # type: ignore
+            if file_id is None:
+                raise TypeError("file can only be of the string or Downloadable type")
+
+        url = (await self.get_file(file_id)).download_url
+
+        return await self.download_file(
+            url, destination=destination, timeout=timeout, chunk_size=chunk_size, seek=seek
+        )
 
     async def __call__(self, method: RubikaMethod[T], request_timeout: int | None = None) -> T:
         """
