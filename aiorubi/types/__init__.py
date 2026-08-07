@@ -21,6 +21,7 @@ from .button_textbox import ButtonTextbox
 from .button_location import ButtonLocation
 from .button import Button
 from .custom import DateTime
+from .downloadable import Downloadable
 from .error_event import ErrorEvent
 from .forwarded_no_link import ForwardedNoLink
 from .download_url import DownloadUrl
@@ -66,6 +67,7 @@ __all__ = [
     "Button",
     "ErrorEvent",
     "DateTime",
+    "Downloadable",
     "DownloadUrl",
     "UploadUrl",
     "ForwardedNoLink",
