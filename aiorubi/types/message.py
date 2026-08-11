@@ -1,13 +1,16 @@
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any, Coroutine
 
 from .base import RubikaObject
 from .custom import DateTime
 
 if TYPE_CHECKING:
     from ..methods import (
-        SendMessage
+        SendMessage,
+        SendContact,
+        SendPoll,
+        SendLocation,
     )
 
     from .aux_data import AuxData
@@ -20,8 +23,14 @@ if TYPE_CHECKING:
     from .contact_message import ContactMessage
     from .poll import Poll
     from .metadata import MetaData
+    from .input_file import InputFile
+    from .message_id import MessageID
 
-    from ..enums import ChatKeypadType
+    from ..enums import (
+        ChatKeypadType,
+        FileType,
+        PollType
+    )
 
 
 class Message(RubikaObject):
@@ -167,3 +176,543 @@ class Message(RubikaObject):
             **kwargs
         ).as_(self._bot)
 
+    def reply_file(
+        self,
+        file: str | InputFile,
+        file_type: FileType = FileType.FILE,
+        text: str | None = None,
+        metadata: MetaData | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        request_timeout: int | None = None,
+    ) -> Coroutine[Any, Any, MessageID]:
+        assert self.chat_id is not None, (
+            "This method can be used only if chat_id is present in the message."
+        )
+
+        return self._bot.send_file(
+            chat_id=self.chat_id,
+            file=file,
+            file_type=file_type,
+            text=text,
+            reply_to_message_id=self.message_id,
+            metadata=metadata,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            request_timeout=request_timeout,
+        )
+
+    def answer_file(
+        self,
+        file: str | InputFile,
+        file_type: FileType = FileType.FILE,
+        text: str | None = None,
+        reply_to_message_id: str | None = None,
+        metadata: MetaData | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        request_timeout: int | None = None,
+    ) -> Coroutine[Any, Any, MessageID]:
+        assert self.chat_id is not None, (
+            "This method can be used only if chat_id is present in the message."
+        )
+
+        return self._bot.send_file(
+            chat_id=self.chat_id,
+            file=file,
+            file_type=file_type,
+            text=text,
+            reply_to_message_id=reply_to_message_id,
+            metadata=metadata,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            request_timeout=request_timeout,
+        )
+
+    def reply_gif(
+        self,
+        gif: str | InputFile,
+        text: str | None = None,
+        metadata: MetaData | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        request_timeout: int | None = None,
+    ) -> Coroutine[Any, Any, MessageID]:
+        assert self.chat_id is not None, (
+            "This method can be used only if chat_id is present in the message."
+        )
+
+        return self._bot.send_gif(
+            chat_id=self.chat_id,
+            gif=gif,
+            text=text,
+            reply_to_message_id=self.message_id,
+            metadata=metadata,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            request_timeout=request_timeout,
+        )
+
+    def answer_gif(
+        self,
+        gif: str | InputFile,
+        text: str | None = None,
+        reply_to_message_id: str | None = None,
+        metadata: MetaData | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        request_timeout: int | None = None,
+    ) -> Coroutine[Any, Any, MessageID]:
+        assert self.chat_id is not None, (
+            "This method can be used only if chat_id is present in the message."
+        )
+
+        return self._bot.send_gif(
+            chat_id=self.chat_id,
+            gif=gif,
+            text=text,
+            reply_to_message_id=reply_to_message_id,
+            metadata=metadata,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            request_timeout=request_timeout,
+        )
+
+    def reply_image(
+        self,
+        image: str | InputFile,
+        text: str | None = None,
+        metadata: MetaData | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        request_timeout: int | None = None,
+    ) -> Coroutine[Any, Any, MessageID]:
+        assert self.chat_id is not None, (
+            "This method can be used only if chat_id is present in the message."
+        )
+
+        return self._bot.send_image(
+            chat_id=self.chat_id,
+            image=image,
+            text=text,
+            reply_to_message_id=self.message_id,
+            metadata=metadata,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            request_timeout=request_timeout,
+        )
+
+    def answer_image(
+        self,
+        image: str | InputFile,
+        text: str | None = None,
+        reply_to_message_id: str | None = None,
+        metadata: MetaData | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        request_timeout: int | None = None,
+    ) -> Coroutine[Any, Any, MessageID]:
+        assert self.chat_id is not None, (
+            "This method can be used only if chat_id is present in the message."
+        )
+
+        return self._bot.send_image(
+            chat_id=self.chat_id,
+            image=image,
+            text=text,
+            reply_to_message_id=reply_to_message_id,
+            metadata=metadata,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            request_timeout=request_timeout,
+        )
+
+    def reply_music(
+        self,
+        music: str | InputFile,
+        text: str | None = None,
+        metadata: MetaData | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        request_timeout: int | None = None,
+    ) -> Coroutine[Any, Any, MessageID]:
+        assert self.chat_id is not None, (
+            "This method can be used only if chat_id is present in the message."
+        )
+
+        return self._bot.send_music(
+            chat_id=self.chat_id,
+            music=music,
+            text=text,
+            reply_to_message_id=self.message_id,
+            metadata=metadata,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            request_timeout=request_timeout,
+        )
+
+    def answer_music(
+        self,
+        music: str | InputFile,
+        text: str | None = None,
+        reply_to_message_id: str | None = None,
+        metadata: MetaData | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        request_timeout: int | None = None,
+    ) -> Coroutine[Any, Any, MessageID]:
+        assert self.chat_id is not None, (
+            "This method can be used only if chat_id is present in the message."
+        )
+
+        return self._bot.send_music(
+            chat_id=self.chat_id,
+            music=music,
+            text=text,
+            reply_to_message_id=reply_to_message_id,
+            metadata=metadata,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            request_timeout=request_timeout,
+        )
+
+    def reply_video(
+        self,
+        video: str | InputFile,
+        text: str | None = None,
+        metadata: MetaData | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        request_timeout: int | None = None,
+    ) -> Coroutine[Any, Any, MessageID]:
+        assert self.chat_id is not None, (
+            "This method can be used only if chat_id is present in the message."
+        )
+
+        return self._bot.send_video(
+            chat_id=self.chat_id,
+            video=video,
+            text=text,
+            reply_to_message_id=self.message_id,
+            metadata=metadata,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            request_timeout=request_timeout,
+        )
+
+    def answer_video(
+        self,
+        video: str | InputFile,
+        text: str | None = None,
+        reply_to_message_id: str | None = None,
+        metadata: MetaData | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        request_timeout: int | None = None,
+    ) -> Coroutine[Any, Any, MessageID]:
+        assert self.chat_id is not None, (
+            "This method can be used only if chat_id is present in the message."
+        )
+
+        return self._bot.send_video(
+            chat_id=self.chat_id,
+            video=video,
+            text=text,
+            reply_to_message_id=reply_to_message_id,
+            metadata=metadata,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            request_timeout=request_timeout,
+        )
+
+    def reply_voice(
+        self,
+        voice: str | InputFile,
+        text: str | None = None,
+        metadata: MetaData | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        request_timeout: int | None = None,
+    ) -> Coroutine[Any, Any, MessageID]:
+        assert self.chat_id is not None, (
+            "This method can be used only if chat_id is present in the message."
+        )
+
+        return self._bot.send_voice(
+            chat_id=self.chat_id,
+            voice=voice,
+            text=text,
+            reply_to_message_id=self.message_id,
+            metadata=metadata,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            request_timeout=request_timeout,
+        )
+
+    def answer_voice(
+        self,
+        voice: str | InputFile,
+        text: str | None = None,
+        reply_to_message_id: str | None = None,
+        metadata: MetaData | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        request_timeout: int | None = None,
+    ) -> Coroutine[Any, Any, MessageID]:
+        assert self.chat_id is not None, (
+            "This method can be used only if chat_id is present in the message."
+        )
+
+        return self._bot.send_voice(
+            chat_id=self.chat_id,
+            voice=voice,
+            text=text,
+            reply_to_message_id=reply_to_message_id,
+            metadata=metadata,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            request_timeout=request_timeout,
+        )
+
+    def reply_contact(
+        self,
+        first_name: str,
+        phone_number: str,
+        last_name: str | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        **kwargs: Any,
+    ) -> SendContact:
+        from aiorubi.methods import SendContact
+
+        assert self.chat_id is not None, (
+            "This method can be used only if chat_id is present in the message."
+        )
+
+        return SendContact(
+            chat_id=self.chat_id,
+            first_name=first_name,
+            phone_number=phone_number,
+            last_name=last_name,
+            reply_to_message_id=self.message_id,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            **kwargs
+        ).as_(self._bot)
+
+    def answer_contact(
+        self,
+        first_name: str,
+        phone_number: str,
+        last_name: str | None = None,
+        reply_to_message_id: str | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        **kwargs: Any,
+    ) -> SendContact:
+        from aiorubi.methods import SendContact
+
+        assert self.chat_id is not None, (
+            "This method can be used only if chat_id is present in the message."
+        )
+
+        return SendContact(
+            chat_id=self.chat_id,
+            first_name=first_name,
+            phone_number=phone_number,
+            last_name=last_name,
+            reply_to_message_id=reply_to_message_id,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            **kwargs
+        ).as_(self._bot)
+
+    def reply_poll(
+        self,
+        question: str,
+        options: list[str],
+        type: PollType | None = None,
+        allows_multiple_answers: bool | None = None,
+        is_anonymous: bool | None = None,
+        correct_option_index: int | None = None,
+        explanation: str | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        **kwargs: Any,
+    ) -> SendPoll:
+        from aiorubi.methods import SendPoll
+
+        assert self.chat_id is not None, (
+            "This method can be used only if chat_id is present in the message."
+        )
+
+        return SendPoll(
+            chat_id=self.chat_id,
+            question=question,
+            options=options,
+            type=type,
+            allows_multiple_answers=allows_multiple_answers,
+            is_anonymous=is_anonymous,
+            correct_option_index=correct_option_index,
+            explanation=explanation,
+            reply_to_message_id=self.message_id,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            **kwargs
+        ).as_(self._bot)
+
+    def answer_poll(
+        self,
+        question: str,
+        options: list[str],
+        type: PollType | None = None,
+        allows_multiple_answers: bool | None = None,
+        is_anonymous: bool | None = None,
+        correct_option_index: int | None = None,
+        explanation: str | None = None,
+        reply_to_message_id: str | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        **kwargs: Any,
+    ) -> SendPoll:
+        from aiorubi.methods import SendPoll
+
+        assert self.chat_id is not None, (
+            "This method can be used only if chat_id is present in the message."
+        )
+
+        return SendPoll(
+            chat_id=self.chat_id,
+            question=question,
+            options=options,
+            type=type,
+            allows_multiple_answers=allows_multiple_answers,
+            is_anonymous=is_anonymous,
+            correct_option_index=correct_option_index,
+            explanation=explanation,
+            reply_to_message_id=reply_to_message_id,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            **kwargs
+        ).as_(self._bot)
+
+    def reply_location(
+        self,
+        latitude: str | float,
+        longitude: str | float,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        **kwargs: Any,
+    ) -> SendLocation:
+        from aiorubi.methods import SendLocation
+
+        assert self.chat_id is not None, (
+            "This method can be used only if chat_id is present in the message."
+        )
+
+        return SendLocation(
+            chat_id=self.chat_id,
+            latitude=latitude,
+            longitude=longitude,
+            reply_to_message_id=self.message_id,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            **kwargs
+        ).as_(self._bot)
+
+    def answer_location(
+        self,
+        latitude: str | float,
+        longitude: str | float,
+        reply_to_message_id: str | None = None,
+        disable_notification: bool | None = None,
+        inline_keypad: Keypad | None = None,
+        chat_keypad: Keypad | None = None,
+        chat_keypad_type: ChatKeypadType | None = None,
+        **kwargs: Any,
+    ) -> SendLocation:
+        from aiorubi.methods import SendLocation
+
+        assert self.chat_id is not None, (
+            "This method can be used only if chat_id is present in the message."
+        )
+
+        return SendLocation(
+            chat_id=self.chat_id,
+            latitude=latitude,
+            longitude=longitude,
+            reply_to_message_id=reply_to_message_id,
+            disable_notification=disable_notification,
+            inline_keypad=inline_keypad,
+            chat_keypad=chat_keypad,
+            chat_keypad_type=chat_keypad_type,
+            **kwargs
+        ).as_(self._bot)
