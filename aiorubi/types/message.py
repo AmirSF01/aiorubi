@@ -4,6 +4,7 @@ from typing import TYPE_CHECKING, Any, Coroutine
 
 from .base import RubikaObject
 from .custom import DateTime
+from ..enums import FileType
 
 if TYPE_CHECKING:
     from ..methods import (
@@ -28,7 +29,6 @@ if TYPE_CHECKING:
 
     from ..enums import (
         ChatKeypadType,
-        FileType,
         PollType
     )
 
