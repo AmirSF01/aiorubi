@@ -1,0 +1,225 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../guide/dispatcher.rst:3
+msgid "Dispatcher"
+msgstr "دیسپچر"
+
+#: ../../guide/dispatcher.rst:5
+msgid "The :class:`~aiorubi.dispatcher.dispatcher.Dispatcher` is the root router of the bot. It owns the update pipeline: incoming :class:`~aiorubi.types.update.Update` objects enter here, are split by update type, flow through the middleware chain (errors → user context → FSM) and reach the first matching handler."
+msgstr ":class:`~aiorubi.dispatcher.dispatcher.Dispatcher` روتِر ریشهٔ بات است. خط لولهٔ آپدیت در اختیار اوست: اشیاء :class:`~aiorubi.types.update.Update` ورودی اینجا وارد می‌شوند، بر اساس نوع آپدیت تفکیک می‌شوند، از زنجیرهٔ میان‌افزارها (خطاها → کانتکست کاربر → FSM) عبور می‌کنند و به اولین هندلر منطبق می‌رسند."
+
+#: ../../guide/dispatcher.rst:12
+msgid "Creating a dispatcher"
+msgstr "ساخت دیسپچر"
+
+#: ../../guide/dispatcher.rst:27
+msgid "All extra keyword arguments are kept in ``dp.workflow_data`` and passed to every handler as keyword arguments — a simple global context:"
+msgstr "همهٔ آرگومان‌های کلیدواژه‌ای اضافی در ``dp.workflow_data`` نگه داشته می‌شوند و به‌عنوان آرگومان کلیدواژه‌ای به هر هندلر پاس داده می‌شوند — یک کانتکست سراسری ساده:"
+
+#: ../../guide/dispatcher.rst:41
+msgid "The dispatcher is a :class:`~aiorubi.dispatcher.router.Router`, so all observer registration methods and ``include_router`` work on it. Unlike a plain router it **cannot** be included into another router — setting ``parent_router`` raises :class:`RuntimeError`."
+msgstr "دیسپچر یک :class:`~aiorubi.dispatcher.router.Router` است، پس همهٔ متدهای ثبت ناظر و ``include_router`` رویش کار می‌کنند. برخلاف روتِر ساده، **نمی‌توان** آن را داخل روتِر دیگری include کرد — تنظیم ``parent_router`` باعث :class:`RuntimeError` می‌شود."
+
+#: ../../guide/dispatcher.rst:47
+msgid "Observers"
+msgstr "ناظرها"
+
+#: ../../guide/dispatcher.rst:49
+msgid "Rubika delivers a single raw update type; the dispatcher's built-in ``update`` observer (``dp.update``) splits it into the specialised observers:"
+msgstr "روبیکا فقط یک نوع آپدیت خام می‌فرستد؛ ناظر ``update`` داخلی دیسپچر (``dp.update``) آن را به ناظرهای تخصصی تفکیک می‌کند:"
+
+#: ../../guide/dispatcher.rst:57
+msgid "Observer"
+msgstr "ناظر"
+
+#: ../../guide/dispatcher.rst:58
+msgid "Event object"
+msgstr "شیء رویداد"
+
+#: ../../guide/dispatcher.rst:59
+msgid "``dp.new_message``"
+msgstr "``dp.new_message``"
+
+#: ../../guide/dispatcher.rst:60
+msgid ":class:`~aiorubi.types.message.Message`"
+msgstr ":class:`~aiorubi.types.message.Message`"
+
+#: ../../guide/dispatcher.rst:61
+msgid "``dp.updated_message``"
+msgstr "``dp.updated_message``"
+
+#: ../../guide/dispatcher.rst:62
+msgid ":class:`~aiorubi.types.message.Message` (with ``is_edited``)"
+msgstr ":class:`~aiorubi.types.message.Message` (با ``is_edited``)"
+
+#: ../../guide/dispatcher.rst:63
+msgid "``dp.removed_message``"
+msgstr "``dp.removed_message``"
+
+#: ../../guide/dispatcher.rst:64
+msgid ":class:`~aiorubi.types.removed_message.RemovedMessage`"
+msgstr ":class:`~aiorubi.types.removed_message.RemovedMessage`"
+
+#: ../../guide/dispatcher.rst:65
+msgid "``dp.inline_message``"
+msgstr "``dp.inline_message``"
+
+#: ../../guide/dispatcher.rst:66
+msgid ":class:`~aiorubi.types.inline_message.InlineMessage` (button clicks)"
+msgstr ":class:`~aiorubi.types.inline_message.InlineMessage` (کلیک‌های دکمه)"
+
+#: ../../guide/dispatcher.rst:67
+msgid "``dp.started_bot``"
+msgstr "``dp.started_bot``"
+
+#: ../../guide/dispatcher.rst:68
+msgid ":class:`~aiorubi.types.started_bot.StartedBot`"
+msgstr ":class:`~aiorubi.types.started_bot.StartedBot`"
+
+#: ../../guide/dispatcher.rst:69
+msgid "``dp.stopped_bot``"
+msgstr "``dp.stopped_bot``"
+
+#: ../../guide/dispatcher.rst:70
+msgid ":class:`~aiorubi.types.stopped_bot.StoppedBot`"
+msgstr ":class:`~aiorubi.types.stopped_bot.StoppedBot`"
+
+#: ../../guide/dispatcher.rst:71
+msgid "``dp.error`` (alias ``dp.errors``)"
+msgstr "``dp.error`` (مستعار ``dp.errors``)"
+
+#: ../../guide/dispatcher.rst:72
+msgid ":class:`~aiorubi.types.error_event.ErrorEvent`"
+msgstr ":class:`~aiorubi.types.error_event.ErrorEvent`"
+
+#: ../../guide/dispatcher.rst:74
+msgid "Registration uses either the decorator or the explicit form — both are equivalent:"
+msgstr "ثبت با دکوریتور یا فرم صریح انجام می‌شود — هر دو هم‌ارزند:"
+
+#: ../../guide/dispatcher.rst:84
+msgid "Unknown update types (new Rubika API features) are warned about and skipped. Because a handler never fires for them, keep your aiorubi version up to date."
+msgstr "انواع آپدیت ناشناخته (قابلیت‌های جدید API روبیکا) با هشدار رد می‌شوند. چون برای آن‌ها هندلری اجرا نمی‌شود، نسخهٔ aiorubi خود را به‌روز نگه دارید."
+
+#: ../../guide/dispatcher.rst:89
+msgid "Polling"
+msgstr "پولینگ"
+
+#: ../../guide/dispatcher.rst:93
+msgid "Starts the long-polling loop for one or more bots:"
+msgstr "حلقهٔ پولینگ بلند را برای یک یا چند بات شروع می‌کند:"
+
+#: ../../guide/dispatcher.rst:102
+msgid "Notable parameters:"
+msgstr "پارامترهای مهم:"
+
+#: ../../guide/dispatcher.rst:104
+msgid "``handle_as_tasks=True`` — process each update in its own :class:`asyncio.Task` (concurrent); ``False`` awaits updates serially."
+msgstr "``handle_as_tasks=True`` — هر آپدیت در یک :class:`asyncio.Task` جداگانه پردازش می‌شود (همزمان)؛ ``False`` آپدیت‌ها را پشت‌سرهم await می‌کند."
+
+#: ../../guide/dispatcher.rst:106
+msgid "``tasks_concurrency_limit`` — cap concurrent updates (a semaphore), only with ``handle_as_tasks=True``."
+msgstr "``tasks_concurrency_limit`` — سقف آپدیت‌های همزمان (یک semaphore)؛ فقط با ``handle_as_tasks=True``."
+
+#: ../../guide/dispatcher.rst:108
+msgid "``backoff_config`` — :class:`~aiorubi.utils.backoff.BackoffConfig` for retry delays when the API is unreachable; polling never dies on network errors."
+msgstr "``backoff_config`` — :class:`~aiorubi.utils.backoff.BackoffConfig` برای تأخیر تلاش مجدد وقتی API در دسترس نیست؛ پولینگ هرگز با خطای شبکه نمی‌میرد."
+
+#: ../../guide/dispatcher.rst:111
+msgid "``handle_signals`` — SIGINT/SIGTERM stop the loop gracefully."
+msgstr "``handle_signals`` — سیگنال‌های SIGINT/SIGTERM حلقه را به‌شکل تمیز متوقف می‌کنند."
+
+#: ../../guide/dispatcher.rst:113
+msgid "``await dp.stop_polling()`` stops the loop programmatically; it raises :class:`RuntimeError` if polling is not running."
+msgstr "``await dp.stop_polling()`` حلقه را از داخل کد متوقف می‌کند؛ اگر پولینگ در حال اجرا نباشد :class:`RuntimeError` پرتاب می‌کند."
+
+#: ../../guide/dispatcher.rst:117
+msgid "Lifecycle hooks"
+msgstr "قلاب‌های چرخهٔ عمر"
+
+#: ../../guide/dispatcher.rst:129
+msgid "``await dp.emit_startup()`` / ``await dp.emit_shutdown()`` propagate the event through all included routers."
+msgstr "``await dp.emit_startup()`` / ``await dp.emit_shutdown()`` رویداد را از همهٔ روتِرهای include‌شده عبور می‌دهند."
+
+#: ../../guide/dispatcher.rst:133
+msgid "Webhooks"
+msgstr "وب‌هوک‌ها"
+
+#: ../../guide/dispatcher.rst:137
+msgid "Entry point for HTTP-delivered updates. Returns a :class:`~aiorubi.methods.base.RubikaMethod` to answer synchronously, or ``None``. If the handler takes longer than ``_timeout`` (55 s; Rubika allows 60), the handler moves to the background and any returned method is sent later via a *silent call*."
+msgstr "نقطهٔ ورود آپدیت‌های تحویل‌شده از HTTP. یک :class:`~aiorubi.methods.base.RubikaMethod` برای پاسخ همزمان برمی‌گرداند، یا ``None``. اگر هندلر بیشتر از ``_timeout`` طول بکشد (۵۵ ثانیه؛ روبیکا ۶۰ را اجازه می‌دهد)، هندلر به پس‌زمینه می‌رود و متد برگشتی بعداً با یک *silent call* ارسال می‌شود."
+
+#: ../../guide/dispatcher.rst:149
+msgid "Lower-level entry points:"
+msgstr "نقاط ورود سطح‌پایین‌تر:"
+
+#: ../../guide/dispatcher.rst:151
+msgid "``await dp.feed_update(bot, update)`` — a parsed :class:`~aiorubi.types.update.Update`."
+msgstr "``await dp.feed_update(bot, update)`` — یک :class:`~aiorubi.types.update.Update` تجزیه‌شده."
+
+#: ../../guide/dispatcher.rst:153
+msgid "``await dp.feed_raw_update(bot, update_dict)`` — a raw dict; validated for you."
+msgstr "``await dp.feed_raw_update(bot, update_dict)`` — یک دیکشنری خام؛ به‌جای شما اعتبارسنجی می‌شود."
+
+#: ../../guide/dispatcher.rst:155
+msgid "``await dp.silent_call_request(bot, method)`` — fire a method ignoring API errors (used for delayed webhook answers)."
+msgstr "``await dp.silent_call_request(bot, method)`` — اجرای یک متد با نادیده‌گرفتن خطاهای API (برای پاسخ‌های تأخیری وب‌هوک)."
+
+#: ../../guide/dispatcher.rst:158
+msgid "See :doc:`webhook` for the aiohttp server wiring."
+msgstr "برای سیم‌کشی سرور aiohttp ببینید :doc:`webhook`."
+
+#: ../../guide/dispatcher.rst:161
+msgid "Built-in middlewares"
+msgstr "میان‌افزارهای داخلی"
+
+#: ../../guide/dispatcher.rst:163
+msgid "The dispatcher installs, in order, on the ``update`` observer:"
+msgstr "دیسپچر به‌ترتیب این‌ها را روی ناظر ``update`` نصب می‌کند:"
+
+#: ../../guide/dispatcher.rst:165
+msgid ":class:`~aiorubi.dispatcher.middlewares.error.ErrorsMiddleware` — catches handler exceptions and routes them to ``dp.error`` handlers."
+msgstr ":class:`~aiorubi.dispatcher.middlewares.error.ErrorsMiddleware` — استثناهای هندلر را می‌گیرد و به هندلرهای ``dp.error`` می‌فرستد."
+
+#: ../../guide/dispatcher.rst:167
+msgid ":class:`~aiorubi.dispatcher.middlewares.user_context.UserContextMiddleware` — caches ``event_context`` / ``event_from_user`` / ``event_chat``."
+msgstr ":class:`~aiorubi.dispatcher.middlewares.user_context.UserContextMiddleware` — ``event_context`` / ``event_from_user`` / ``event_chat`` را کش می‌کند."
+
+#: ../../guide/dispatcher.rst:169
+msgid ":class:`~aiorubi.fsm.middleware.FSMContextMiddleware` — the FSM (skipped with ``disable_fsm=True``); adds ``state``, ``raw_state``, ``fsm_storage``."
+msgstr ":class:`~aiorubi.fsm.middleware.FSMContextMiddleware` — همان FSM (با ``disable_fsm=True`` رد می‌شود)؛ ``state``، ``raw_state``، ``fsm_storage`` را اضافه می‌کند."
+
+#: ../../guide/dispatcher.rst:173
+msgid "``dp.storage`` is a read-only alias for ``dp.fsm.storage``; ``dp.fsm`` is the middleware instance itself."
+msgstr "``dp.storage`` مستعار فقط‌خواندنی ``dp.fsm.storage`` است؛ ``dp.fsm`` خود نمونهٔ میان‌افزار است."
+
+#: ../../guide/dispatcher.rst:177
+msgid "See also"
+msgstr "همچنین ببینید"
+
+#: ../../guide/dispatcher.rst:179
+msgid ":doc:`router` — organising handlers across routers."
+msgstr ":doc:`router` — سازمان‌دهی هندلرها بین روتِرها."
+
+#: ../../guide/dispatcher.rst:180
+msgid ":doc:`fsm` — the FSM configuration arguments in detail."
+msgstr ":doc:`fsm` — آرگومان‌های پیکربندی FSM با جزئیات."
+
+#: ../../guide/dispatcher.rst:181
+msgid ":doc:`webhook` — webhook deployment."
+msgstr ":doc:`webhook` — استقرار وب‌هوک."
+

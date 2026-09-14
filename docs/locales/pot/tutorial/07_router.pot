@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tutorial/07_router.rst:5
+msgid "7. Splitting up: Routers"
+msgstr ""
+
+#: ../../tutorial/07_router.rst:7
+msgid "So far everything lives in one file. That works until your bot has 30 handlers — then you want modules. :class:`~aiorubi.dispatcher.router.Router` splits a bot into independent, mountable pieces."
+msgstr ""
+
+#: ../../tutorial/07_router.rst:13
+msgid "Creating a router"
+msgstr ""
+
+#: ../../tutorial/07_router.rst:15
+msgid "A ``Router`` is created, filled with handlers, and then included into the dispatcher:"
+msgstr ""
+
+#: ../../tutorial/07_router.rst:51
+msgid "Handlers registered on the router behave exactly as if they were registered on the dispatcher."
+msgstr ""
+
+#: ../../tutorial/07_router.rst:56
+msgid "Multiple routers"
+msgstr ""
+
+#: ../../tutorial/07_router.rst:58
+msgid "Include as many as you like — order defines priority:"
+msgstr ""
+
+#: ../../tutorial/07_router.rst:68
+msgid "An update flows through the routers in order; the first handler whose filters match wins, and propagation stops there."
+msgstr ""
+
+#: ../../tutorial/07_router.rst:73
+msgid "Nesting"
+msgstr ""
+
+#: ../../tutorial/07_router.rst:75
+msgid "Routers can contain routers:"
+msgstr ""
+
+#: ../../tutorial/07_router.rst:85
+msgid "This lets big projects mirror their package structure in the bot layout. Deeply nested routers are cheap — propagation just walks the tree."
+msgstr ""
+
+#: ../../tutorial/07_router.rst:91
+msgid "Naming routers"
+msgstr ""
+
+#: ../../tutorial/07_router.rst:93
+msgid "``Router(name=\"notes\")`` makes logs readable: when an update is handled, the dispatcher logs which router it ended up in. For debugging unfamiliar codebases, name your routers."
+msgstr ""
+
+#: ../../tutorial/07_router.rst:99
+msgid "Startup and shutdown hooks"
+msgstr ""
+
+#: ../../tutorial/07_router.rst:101
+msgid "Every router has its own ``startup`` and ``shutdown`` observers, fired recursively by the dispatcher:"
+msgstr ""
+
+#: ../../tutorial/07_router.rst:115
+msgid "Use them to open and close database connections owned by the module."
+msgstr ""
+
+#: ../../tutorial/07_router.rst:119
+msgid "Recap"
+msgstr ""
+
+#: ../../tutorial/07_router.rst:121
+msgid "You can now split a bot into ``Router`` modules, mount them in priority order, nest them, and give each module its own lifecycle hooks. Next: intercepting every update with middlewares."
+msgstr ""

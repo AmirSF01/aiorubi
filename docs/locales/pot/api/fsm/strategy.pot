@@ -1,0 +1,37 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/fsm/strategy.rst:3
+msgid "Strategy"
+msgstr ""
+
+#: ../../../aiorubi/fsm/strategy.py:docstring of aiorubi.fsm.strategy.FSMStrategy:1
+msgid "FSM strategy for storage key generation."
+msgstr ""
+
+#: ../../../aiorubi/fsm/strategy.py:docstring of aiorubi.fsm.strategy.FSMStrategy.CHAT:1
+msgid "State will be stored for each chat globally without separating by users."
+msgstr ""
+
+#: ../../../aiorubi/fsm/strategy.py:docstring of aiorubi.fsm.strategy.FSMStrategy.GLOBAL_USER:1
+msgid "State will be stored globally for each user globally."
+msgstr ""
+
+#: ../../../aiorubi/fsm/strategy.py:docstring of aiorubi.fsm.strategy.FSMStrategy.USER_IN_CHAT:1
+msgid "State will be stored for each user in chat."
+msgstr ""

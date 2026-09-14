@@ -1,0 +1,89 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tutorial/07_router.rst:5
+msgid "7. Splitting up: Routers"
+msgstr "۷. تقسیم‌کردن: روتِرها"
+
+#: ../../tutorial/07_router.rst:7
+msgid "So far everything lives in one file. That works until your bot has 30 handlers — then you want modules. :class:`~aiorubi.dispatcher.router.Router` splits a bot into independent, mountable pieces."
+msgstr "تا اینجا همه‌چیز در یک فایل است. این تا وقتی کار می‌کند که بات ۳۰ هندلر داشته باشد — بعدش ماژول می‌خواهید. :class:`~aiorubi.dispatcher.router.Router` بات را به قطعات مستقل و قابل‌نصب تقسیم می‌کند."
+
+#: ../../tutorial/07_router.rst:13
+msgid "Creating a router"
+msgstr "ساخت یک روتِر"
+
+#: ../../tutorial/07_router.rst:15
+msgid "A ``Router`` is created, filled with handlers, and then included into the dispatcher:"
+msgstr "یک ``Router`` ساخته می‌شود، با هندلرها پر می‌شود و بعد داخل دیسپچر include می‌شود:"
+
+#: ../../tutorial/07_router.rst:51
+msgid "Handlers registered on the router behave exactly as if they were registered on the dispatcher."
+msgstr "هندلرهای ثبت‌شده روی روتِر دقیقاً مثل وقتی رفتار می‌کنند که روی دیسپچر ثبت شده بودند."
+
+#: ../../tutorial/07_router.rst:56
+msgid "Multiple routers"
+msgstr "چند روتِر"
+
+#: ../../tutorial/07_router.rst:58
+msgid "Include as many as you like — order defines priority:"
+msgstr "هر تعداد که خواستید include کنید — ترتیب، اولویت را تعیین می‌کند:"
+
+#: ../../tutorial/07_router.rst:68
+msgid "An update flows through the routers in order; the first handler whose filters match wins, and propagation stops there."
+msgstr "آپدیت به ترتیب از روتِرها عبور می‌کند؛ اولین هندلری که فیلترهایش match شود برنده است و انتشار همان‌جا متوقف می‌شود."
+
+#: ../../tutorial/07_router.rst:73
+msgid "Nesting"
+msgstr "تو در تو"
+
+#: ../../tutorial/07_router.rst:75
+msgid "Routers can contain routers:"
+msgstr "روتِرها می‌توانند روتِر داشته باشند:"
+
+#: ../../tutorial/07_router.rst:85
+msgid "This lets big projects mirror their package structure in the bot layout. Deeply nested routers are cheap — propagation just walks the tree."
+msgstr "این اجازه می‌دهد پروژه‌های بزرگ ساختار پکیج خود را در چیدمان بات آینه کنند. روتِرهای عمیقاً تو در تو ارزان‌اند — انتشار فقط درخت را می‌پیماید."
+
+#: ../../tutorial/07_router.rst:91
+msgid "Naming routers"
+msgstr "نام‌گذاری روتِرها"
+
+#: ../../tutorial/07_router.rst:93
+msgid "``Router(name=\"notes\")`` makes logs readable: when an update is handled, the dispatcher logs which router it ended up in. For debugging unfamiliar codebases, name your routers."
+msgstr "``Router(name=\"notes\")`` لاگ‌ها را خوانا می‌کند: وقتی آپدیت هندل می‌شود، دیسپچر لاگ می‌کند به کدام روتِر رسید. برای دیباگ کدبیس‌های ناآشنا، روتِرهایتان را نام‌گذاری کنید."
+
+#: ../../tutorial/07_router.rst:99
+msgid "Startup and shutdown hooks"
+msgstr "قلاب‌های شروع و خاموشی"
+
+#: ../../tutorial/07_router.rst:101
+msgid "Every router has its own ``startup`` and ``shutdown`` observers, fired recursively by the dispatcher:"
+msgstr "هر روتِر ناظرهای ``startup`` و ``shutdown`` خودش را دارد که توسط دیسپچر به‌صورت بازگشتی اجرا می‌شوند:"
+
+#: ../../tutorial/07_router.rst:115
+msgid "Use them to open and close database connections owned by the module."
+msgstr "از آن‌ها برای باز و بسته‌کردن اتصال‌های دیتابیسِ متعلق به ماژول استفاده کنید."
+
+#: ../../tutorial/07_router.rst:119
+msgid "Recap"
+msgstr "جمع‌بندی"
+
+#: ../../tutorial/07_router.rst:121
+msgid "You can now split a bot into ``Router`` modules, mount them in priority order, nest them, and give each module its own lifecycle hooks. Next: intercepting every update with middlewares."
+msgstr "الان می‌توانید بات را به ماژول‌های ``Router`` تقسیم کنید، به ترتیب اولویت نصبشان کنید، تو در توشان کنید و به هر ماژول قلاب‌های چرخهٔ عمر خودش را بدهید. بعدی: رهگیری هر آپدیت با میان‌افزارها."
+

@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/dispatcher/event_observers.rst:3
+msgid "Event observers"
+msgstr ""
+
+#: ../../api/dispatcher/event_observers.rst:5
+msgid "Internals of the event propagation system."
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/event/event.py:docstring of aiorubi.dispatcher.event.event.EventObserver:1
+msgid "Simple events observer"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/event/event.py:docstring of aiorubi.dispatcher.event.event.EventObserver:3
+msgid "Is used for managing events is not related with Rubika (For example startup/shutdown processes)"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/event/event.py:docstring of aiorubi.dispatcher.event.event.EventObserver:6
+msgid "Handlers can be registered via decorator or method"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/event/event.py:docstring of aiorubi.dispatcher.event.event.EventObserver.register:1
+msgid "Register callback with filters"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/event/event.py:docstring of aiorubi.dispatcher.event.event.EventObserver.register:0
+#: ../../../aiorubi/dispatcher/event/event.py:docstring of aiorubi.dispatcher.event.event.EventObserver.trigger:0
+#: ../../../aiorubi/dispatcher/event/rubika.py:docstring of aiorubi.dispatcher.event.rubika.RubikaEventObserver.register:0
+#: ../../../aiorubi/dispatcher/event/rubika.py:docstring of aiorubi.dispatcher.event.rubika.RubikaEventObserver.trigger:0
+#: ../../api/dispatcher/event_observers.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/event/event.py:docstring of aiorubi.dispatcher.event.event.EventObserver.register:0
+#: ../../../aiorubi/dispatcher/event/event.py:docstring of aiorubi.dispatcher.event.event.EventObserver.trigger:0
+#: ../../../aiorubi/dispatcher/event/rubika.py:docstring of aiorubi.dispatcher.event.rubika.RubikaEventObserver.register:0
+#: ../../../aiorubi/dispatcher/event/rubika.py:docstring of aiorubi.dispatcher.event.rubika.RubikaEventObserver.trigger:0
+#: ../../api/dispatcher/event_observers.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/event/event.py:docstring of aiorubi.dispatcher.event.event.EventObserver.trigger:1
+msgid "Propagate event to handlers. Handler will be called when all its filters is pass."
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/event/rubika.py:docstring of aiorubi.dispatcher.event.rubika.RubikaEventObserver:1
+msgid "Event observer for Rubika events"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/event/rubika.py:docstring of aiorubi.dispatcher.event.rubika.RubikaEventObserver:3
+msgid "Here you can register handler with filter. This observer will stop event propagation when first handler is pass."
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/event/rubika.py:docstring of aiorubi.dispatcher.event.rubika.RubikaEventObserver.filter:1
+msgid "Register filter for all handlers of this event observer"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/event/rubika.py:docstring of aiorubi.dispatcher.event.rubika.RubikaEventObserver.filter:3
+msgid "positional filters"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/event/rubika.py:docstring of aiorubi.dispatcher.event.rubika.RubikaEventObserver.register:1
+msgid "Register event handler"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/event/rubika.py:docstring of aiorubi.dispatcher.event.rubika.RubikaEventObserver.trigger:1
+msgid "Propagate event to handlers and stops propagation on first match. Handler will be called when all its filters are pass."
+msgstr ""

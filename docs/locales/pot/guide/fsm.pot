@@ -1,0 +1,429 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../guide/fsm.rst:3
+msgid "Finite State Machine"
+msgstr ""
+
+#: ../../guide/fsm.rst:5
+msgid "The Finite State Machine (FSM) is aiorubi's mechanism for storing per-conversation *state* and *data* between updates. It is what turns a stateless ``new_message`` handler into a multi-step dialog: \"What is your name?\" → \"How old are you?\" → \"Done!\"."
+msgstr ""
+
+#: ../../guide/fsm.rst:10
+msgid "If you have used aiogram 3.x, the FSM here works exactly the same way — same classes, same methods, same storage model. The only platform-specific detail is that all identifiers (``chat_id``, ``user_id``, ``bot_id``) are strings, because Rubika issues string ids."
+msgstr ""
+
+#: ../../guide/fsm.rst:16
+msgid "Quick example"
+msgstr ""
+
+#: ../../guide/fsm.rst:18
+msgid "A two-step form"
+msgstr ""
+
+#: ../../guide/fsm.rst:51
+msgid "How it works:"
+msgstr ""
+
+#: ../../guide/fsm.rst:53
+msgid "Every incoming update flows through the built-in :class:`~aiorubi.fsm.middleware.FSMContextMiddleware`, which computes a :class:`~aiorubi.fsm.storage.base.StorageKey` for the update and puts an :class:`~aiorubi.fsm.context.FSMContext` instance into the handler's keyword arguments as ``state``."
+msgstr ""
+
+#: ../../guide/fsm.rst:58
+msgid "The raw state string (or ``None``) is stored in the middleware context as ``raw_state`` — this is what filters such as ``StateFilter`` compare against, and what the :class:`~aiorubi.fsm.state.State` objects passed to the decorator match."
+msgstr ""
+
+#: ../../guide/fsm.rst:62
+msgid "The handler reads and writes state and data through :class:`~aiorubi.fsm.context.FSMContext`, which delegates to the configured :doc:`storage <storages>` (memory by default)."
+msgstr ""
+
+#: ../../guide/fsm.rst:68
+msgid "States"
+msgstr ""
+
+#: ../../guide/fsm.rst:71
+msgid "State"
+msgstr ""
+
+#: ../../guide/fsm.rst:73
+msgid "`aiorubi.fsm.state.State(state: str | None = None, group_name: str | None = None)`"
+msgstr ""
+
+#: ../../guide/fsm.rst:75
+msgid "A single FSM state. Usually you do not instantiate ``State`` directly with a name — you declare it as a class attribute of a :class:`~aiorubi.fsm.state.StatesGroup` and the group assigns the name for you:"
+msgstr ""
+
+#: ../../guide/fsm.rst:87
+msgid "The fully-qualified state string is ``\"<Group>:<state>\"``. For nested groups the parent groups are joined with dots, e.g. ``\"Registration:Profile:bio\"``."
+msgstr ""
+
+#: ../../guide/fsm.rst:90
+msgid "States can also be created standalone (without a group):"
+msgstr ""
+
+#: ../../guide/fsm.rst:97
+msgid "Useful properties and behaviour:"
+msgstr ""
+
+#: ../../guide/fsm.rst:99
+msgid "``state.state`` — the fully-qualified state string (or ``None`` for :data:`~aiorubi.fsm.state.default_state`, or ``\"*\"`` for :data:`~aiorubi.fsm.state.any_state`)."
+msgstr ""
+
+#: ../../guide/fsm.rst:102
+msgid "``state.group`` — the owning :class:`~aiorubi.fsm.state.StatesGroup` class. Raises :class:`RuntimeError` for states that do not belong to a group."
+msgstr ""
+
+#: ../../guide/fsm.rst:104
+msgid "``state == \"Form:name\"`` — states compare equal to their string form."
+msgstr ""
+
+#: ../../guide/fsm.rst:105
+msgid "``state(event, raw_state)`` — callable predicate used by :class:`~aiorubi.fsm.filters.state.StateFilter`: returns ``True`` for ``any_state`` or when ``raw_state`` matches."
+msgstr ""
+
+#: ../../guide/fsm.rst:110
+msgid "StatesGroup"
+msgstr ""
+
+#: ../../guide/fsm.rst:112
+msgid "`aiorubi.fsm.state.StatesGroup`"
+msgstr ""
+
+#: ../../guide/fsm.rst:114
+msgid "A group of states declared with a class body. The metaclass (:class:`~aiorubi.fsm.state.StatesGroupMeta`) collects all ``State`` attributes and nested ``StatesGroup`` subclasses, and exposes them via class-level attributes:"
+msgstr ""
+
+#: ../../guide/fsm.rst:123
+msgid "Attribute"
+msgstr ""
+
+#: ../../guide/fsm.rst:124
+msgid "Meaning"
+msgstr ""
+
+#: ../../guide/fsm.rst:125
+msgid "``__states__``"
+msgstr ""
+
+#: ../../guide/fsm.rst:126
+msgid "Tuple of the directly declared states."
+msgstr ""
+
+#: ../../guide/fsm.rst:127
+msgid "``__state_names__``"
+msgstr ""
+
+#: ../../guide/fsm.rst:128
+msgid "Tuple of their fully-qualified names."
+msgstr ""
+
+#: ../../guide/fsm.rst:129
+msgid "``__all_states__`` / ``__all_states_names__``"
+msgstr ""
+
+#: ../../guide/fsm.rst:130
+msgid "Same, but including states inherited from nested child groups."
+msgstr ""
+
+#: ../../guide/fsm.rst:131
+msgid "``__childs__`` / ``__all_childs__``"
+msgstr ""
+
+#: ../../guide/fsm.rst:132
+msgid "Direct and transitive child groups."
+msgstr ""
+
+#: ../../guide/fsm.rst:133
+msgid "``__full_group_name__``"
+msgstr ""
+
+#: ../../guide/fsm.rst:134
+msgid "Dot-joined group path, e.g. ``\"Registration.Profile\"``."
+msgstr ""
+
+#: ../../guide/fsm.rst:136
+msgid "Membership checks work out of the box:"
+msgstr ""
+
+#: ../../guide/fsm.rst:144
+msgid "Nested groups let you build state trees:"
+msgstr ""
+
+#: ../../guide/fsm.rst:157
+msgid "default_state and any_state"
+msgstr ""
+
+#: ../../guide/fsm.rst:159
+msgid "Two ready-made singletons are exported from :mod:`aiorubi.fsm.state`:"
+msgstr ""
+
+#: ../../guide/fsm.rst:163
+msgid "``State()`` — matches \"no state at all\" (the state string is ``None``). Use it to register handlers that must only fire while the user is *not* inside any dialog:"
+msgstr ""
+
+#: ../../guide/fsm.rst:175
+msgid "``State(state=\"*\")`` — the wildcard. Matches any state, including \"no state\". Handlers registered with ``any_state`` are typically combined with another filter (e.g. a command) so they do not swallow regular messages:"
+msgstr ""
+
+#: ../../guide/fsm.rst:189
+msgid "Handlers are checked in registration order and the **first** handler whose filters all pass wins (unless it raises :class:`~aiorubi.dispatcher.event.bases.SkipHandler`). Register ``any_state`` handlers *after* the more specific ones."
+msgstr ""
+
+#: ../../guide/fsm.rst:196
+msgid "FSMContext"
+msgstr ""
+
+#: ../../guide/fsm.rst:198
+msgid "`aiorubi.fsm.context.FSMContext(storage: BaseStorage, key: StorageKey)`"
+msgstr ""
+
+#: ../../guide/fsm.rst:200
+msgid "The per-update handle to the FSM. An instance is injected into every handler as the ``state`` keyword argument (assuming FSM is enabled — see `Disabling FSM`_). All methods are coroutines."
+msgstr ""
+
+#: ../../guide/fsm.rst:205
+msgid "Setting and getting the state"
+msgstr ""
+
+#: ../../guide/fsm.rst:209
+msgid "Store the new state. Accepts a :class:`~aiorubi.fsm.state.State` (usually ``Form.name``), a raw string, or ``None`` to reset to \"no state\"."
+msgstr ""
+
+#: ../../guide/fsm.rst:219
+msgid "Return the current state string, or ``None`` if no state is set. To test against a :class:`~aiorubi.fsm.state.State`, compare strings:"
+msgstr ""
+
+#: ../../guide/fsm.rst:228
+msgid "Reading and writing data"
+msgstr ""
+
+#: ../../guide/fsm.rst:230
+msgid "The FSM data is a plain ``dict[str, Any]`` stored next to the state."
+msgstr ""
+
+#: ../../guide/fsm.rst:234
+msgid "**Replace** the whole data dict."
+msgstr ""
+
+#: ../../guide/fsm.rst:238
+msgid "Return a copy of the current data (never ``None`` — an empty dict when nothing was stored)."
+msgstr ""
+
+#: ../../guide/fsm.rst:243
+msgid "Merge the given keys into the stored data (like :meth:`dict.update`) and return the new data. Both spellings are equivalent:"
+msgstr ""
+
+#: ../../guide/fsm.rst:253
+msgid "Read a single value without materialising the whole dict:"
+msgstr ""
+
+#: ../../guide/fsm.rst:262
+msgid "Reset the FSM context: sets the state to ``None`` and replaces the data with an empty dict. Call this when a dialog finishes or is cancelled."
+msgstr ""
+
+#: ../../guide/fsm.rst:267
+msgid "Storage data must be JSON-serialisable for the :doc:`Redis <storages>` and :doc:`MongoDB <storages>` storages. Pass ``None``/``\"\"`` instead of model objects, or store the ``model_dump()`` of your payload. The :class:`MemoryStorage` is more forgiving but raises :class:`~aiorubi.exceptions.DataNotDictLikeError` if you pass something that is not dict-like to ``set_data``."
+msgstr ""
+
+#: ../../guide/fsm.rst:276
+msgid "Storage keys and strategies"
+msgstr ""
+
+#: ../../guide/fsm.rst:279
+msgid "StorageKey"
+msgstr ""
+
+#: ../../guide/fsm.rst:281
+msgid "``aiorubi.fsm.storage.base.StorageKey``"
+msgstr ""
+
+#: ../../guide/fsm.rst:283
+msgid "A frozen dataclass identifying one FSM \"cell\":"
+msgstr ""
+
+#: ../../guide/fsm.rst:294
+msgid "``bot_id`` — isolates data between bots sharing one storage."
+msgstr ""
+
+#: ../../guide/fsm.rst:295
+msgid "``chat_id`` / ``user_id`` — filled according to the FSM strategy."
+msgstr ""
+
+#: ../../guide/fsm.rst:296
+msgid "``destiny`` — a namespace that lets subsystems (scenes history, i18n context, your own features) keep independent state for the same user and chat. The default destiny is ``\"default\"``."
+msgstr ""
+
+#: ../../guide/fsm.rst:301
+msgid "FSMStrategy"
+msgstr ""
+
+#: ../../guide/fsm.rst:303
+msgid "``aiorubi.fsm.strategy.FSMStrategy``"
+msgstr ""
+
+#: ../../guide/fsm.rst:305
+msgid "Enum controlling how ``chat_id`` and ``user_id`` are derived for the :class:`~aiorubi.fsm.storage.base.StorageKey`. Pass it to the :class:`~aiorubi.dispatcher.dispatcher.Dispatcher` constructor as ``fsm_strategy=``."
+msgstr ""
+
+#: ../../guide/fsm.rst:314
+msgid "Strategy"
+msgstr ""
+
+#: ../../guide/fsm.rst:315
+msgid "Key is scoped to"
+msgstr ""
+
+#: ../../guide/fsm.rst:316
+msgid "``FSMStrategy.USER_IN_CHAT`` *(default)*"
+msgstr ""
+
+#: ../../guide/fsm.rst:317
+msgid "Each user **inside each chat**. The same user has independent state in every group and in private dialog. Best choice for per-user forms."
+msgstr ""
+
+#: ../../guide/fsm.rst:320
+msgid "``FSMStrategy.CHAT``"
+msgstr ""
+
+#: ../../guide/fsm.rst:321
+msgid "Each **chat as a whole**. All users of a group share one state — useful for collective workflows (polls, shared checklists)."
+msgstr ""
+
+#: ../../guide/fsm.rst:323
+msgid "``FSMStrategy.GLOBAL_USER``"
+msgstr ""
+
+#: ../../guide/fsm.rst:324
+msgid "Each **user across all chats**. The user's state follows them from private chat into groups."
+msgstr ""
+
+#: ../../guide/fsm.rst:336
+msgid "If an update carries no user context (for example a ``removed_message``), the FSM middleware cannot build a key and simply proceeds without a ``state`` — handlers will not receive the ``state`` argument for such updates."
+msgstr ""
+
+#: ../../guide/fsm.rst:343
+msgid "Disabling FSM"
+msgstr ""
+
+#: ../../guide/fsm.rst:345
+msgid "If your bot keeps all context in its own database and does not need the built-in FSM at all, disable it:"
+msgstr ""
+
+#: ../../guide/fsm.rst:352
+msgid "When ``disable_fsm=True``:"
+msgstr ""
+
+#: ../../guide/fsm.rst:354
+msgid "The :class:`~aiorubi.fsm.middleware.FSMContextMiddleware` is not installed, so no ``state`` / ``raw_state`` / ``fsm_storage`` keys are injected into handlers and no storage round-trips happen."
+msgstr ""
+
+#: ../../guide/fsm.rst:357
+msgid "Event isolation (which is part of the FSM pipeline) is disabled with it."
+msgstr ""
+
+#: ../../guide/fsm.rst:358
+msgid "``StateFilter`` has nothing to match — avoid state-bound handlers."
+msgstr ""
+
+#: ../../guide/fsm.rst:360
+msgid "Note that the storage and events-isolation arguments are still accepted (and ``Dispatcher.storage`` still resolves), but they are simply unused by the pipeline."
+msgstr ""
+
+#: ../../guide/fsm.rst:366
+msgid "Default storage and swapping storages"
+msgstr ""
+
+#: ../../guide/fsm.rst:368
+msgid "By default the :class:`~aiorubi.dispatcher.dispatcher.Dispatcher` uses :class:`~aiorubi.fsm.storage.memory.MemoryStorage` — a plain in-process dict. It is perfect for development and tests, but all FSM state is lost on restart, so production bots should swap in a persistent storage:"
+msgstr ""
+
+#: ../../guide/fsm.rst:381
+msgid "The full catalogue of bundled storages — Redis, MongoDB via motor, MongoDB via pymongo, plus the storage interface for writing your own — is covered in :doc:`storages`."
+msgstr ""
+
+#: ../../guide/fsm.rst:385
+msgid "Because storages are keyed by :class:`~aiorubi.fsm.storage.base.StorageKey`, swapping is transparent: no handler code changes, only the ``storage=`` argument to the dispatcher."
+msgstr ""
+
+#: ../../guide/fsm.rst:391
+msgid "Event isolation"
+msgstr ""
+
+#: ../../guide/fsm.rst:393
+msgid "Two updates from the same user can be processed concurrently (polling runs handlers as tasks by default). To prevent two handlers from reading and writing the same FSM cell at the same time, the FSM middleware wraps every stateful dispatch in an isolation lock."
+msgstr ""
+
+#: ../../guide/fsm.rst:398
+msgid "Configure it with ``events_isolation=``:"
+msgstr ""
+
+#: ../../guide/fsm.rst:406
+msgid "Bundled implementations:"
+msgstr ""
+
+#: ../../guide/fsm.rst:408
+msgid ":class:`~aiorubi.fsm.storage.memory.DisabledEventIsolation` *(default)* — no locking at all."
+msgstr ""
+
+#: ../../guide/fsm.rst:410
+msgid ":class:`~aiorubi.fsm.storage.memory.SimpleEventIsolation` — an :class:`asyncio.Lock` per storage key, held while the handler runs."
+msgstr ""
+
+#: ../../guide/fsm.rst:412
+msgid ":class:`~aiorubi.fsm.storage.redis.RedisEventIsolation` — a Redis lock (``timeout=60`` seconds by default) so isolation also works across multiple bot processes sharing one Redis. The convenient way to get it is ``storage.create_isolation()`` on a :class:`~aiorubi.fsm.storage.redis.RedisStorage`."
+msgstr ""
+
+#: ../../guide/fsm.rst:417
+msgid "The state string is read **after** the lock is acquired, which guarantees that ``await state.get_state()`` inside the handler always observes the latest committed state."
+msgstr ""
+
+#: ../../guide/fsm.rst:423
+msgid "Recipes"
+msgstr ""
+
+#: ../../guide/fsm.rst:426
+msgid "Counting attempts"
+msgstr ""
+
+#: ../../guide/fsm.rst:442
+msgid "Passing context between handlers"
+msgstr ""
+
+#: ../../guide/fsm.rst:444
+msgid "Store anything JSON-serialisable in the FSM data and read it in later handlers with :meth:`~aiorubi.fsm.context.FSMContext.get_value` — this is the idiomatic replacement for aiogram's ``RuntimeError``-prone global variables."
+msgstr ""
+
+#: ../../guide/fsm.rst:450
+msgid "See also"
+msgstr ""
+
+#: ../../guide/fsm.rst:452
+msgid ":doc:`storages` — persistent FSM storages and the storage interface."
+msgstr ""
+
+#: ../../guide/fsm.rst:453
+msgid ":doc:`scenes` — a higher-level wizard built on top of the FSM."
+msgstr ""
+
+#: ../../guide/fsm.rst:454
+msgid ":doc:`filter` — matching updates by state with :class:`~aiorubi.filters.state.StateFilter`."
+msgstr ""
+
+#: ../../guide/fsm.rst:456
+msgid ":doc:`/migration-from-aiogram` — the FSM part of the aiogram port is API-identical; identifiers are ``str`` instead of ``int``."
+msgstr ""

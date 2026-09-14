@@ -15,6 +15,9 @@ site/
 *.egg
 .ruff_cache
 
+.doctrees/
+_sphinx_design_static/
+
 .mypy_cache
 .pytest_cache
 .coverage

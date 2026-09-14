@@ -1,0 +1,233 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/fsm/scene.rst:3
+msgid "Scene"
+msgstr "صحنه"
+
+#: aiorubi.fsm.scene.Scene:1 of
+msgid "Represents a scene in a conversation flow."
+msgstr "یک صحنه در جریان گفتگو را نمایندگی می‌کند."
+
+#: aiorubi.fsm.scene.Scene:3 of
+msgid "A scene is a specific state in a conversation where certain actions can take place."
+msgstr "صحنه حالتی مشخص در گفتگوست که اقدامات خاصی در آن می‌توانند رخ دهند."
+
+#: aiorubi.fsm.scene.Scene:5 of
+msgid "Each scene has a set of filters that determine when it should be triggered, and a set of handlers that define the actions to be executed when the scene is active."
+msgstr "هر صحنه مجموعه‌ای فیلتر دارد که تعیین می‌کند چه زمانی فعال شود، و مجموعه‌ای هندلر که اقدامات قابل‌اجرا در زمان فعال‌بودن صحنه را تعریف می‌کنند."
+
+#: aiorubi.fsm.scene.Scene:9 of
+msgid "This class is not meant to be used directly. Instead, it should be subclassed to define custom scenes."
+msgstr "این کلاس برای استفادهٔ مستقیم نیست؛ به‌جای آن برای تعریف صحنه‌های سفارشی باید از آن ارث‌بری کنید."
+
+#: ../../api/fsm/scene.rst aiorubi.fsm.scene.Scene.as_handler of
+msgid "Parameters"
+msgstr "پارامترها"
+
+#: aiorubi.fsm.scene.Scene.add_to_router:1 of
+msgid "Adds the scene to the given router."
+msgstr "صحنه را به روتِر داده‌شده اضافه می‌کند."
+
+#: ../../api/fsm/scene.rst
+msgid "Returns"
+msgstr "بازگشت‌ها"
+
+#: ../../api/fsm/scene.rst aiorubi.fsm.scene.Scene.as_handler of
+msgid "Return type"
+msgstr "نوع بازگشتی"
+
+#: aiorubi.fsm.scene.Scene.as_handler:1 of
+msgid "Create an entry point handler for the scene, can be used to simplify the handler that starts the scene."
+msgstr "یک هندلر نقطهٔ ورود برای صحنه می‌سازد؛ می‌توان از آن برای ساده‌کردن هندلرِ شروع‌کنندهٔ صحنه استفاده کرد."
+
+#: aiorubi.fsm.scene.Scene.as_router:1 of
+msgid "Returns the scene as a router."
+msgstr "صحنه را به‌عنوان روتِر برمی‌گرداند."
+
+#: aiorubi.fsm.scene.Scene.as_router:3 of
+msgid "new router"
+msgstr "روتِر جدید"
+
+#: aiorubi.fsm.scene.SceneWizard:1 of
+msgid "A class that represents a wizard for managing scenes in a Rubika bot."
+msgstr "کلاسی که ویزارد مدیریت صحنه‌ها در یک بات روبیکا را نمایندگی می‌کند."
+
+#: aiorubi.fsm.scene.SceneWizard:3 of
+msgid "Instance of this class is passed to each scene as a parameter. So, you can use it to transition between scenes, get and set data, etc."
+msgstr "نمونه‌ای از این کلاس به‌عنوان پارامتر به هر صحنه پاس داده می‌شود؛ پس می‌توانید از آن برای گذار بین صحنه‌ها، گرفتن و تنظیم داده و غیره استفاده کنید."
+
+#: aiorubi.fsm.scene.SceneWizard:8 of
+msgid "This class is not meant to be used directly. Instead, it should be used as a parameter in the scene constructor."
+msgstr "این کلاس برای استفادهٔ مستقیم نیست؛ به‌جای آن باید به‌عنوان پارامتر در سازندهٔ صحنه استفاده شود."
+
+#: aiorubi.fsm.scene.SceneWizard.back:1 of
+msgid "This method is used to go back to the previous scene."
+msgstr "این متد برای برگشتن به صحنهٔ قبلی استفاده می‌شود."
+
+#: aiorubi.fsm.scene.SceneWizard.back:3 of
+msgid "Keyword arguments that can be passed to the method."
+msgstr "آرگومان‌های کلیدواژه‌ای که می‌توان به متد پاس داد."
+
+#: aiorubi.fsm.scene.SceneWizard.back:4
+#: aiorubi.fsm.scene.SceneWizard.clear_data:3
+#: aiorubi.fsm.scene.SceneWizard.enter:6 aiorubi.fsm.scene.SceneWizard.exit:4
+#: aiorubi.fsm.scene.SceneWizard.goto:9 aiorubi.fsm.scene.SceneWizard.leave:6
+#: aiorubi.fsm.scene.SceneWizard.retake:4
+#: aiorubi.fsm.scene.SceneWizard.set_data:4
+#: aiorubi.fsm.scene.ScenesManager.close:4
+#: aiorubi.fsm.scene.ScenesManager.enter:7 of
+msgid "None"
+msgstr "None"
+
+#: aiorubi.fsm.scene.SceneWizard.clear_data:1 of
+msgid "Clears the data."
+msgstr "داده را پاک می‌کند."
+
+#: aiorubi.fsm.scene.SceneWizard.enter:1 of
+msgid "Enter method is used to transition into a scene in the SceneWizard class. It sets the state, clears data and history if specified, and triggers entering event of the scene."
+msgstr "متد enter در کلاس SceneWizard برای ورود به یک صحنه استفاده می‌شود. حالت را تنظیم می‌کند، در صورت تعیین داده و تاریخچه را پاک می‌کند و رویداد ورود صحنه را اجرا می‌کند."
+
+#: aiorubi.fsm.scene.SceneWizard.enter:5 aiorubi.fsm.scene.SceneWizard.exit:3
+#: aiorubi.fsm.scene.SceneWizard.leave:5 of
+msgid "Additional keyword arguments."
+msgstr "آرگومان‌های کلیدواژه‌ای اضافی."
+
+#: aiorubi.fsm.scene.SceneWizard.exit:1 of
+msgid "Exit the current scene and enter the default scene/state."
+msgstr "از صحنهٔ فعلی خارج شو و صحنه/حالت پیش‌فرض را وارد کن."
+
+#: aiorubi.fsm.scene.SceneWizard.get_data:1 of
+msgid "This method returns the data stored in the current state."
+msgstr "این متد دادهٔ ذخیره‌شده در حالت فعلی را برمی‌گرداند."
+
+#: aiorubi.fsm.scene.SceneWizard.get_data:3 of
+msgid "A dictionary containing the data stored in the scene state."
+msgstr "دیکشنری‌ای حاوی دادهٔ ذخیره‌شده در حالت صحنه."
+
+#: aiorubi.fsm.scene.SceneWizard.goto:1 of
+msgid "The `goto` method transitions to a new scene. It first calls the `leave` method to perform any necessary cleanup in the current scene, then calls the `enter` event to enter the specified scene."
+msgstr "متد `goto` به صحنهٔ جدید می‌رود. اول متد `leave` را صدا می‌زند تا پاک‌سازی‌های لازم در صحنهٔ فعلی انجام شود، بعد رویداد `enter` را برای ورود به صحنهٔ مشخص‌شده فراخوانی می‌کند."
+
+#: aiorubi.fsm.scene.SceneWizard.goto:5 of
+msgid "The scene to transition to. Can be either a `Scene` instance `State` instance or a string representing the scene."
+msgstr "صحنهٔ مقصد. می‌تواند نمونهٔ `Scene`، نمونهٔ `State` یا رشته‌ای نمایانگر صحنه باشد."
+
+#: aiorubi.fsm.scene.SceneWizard.goto:7 of
+msgid "Additional keyword arguments to pass to the `enter` method of the scene manager."
+msgstr "آرگومان‌های کلیدواژه‌ای اضافی برای پاس‌دادن به متد `enter` مدیر صحنه‌ها."
+
+#: aiorubi.fsm.scene.SceneWizard.leave:1 of
+msgid "Leaves the current scene. This method is used to exit a scene and transition to the next scene."
+msgstr "صحنهٔ فعلی را ترک می‌کند. این متد برای خروج از یک صحنه و گذار به صحنهٔ بعدی استفاده می‌شود."
+
+#: aiorubi.fsm.scene.SceneWizard.leave:4 of
+msgid "Whether to include history in the snapshot. Defaults to True."
+msgstr "آیا تاریخچه در اسنپ‌شات لحاظ شود. پیش‌فرض True."
+
+#: aiorubi.fsm.scene.SceneWizard.retake:1 of
+msgid "This method allows to re-enter the current scene."
+msgstr "این متد اجازه می‌دهد دوباره وارد صحنهٔ فعلی شوید."
+
+#: aiorubi.fsm.scene.SceneWizard.retake:3 of
+msgid "Additional keyword arguments to pass to the scene."
+msgstr "آرگومان‌های کلیدواژه‌ای اضافی برای پاس‌دادن به صحنه."
+
+#: aiorubi.fsm.scene.SceneWizard.set_data:1 of
+msgid "Sets custom data in the current state."
+msgstr "دادهٔ سفارشی را در حالت فعلی تنظیم می‌کند."
+
+#: aiorubi.fsm.scene.SceneWizard.set_data:3 of
+msgid "A mapping containing the custom data to be set in the current state."
+msgstr "نگاشتی حاوی دادهٔ سفارشی که باید در حالت فعلی تنظیم شود."
+
+#: aiorubi.fsm.scene.SceneWizard.update_data:1 of
+msgid "This method updates the data stored in the current state"
+msgstr "این متد دادهٔ ذخیره‌شده در حالت فعلی را به‌روزرسانی می‌کند"
+
+#: aiorubi.fsm.scene.SceneWizard.update_data:3 of
+msgid "Optional mapping of data to update."
+msgstr "نگاشت اختیاری داده برای به‌روزرسانی."
+
+#: aiorubi.fsm.scene.SceneWizard.update_data:4 of
+msgid "Additional key-value pairs of data to update."
+msgstr "جفت‌های کلید-مقدار اضافی داده برای به‌روزرسانی."
+
+#: aiorubi.fsm.scene.SceneWizard.update_data:5 of
+msgid "Dictionary of updated data"
+msgstr "دیکشنری دادهٔ به‌روزشده"
+
+#: aiorubi.fsm.scene.ScenesManager:1 of
+msgid "The ScenesManager class is responsible for managing scenes in an application. It provides methods for entering and exiting scenes, as well as retrieving the active scene."
+msgstr "کلاس ScenesManager مسئول مدیریت صحنه‌ها در اپلیکیشن است. متدهایی برای ورود و خروج از صحنه‌ها و همچنین گرفتن صحنهٔ فعال ارائه می‌دهد."
+
+#: aiorubi.fsm.scene.ScenesManager.close:1 of
+msgid "Close method is used to exit the currently active scene in the ScenesManager."
+msgstr "متد close برای خروج از صحنهٔ فعال فعلی در ScenesManager استفاده می‌شود."
+
+#: aiorubi.fsm.scene.ScenesManager.close:3 of
+msgid "Additional keyword arguments passed to the scene's exit method."
+msgstr "آرگومان‌های کلیدواژه‌ای اضافی که به متد exit صحنه پاس داده می‌شوند."
+
+#: aiorubi.fsm.scene.ScenesManager.enter:1 of
+msgid "Enters the specified scene."
+msgstr "صحنهٔ مشخص‌شده را وارد می‌کند."
+
+#: aiorubi.fsm.scene.ScenesManager.enter:3 of
+msgid "Optional Type[Scene], State or str representing the scene type to enter."
+msgstr "اختیاری: Type[Scene]، State یا رشته‌ای که نوع صحنهٔ ورودی را نمایندگی می‌کند."
+
+#: aiorubi.fsm.scene.ScenesManager.enter:4 of
+msgid "Optional bool indicating whether to check if there is an active scene to exit before entering the new scene. Defaults to True."
+msgstr "بولی اختیاری که مشخص می‌کند قبل از ورود به صحنهٔ جدید بررسی شود صحنهٔ فعالی برای خروج هست یا نه. پیش‌فرض True."
+
+#: aiorubi.fsm.scene.ScenesManager.enter:6 of
+msgid "Additional keyword arguments to pass to the scene's wizard.enter() method."
+msgstr "آرگومان‌های کلیدواژه‌ای اضافی برای پاس‌دادن به متد wizard.enter() صحنه."
+
+#: aiorubi.fsm.scene.SceneConfig.actions:1 of
+msgid "Scene actions"
+msgstr "اکشن‌های صحنه"
+
+#: aiorubi.utils.class_attrs_resolver.get_sorted_mro_attrs_resolver:1 of
+msgid "Attributes resolver."
+msgstr "حل‌کنندهٔ ویژگی‌ها."
+
+#: aiorubi.utils.class_attrs_resolver.get_sorted_mro_attrs_resolver:4 of
+msgid "This attribute should only be changed when you know what you are doing."
+msgstr "این ویژگی فقط وقتی باید تغییر کند که بدانید چه می‌کنید."
+
+#: aiorubi.fsm.scene.SceneConfig.handlers:1 of
+msgid "Scene handlers"
+msgstr "هندلرهای صحنه"
+
+#: aiorubi.fsm.scene.SceneConfig.inline_message_without_state:1 of
+msgid "Allow callback query without state"
+msgstr "اجازهٔ callback query بدون حالت"
+
+#: aiorubi.fsm.scene.SceneConfig.reset_data_on_enter:1 of
+msgid "Reset scene data on enter"
+msgstr "بازنشانی دادهٔ صحنه هنگام ورود"
+
+#: aiorubi.fsm.scene.SceneConfig.reset_history_on_enter:1 of
+msgid "Reset scene history on enter"
+msgstr "بازنشانی تاریخچهٔ صحنه هنگام ورود"
+
+#: aiorubi.fsm.scene.SceneConfig.state:1 of
+msgid "Scene state"
+msgstr "حالت صحنه"
+

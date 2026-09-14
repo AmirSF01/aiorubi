@@ -1,0 +1,85 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/dispatcher/router.rst:3
+msgid "Router"
+msgstr "روتِر"
+
+#: aiorubi.dispatcher.router.Router:1 of
+msgid "Router can route update, and it nested update types like messages, callback query, polls and all other event types."
+msgstr "روتِر می‌تواند آپدیت و انواع تودرتوی آن مثل پیام‌ها، کوئری‌های دکمه، نظرسنجی‌ها و همهٔ انواع رویداد دیگر را مسیریابی کند."
+
+#: aiorubi.dispatcher.router.Router:4 of
+msgid "Event handlers can be registered in observer by two ways:"
+msgstr "هندلرهای رویداد به دو روش در ناظر ثبت می‌شوند:"
+
+#: aiorubi.dispatcher.router.Router:6 of
+msgid "By observer method - :obj:`router.<event_type>.register(handler, <filters, ...>)`"
+msgstr "با متد ناظر - :obj:`router.<event_type>.register(handler, <filters, ...>)`"
+
+#: aiorubi.dispatcher.router.Router:7 of
+msgid "By decorator - :obj:`@router.<event_type>(<filters, ...>)`"
+msgstr "با دکوریتور - :obj:`@router.<event_type>(<filters, ...>)`"
+
+#: ../../api/dispatcher/router.rst
+msgid "Parameters"
+msgstr "پارامترها"
+
+#: aiorubi.dispatcher.router.Router.__init__:1 of
+msgid "Optional router name, can be useful for debugging"
+msgstr "نام اختیاری روتِر؛ برای دیباگ می‌تواند مفید باشد"
+
+#: ../../api/dispatcher/router.rst
+msgid "Return type"
+msgstr "نوع بازگشتی"
+
+#: aiorubi.dispatcher.router.Router.emit_shutdown:1 of
+msgid "Recursively call shutdown callbacks to graceful shutdown"
+msgstr "فراخوانی بازگشتی کال‌بک‌های shutdown برای خاموشی تمیز"
+
+#: ../../api/dispatcher/router.rst
+msgid "Returns"
+msgstr "بازگشت‌ها"
+
+#: aiorubi.dispatcher.router.Router.emit_startup:1 of
+msgid "Recursively call startup callbacks"
+msgstr "فراخوانی بازگشتی کال‌بک‌های startup"
+
+#: aiorubi.dispatcher.router.Router.include_router:1 of
+msgid "Attach another router."
+msgstr "اتصال یک روتِر دیگر."
+
+#: aiorubi.dispatcher.router.Router.include_routers:1 of
+msgid "Attach multiple routers."
+msgstr "اتصال چند روتِر."
+
+#: aiorubi.dispatcher.router.Router.resolve_used_update_types:1 of
+msgid "Resolve registered event names"
+msgstr "استخراج نام رویدادهای ثبت‌شده"
+
+#: aiorubi.dispatcher.router.Router.resolve_used_update_types:3 of
+msgid "Is useful for getting updates only for registered event types."
+msgstr "برای گرفتن آپدیت‌ها فقط برای انواع رویداد ثبت‌شده مفید است."
+
+#: aiorubi.dispatcher.router.Router.resolve_used_update_types:5 of
+msgid "skip specified event names"
+msgstr "رد کردن نام رویدادهای مشخص‌شده"
+
+#: aiorubi.dispatcher.router.Router.resolve_used_update_types:6 of
+msgid "set of registered names"
+msgstr "مجموعهٔ نام‌های ثبت‌شده"
+

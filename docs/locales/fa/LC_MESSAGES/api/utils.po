@@ -1,0 +1,97 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/utils.rst:3
+msgid "Utils"
+msgstr "ابزارها"
+
+#: ../../api/utils.rst:5
+msgid "Helper utilities. These are considered *stable enough to use* but are not part of the semver contract."
+msgstr "ابزارهای کمکی. این‌ها *به‌قدر کافی پایدار برای استفاده* تلقی می‌شوند ولی جزء قرارداد semver نیستند."
+
+#: ../../api/utils.rst aiorubi.utils.payload.decode_payload
+#: aiorubi.utils.payload.encode_payload of
+msgid "Parameters"
+msgstr "پارامترها"
+
+#: ../../api/utils.rst aiorubi.utils.payload.decode_payload
+#: aiorubi.utils.payload.encode_payload of
+msgid "Return type"
+msgstr "نوع بازگشتی"
+
+#: aiorubi.utils.deep_linking.create_deep_link:1 of
+msgid "Create deep link."
+msgstr "ساخت دیپ‌لینک."
+
+#: aiorubi.utils.deep_linking.create_deep_link:4 of
+msgid "any string-convertible data"
+msgstr "هر داده‌ای که به رشته قابل تبدیل باشد"
+
+#: aiorubi.utils.deep_linking.create_deep_link:5
+#: aiorubi.utils.deep_linking.create_start_link:7 of
+msgid "encode payload with base64url or custom encoder"
+msgstr "کدگذاری payload با base64url یا encoder سفارشی"
+
+#: aiorubi.utils.deep_linking.create_deep_link:6
+#: aiorubi.utils.deep_linking.create_start_link:8 of
+msgid "custom encoder callable"
+msgstr "تابع فراخوانی‌پذیر encoder سفارشی"
+
+#: ../../api/utils.rst
+msgid "Returns"
+msgstr "بازگشت‌ها"
+
+#: aiorubi.utils.deep_linking.create_deep_link:7 of
+msgid "deeplink"
+msgstr "دیپ‌لینک"
+
+#: aiorubi.utils.deep_linking.create_start_link:1 of
+msgid "Create 'st' deep link with your payload."
+msgstr "ساخت دیپ‌لینک 'st' با payload دلخواه شما."
+
+#: aiorubi.utils.deep_linking.create_start_link:3 of
+msgid "If you need to encode payload or pass special characters - set encode as True"
+msgstr "اگر لازم است payload کدگذاری شود یا کاراکتر خاصی پاس داده شود — encode را True بگذارید"
+
+#: aiorubi.utils.deep_linking.create_start_link:5 of
+msgid "bot instance"
+msgstr "نمونهٔ بات"
+
+#: aiorubi.utils.deep_linking.create_start_link:6 of
+msgid "args passed with /start"
+msgstr "آرگومان‌هایی که همراه /start ارسال شده‌اند"
+
+#: aiorubi.utils.deep_linking.create_start_link:9 of
+msgid "link"
+msgstr "لینک"
+
+#: aiorubi.utils.payload.decode_payload:1 of
+msgid "Decode URL-safe base64url payload with decoder."
+msgstr "کدگشایی payload با base64url امنِ URL به‌کمک decoder."
+
+#: aiorubi.utils.payload.encode_payload:1 of
+msgid "Encode payload with encoder."
+msgstr "کدگذاری payload با encoder."
+
+#: aiorubi.utils.payload.encode_payload:3 of
+msgid "Result also will be encoded with URL-safe base64url."
+msgstr "نتیجه همچنین با base64url امنِ URL کدگذاری می‌شود."
+
+#: aiorubi.utils.token.validate_token:1 of
+msgid "Validate Rubika token"
+msgstr "اعتبارسنجی توکن روبیکا"
+

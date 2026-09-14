@@ -1,0 +1,218 @@
+# Persian translations for aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 00:00+0000\n"
+"PO-Revision-Date: 2026-09-09 00:00+0000\n"
+"Last-Translator: Mehdi\n"
+"Language-Team: fa\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+
+msgid "Installation"
+msgstr "نصب"
+
+#: ../../installation.rst:7
+msgid "Stable release"
+msgstr "نسخهٔ پایدار"
+
+#: ../../installation.rst:9
+msgid "You can install the latest stable version from PyPI:"
+msgstr "آخرین نسخهٔ پایدار را می‌توانید از PyPI نصب کنید:"
+
+#: ../../installation.rst:15
+msgid "That gives you the core runtime dependencies:"
+msgstr "این دستور وابستگی‌های اصلی زمان اجرا را نصب می‌کند:"
+
+#: ../../installation.rst:17
+msgid "``aiohttp`` — HTTP client"
+msgstr "``aiohttp`` — کلاینت HTTP"
+
+#: ../../installation.rst:18
+msgid "``aiofiles`` — async file IO for sending files from disk"
+msgstr "``aiofiles`` — ورودی/خروجی ناهمگام فایل برای ارسال فایل از دیسک"
+
+#: ../../installation.rst:19
+msgid "``pydantic`` — data models for every API object"
+msgstr "``pydantic`` — مدل‌های داده برای همهٔ اشیاء API"
+
+#: ../../installation.rst:20
+msgid "``magic-filter`` — the filtering DSL powering ``F.text`` and friends"
+msgstr "``magic-filter`` — DSL فیلترینگی که ``F.text`` و امثال آن را قدرت می‌دهد"
+
+#: ../../installation.rst:21
+msgid "``certifi`` — bundled CA bundle for HTTPS"
+msgstr "``certifi`` — بستهٔ CA همراه برای HTTPS"
+
+#: ../../installation.rst:22
+msgid "``typing-extensions``"
+msgstr "``typing-extensions``"
+
+#: ../../installation.rst:26
+msgid "Optional extras"
+msgstr "افزونه‌های اختیاری"
+
+#: ../../installation.rst:28
+msgid "The package ships several *extras* that you can opt into with the standard ``pip install aiorubi[extra1,extra2]`` syntax."
+msgstr "این بسته چند *افزونه* دارد که با سینتکس استاندارد ``pip install aiorubi[extra1,extra2]`` می‌توانید فعال کنید."
+
+#: ../../installation.rst:35
+msgid "Extra"
+msgstr "افزونه"
+
+#: ../../installation.rst:36
+msgid "Adds"
+msgstr "اضافه می‌کند"
+
+#: ../../installation.rst:37
+msgid "Use it for"
+msgstr "کاربرد"
+
+#: ../../installation.rst:38
+msgid "``fast``"
+msgstr "``fast``"
+
+#: ../../installation.rst:39
+msgid "``uvloop`` (Linux/macOS, PyPy excluded) and ``aiodns``"
+msgstr "``uvloop`` (لینوکس/macOS، بدون PyPy) و ``aiodns``"
+
+#: ../../installation.rst:40
+msgid "Faster event loop and DNS resolution. Recommended on production."
+msgstr "حلقهٔ رویداد و resolve کردن DNS سریع‌تر. برای پروداکشن توصیه می‌شود."
+
+#: ../../installation.rst:41
+msgid "``redis``"
+msgstr "``redis``"
+
+#: ../../installation.rst:42
+msgid "``redis[hiredis]``"
+msgstr "``redis[hiredis]``"
+
+#: ../../installation.rst:43
+msgid ":class:`RedisStorage <aiorubi.fsm.storage.redis.RedisStorage>` for the FSM."
+msgstr ":class:`RedisStorage <aiorubi.fsm.storage.redis.RedisStorage>` برای FSM."
+
+#: ../../installation.rst:45
+msgid "``mongo``"
+msgstr "``mongo``"
+
+#: ../../installation.rst:46
+msgid "``motor`` (async) and ``pymongo``"
+msgstr "``motor`` (ناهمگام) و ``pymongo``"
+
+#: ../../installation.rst:47
+msgid ":class:`MongoStorage <aiorubi.fsm.storage.mongo.MongoStorage>` and :class:`PyMongoStorage <aiorubi.fsm.storage.pymongo.PyMongoStorage>` for the FSM."
+msgstr ":class:`MongoStorage <aiorubi.fsm.storage.mongo.MongoStorage>` و :class:`PyMongoStorage <aiorubi.fsm.storage.pymongo.PyMongoStorage>` برای FSM."
+
+#: ../../installation.rst:50
+msgid "``proxy``"
+msgstr "``proxy``"
+
+#: ../../installation.rst:51
+msgid "``aiohttp-socks``"
+msgstr "``aiohttp-socks``"
+
+#: ../../installation.rst:52
+msgid "Connecting through SOCKS proxies."
+msgstr "اتصال از طریق پروکسی‌های SOCKS."
+
+#: ../../installation.rst:53
+msgid "``i18n``"
+msgstr "``i18n``"
+
+#: ../../installation.rst:54
+msgid "``Babel``"
+msgstr "``Babel``"
+
+#: ../../installation.rst:55
+msgid "Internationalisation helpers."
+msgstr "ابزارهای بین‌المللی‌سازی."
+
+#: ../../installation.rst:56
+msgid "``docs``"
+msgstr "``docs``"
+
+#: ../../installation.rst:57
+msgid "``Sphinx`` and a few helpers"
+msgstr "``Sphinx`` و چند ابزار کمکی"
+
+#: ../../installation.rst:58
+msgid "Building the documentation locally (this site)."
+msgstr "ساخت مستندات به‌صورت لوکال (همین سایت)."
+
+#: ../../installation.rst:62
+msgid "Examples"
+msgstr "نمونه‌ها"
+
+#: ../../installation.rst:77
+msgid "From Git"
+msgstr "از Git"
+
+#: ../../installation.rst:79
+msgid "If you need an unreleased change, install straight from GitHub:"
+msgstr "اگر به تغییری نیاز دارید که هنوز منتشر نشده، مستقیم از گیت‌هاب نصب کنید:"
+
+#: ../../installation.rst:85
+msgid "To install a *specific* tag (for example ``v1.2.1``):"
+msgstr "برای نصب یک *تگ مشخص* (مثلاً ``v1.2.1``):"
+
+#: ../../installation.rst:93
+msgid "Verify the installation"
+msgstr "بررسی نصب"
+
+#: ../../installation.rst:95
+msgid "The following one-liner should print the installed version and the Rubika Bot API version it targets:"
+msgstr "این تک‌خطی باید نسخهٔ نصب‌شده و نسخهٔ Rubika Bot API موردهدف را چاپ کند:"
+
+#: ../../installation.rst:108
+msgid "System requirements"
+msgstr "نیازمندی‌های سیستم"
+
+#: ../../installation.rst:110
+msgid "**Python:** 3.10, 3.11, 3.12, 3.13 or 3.14 (3.10 is the lower bound)."
+msgstr "**پایتون:** ۳.۱۰، ۳.۱۱، ۳.۱۲، ۳.۱۳ یا ۳.۱۴ (حد پایین ۳.۱۰ است)."
+
+#: ../../installation.rst:111
+msgid "**OS:** any platform that can run ``asyncio`` and ``aiohttp``. Linux and macOS are the most tested; Windows works but most users run bots on a Linux VPS."
+msgstr "**سیستم‌عامل:** هر پلتفرمی که ``asyncio`` و ``aiohttp`` را اجرا کند. لینوکس و macOS بیشتر تست شده‌اند؛ ویندوز هم کار می‌کند ولی اکثر کاربران بات را روی سرور مجازی لینوکس اجرا می‌کنند."
+
+#: ../../installation.rst:114
+msgid "**Disk space:** ~1 MB for the package itself, plus whatever your FSM storage needs."
+msgstr "**فضای دیسک:** حدود ۱ مگابایت برای خود بسته، به‌علاوهٔ هرچه استورج FSM نیاز دارد."
+
+#: ../../installation.rst:119
+msgid "Troubleshooting"
+msgstr "عیب‌یابی"
+
+#: ../../installation.rst:121
+msgid "``pip install aiorubi`` fails with \"No matching distribution found\""
+msgstr ""
+"دستور ``pip install aiorubi`` با خطای \"No matching distribution found\" "
+"شکست می‌خورد"
+
+#: ../../installation.rst:122
+msgid "You are probably on Python 3.9 or older. ``aiorubi`` requires 3.10+; upgrade Python or use a ``pyenv``/``uv`` environment."
+msgstr "احتمالاً پایتون شما ۳.۹ یا قدیمی‌تر است. ``aiorubi`` به ۳.۱۰ به بالا نیاز دارد؛ پایتون را ارتقا دهید یا از محیط ``pyenv``/``uv`` استفاده کنید."
+
+#: ../../installation.rst:125
+msgid "``Bot`` accepts any token string without validation"
+msgstr "``Bot`` هر رشتهٔ توکنی را بدون اعتبارسنجی می‌پذیرد"
+
+#: ../../installation.rst:126
+msgid "Token format is only *documented* to start with a capital letter; ``validate_token`` exists in ``aiorubi.utils.token`` but is not invoked automatically. If your token is rejected by the API (HTTP 401/403), double-check that no whitespace or newline was pasted in and that the token came from `@BotFather <https://rubika.ir/BotFather>`_."
+msgstr "قالب توکن فقط در *مستندات* گفته شده که با حرف بزرگ شروع می‌شود؛ تابع ``validate_token`` در ``aiorubi.utils.token`` هست ولی به‌طور خودکار صدا زده نمی‌شود. اگر API توکن را رد کند (HTTP 401/403)، بررسی کنید که فاصله یا خط جدیدی در آن چسبیده نباشد و توکن از `@BotFather <https://rubika.ir/BotFather>`_ گرفته شده باشد."
+
+#: ../../installation.rst:133
+msgid "``RuntimeError: Bot ID is not available yet``"
+msgstr "خطای ``RuntimeError: Bot ID is not available yet``"
+
+#: ../../installation.rst:134
+msgid "Some shortcut (e.g. ``bot.id``) needs the bot info to be loaded. Call ``await bot.me()`` (or ``await bot.get_me()``) before reading those attributes."
+msgstr "برخی میان‌برها (مثل ``bot.id``) نیاز دارند اطلاعات بات بارگذاری شده باشد. پیش از خواندن این ویژگی‌ها ``await bot.me()`` (یا ``await bot.get_me()``) را صدا بزنید."
+

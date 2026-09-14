@@ -1,0 +1,144 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/filters.rst:3
+msgid "Filters"
+msgstr ""
+
+#: ../../api/filters.rst:5
+msgid "All filters live in the :mod:`aiorubi.filters` package. The base class is exported as both ``Filter`` and ``BaseFilter``."
+msgstr ""
+
+#: ../../api/filters.rst:9
+msgid "Base"
+msgstr ""
+
+#: ../../../aiorubi/filters/base.py:docstring of aiorubi.filters.base.Filter:1
+msgid "If you want to register own filters like builtin filters you will need to write subclass of this class with overriding the :code:`__call__` method and adding filter attributes."
+msgstr ""
+
+#: ../../../aiorubi/filters/base.py:docstring of aiorubi.filters.base.Filter.update_handler_flags:1
+#: ../../../aiorubi/filters/command.py:docstring of aiorubi.filters.command.Command.update_handler_flags:1
+msgid "Also if you want to extend handler flags with using this filter you should implement this method"
+msgstr ""
+
+#: ../../api/filters.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../aiorubi/filters/base.py:docstring of aiorubi.filters.base.Filter.update_handler_flags:4
+#: ../../../aiorubi/filters/command.py:docstring of aiorubi.filters.command.Command.update_handler_flags:4
+msgid "existing flags, can be updated directly"
+msgstr ""
+
+#: ../../api/filters.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../api/filters.rst:15
+msgid "Command"
+msgstr ""
+
+#: ../../../aiorubi/filters/command.py:docstring of aiorubi.filters.command.Command:1
+msgid "This filter can be helpful for handling commands from the text messages."
+msgstr ""
+
+#: ../../../aiorubi/filters/command.py:docstring of aiorubi.filters.command.Command:3
+msgid "Works only with :class:`aiorubi.types.message.Message` events which have the :code:`text`."
+msgstr ""
+
+#: ../../../aiorubi/filters/command.py:docstring of aiorubi.filters.command.Command.parse_command:1
+#: ../../../aiorubi/filters/command.py:docstring of aiorubi.filters.command.CommandStart.parse_command:1
+msgid "Extract command from the text and validate"
+msgstr ""
+
+#: ../../api/filters.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../aiorubi/filters/command.py:docstring of aiorubi.filters.command.CommandObject:1
+msgid "Instance of this object is always has command and it prefix. Can be passed as keyword argument **command** to the handler"
+msgstr ""
+
+#: ../../../aiorubi/filters/command.py:docstring of aiorubi.filters.command.CommandObject.args:1
+msgid "Command argument"
+msgstr ""
+
+#: ../../../aiorubi/filters/command.py:docstring of aiorubi.filters.command.CommandObject.command:1
+msgid "Command without prefix and mention"
+msgstr ""
+
+#: ../../../aiorubi/filters/command.py:docstring of aiorubi.filters.command.CommandObject.mention:1
+msgid "Mention (if available)"
+msgstr ""
+
+#: ../../../aiorubi/filters/command.py:docstring of aiorubi.filters.command.CommandObject.mentioned:1
+msgid "This command has mention?"
+msgstr ""
+
+#: ../../../aiorubi/filters/command.py:docstring of aiorubi.filters.command.CommandObject.prefix:1
+msgid "Command prefix"
+msgstr ""
+
+#: ../../../aiorubi/filters/command.py:docstring of aiorubi.filters.command.CommandObject.regexp_match:1
+msgid "Will be presented match result if the command is presented as regexp in filter"
+msgstr ""
+
+#: ../../../aiorubi/filters/command.py:docstring of aiorubi.filters.command.CommandObject.text:1
+msgid "Generate original text from object"
+msgstr ""
+
+#: ../../api/filters.rst:27
+msgid "State"
+msgstr ""
+
+#: ../../../aiorubi/filters/state.py:docstring of aiorubi.filters.state.StateFilter:1
+msgid "State filter"
+msgstr ""
+
+#: ../../api/filters.rst:33
+msgid "Magic data"
+msgstr ""
+
+#: ../../../aiorubi/filters/magic_data.py:docstring of aiorubi.filters.magic_data.MagicData:1
+msgid "This filter helps to filter event with contextual data"
+msgstr ""
+
+#: ../../api/filters.rst:39
+msgid "Exceptions"
+msgstr ""
+
+#: ../../../aiorubi/filters/exception.py:docstring of aiorubi.filters.exception.ExceptionTypeFilter:1
+msgid "Allows to match exception by type"
+msgstr ""
+
+#: ../../../aiorubi/filters/exception.py:docstring of aiorubi.filters.exception.ExceptionMessageFilter:1
+msgid "Allow to match exception by message"
+msgstr ""
+
+#: ../../api/filters.rst:48
+msgid "Logic combinators"
+msgstr ""
+
+#: ../../api/filters.rst:57
+msgid "Magic filter"
+msgstr ""
+
+#: ../../api/filters.rst:64
+msgid "The shared :class:`~aiorubi.utils.magic_filter.MagicFilter` root."
+msgstr ""

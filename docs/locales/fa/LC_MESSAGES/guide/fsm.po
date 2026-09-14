@@ -1,0 +1,429 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../guide/fsm.rst:3
+msgid "Finite State Machine"
+msgstr "ماشین حالت متناهی"
+
+#: ../../guide/fsm.rst:5
+msgid "The Finite State Machine (FSM) is aiorubi's mechanism for storing per-conversation *state* and *data* between updates. It is what turns a stateless ``new_message`` handler into a multi-step dialog: \"What is your name?\" → \"How old are you?\" → \"Done!\"."
+msgstr "ماشین حالت متناهی (FSM) سازوکار aiorubi برای ذخیرهٔ *حالت* و *دادهٔ* هر مکالمه بین آپدیت‌هاست. همین است که یک هندلر بدون‌حالتِ ``new_message`` را به یک دیالوگ چندمرحله‌ای تبدیل می‌کند: «اسمت چیه؟» → «چند سالته؟» → «تمام!»."
+
+#: ../../guide/fsm.rst:10
+msgid "If you have used aiogram 3.x, the FSM here works exactly the same way — same classes, same methods, same storage model. The only platform-specific detail is that all identifiers (``chat_id``, ``user_id``, ``bot_id``) are strings, because Rubika issues string ids."
+msgstr "اگر aiogram 3.x کار کرده باشید، FSM اینجا دقیقاً همان‌طور کار می‌کند — همان کلاس‌ها، همان متدها، همان مدل استورج. تنها نکتهٔ مخصوص پلتفرم این است که همهٔ شناسه‌ها (``chat_id``، ``user_id``، ``bot_id``) رشته هستند، چون روبیکا شناسهٔ رشته‌ای صادر می‌کند."
+
+#: ../../guide/fsm.rst:16
+msgid "Quick example"
+msgstr "مثال سریع"
+
+#: ../../guide/fsm.rst:18
+msgid "A two-step form"
+msgstr "یک فرم دومرحله‌ای"
+
+#: ../../guide/fsm.rst:51
+msgid "How it works:"
+msgstr "چطور کار می‌کند:"
+
+#: ../../guide/fsm.rst:53
+msgid "Every incoming update flows through the built-in :class:`~aiorubi.fsm.middleware.FSMContextMiddleware`, which computes a :class:`~aiorubi.fsm.storage.base.StorageKey` for the update and puts an :class:`~aiorubi.fsm.context.FSMContext` instance into the handler's keyword arguments as ``state``."
+msgstr "هر آپدیت ورودی از :class:`~aiorubi.fsm.middleware.FSMContextMiddleware` داخلی عبور می‌کند؛ این میان‌افزار برای آپدیت یک :class:`~aiorubi.fsm.storage.base.StorageKey` محاسبه می‌کند و یک نمونهٔ :class:`~aiorubi.fsm.context.FSMContext` را به‌عنوان ``state`` داخل آرگومان‌های کلیدواژه‌ای هندلر می‌گذارد."
+
+#: ../../guide/fsm.rst:58
+msgid "The raw state string (or ``None``) is stored in the middleware context as ``raw_state`` — this is what filters such as ``StateFilter`` compare against, and what the :class:`~aiorubi.fsm.state.State` objects passed to the decorator match."
+msgstr "رشتهٔ خام حالت (یا ``None``) در کانتکست میان‌افزار به‌عنوان ``raw_state`` ذخیره می‌شود — فیلترهایی مثل ``StateFilter`` با همین مقایسه می‌کنند و اشیاء :class:`~aiorubi.fsm.state.State` پاس‌داده‌شده به دکوریتور هم با همین match می‌شوند."
+
+#: ../../guide/fsm.rst:62
+msgid "The handler reads and writes state and data through :class:`~aiorubi.fsm.context.FSMContext`, which delegates to the configured :doc:`storage <storages>` (memory by default)."
+msgstr "هندلر حالت و داده را از طریق :class:`~aiorubi.fsm.context.FSMContext` می‌خواند و می‌نویسد؛ این کلاس کار را به :doc:`استورج <storages>` پیکربندی‌شده می‌سپارد (پیش‌فرض حافظه است)."
+
+#: ../../guide/fsm.rst:68
+msgid "States"
+msgstr "حالت‌ها"
+
+#: ../../guide/fsm.rst:71
+msgid "State"
+msgstr "State"
+
+#: ../../guide/fsm.rst:73
+msgid "`aiorubi.fsm.state.State(state: str | None = None, group_name: str | None = None)`"
+msgstr "`aiorubi.fsm.state.State(state: str | None = None, group_name: str | None = None)`"
+
+#: ../../guide/fsm.rst:75
+msgid "A single FSM state. Usually you do not instantiate ``State`` directly with a name — you declare it as a class attribute of a :class:`~aiorubi.fsm.state.StatesGroup` and the group assigns the name for you:"
+msgstr "یک حالت FSM واحد. معمولاً ``State`` را مستقیماً با نام نمی‌سازید — آن را به‌عنوان ویژگی کلاس در یک :class:`~aiorubi.fsm.state.StatesGroup` اعلان می‌کنید و گروه خودش نام را تعیین می‌کند:"
+
+#: ../../guide/fsm.rst:87
+msgid "The fully-qualified state string is ``\"<Group>:<state>\"``. For nested groups the parent groups are joined with dots, e.g. ``\"Registration:Profile:bio\"``."
+msgstr "رشتهٔ کامل حالت ``\"<Group>:<state>\"`` است. برای گروه‌های تودرتو، گروه‌های والد با نقطه به هم متصل می‌شوند، مثلاً ``\"Registration:Profile:bio\"``."
+
+#: ../../guide/fsm.rst:90
+msgid "States can also be created standalone (without a group):"
+msgstr "حالت‌ها را می‌توان مستقل (بدون گروه) هم ساخت:"
+
+#: ../../guide/fsm.rst:97
+msgid "Useful properties and behaviour:"
+msgstr "ویژگی‌ها و رفتارهای مفید:"
+
+#: ../../guide/fsm.rst:99
+msgid "``state.state`` — the fully-qualified state string (or ``None`` for :data:`~aiorubi.fsm.state.default_state`, or ``\"*\"`` for :data:`~aiorubi.fsm.state.any_state`)."
+msgstr "``state.state`` — رشتهٔ کامل حالت (برای :data:`~aiorubi.fsm.state.default_state` مقدار ``None`` و برای :data:`~aiorubi.fsm.state.any_state` مقدار ``\"*\"``)."
+
+#: ../../guide/fsm.rst:102
+msgid "``state.group`` — the owning :class:`~aiorubi.fsm.state.StatesGroup` class. Raises :class:`RuntimeError` for states that do not belong to a group."
+msgstr "``state.group`` — کلاس :class:`~aiorubi.fsm.state.StatesGroup` مالک. برای حالت‌هایی که به گروهی تعلق ندارند :class:`RuntimeError` پرتاب می‌کند."
+
+#: ../../guide/fsm.rst:104
+msgid "``state == \"Form:name\"`` — states compare equal to their string form."
+msgstr "``state == \"Form:name\"`` — حالت‌ها با شکل رشته‌ای خودشان برابر مقایسه می‌شوند."
+
+#: ../../guide/fsm.rst:105
+msgid "``state(event, raw_state)`` — callable predicate used by :class:`~aiorubi.fsm.filters.state.StateFilter`: returns ``True`` for ``any_state`` or when ``raw_state`` matches."
+msgstr "``state(event, raw_state)`` — محمولِ فراخوانی‌پذیری که :class:`~aiorubi.fsm.filters.state.StateFilter` استفاده می‌کند: برای ``any_state`` یا وقتی ``raw_state`` منطبق باشد ``True`` برمی‌گرداند."
+
+#: ../../guide/fsm.rst:110
+msgid "StatesGroup"
+msgstr "StatesGroup"
+
+#: ../../guide/fsm.rst:112
+msgid "`aiorubi.fsm.state.StatesGroup`"
+msgstr "`aiorubi.fsm.state.StatesGroup`"
+
+#: ../../guide/fsm.rst:114
+msgid "A group of states declared with a class body. The metaclass (:class:`~aiorubi.fsm.state.StatesGroupMeta`) collects all ``State`` attributes and nested ``StatesGroup`` subclasses, and exposes them via class-level attributes:"
+msgstr "گروهی از حالت‌ها که با بدنهٔ کلاس اعلان می‌شود. متاکلاس (:class:`~aiorubi.fsm.state.StatesGroupMeta`) همهٔ ویژگی‌های ``State`` و زیرکلاس‌های تودرتوی ``StatesGroup`` را جمع می‌کند و از طریق ویژگی‌های سطح کلاس ارائه می‌دهد:"
+
+#: ../../guide/fsm.rst:123
+msgid "Attribute"
+msgstr "ویژگی"
+
+#: ../../guide/fsm.rst:124
+msgid "Meaning"
+msgstr "معنا"
+
+#: ../../guide/fsm.rst:125
+msgid "``__states__``"
+msgstr "``__states__``"
+
+#: ../../guide/fsm.rst:126
+msgid "Tuple of the directly declared states."
+msgstr "تاپل حالت‌هایی که مستقیماً اعلان شده‌اند."
+
+#: ../../guide/fsm.rst:127
+msgid "``__state_names__``"
+msgstr "``__state_names__``"
+
+#: ../../guide/fsm.rst:128
+msgid "Tuple of their fully-qualified names."
+msgstr "تاپل نام‌های کامل آن‌ها."
+
+#: ../../guide/fsm.rst:129
+msgid "``__all_states__`` / ``__all_states_names__``"
+msgstr "``__all_states__`` / ``__all_states_names__``"
+
+#: ../../guide/fsm.rst:130
+msgid "Same, but including states inherited from nested child groups."
+msgstr "همان، ولی شامل حالت‌های به‌ارث‌رسیده از گروه‌های فرزندِ تودرتو."
+
+#: ../../guide/fsm.rst:131
+msgid "``__childs__`` / ``__all_childs__``"
+msgstr "``__childs__`` / ``__all_childs__``"
+
+#: ../../guide/fsm.rst:132
+msgid "Direct and transitive child groups."
+msgstr "گروه‌های فرزند مستقیم و غیرمستقیم."
+
+#: ../../guide/fsm.rst:133
+msgid "``__full_group_name__``"
+msgstr "``__full_group_name__``"
+
+#: ../../guide/fsm.rst:134
+msgid "Dot-joined group path, e.g. ``\"Registration.Profile\"``."
+msgstr "مسیر گروه با نقطه، مثلاً ``\"Registration.Profile\"``."
+
+#: ../../guide/fsm.rst:136
+msgid "Membership checks work out of the box:"
+msgstr "بررسی تعلق، بدون تنظیم اضافه کار می‌کند:"
+
+#: ../../guide/fsm.rst:144
+msgid "Nested groups let you build state trees:"
+msgstr "گروه‌های تودرتو به شما امکان ساخت درخت حالت می‌دهند:"
+
+#: ../../guide/fsm.rst:157
+msgid "default_state and any_state"
+msgstr "default_state و any_state"
+
+#: ../../guide/fsm.rst:159
+msgid "Two ready-made singletons are exported from :mod:`aiorubi.fsm.state`:"
+msgstr "دو singleton آماده از :mod:`aiorubi.fsm.state` صادر شده‌اند:"
+
+#: ../../guide/fsm.rst:163
+msgid "``State()`` — matches \"no state at all\" (the state string is ``None``). Use it to register handlers that must only fire while the user is *not* inside any dialog:"
+msgstr "``State()`` — با «هیچ حالتی» match می‌شود (رشتهٔ حالت ``None`` است). برای ثبت هندلرهایی استفاده کنید که فقط وقتی کاربر *داخل* هیچ دیالوگی نیست اجرا شوند:"
+
+#: ../../guide/fsm.rst:175
+msgid "``State(state=\"*\")`` — the wildcard. Matches any state, including \"no state\". Handlers registered with ``any_state`` are typically combined with another filter (e.g. a command) so they do not swallow regular messages:"
+msgstr "``State(state=\"*\")`` — wildcard. با هر حالتی match می‌شود، از جمله «بی‌حالت». هندلرهای ثبت‌شده با ``any_state`` معمولاً با فیلتر دیگری ترکیب می‌شوند (مثلاً یک دستور) تا پیام‌های عادی را نبلعند:"
+
+#: ../../guide/fsm.rst:189
+msgid "Handlers are checked in registration order and the **first** handler whose filters all pass wins (unless it raises :class:`~aiorubi.dispatcher.event.bases.SkipHandler`). Register ``any_state`` handlers *after* the more specific ones."
+msgstr "هندلرها به ترتیب ثبت بررسی می‌شوند و **اولین** هندلری که همهٔ فیلترهایش پاس شود برنده است (مگر اینکه :class:`~aiorubi.dispatcher.event.bases.SkipHandler` پرتاب کند). هندلرهای ``any_state`` را *بعد از* هندلرهای خاص‌تر ثبت کنید."
+
+#: ../../guide/fsm.rst:196
+msgid "FSMContext"
+msgstr "FSMContext"
+
+#: ../../guide/fsm.rst:198
+msgid "`aiorubi.fsm.context.FSMContext(storage: BaseStorage, key: StorageKey)`"
+msgstr "`aiorubi.fsm.context.FSMContext(storage: BaseStorage, key: StorageKey)`"
+
+#: ../../guide/fsm.rst:200
+msgid "The per-update handle to the FSM. An instance is injected into every handler as the ``state`` keyword argument (assuming FSM is enabled — see `Disabling FSM`_). All methods are coroutines."
+msgstr "دسترسی هر آپدیت به FSM. یک نمونه از آن به‌عنوان آرگومان کلیدواژه‌ای ``state`` به هر هندلر تزریق می‌شود (به شرط فعال‌بودن FSM — بخش `Disabling FSM`_ را ببینید). همهٔ متدها coroutine هستند."
+
+#: ../../guide/fsm.rst:205
+msgid "Setting and getting the state"
+msgstr "تنظیم و خواندن حالت"
+
+#: ../../guide/fsm.rst:209
+msgid "Store the new state. Accepts a :class:`~aiorubi.fsm.state.State` (usually ``Form.name``), a raw string, or ``None`` to reset to \"no state\"."
+msgstr "ذخیرهٔ حالت جدید. یک :class:`~aiorubi.fsm.state.State` (معمولاً ``Form.name``)، یک رشتهٔ خام، یا ``None`` برای بازگشت به «بی‌حالت» می‌پذیرد."
+
+#: ../../guide/fsm.rst:219
+msgid "Return the current state string, or ``None`` if no state is set. To test against a :class:`~aiorubi.fsm.state.State`, compare strings:"
+msgstr "رشتهٔ حالت فعلی را برمی‌گرداند، یا اگر حالتی تنظیم نشده ``None``. برای مقایسه با یک :class:`~aiorubi.fsm.state.State`، رشته‌ها را مقایسه کنید:"
+
+#: ../../guide/fsm.rst:228
+msgid "Reading and writing data"
+msgstr "خواندن و نوشتن داده"
+
+#: ../../guide/fsm.rst:230
+msgid "The FSM data is a plain ``dict[str, Any]`` stored next to the state."
+msgstr "دادهٔ FSM یک ``dict[str, Any]`` ساده است که کنار حالت ذخیره می‌شود."
+
+#: ../../guide/fsm.rst:234
+msgid "**Replace** the whole data dict."
+msgstr "**جایگزینی** کامل دیکشنری داده."
+
+#: ../../guide/fsm.rst:238
+msgid "Return a copy of the current data (never ``None`` — an empty dict when nothing was stored)."
+msgstr "یک کپی از دادهٔ فعلی برمی‌گرداند (هرگز ``None`` نیست — وقتی چیزی ذخیره نشده دیکشنری خالی است)."
+
+#: ../../guide/fsm.rst:243
+msgid "Merge the given keys into the stored data (like :meth:`dict.update`) and return the new data. Both spellings are equivalent:"
+msgstr "کلیدهای داده‌شده را با دادهٔ ذخیره‌شده ادغام می‌کند (مثل :meth:`dict.update`) و دادهٔ جدید را برمی‌گرداند. هر دو شکل نوشتار هم‌ارزند:"
+
+#: ../../guide/fsm.rst:253
+msgid "Read a single value without materialising the whole dict:"
+msgstr "خواندن یک مقدار واحد بدون ساخت کل دیکشنری:"
+
+#: ../../guide/fsm.rst:262
+msgid "Reset the FSM context: sets the state to ``None`` and replaces the data with an empty dict. Call this when a dialog finishes or is cancelled."
+msgstr "بازنشانی کانتکست FSM: حالت را ``None`` و داده را دیکشنری خالی می‌کند. وقتی دیالوگ تمام می‌شود یا لغو می‌شود این را صدا بزنید."
+
+#: ../../guide/fsm.rst:267
+msgid "Storage data must be JSON-serialisable for the :doc:`Redis <storages>` and :doc:`MongoDB <storages>` storages. Pass ``None``/``\"\"`` instead of model objects, or store the ``model_dump()`` of your payload. The :class:`MemoryStorage` is more forgiving but raises :class:`~aiorubi.exceptions.DataNotDictLikeError` if you pass something that is not dict-like to ``set_data``."
+msgstr "دادهٔ استورج برای :doc:`Redis <storages>` و :doc:`MongoDB <storages>` باید JSON-پذیر باشد. به‌جای شیء مدل، ``None``/``\"\"`` بفرستید یا ``model_dump()`` دادهٔ خود را ذخیره کنید. :class:`MemoryStorage` بخشنده‌تر است ولی اگر چیزی dict-like به ``set_data`` بدهید :class:`~aiorubi.exceptions.DataNotDictLikeError` پرتاب می‌کند."
+
+#: ../../guide/fsm.rst:276
+msgid "Storage keys and strategies"
+msgstr "کلیدها و استراتژی‌های استورج"
+
+#: ../../guide/fsm.rst:279
+msgid "StorageKey"
+msgstr "StorageKey"
+
+#: ../../guide/fsm.rst:281
+msgid "``aiorubi.fsm.storage.base.StorageKey``"
+msgstr "``aiorubi.fsm.storage.base.StorageKey``"
+
+#: ../../guide/fsm.rst:283
+msgid "A frozen dataclass identifying one FSM \"cell\":"
+msgstr "یک dataclass تغییرناپذیر که یک «سلول» FSM را شناسایی می‌کند:"
+
+#: ../../guide/fsm.rst:294
+msgid "``bot_id`` — isolates data between bots sharing one storage."
+msgstr "``bot_id`` — دادهٔ بات‌هایی که یک استورج مشترک دارند را از هم جدا می‌کند."
+
+#: ../../guide/fsm.rst:295
+msgid "``chat_id`` / ``user_id`` — filled according to the FSM strategy."
+msgstr "``chat_id`` / ``user_id`` — مطابق استراتژی FSM پر می‌شوند."
+
+#: ../../guide/fsm.rst:296
+msgid "``destiny`` — a namespace that lets subsystems (scenes history, i18n context, your own features) keep independent state for the same user and chat. The default destiny is ``\"default\"``."
+msgstr "``destiny`` — یک فضای‌نام که به زیرسیستم‌ها (تاریخچهٔ صحنه‌ها، کانتکست i18n، قابلیت‌های خودتان) اجازه می‌دهد برای همان کاربر و چت، حالت مستقل نگه دارند. destiny پیش‌فرض ``\"default\"`` است."
+
+#: ../../guide/fsm.rst:301
+msgid "FSMStrategy"
+msgstr "FSMStrategy"
+
+#: ../../guide/fsm.rst:303
+msgid "``aiorubi.fsm.strategy.FSMStrategy``"
+msgstr "``aiorubi.fsm.strategy.FSMStrategy``"
+
+#: ../../guide/fsm.rst:305
+msgid "Enum controlling how ``chat_id`` and ``user_id`` are derived for the :class:`~aiorubi.fsm.storage.base.StorageKey`. Pass it to the :class:`~aiorubi.dispatcher.dispatcher.Dispatcher` constructor as ``fsm_strategy=``."
+msgstr "Enumی که تعیین می‌کند ``chat_id`` و ``user_id`` چطور برای :class:`~aiorubi.fsm.storage.base.StorageKey` استخراج شوند. آن را به‌عنوان ``fsm_strategy=`` به سازندهٔ :class:`~aiorubi.dispatcher.dispatcher.Dispatcher` بدهید."
+
+#: ../../guide/fsm.rst:314
+msgid "Strategy"
+msgstr "استراتژی"
+
+#: ../../guide/fsm.rst:315
+msgid "Key is scoped to"
+msgstr "دامنهٔ کلید"
+
+#: ../../guide/fsm.rst:316
+msgid "``FSMStrategy.USER_IN_CHAT`` *(default)*"
+msgstr "``FSMStrategy.USER_IN_CHAT`` *(پیش‌فرض)*"
+
+#: ../../guide/fsm.rst:317
+msgid "Each user **inside each chat**. The same user has independent state in every group and in private dialog. Best choice for per-user forms."
+msgstr "هر کاربر **داخل هر چت**. همان کاربر در هر گروه و در گفتگوی خصوصی حالت مستقل دارد. بهترین انتخاب برای فرم‌های مخصوص هر کاربر."
+
+#: ../../guide/fsm.rst:320
+msgid "``FSMStrategy.CHAT``"
+msgstr "``FSMStrategy.CHAT``"
+
+#: ../../guide/fsm.rst:321
+msgid "Each **chat as a whole**. All users of a group share one state — useful for collective workflows (polls, shared checklists)."
+msgstr "هر **چت در کل**. همهٔ اعضای گروه یک حالت مشترک دارند — برای فرایندهای جمعی (نظرسنجی‌ها، چک‌لیست‌های مشترک) مفید است."
+
+#: ../../guide/fsm.rst:323
+msgid "``FSMStrategy.GLOBAL_USER``"
+msgstr "``FSMStrategy.GLOBAL_USER``"
+
+#: ../../guide/fsm.rst:324
+msgid "Each **user across all chats**. The user's state follows them from private chat into groups."
+msgstr "هر **کاربر در همهٔ چت‌ها**. حالت کاربر از چت خصوصی به گروه‌ها همراهش می‌ماند."
+
+#: ../../guide/fsm.rst:336
+msgid "If an update carries no user context (for example a ``removed_message``), the FSM middleware cannot build a key and simply proceeds without a ``state`` — handlers will not receive the ``state`` argument for such updates."
+msgstr "اگر آپدیت کانتکست کاربر نداشته باشد (مثلاً ``removed_message``)، میان‌افزار FSM نمی‌تواند کلید بسازد و بدون ``state`` ادامه می‌دهد — هندلرها برای چنین آپدیت‌هایی آرگومان ``state`` دریافت نمی‌کنند."
+
+#: ../../guide/fsm.rst:343
+msgid "Disabling FSM"
+msgstr "غیرفعال‌کردن FSM"
+
+#: ../../guide/fsm.rst:345
+msgid "If your bot keeps all context in its own database and does not need the built-in FSM at all, disable it:"
+msgstr "اگر بات شما همهٔ کانتکست را در دیتابیس خودش نگه می‌دارد و اصلاً به FSM داخلی نیاز ندارد، آن را غیرفعال کنید:"
+
+#: ../../guide/fsm.rst:352
+msgid "When ``disable_fsm=True``:"
+msgstr "وقتی ``disable_fsm=True``:"
+
+#: ../../guide/fsm.rst:354
+msgid "The :class:`~aiorubi.fsm.middleware.FSMContextMiddleware` is not installed, so no ``state`` / ``raw_state`` / ``fsm_storage`` keys are injected into handlers and no storage round-trips happen."
+msgstr "کلاس :class:`~aiorubi.fsm.middleware.FSMContextMiddleware` نصب نمی‌شود؛ بنابراین هیچ کلید ``state`` / ``raw_state`` / ``fsm_storage`` به هندلرها تزریق نمی‌شود و هیچ رفت‌وبرگشتی به استورج انجام نمی‌شود."
+
+#: ../../guide/fsm.rst:357
+msgid "Event isolation (which is part of the FSM pipeline) is disabled with it."
+msgstr "ایزوله‌سازی رویداد (که بخشی از خط لولهٔ FSM است) هم با آن غیرفعال می‌شود."
+
+#: ../../guide/fsm.rst:358
+msgid "``StateFilter`` has nothing to match — avoid state-bound handlers."
+msgstr "``StateFilter`` چیزی برای match ندارد — از هندلرهای وابسته به حالت پرهیز کنید."
+
+#: ../../guide/fsm.rst:360
+msgid "Note that the storage and events-isolation arguments are still accepted (and ``Dispatcher.storage`` still resolves), but they are simply unused by the pipeline."
+msgstr "توجه کنید که آرگومان‌های storage و events-isolation هنوز پذیرفته می‌شوند (و ``Dispatcher.storage`` هم resolve می‌شود) ولی خط لوله از آن‌ها استفاده نمی‌کند."
+
+#: ../../guide/fsm.rst:366
+msgid "Default storage and swapping storages"
+msgstr "استورج پیش‌فرض و تعویض استورج‌ها"
+
+#: ../../guide/fsm.rst:368
+msgid "By default the :class:`~aiorubi.dispatcher.dispatcher.Dispatcher` uses :class:`~aiorubi.fsm.storage.memory.MemoryStorage` — a plain in-process dict. It is perfect for development and tests, but all FSM state is lost on restart, so production bots should swap in a persistent storage:"
+msgstr "به‌طور پیش‌فرض :class:`~aiorubi.dispatcher.dispatcher.Dispatcher` از :class:`~aiorubi.fsm.storage.memory.MemoryStorage` استفاده می‌کند — یک دیکشنری ساده درون‌پردازشی. برای توسعه و تست عالی است، ولی همهٔ حالت FSM با ری‌استارت از دست می‌رود؛ پس بات‌های production باید یک استورج ماندگار بگذارند:"
+
+#: ../../guide/fsm.rst:381
+msgid "The full catalogue of bundled storages — Redis, MongoDB via motor, MongoDB via pymongo, plus the storage interface for writing your own — is covered in :doc:`storages`."
+msgstr "کاتالوگ کامل استورج‌های همراه — Redis، MongoDB با motor، MongoDB با pymongo، و همچنین رابط استورج برای نوشتن استورج اختصاصی — در :doc:`storages` پوشش داده شده است."
+
+#: ../../guide/fsm.rst:385
+msgid "Because storages are keyed by :class:`~aiorubi.fsm.storage.base.StorageKey`, swapping is transparent: no handler code changes, only the ``storage=`` argument to the dispatcher."
+msgstr "چون استورج‌ها با :class:`~aiorubi.fsm.storage.base.StorageKey` کلیدگذاری می‌شوند، تعویضشان شفاف است: هیچ کد هندلری تغییر نمی‌کند، فقط آرگومان ``storage=`` دیسپچر."
+
+#: ../../guide/fsm.rst:391
+msgid "Event isolation"
+msgstr "ایزوله‌سازی رویدادها"
+
+#: ../../guide/fsm.rst:393
+msgid "Two updates from the same user can be processed concurrently (polling runs handlers as tasks by default). To prevent two handlers from reading and writing the same FSM cell at the same time, the FSM middleware wraps every stateful dispatch in an isolation lock."
+msgstr "دو آپدیت از یک کاربر می‌توانند همزمان پردازش شوند (پولینگ به‌طور پیش‌فرض هندلرها را به‌صورت task اجرا می‌کند). برای جلوگیری از خواندن و نوشتن همزمان دو هندلر روی همان سلول FSM، میان‌افزار هر dispatch حالت‌دار را در یک قفل ایزوله‌سازی می‌پیچد."
+
+#: ../../guide/fsm.rst:398
+msgid "Configure it with ``events_isolation=``:"
+msgstr "با ``events_isolation=`` پیکربندی‌اش کنید:"
+
+#: ../../guide/fsm.rst:406
+msgid "Bundled implementations:"
+msgstr "پیاده‌سازی‌های همراه:"
+
+#: ../../guide/fsm.rst:408
+msgid ":class:`~aiorubi.fsm.storage.memory.DisabledEventIsolation` *(default)* — no locking at all."
+msgstr ":class:`~aiorubi.fsm.storage.memory.DisabledEventIsolation` *(پیش‌فرض)* — اصلاً قفلی وجود ندارد."
+
+#: ../../guide/fsm.rst:410
+msgid ":class:`~aiorubi.fsm.storage.memory.SimpleEventIsolation` — an :class:`asyncio.Lock` per storage key, held while the handler runs."
+msgstr ":class:`~aiorubi.fsm.storage.memory.SimpleEventIsolation` — یک :class:`asyncio.Lock` برای هر کلید استورج که تا پایان اجرای هندلر نگه داشته می‌شود."
+
+#: ../../guide/fsm.rst:412
+msgid ":class:`~aiorubi.fsm.storage.redis.RedisEventIsolation` — a Redis lock (``timeout=60`` seconds by default) so isolation also works across multiple bot processes sharing one Redis. The convenient way to get it is ``storage.create_isolation()`` on a :class:`~aiorubi.fsm.storage.redis.RedisStorage`."
+msgstr ":class:`~aiorubi.fsm.storage.redis.RedisEventIsolation` — یک قفل Redis (پیش‌فرض ``timeout=60`` ثانیه) تا ایزوله‌سازی بین چند پروسهٔ بات که یک Redis مشترک دارند هم کار کند. راه راحت گرفتن آن، ``storage.create_isolation()`` روی یک :class:`~aiorubi.fsm.storage.redis.RedisStorage` است."
+
+#: ../../guide/fsm.rst:417
+msgid "The state string is read **after** the lock is acquired, which guarantees that ``await state.get_state()`` inside the handler always observes the latest committed state."
+msgstr "رشتهٔ حالت **بعد از** گرفتن قفل خوانده می‌شود؛ این تضمین می‌کند ``await state.get_state()`` داخل هندلر همیشه آخرین حالت ثبت‌شده را می‌بیند."
+
+#: ../../guide/fsm.rst:423
+msgid "Recipes"
+msgstr "دستورالعمل‌ها"
+
+#: ../../guide/fsm.rst:426
+msgid "Counting attempts"
+msgstr "شمارش تلاش‌ها"
+
+#: ../../guide/fsm.rst:442
+msgid "Passing context between handlers"
+msgstr "انتقال کانتکست بین هندلرها"
+
+#: ../../guide/fsm.rst:444
+msgid "Store anything JSON-serialisable in the FSM data and read it in later handlers with :meth:`~aiorubi.fsm.context.FSMContext.get_value` — this is the idiomatic replacement for aiogram's ``RuntimeError``-prone global variables."
+msgstr "هر دادهٔ JSON-پذیری را در دادهٔ FSM ذخیره کنید و در هندلرهای بعدی با :meth:`~aiorubi.fsm.context.FSMContext.get_value` بخوانید — این جایگزین اصیل برای متغیرهای سراسریِ مستعد ``RuntimeError`` در aiogram است."
+
+#: ../../guide/fsm.rst:450
+msgid "See also"
+msgstr "همچنین ببینید"
+
+#: ../../guide/fsm.rst:452
+msgid ":doc:`storages` — persistent FSM storages and the storage interface."
+msgstr ":doc:`storages` — استورج‌های ماندگار FSM و رابط استورج."
+
+#: ../../guide/fsm.rst:453
+msgid ":doc:`scenes` — a higher-level wizard built on top of the FSM."
+msgstr ":doc:`scenes` — یک ویزارد سطح‌بالاتر که روی FSM ساخته شده است."
+
+#: ../../guide/fsm.rst:454
+msgid ":doc:`filter` — matching updates by state with :class:`~aiorubi.filters.state.StateFilter`."
+msgstr ":doc:`filter` — تطبیق آپدیت‌ها بر اساس حالت با :class:`~aiorubi.filters.state.StateFilter`."
+
+#: ../../guide/fsm.rst:456
+msgid ":doc:`/migration-from-aiogram` — the FSM part of the aiogram port is API-identical; identifiers are ``str`` instead of ``int``."
+msgstr ":doc:`/migration-from-aiogram` — بخش FSM پورت aiogram از نظر API یکسان است؛ شناسه‌ها ``str`` هستند به‌جای ``int``."
+

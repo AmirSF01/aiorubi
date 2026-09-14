@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tutorial/08_middlewares.rst:5
+msgid "8. Middlewares & global error handling"
+msgstr ""
+
+#: ../../tutorial/08_middlewares.rst:7
+msgid "Middlewares run **around** every handler on an observer. Use them for cross-cutting concerns: timing, authentication, throttling, database sessions, error reporting."
+msgstr ""
+
+#: ../../tutorial/08_middlewares.rst:13
+msgid "Your first middleware"
+msgstr ""
+
+#: ../../tutorial/08_middlewares.rst:15
+msgid "A middleware is any callable with the signature ``(handler, event, data) -> result``:"
+msgstr ""
+
+#: ../../tutorial/08_middlewares.rst:34
+msgid "Register it on an observer:"
+msgstr ""
+
+#: ../../tutorial/08_middlewares.rst:40
+msgid "From now on every ``new_message`` update is timed."
+msgstr ""
+
+#: ../../tutorial/08_middlewares.rst:44
+msgid "Outer vs inner"
+msgstr ""
+
+#: ../../tutorial/08_middlewares.rst:46
+msgid "**outer middleware** runs *before filters* — for every incoming update, handled or not. Use it for things that must always happen (loading a user from DB, throttling)."
+msgstr ""
+
+#: ../../tutorial/08_middlewares.rst:49
+msgid "**inner middleware** runs *after filters matched*, immediately around the handler itself. Use it for handler-scoped concerns (opening a DB session per handler)."
+msgstr ""
+
+#: ../../tutorial/08_middlewares.rst:58
+msgid "The same two registration methods exist on every router observer."
+msgstr ""
+
+#: ../../tutorial/08_middlewares.rst:62
+msgid "Injecting data"
+msgstr ""
+
+#: ../../tutorial/08_middlewares.rst:64
+msgid "Middlewares communicate with handlers through ``data`` — the same dict that powers dependency injection. Anything a middleware puts into ``data`` can be declared as a handler argument:"
+msgstr ""
+
+#: ../../tutorial/08_middlewares.rst:82
+msgid "Error handling"
+msgstr ""
+
+#: ../../tutorial/08_middlewares.rst:84
+msgid "aiorubi already wraps every update in a built-in error middleware. To *react* to errors, register a handler on the ``errors`` observer:"
+msgstr ""
+
+#: ../../tutorial/08_middlewares.rst:100
+msgid "``event.exception`` is the raised exception; ``event.update`` is the update being processed (may be ``None``)."
+msgstr ""
+
+#: ../../tutorial/08_middlewares.rst:105
+msgid "Throttling example"
+msgstr ""
+
+#: ../../tutorial/08_middlewares.rst:107
+msgid "A complete, practical middleware — one message per second per user:"
+msgstr ""
+
+#: ../../tutorial/08_middlewares.rst:132
+msgid "Recap"
+msgstr ""
+
+#: ../../tutorial/08_middlewares.rst:134
+msgid "You can write middlewares, choose between outer and inner, inject per-request data into handlers, and handle errors globally. Final chapter: deploying behind a webhook."
+msgstr ""

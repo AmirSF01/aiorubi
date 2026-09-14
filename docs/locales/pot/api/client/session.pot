@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/client/session.rst:3
+msgid "Session"
+msgstr ""
+
+#: ../../api/client/session.rst:5
+msgid "HTTP session layer used by :class:`~aiorubi.client.bot.Bot` to talk to the Rubika Bot API."
+msgstr ""
+
+#: ../../api/client/session.rst:9
+msgid "Base session"
+msgstr ""
+
+#: ../../../aiorubi/client/session/base.py:docstring of aiorubi.client.session.base.BaseSession:1
+msgid "This is base class for all HTTP sessions in aiorubi."
+msgstr ""
+
+#: ../../../aiorubi/client/session/base.py:docstring of aiorubi.client.session.base.BaseSession:3
+msgid "If you want to create your own session, you must inherit from this class."
+msgstr ""
+
+#: ../../../aiorubi/client/session/aiohttp.py:docstring of aiorubi.client.session.aiohttp.AiohttpSession.stream_content:0
+#: ../../../aiorubi/client/session/aiohttp.py:docstring of aiorubi.client.session.aiohttp.AiohttpSession.upload_file:0
+#: ../../../aiorubi/client/session/base.py:docstring of aiorubi.client.session.base.BaseSession.__call__:0
+#: ../../../aiorubi/client/session/base.py:docstring of aiorubi.client.session.base.BaseSession.check_response:0
+#: ../../../aiorubi/client/session/base.py:docstring of aiorubi.client.session.base.BaseSession.prepare_value:0
+#: ../../../aiorubi/client/session/base.py:docstring of aiorubi.client.session.base.BaseSession.stream_content:0
+#: ../../../aiorubi/client/session/middlewares/manager.py:docstring of aiorubi.client.session.middlewares.manager.RequestMiddlewareManager.register:0
+#: ../../api/client/session.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../aiorubi/client/session/base.py:docstring of aiorubi.client.session.base.BaseSession.__call__:1
+msgid "Call self as a function."
+msgstr ""
+
+#: ../../../aiorubi/client/session/aiohttp.py:docstring of aiorubi.client.session.aiohttp.AiohttpSession.close:0
+#: ../../../aiorubi/client/session/aiohttp.py:docstring of aiorubi.client.session.aiohttp.AiohttpSession.stream_content:0
+#: ../../../aiorubi/client/session/aiohttp.py:docstring of aiorubi.client.session.aiohttp.AiohttpSession.upload_file:0
+#: ../../../aiorubi/client/session/base.py:docstring of aiorubi.client.session.base.BaseSession.__call__:0
+#: ../../../aiorubi/client/session/base.py:docstring of aiorubi.client.session.base.BaseSession.check_response:0
+#: ../../../aiorubi/client/session/base.py:docstring of aiorubi.client.session.base.BaseSession.close:0
+#: ../../../aiorubi/client/session/base.py:docstring of aiorubi.client.session.base.BaseSession.prepare_value:0
+#: ../../../aiorubi/client/session/base.py:docstring of aiorubi.client.session.base.BaseSession.stream_content:0
+#: ../../../aiorubi/client/session/middlewares/manager.py:docstring of aiorubi.client.session.middlewares.manager.RequestMiddlewareManager.register:0
+#: ../../api/client/session.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../aiorubi/client/session/base.py:docstring of aiorubi.client.session.base.BaseSession.check_response:1
+msgid "Check response status"
+msgstr ""
+
+#: ../../../aiorubi/client/session/aiohttp.py:docstring of aiorubi.client.session.aiohttp.AiohttpSession.close:1
+#: ../../../aiorubi/client/session/base.py:docstring of aiorubi.client.session.base.BaseSession.close:1
+msgid "Close client session"
+msgstr ""
+
+#: ../../../aiorubi/client/session/aiohttp.py:docstring of aiorubi.client.session.aiohttp.AiohttpSession.make_request:1
+#: ../../../aiorubi/client/session/base.py:docstring of aiorubi.client.session.base.BaseSession.make_request:1
+msgid "Make request to Rubika Bot API"
+msgstr ""
+
+#: ../../../aiorubi/client/session/aiohttp.py:docstring of aiorubi.client.session.aiohttp.AiohttpSession.make_request:3
+#: ../../../aiorubi/client/session/base.py:docstring of aiorubi.client.session.base.BaseSession.make_request:3
+msgid "Bot instance"
+msgstr ""
+
+#: ../../../aiorubi/client/session/aiohttp.py:docstring of aiorubi.client.session.aiohttp.AiohttpSession.make_request:4
+#: ../../../aiorubi/client/session/base.py:docstring of aiorubi.client.session.base.BaseSession.make_request:4
+msgid "Method instance"
+msgstr ""
+
+#: ../../../aiorubi/client/session/aiohttp.py:docstring of aiorubi.client.session.aiohttp.AiohttpSession.make_request:5
+#: ../../../aiorubi/client/session/base.py:docstring of aiorubi.client.session.base.BaseSession.make_request:5
+msgid "Request timeout"
+msgstr ""
+
+#: ../../api/client/session.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../api/client/session.rst:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../aiorubi/client/session/base.py:docstring of aiorubi.client.session.base.BaseSession.prepare_value:1
+msgid "Prepare value before send"
+msgstr ""
+
+#: ../../../aiorubi/client/session/aiohttp.py:docstring of aiorubi.client.session.aiohttp.AiohttpSession.stream_content:1
+#: ../../../aiorubi/client/session/base.py:docstring of aiorubi.client.session.base.BaseSession.stream_content:1
+msgid "Stream reader"
+msgstr ""
+
+#: ../../api/client/session.rst:16
+msgid "aiohttp implementation"
+msgstr ""
+
+#: ../../../aiorubi/client/session/aiohttp.py:docstring of aiorubi.client.session.aiohttp.AiohttpSession.__init__:1
+msgid "Client session based on aiohttp."
+msgstr ""
+
+#: ../../../aiorubi/client/session/aiohttp.py:docstring of aiorubi.client.session.aiohttp.AiohttpSession.__init__:3
+msgid "The proxy to be used for requests. Default is None."
+msgstr ""
+
+#: ../../../aiorubi/client/session/aiohttp.py:docstring of aiorubi.client.session.aiohttp.AiohttpSession.__init__:4
+msgid "The total number of simultaneous connections. Default is 100."
+msgstr ""
+
+#: ../../../aiorubi/client/session/aiohttp.py:docstring of aiorubi.client.session.aiohttp.AiohttpSession.__init__:5
+msgid "Additional keyword arguments."
+msgstr ""
+
+#: ../../../aiorubi/client/session/aiohttp.py:docstring of aiorubi.client.session.aiohttp.AiohttpSession.upload_file:1
+msgid "Uploads a file to Rubika's storage using the provided upload_url."
+msgstr ""
+
+#: ../../api/client/session.rst:23
+msgid "Session middlewares"
+msgstr ""
+
+#: ../../../aiorubi/client/session/middlewares/base.py:docstring of aiorubi.client.session.middlewares.base.BaseRequestMiddleware:1
+msgid "Generic middleware class"
+msgstr ""
+
+#: ../../../aiorubi/client/session/middlewares/manager.py:docstring of aiorubi.client.session.middlewares.manager.RequestMiddlewareManager.register:1
+msgid "Register a virtual subclass of an ABC."
+msgstr ""
+
+#: ../../../aiorubi/client/session/middlewares/manager.py:docstring of aiorubi.client.session.middlewares.manager.RequestMiddlewareManager.register:3
+msgid "Returns the subclass, to allow usage as a class decorator."
+msgstr ""

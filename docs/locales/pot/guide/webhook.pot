@@ -1,0 +1,154 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../guide/webhook.rst:3
+#: ../../guide/webhook.rst:166
+msgid "Webhook"
+msgstr ""
+
+#: ../../guide/webhook.rst:5
+msgid "Besides long-polling (see :doc:`dispatcher`), aiorubi can receive updates over HTTP. Rubika pushes updates to a public HTTPS endpoint you register with :meth:`Bot.update_bot_endpoints <aiorubi.client.bot.Bot.update_bot_endpoints>`; aiorubi ships an aiohttp-based server and request handler to receive them."
+msgstr ""
+
+#: ../../guide/webhook.rst:12
+msgid "Registering the endpoint"
+msgstr ""
+
+#: ../../guide/webhook.rst:23
+msgid "After a successful registration Rubika POSTs every update as JSON to that URL. Give Rubika **60 seconds** to answer; the dispatcher's webhook entry point enforces a 55-second budget and moves slower handlers to the background (see below)."
+msgstr ""
+
+#: ../../guide/webhook.rst:29
+msgid "The webhook request handler"
+msgstr ""
+
+#: ../../guide/webhook.rst:33
+msgid "Subclass it and implement ``resolve_bot(request)`` — the method that maps an incoming request to the :class:`~aiorubi.client.bot.Bot` that should process it. ``register(app, *paths, **kwargs)`` then attaches the route:"
+msgstr ""
+
+#: ../../guide/webhook.rst:48
+msgid "Behaviour:"
+msgstr ""
+
+#: ../../guide/webhook.rst:50
+msgid "The JSON body is parsed with the bot session's loader and passed to ``dp.feed_raw_update`` (a raw ``dict`` is validated into an :class:`~aiorubi.types.update.Update` automatically)."
+msgstr ""
+
+#: ../../guide/webhook.rst:53
+msgid "``handle_in_background=False`` (default) awaits the pipeline and answers with ``{\"status\": \"OK\"}``; a returned :class:`~aiorubi.methods.base.RubikaMethod` is still answered with the same body — **Rubika does not support returning API calls in the webhook response** (unlike Telegram), so delayed calls go through ``dp.silent_call_request`` in the background."
+msgstr ""
+
+#: ../../guide/webhook.rst:59
+msgid "``handle_in_background=True`` answers immediately and processes the update in an :class:`asyncio.Task`."
+msgstr ""
+
+#: ../../guide/webhook.rst:61
+msgid "The handler registers its own ``close()`` on app shutdown to await leftover background tasks."
+msgstr ""
+
+#: ../../guide/webhook.rst:64
+msgid "Note that the response writer is deliberately fixed: every answer body is ``{\"status\": \"OK\"}``."
+msgstr ""
+
+#: ../../guide/webhook.rst:68
+msgid "Wiring the aiohttp application"
+msgstr ""
+
+#: ../../guide/webhook.rst:70
+msgid "``setup_application(app, dispatcher, **kwargs)``"
+msgstr ""
+
+#: ../../guide/webhook.rst:72
+msgid "Connects the application lifecycle to the dispatcher: on startup it emits ``dp.emit_startup(**workflow_data)``, on shutdown ``dp.emit_shutdown(...)`` (closing the FSM storage). Extra ``kwargs`` join the workflow data handed to handlers."
+msgstr ""
+
+#: ../../guide/webhook.rst:78
+msgid "Full example"
+msgstr ""
+
+#: ../../guide/webhook.rst:80
+msgid "webhook_bot.py"
+msgstr ""
+
+#: ../../guide/webhook.rst:140
+msgid "Security: IP filtering"
+msgstr ""
+
+#: ../../guide/webhook.rst:142
+msgid "`aiorubi.webhook.security.IPFilter`"
+msgstr ""
+
+#: ../../guide/webhook.rst:144
+msgid "Rubika posts updates from its own servers. To reject requests from anyone else, install the IP-filter middleware (it honours ``X-Forwarded-For`` when running behind a reverse proxy and answers ``401`` for blocked sources):"
+msgstr ""
+
+#: ../../guide/webhook.rst:160
+msgid "Webhook vs polling"
+msgstr ""
+
+#: ../../guide/webhook.rst:167
+msgid "Polling"
+msgstr ""
+
+#: ../../guide/webhook.rst:168
+msgid "Needs a public HTTPS endpoint and TLS"
+msgstr ""
+
+#: ../../guide/webhook.rst:169
+msgid "Works from any machine with outbound internet"
+msgstr ""
+
+#: ../../guide/webhook.rst:170
+msgid "Lower latency; no ``get_updates`` traffic"
+msgstr ""
+
+#: ../../guide/webhook.rst:171
+msgid "Simpler ops; built-in exponential backoff"
+msgstr ""
+
+#: ../../guide/webhook.rst:172
+msgid "60 s response budget; slow handlers must be backgrounded"
+msgstr ""
+
+#: ../../guide/webhook.rst:173
+msgid "No response budget"
+msgstr ""
+
+#: ../../guide/webhook.rst:174
+msgid "``dp.feed_webhook_update`` / ``BaseRequestHandler``"
+msgstr ""
+
+#: ../../guide/webhook.rst:175
+msgid "``dp.start_polling``"
+msgstr ""
+
+#: ../../guide/webhook.rst:177
+msgid "For development behind NAT or without a domain, prefer polling; for production on a VM with a certificate, webhooks reduce latency."
+msgstr ""
+
+#: ../../guide/webhook.rst:181
+msgid "See also"
+msgstr ""
+
+#: ../../guide/webhook.rst:183
+msgid ":doc:`dispatcher` — ``feed_webhook_update`` timeout semantics and ``silent_call_request``."
+msgstr ""
+
+#: ../../guide/webhook.rst:185
+msgid ":doc:`handlers` — what handlers receive in webhook mode (the same context as in polling)."
+msgstr ""

@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../quickstart.rst:3
+msgid "Quickstart"
+msgstr ""
+
+#: ../../quickstart.rst:5
+msgid "This page walks you through installing ``aiorubi`` and running your first bot in **under five minutes**. If you already know aiogram 3.x you will feel right at home — but if not, that's fine too."
+msgstr ""
+
+#: ../../quickstart.rst:11
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../quickstart.rst:13
+msgid "Python 3.10 or newer (``aiorubi`` supports 3.10, 3.11, 3.12, 3.13 and 3.14)."
+msgstr ""
+
+#: ../../quickstart.rst:15
+msgid "A Rubika bot token. To obtain it, open `@BotFather <https://rubika.ir/BotFather>`_ in Rubika, send ``/newbot``, follow the prompts and copy the token."
+msgstr ""
+
+#: ../../quickstart.rst:20
+msgid "Install"
+msgstr ""
+
+#: ../../quickstart.rst:26
+msgid "If you intend to use the :doc:`Redis <guide/fsm>`, MongoDB, or proxy storages, install the matching extras:"
+msgstr ""
+
+#: ../../quickstart.rst:35
+msgid "Your first bot"
+msgstr ""
+
+#: ../../quickstart.rst:37
+msgid "Create a file called ``bot.py``:"
+msgstr ""
+
+#: ../../quickstart.rst:75
+msgid "Run it:"
+msgstr ""
+
+#: ../../quickstart.rst:81
+msgid "Open your bot in Rubika and send ``/start``. You should get back the \"Hello, …!\" reply. Send any other text and the bot will echo it back."
+msgstr ""
+
+#: ../../quickstart.rst:86
+msgid "The echo handler deliberately checks ``message.text is not None`` because Rubika can deliver image, file, location, contact, sticker and poll messages too — those updates do **not** have a ``text`` attribute. See :doc:`guide/filter` for ways to filter by content type."
+msgstr ""
+
+#: ../../quickstart.rst:94
+msgid "What just happened?"
+msgstr ""
+
+#: ../../quickstart.rst:96
+msgid "Let's dissect the code, because every concept used above is reused throughout the framework."
+msgstr ""
+
+#: ../../quickstart.rst:99
+msgid "The :class:`~aiorubi.client.bot.Bot` object is a thin wrapper around the Rubika Bot API. It owns the token, an :class:`aiohttp`-backed session, and exposes one Python method per Rubika endpoint. Calling ``await bot.me()`` resolves and caches :class:`~aiorubi.types.bot_info.BotInfo` so that helpers like ``bot.id`` are usable in logs."
+msgstr ""
+
+#: ../../quickstart.rst:105
+msgid "The :class:`~aiorubi.dispatcher.dispatcher.Dispatcher` is the entry point of the routing layer. It is a special :class:`Router <aiorubi.dispatcher.router.Router>` that owns the FSM, the error middleware and the lifecycle observers (``startup`` / ``shutdown``). In practice you almost never register handlers directly on it — you create sub-routers and mount them — but for a tiny bot it is perfectly fine."
+msgstr ""
+
+#: ../../quickstart.rst:112
+msgid "A handler is just an ``async`` function. You attach it to an observer with either the decorator syntax (``@dp.new_message()``) or the explicit ``register`` syntax:"
+msgstr ""
+
+#: ../../quickstart.rst:121
+msgid "is identical to"
+msgstr ""
+
+#: ../../quickstart.rst:129
+msgid "Filters are callables that decide whether an update should reach a handler. :class:`~aiorubi.filters.command.Command` is one of the built-ins: it accepts a list of commands (``Command(\"start\", \"help\")``) and configurable prefixes (default ``\"/\"``). The whole :doc:`guide/filter` chapter explains them in detail."
+msgstr ""
+
+#: ../../quickstart.rst:135
+msgid "``message.reply`` and ``message.answer`` are *shortcuts*. They return a coroutine that, when awaited, calls the underlying :class:`Bot.send_message` method. Behind the scenes ``reply`` sets ``reply_to_message_id`` to the current message's id, while ``answer`` does not. A whole family of these shortcuts exists — ``reply_image``, ``answer_poll``, ``reply_location``, etc."
+msgstr ""
+
+#: ../../quickstart.rst:142
+msgid "Finally, ``await dp.start_polling(bot)`` begins the long-polling loop. Under the hood the dispatcher calls ``bot.get_updates`` in a loop, parses each update into an :class:`~aiorubi.types.update.Update`, splits it into the appropriate observer (``new_message`` here) and triggers every matching handler."
+msgstr ""
+
+#: ../../quickstart.rst:150
+msgid "Where to go next"
+msgstr ""
+
+#: ../../quickstart.rst:152
+msgid ":doc:`installation` — full installation matrix and extras."
+msgstr ""
+
+#: ../../quickstart.rst:153
+msgid ":doc:`migration-from-aiogram` — if you already know aiogram 3.x."
+msgstr ""
+
+#: ../../quickstart.rst:154
+msgid ":doc:`tutorial/index` — a six-chapter guided tour from ``/start`` to webhooks."
+msgstr ""
+
+#: ../../quickstart.rst:156
+msgid ":doc:`guide/index` — concept-by-concept reference."
+msgstr ""

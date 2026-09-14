@@ -1,0 +1,406 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../migration-from-aiogram.rst:3
+msgid "Migration from aiogram 3.x"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:5
+msgid "``aiorubi`` is a port of `aiogram <https://docs.aiogram.dev/>`_ 3.x to the **Rubika Bot API**. The architecture, the names, the file layout and the *ergonomics* are intentionally almost identical so that aiogram users feel at home, and so that the rich aiogram learning material remains 90 % applicable."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:11
+msgid "This page is a **field guide** for the 10 % that isn't."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:13
+msgid "If you have never used aiogram before, you can safely skip this chapter and jump straight to :doc:`tutorial/index`."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:18
+msgid "What stays the same"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:20
+msgid "**Module layout**: ``aiorubi.client``, ``aiorubi.dispatcher``, ``aiorubi.fsm``, ``aiorubi.filters``, ``aiorubi.handlers``, ``aiorubi.methods``, ``aiorubi.types``, ``aiorubi.webhook``, …."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:23
+msgid "**Routers and Dispatchers**: same ``@dp.<event>()`` decorator pattern, same ``include_router`` mechanism."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:25
+msgid "**FSM**: ``State``, ``StatesGroup``, ``FSMContext``, ``MemoryStorage`` / ``RedisStorage`` / ``MongoStorage`` — identical API."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:28
+msgid "**Scenes**: ``Scene``, ``SceneWizard``, ``ScenesManager`` — identical API."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:30
+msgid "**Filters**: ``Command``, ``CommandStart``, ``StateFilter``, ``MagicData``, ``ExceptionTypeFilter``, ``F`` and friends. (A ``CallbackData`` factory is not shipped yet — see :doc:`guide/filter` for the available toolkit.)"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:34
+msgid "**Middlewares**: outer/inner semantics, ``BaseMiddleware``, ``MiddlewareManager``."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:36
+msgid "**Flags**: ``flags`` generator and decorator usage."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:37
+msgid "**Shortcuts**: ``message.reply`` / ``message.answer`` / ``message.reply_image`` / etc."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:42
+msgid "What is *different* — at a glance"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:44
+msgid "**Identifiers are strings, not integers.** Rubika issues string ids, so ``chat_id``, ``message_id``, ``user_id`` and ``bot_id`` are all :class:`str` in aiorubi."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:58
+msgid "**The update model is unified.** Rubika does not give you a different class for every kind of message. There is one :class:`~aiorubi.types.message.Message` class; attached media appears as the ``file`` attribute (a :class:`~aiorubi.types.file.File` whose ``file_type`` distinguishes image, video, voice, music, gif and generic file). Other attached content types have their own attribute (``poll``, ``location``, ``contact_message``, ``sticker``)."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:0
+#: ../../migration-from-aiogram.rst:70
+#: ../../migration-from-aiogram.rst:96
+#: ../../migration-from-aiogram.rst:230
+msgid "aiogram"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:0
+#: ../../migration-from-aiogram.rst:71
+#: ../../migration-from-aiogram.rst:97
+#: ../../migration-from-aiogram.rst:231
+msgid "aiorubi"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:72
+msgid "``Message.photo``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:73
+msgid "``Message.file`` (when ``file.file_type == FileType.IMAGE``)"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:74
+msgid "``Message.video``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:75
+msgid "``Message.file`` (when ``file.file_type == FileType.VIDEO``)"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:76
+msgid "``Message.voice``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:77
+msgid "``Message.file`` (when ``file.file_type == FileType.VOICE``)"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:78
+msgid "``Message.audio``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:79
+msgid "``Message.file`` (when ``file.file_type == FileType.MUSIC``)"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:80
+msgid "``Message.animation``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:81
+msgid "``Message.file`` (when ``file.file_type == FileType.GIF``)"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:82
+#: ../../migration-from-aiogram.rst:83
+msgid "``Message.sticker``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:84
+#: ../../migration-from-aiogram.rst:85
+msgid "``Message.poll``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:86
+#: ../../migration-from-aiogram.rst:87
+msgid "``Message.location``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:88
+msgid "``Message.contact``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:89
+msgid "``Message.contact_message``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:91
+msgid "**The event names are renamed.**"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:98
+msgid "``message``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:99
+msgid "``new_message``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:100
+msgid "``edited_message``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:101
+msgid "``updated_message``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:102
+msgid "``callback_query``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:103
+msgid "``inline_message``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:104
+msgid "``my_chat_member`` / ``chat_member``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:105
+msgid "``started_bot`` / ``stopped_bot``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:107
+msgid "**There is one ``Keypad`` type, not two.** Rubika keypads come in two *display modes* — *inline* (under a message) and *chat* (at the bottom of the chat). Both are :class:`~aiorubi.types.keypad.Keypad` instances; the distinction is made at the call site via the ``inline_keypad=`` / ``chat_keypad=`` keyword arguments."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:124
+msgid "To **remove** a chat keypad, call :meth:`Bot.remove_chat_keypad <aiorubi.client.bot.Bot.remove_chat_keypad>` — there is no ``ReplyKeyboardRemove`` class."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:128
+msgid "**Buttons are a small hierarchy.** Seven button kinds are first-class types: ``Button``, ``ButtonSelection``, ``ButtonCalendar``, ``ButtonNumberPicker``, ``ButtonStringPicker``, ``ButtonTextbox``, ``ButtonLocation``. Mixing them in a single keypad is allowed. ``button_text`` is a required string (use an empty string for a textless button — there is no separate icon-only button kind)."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:135
+msgid "**HTML/Markdown text decorations are not yet supported.** Plain text only. The ``html`` and ``md`` helpers exposed in ``aiorubi/__init__.py`` are commented out; do not rely on them."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:139
+msgid "**There is no ``ChatAction`` typing/uploading status.** Rubika does not expose the equivalent of \"typing…\" status updates, so aiorubi ships no helper for it."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:143
+msgid "**Inline mode, payments, games, Passport, stickers API.** These are Telegram-specific and are not available on Rubika. The equivalent surface (``inline_message`` for button clicks, plain ``Message`` with ``poll`` for polls) is supported."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:148
+msgid "**Webhook timeout.** Rubika gives you 60 seconds to respond to a webhook. The default ``_timeout`` value in :meth:`Dispatcher.feed_webhook_update <aiorubi.dispatcher.dispatcher.Dispatcher.feed_webhook_update>` is 55 seconds, with a fallback that moves slow handlers into the background and returns immediately."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:157
+msgid "Side-by-side example"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:159
+msgid "The same \"echo + /start\" bot in both frameworks:"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:208
+msgid "The differences are:"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:210
+msgid "The Bot constructor takes ``token=`` (keyword) — Rubika tokens are sensitive to leading whitespace so the explicit kwarg avoids bugs."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:213
+msgid "Observers are renamed: ``message`` → ``new_message``."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:214
+msgid "``message.from_user.id`` → ``message.sender_id``."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:215
+msgid "``await bot.me()`` must be called once before the bot info becomes available via shortcuts like ``bot.id``."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:217
+msgid "No ``asyncio.run(main())`` shown — same as aiogram."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:221
+msgid "Renaming cheat-sheet"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:223
+msgid "When porting a real codebase, the tedious work is renaming. Here is a quick reference for ``sed`` / IDE find-and-replace:"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:232
+msgid "``from aiogram import …``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:233
+msgid "``from aiorubi import …``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:234
+msgid "``from aiogram.filters import …``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:235
+msgid "``from aiorubi.filters import …``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:236
+msgid "``from aiogram.fsm import …``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:237
+msgid "``from aiorubi.fsm import …``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:238
+msgid "``from aiogram.types import …``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:239
+msgid "``from aiorubi.types import …``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:240
+msgid "``from aiogram.enums import …``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:241
+msgid "``from aiorubi.enums import …``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:242
+msgid "``@dp.message``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:243
+msgid "``@dp.new_message``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:244
+msgid "``@dp.edited_message``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:245
+msgid "``@dp.updated_message``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:246
+msgid "``@dp.callback_query``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:247
+msgid "``@dp.inline_message``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:248
+msgid "``@dp.my_chat_member`` / ``chat_member``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:249
+msgid "``@dp.started_bot`` / ``@dp.stopped_bot``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:250
+msgid "``Bot(TOKEN)``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:251
+msgid "``Bot(token=TOKEN)``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:252
+msgid "``message.from_user.id``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:253
+msgid "``message.sender_id``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:254
+msgid "``reply_markup=``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:255
+msgid "``inline_keypad=`` / ``chat_keypad=``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:256
+msgid "``Message.photo[-1].file_id``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:257
+msgid "``message.file.file_id`` (guarded by ``FileType.IMAGE``)"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:258
+msgid "``callback_query.data``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:259
+msgid "``inline_message.aux_data.button_id``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:260
+msgid "``CallbackQuery``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:261
+msgid "``InlineMessage``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:262
+msgid "``CallbackData(...)`` factory"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:263
+msgid "not shipped yet — filter on ``aux_data.button_id``"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:267
+msgid "When *not* to migrate"
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:269
+msgid "If your bot talks to the **Telegram** Bot API, stay with aiogram. Rubika is a separate platform."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:271
+msgid "If you depend on Telegram-specific features that aiorubi does not mirror (inline mode, payments, Telegram Passport, games, stickers API), you will need to wait — or sponsor the work."
+msgstr ""
+
+#: ../../migration-from-aiogram.rst:274
+msgid "If you depend on HTML/Markdown text decorations, aiorubi does not expose them yet. Use plain text or patch your own formatter."
+msgstr ""

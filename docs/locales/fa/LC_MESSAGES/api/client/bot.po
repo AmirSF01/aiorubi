@@ -1,0 +1,342 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/client/bot.rst:3
+msgid "Bot"
+msgstr "بات"
+
+#: ../../api/client/bot.rst:7
+msgid "Automatically-generated reference of the :class:`~aiorubi.client.bot.Bot` class."
+msgstr "مرجع خودکار-تولیدشدهٔ کلاس :class:`~aiorubi.client.bot.Bot`."
+
+#: ../../api/client/bot.rst aiorubi.client.bot.Bot.ban_chat_member
+#: aiorubi.client.bot.Bot.get_file aiorubi.client.bot.Bot.send_file
+#: aiorubi.client.bot.Bot.send_location
+#: aiorubi.client.bot.Bot.unban_chat_member aiorubi.client.bot.Bot.upload_file
+#: of
+msgid "Parameters"
+msgstr "پارامترها"
+
+#: ../../api/client/bot.rst aiorubi.client.bot.Bot.ban_chat_member
+#: aiorubi.client.bot.Bot.get_file aiorubi.client.bot.Bot.send_file
+#: aiorubi.client.bot.Bot.send_location
+#: aiorubi.client.bot.Bot.unban_chat_member aiorubi.client.bot.Bot.upload_file
+#: of
+msgid "Return type"
+msgstr "نوع بازگشتی"
+
+#: aiorubi.client.bot.Bot.__call__:1 of
+msgid "Call API method"
+msgstr "فراخوانی متد API"
+
+#: ../../api/client/bot.rst
+msgid "Returns"
+msgstr "بازگشت‌ها"
+
+#: aiorubi.client.bot.Bot.__init__:1 of
+msgid "Bot class"
+msgstr "کلاس Bot"
+
+#: aiorubi.client.bot.Bot.__init__:3 of
+msgid "Rubika Bot token `Obtained from @BotFather <https://rubika.ir/BotFather>`_"
+msgstr "توکن بات روبیکا که `از @BotFather <https://rubika.ir/BotFather>`_ گرفته می‌شود"
+
+#: aiorubi.client.bot.Bot.__init__:4 of
+msgid "HTTP Client session (For example AiohttpSession). If not specified it will be automatically created."
+msgstr "سشن کلاینت HTTP (مثلاً AiohttpSession). اگر مشخص نشود به‌طور خودکار ساخته می‌شود."
+
+#: aiorubi.client.bot.Bot.__init__:6 of
+msgid "Default bot properties. If specified it will be propagated into the API methods at runtime."
+msgstr "ویژگی‌های پیش‌فرض بات. اگر مشخص شود در زمان اجرا به متدهای API تزریق می‌شود."
+
+#: ../../api/client/bot.rst
+msgid "Raises"
+msgstr "پرتاب‌ها"
+
+#: aiorubi.client.bot.Bot.__init__:8 of
+msgid "When token has invalid format this exception will be raised"
+msgstr "وقتی قالب توکن نامعتبر باشد این استثنا پرتاب می‌شود"
+
+#: aiorubi.client.bot.Bot.ban_chat_member:1 of
+msgid "Use this method to ban a user in a group or a channel. Returns :code:`True` on success."
+msgstr "از این متد برای مسدودکردن یک کاربر در گروه یا کانال استفاده کنید. در صورت موفقیت :code:`True` برمی‌گرداند."
+
+#: aiorubi.client.bot.Bot.ban_chat_member:4 of
+msgid "Source: https://rubika.ir/botapi/methods#_15"
+msgstr "منبع: https://rubika.ir/botapi/methods#_15"
+
+#: aiorubi.client.bot.Bot.context:1 of
+msgid "Generate bot context"
+msgstr "تولید کانتکست بات"
+
+#: aiorubi.client.bot.Bot.context:3 of
+msgid "close session on exit"
+msgstr "بستن سشن هنگام خروج"
+
+#: aiorubi.client.bot.Bot.delete_message:1 of
+msgid "Use this method to delete a message, including service messages. Returns :code:`True` on success."
+msgstr "از این متد برای حذف یک پیام، از جمله پیام‌های سیستمی، استفاده کنید. در صورت موفقیت :code:`True` برمی‌گرداند."
+
+#: aiorubi.client.bot.Bot.delete_message:4 of
+msgid "Source: https://rubika.ir/botapi/methods#_10"
+msgstr "منبع: https://rubika.ir/botapi/methods#_10"
+
+#: aiorubi.client.bot.Bot.delete_message:6
+#: aiorubi.client.bot.Bot.edit_chat_keypad:6
+#: aiorubi.client.bot.Bot.edit_message_keypad:6
+#: aiorubi.client.bot.Bot.edit_message_text:7
+#: aiorubi.client.bot.Bot.remove_chat_keypad:6 of
+msgid "Unique identifier for the target chat"
+msgstr "شناسهٔ یکتای چت هدف"
+
+#: aiorubi.client.bot.Bot.delete_message:7 of
+msgid "Identifier of the message to delete"
+msgstr "شناسهٔ پیامی که باید حذف شود"
+
+#: aiorubi.client.bot.Bot.delete_message:8
+#: aiorubi.client.bot.Bot.edit_chat_keypad:8
+#: aiorubi.client.bot.Bot.edit_message_keypad:9
+#: aiorubi.client.bot.Bot.edit_message_text:9
+#: aiorubi.client.bot.Bot.remove_chat_keypad:7
+#: aiorubi.client.bot.Bot.set_commands:7
+#: aiorubi.client.bot.Bot.update_bot_endpoints:8 of
+msgid "Request timeout"
+msgstr "تایم‌اوت درخواست"
+
+#: aiorubi.client.bot.Bot.delete_message:9
+#: aiorubi.client.bot.Bot.edit_chat_keypad:9
+#: aiorubi.client.bot.Bot.edit_message_keypad:10
+#: aiorubi.client.bot.Bot.edit_message_text:10
+#: aiorubi.client.bot.Bot.remove_chat_keypad:8
+#: aiorubi.client.bot.Bot.set_commands:8
+#: aiorubi.client.bot.Bot.update_bot_endpoints:9 of
+msgid "Returns :code:`True` on success."
+msgstr "در صورت موفقیت :code:`True` برمی‌گرداند."
+
+#: aiorubi.client.bot.Bot.download:1 of
+msgid "Download file by file_id or Downloadable object to destination."
+msgstr "دانلود فایل با file_id یا شیء Downloadable به مقصد."
+
+#: aiorubi.client.bot.Bot.download:3 of
+msgid "If you want to automatically create destination (:class:`io.BytesIO`) use default value of destination and handle result of this method."
+msgstr "اگر می‌خواهید مقصد (:class:`io.BytesIO`) به‌طور خودکار ساخته شود، از مقدار پیش‌فرض destination استفاده کنید و نتیجهٔ این متد را مدیریت کنید."
+
+#: aiorubi.client.bot.Bot.download:6 of
+msgid "file_id or Downloadable object"
+msgstr "file_id یا شیء Downloadable"
+
+#: aiorubi.client.bot.Bot.download:7 of
+msgid "Filename, file path or instance of :class:`io.IOBase`. For e.g. :class:`io.BytesIO`, defaults to None"
+msgstr "نام فایل، مسیر فایل یا نمونه‌ای از :class:`io.IOBase`. مثلاً :class:`io.BytesIO`؛ پیش‌فرض None"
+
+#: aiorubi.client.bot.Bot.download:8 of
+msgid "Total timeout in seconds, defaults to 30"
+msgstr "تایم‌اوت کل به ثانیه؛ پیش‌فرض ۳۰"
+
+#: aiorubi.client.bot.Bot.download:9 of
+msgid "File chunks size, defaults to 64 kb"
+msgstr "اندازهٔ chunkهای فایل؛ پیش‌فرض ۶۴ کیلوبایت"
+
+#: aiorubi.client.bot.Bot.download:10 of
+msgid "Go to start of file when downloading is finished. Used only for destination with :class:`typing.BinaryIO` type, defaults to True"
+msgstr "بعد از پایان دانلود به ابتدای فایل برو. فقط برای مقصدهای از نوع :class:`typing.BinaryIO` استفاده می‌شود؛ پیش‌فرض True"
+
+#: aiorubi.client.bot.Bot.edit_chat_keypad:1 of
+msgid "Use this method to edit the chat's keypad. Returns :code:`True` on success."
+msgstr "از این متد برای ویرایش کیبورد چت استفاده کنید. در صورت موفقیت :code:`True` برمی‌گرداند."
+
+#: aiorubi.client.bot.Bot.edit_chat_keypad:4 of
+msgid "Source: https://rubika.ir/botapi/methods#keypad_2"
+msgstr "منبع: https://rubika.ir/botapi/methods#keypad_2"
+
+#: aiorubi.client.bot.Bot.edit_chat_keypad:7 of
+msgid "The new keypad"
+msgstr "کیبورد جدید"
+
+#: aiorubi.client.bot.Bot.edit_message_keypad:1 of
+msgid "Use this method to edit only the keypad of messages. Returns :code:`True` on success."
+msgstr "از این متد برای ویرایش فقط کیبورد پیام‌ها استفاده کنید. در صورت موفقیت :code:`True` برمی‌گرداند."
+
+#: aiorubi.client.bot.Bot.edit_message_keypad:4 of
+msgid "Source: https://botapi.rubika.ir/v3/editMessageKeypad"
+msgstr "منبع: https://botapi.rubika.ir/v3/editMessageKeypad"
+
+#: aiorubi.client.bot.Bot.edit_message_keypad:7
+#: aiorubi.client.bot.Bot.edit_message_text:8 of
+msgid "Identifier of the message to edit"
+msgstr "شناسهٔ پیامی که باید ویرایش شود"
+
+#: aiorubi.client.bot.Bot.edit_message_keypad:8 of
+msgid "The new keypad to replace the current inline keypad of the message."
+msgstr "کیبورد جدید برای جایگزینی کیبورد درون‌خطی فعلی پیام."
+
+#: aiorubi.client.bot.Bot.edit_message_text:1 of
+msgid "Use this method to edit text messages. Returns :code:`True` on success."
+msgstr "از این متد برای ویرایش پیام‌های متنی استفاده کنید. در صورت موفقیت :code:`True` برمی‌گرداند."
+
+#: aiorubi.client.bot.Bot.edit_message_text:4 of
+msgid "Source: https://rubika.ir/botapi/methods#_9"
+msgstr "منبع: https://rubika.ir/botapi/methods#_9"
+
+#: aiorubi.client.bot.Bot.edit_message_text:6 of
+msgid "New text of the message"
+msgstr "متن جدید پیام"
+
+#: aiorubi.client.bot.Bot.forward_message:1 of
+msgid "Forward messages of any kind."
+msgstr "فوروارد پیام‌ها از هر نوعی."
+
+#: aiorubi.client.bot.Bot.forward_message:3 of
+msgid "Unique identifier for the chat where the original message was sent."
+msgstr "شناسهٔ یکتای چیتی که پیام اصلی در آن ارسال شده است."
+
+#: aiorubi.client.bot.Bot.forward_message:4 of
+msgid "Unique identifier for the target chat."
+msgstr "شناسهٔ یکتای چت هدف."
+
+#: aiorubi.client.bot.Bot.forward_message:5 of
+msgid "Message identifier in the chat specified in from_chat_id."
+msgstr "شناسهٔ پیام در چیتی که در from_chat_id مشخص شده است."
+
+#: aiorubi.client.bot.Bot.forward_message:6 of
+msgid "Sends the message silently."
+msgstr "پیام را بی‌صدا ارسال می‌کند."
+
+#: aiorubi.client.bot.Bot.forward_message:7 of
+msgid "Timeout for the request."
+msgstr "تایم‌اوت درخواست."
+
+#: aiorubi.client.bot.Bot.forward_message:8 of
+msgid ":class:`MessageID` object."
+msgstr "شیء :class:`MessageID`."
+
+#: aiorubi.client.bot.Bot.get_file:1 of
+msgid "Get url of a file to download."
+msgstr "گرفتن URL دانلود یک فایل."
+
+#: aiorubi.client.bot.Bot.id:1 of
+msgid "Get bot ID"
+msgstr "گرفتن شناسهٔ بات"
+
+#: aiorubi.client.bot.Bot.id:3 of
+msgid "If bot information has not been loaded yet."
+msgstr "اگر اطلاعات بات هنوز بارگذاری نشده باشد."
+
+#: aiorubi.client.bot.Bot.me:1 of
+msgid "Cached alias for getMe method"
+msgstr "مستعار کش‌شدهٔ متد getMe"
+
+#: aiorubi.client.bot.Bot.remove_chat_keypad:1 of
+msgid "Use this method to remove the chat's keypad. Returns :code:`True` on success."
+msgstr "از این متد برای حذف کیبورد چت استفاده کنید. در صورت موفقیت :code:`True` برمی‌گرداند."
+
+#: aiorubi.client.bot.Bot.remove_chat_keypad:4 of
+msgid "Source: https://rubika.ir/botapi/methods#keypad_1"
+msgstr "منبع: https://rubika.ir/botapi/methods#keypad_1"
+
+#: aiorubi.client.bot.Bot.send_file:1 of
+msgid "Send a file, either by referencing an existing file_id or uploading a new InputFile."
+msgstr "ارسال فایل، چه با ارجاع به file_id موجود چه با آپلود InputFile جدید."
+
+#: aiorubi.client.bot.Bot.send_file:3 of
+msgid "Note: `file_type` is only used when uploading a new file (InputFile). It is ignored when `file` is a file_id (str)."
+msgstr "نکته: `file_type` فقط هنگام آپلود فایل جدید (InputFile) استفاده می‌شود. وقتی `file` یک file_id (str) باشد نادیده گرفته می‌شود."
+
+#: aiorubi.client.bot.Bot.send_gif:1 of
+msgid "Send a gif, either by referencing an existing file_id or uploading a new InputFile."
+msgstr "ارسال گیف، چه با ارجاع به file_id موجود چه با آپلود InputFile جدید."
+
+#: aiorubi.client.bot.Bot.send_gif:5 of
+msgid "When using a `file_id`, the file will be sent as a gif **only if** it was originally uploaded as a gif type; otherwise, it will be sent as its original type instead."
+msgstr "وقتی از `file_id` استفاده می‌کنید، فایل **فقط وقتی** به‌عنوان گیف ارسال می‌شود که در اصل به‌عنوان نوع گیف آپلود شده باشد؛ وگرنه به‌عنوان نوع اصلی‌اش ارسال می‌شود."
+
+#: aiorubi.client.bot.Bot.send_image:1 of
+msgid "Send an image, either by referencing an existing file_id or uploading a new InputFile."
+msgstr "ارسال تصویر، چه با ارجاع به file_id موجود چه با آپلود InputFile جدید."
+
+#: aiorubi.client.bot.Bot.send_image:5 of
+msgid "When using a `file_id`, the file will be sent as an image **only if** it was originally uploaded as an image type; otherwise, it will be sent as its original type instead."
+msgstr "وقتی از `file_id` استفاده می‌کنید، فایل **فقط وقتی** به‌عنوان تصویر ارسال می‌شود که در اصل به‌عنوان نوع تصویر آپلود شده باشد؛ وگرنه به‌عنوان نوع اصلی‌اش ارسال می‌شود."
+
+#: aiorubi.client.bot.Bot.send_location:1 of
+msgid "Send a location."
+msgstr "ارسال موقعیت مکانی."
+
+#: aiorubi.client.bot.Bot.send_music:1 of
+msgid "Send music, either by referencing an existing file_id or uploading a new InputFile."
+msgstr "ارسال موسیقی، چه با ارجاع به file_id موجود چه با آپلود InputFile جدید."
+
+#: aiorubi.client.bot.Bot.send_music:5 of
+msgid "When using a `file_id`, the file will be sent as music **only if** it was originally uploaded as a music type; otherwise, it will be sent as its original type instead."
+msgstr "وقتی از `file_id` استفاده می‌کنید، فایل **فقط وقتی** به‌عنوان موسیقی ارسال می‌شود که در اصل به‌عنوان نوع موسیقی آپلود شده باشد؛ وگرنه به‌عنوان نوع اصلی‌اش ارسال می‌شود."
+
+#: aiorubi.client.bot.Bot.send_video:1 of
+msgid "Send a video, either by referencing an existing file_id or uploading a new InputFile."
+msgstr "ارسال ویدیو، چه با ارجاع به file_id موجود چه با آپلود InputFile جدید."
+
+#: aiorubi.client.bot.Bot.send_video:5 of
+msgid "When using a `file_id`, the file will be sent as a video **only if** it was originally uploaded as a video type; otherwise, it will be sent as its original type instead."
+msgstr "وقتی از `file_id` استفاده می‌کنید، فایل **فقط وقتی** به‌عنوان ویدیو ارسال می‌شود که در اصل به‌عنوان نوع ویدیو آپلود شده باشد؛ وگرنه به‌عنوان نوع اصلی‌اش ارسال می‌شود."
+
+#: aiorubi.client.bot.Bot.send_voice:1 of
+msgid "Send a voice, either by referencing an existing file_id or uploading a new InputFile."
+msgstr "ارسال ویس، چه با ارجاع به file_id موجود چه با آپلود InputFile جدید."
+
+#: aiorubi.client.bot.Bot.send_voice:5 of
+msgid "When using a `file_id`, the file will be sent as a voice **only if** it was originally uploaded as a voice type; otherwise, it will be sent as its original type instead."
+msgstr "وقتی از `file_id` استفاده می‌کنید، فایل **فقط وقتی** به‌عنوان ویس ارسال می‌شود که در اصل به‌عنوان نوع ویس آپلود شده باشد؛ وگرنه به‌عنوان نوع اصلی‌اش ارسال می‌شود."
+
+#: aiorubi.client.bot.Bot.set_commands:1 of
+msgid "Use this method to change the list of the bot's commands. Returns :code:`True` on success."
+msgstr "از این متد برای تغییر فهرست دستورهای بات استفاده کنید. در صورت موفقیت :code:`True` برمی‌گرداند."
+
+#: aiorubi.client.bot.Bot.set_commands:4 of
+msgid "Source: https://botapi.rubika.ir/v3/setCommands"
+msgstr "منبع: https://botapi.rubika.ir/v3/setCommands"
+
+#: aiorubi.client.bot.Bot.set_commands:6 of
+msgid "A list of bot commands to be set as the list of the bot's commands."
+msgstr "فهرست دستورهای بات که باید به‌عنوان فهرست دستورهای بات تنظیم شود."
+
+#: aiorubi.client.bot.Bot.unban_chat_member:1 of
+msgid "Use this method to unban a user in a group or a channel. Returns :code:`True` on success."
+msgstr "از این متد برای رفع‌مسدودی یک کاربر در گروه یا کانال استفاده کنید. در صورت موفقیت :code:`True` برمی‌گرداند."
+
+#: aiorubi.client.bot.Bot.unban_chat_member:4 of
+msgid "Source: https://rubika.ir/botapi/methods#_16"
+msgstr "منبع: https://rubika.ir/botapi/methods#_16"
+
+#: aiorubi.client.bot.Bot.update_bot_endpoints:1 of
+msgid "Use this method to update the bot's endpoint URLs for different event types. Returns :code:`True` on success."
+msgstr "از این متد برای به‌روزرسانی URLهای endpoint بات برای انواع مختلف رویداد استفاده کنید. در صورت موفقیت :code:`True` برمی‌گرداند."
+
+#: aiorubi.client.bot.Bot.update_bot_endpoints:4 of
+msgid "Source: https://rubika.ir/botapi/methods#url-endpoint"
+msgstr "منبع: https://rubika.ir/botapi/methods#url-endpoint"
+
+#: aiorubi.client.bot.Bot.update_bot_endpoints:6 of
+msgid "The new endpoint URL"
+msgstr "URL جدید endpoint"
+
+#: aiorubi.client.bot.Bot.update_bot_endpoints:7 of
+msgid "The type of endpoint (e.g., UpdateEndpointType.RECEIVE_UPDATE)"
+msgstr "نوع endpoint (مثلاً UpdateEndpointType.RECEIVE_UPDATE)"
+
+#: aiorubi.client.bot.Bot.upload_file:1 of
+msgid "Internal method to upload files to Rubika's storage."
+msgstr "متد داخلی برای آپلود فایل‌ها به فضای ذخیره‌سازی روبیکا."
+

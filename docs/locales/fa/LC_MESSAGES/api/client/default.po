@@ -1,0 +1,41 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Default"
+msgstr  "پیش‌فرض"
+
+msgid "Default bot properties propagated into API method calls."
+msgstr  "ویژگی‌های پیش‌فرض بات که به فراخوانی متدهای API منتقل می‌شوند."
+
+msgid "Parameters"
+msgstr  "پارامترها"
+
+msgid "Default bot properties."
+msgstr  "ویژگی‌های پیش‌فرض بات."
+
+msgid "Return type"
+msgstr  "نوع بازگشتی"
+
+msgid "Allows to send messages without reply."
+msgstr  "اجازهٔ ارسال پیام بدون نقل‌قول (ریپلای) را می‌دهد."
+
+msgid "Sends the message silently. Users will receive a notification with no sound."
+msgstr "پیام را بی‌صدا ارسال می‌کند. کاربران اعلانی بدون صدا دریافت خواهند کرد."
+
+msgid "Default parse mode for messages."
+msgstr  "حالت پارس پیش‌فرض برای پیام‌ها."
+

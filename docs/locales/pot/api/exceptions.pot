@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/exceptions.rst:3
+msgid "Exceptions"
+msgstr ""
+
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.AiorubiError:1
+msgid "Base exception for all aiorubi errors."
+msgstr ""
+
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.CallbackAnswerException:1
+msgid "Exception for callback answer."
+msgstr ""
+
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.ClientDecodeError:1
+msgid "Exception raised when client can't decode response. (Malformed response, etc.)"
+msgstr ""
+
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.ClientDecodeError:0
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.DataNotDictLikeError:0
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.RubikaInvalidAccess:0
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.RubikaInvalidInput:0
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.RubikaServerError:0
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.RubikaTooRequests:0
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.UnsupportedKeywordArgument:0
+#: ../../api/exceptions.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.ClientDecodeError:0
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.DataNotDictLikeError:0
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.RubikaInvalidAccess:0
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.RubikaInvalidInput:0
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.RubikaServerError:0
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.RubikaTooRequests:0
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.UnsupportedKeywordArgument:0
+#: ../../api/exceptions.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.DataNotDictLikeError:1
+msgid "Exception raised when data is not dict-like."
+msgstr ""
+
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.DetailedAiorubiError:1
+msgid "Base exception for all aiorubi errors with detailed message."
+msgstr ""
+
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.RubikaAPIError:1
+msgid "Base exception for all Rubika API errors."
+msgstr ""
+
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.RubikaInvalidAccess:1
+msgid "Exception raised when the bot does not have permission to perform the requested action."
+msgstr ""
+
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.RubikaInvalidInput:1
+msgid "Exception raised when request is malformed."
+msgstr ""
+
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.RubikaNetworkError:1
+msgid "Base exception for all Rubika network errors."
+msgstr ""
+
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.RubikaServerError:1
+msgid "Exception raised when Rubika server returns 5xx HTTP error or \"status\": \"SERVER_ERROR\"."
+msgstr ""
+
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.RubikaTooRequests:1
+msgid "Exception raised when the Rubika API returns a \"TOO_REQUESTS\" status, meaning the bot has sent too many requests in a short time."
+msgstr ""
+
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.RubikaTooRequests:4
+msgid "Note: Rubika does not provide a 'retry_after' value, so the client must manage timing between requests based on experience."
+msgstr ""
+
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.SceneException:1
+msgid "Exception for scenes."
+msgstr ""
+
+#: ../../../aiorubi/exceptions.py:docstring of aiorubi.exceptions.UnsupportedKeywordArgument:1
+msgid "Exception raised when a keyword argument is passed as filter."
+msgstr ""

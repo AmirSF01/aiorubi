@@ -1,0 +1,131 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/dispatcher/dispatcher.rst:3
+msgid "Dispatcher"
+msgstr "دیسپچر"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher:1
+#: aiorubi.dispatcher.dispatcher.Dispatcher.__init__:1 of
+msgid "Root router"
+msgstr "روتِر ریشه"
+
+#: ../../api/dispatcher/dispatcher.rst
+msgid "Parameters"
+msgstr "پارامترها"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher.__init__:3 of
+msgid "Storage for FSM"
+msgstr "استورج برای FSM"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher.__init__:4 of
+msgid "FSM strategy"
+msgstr "استراتژی FSM"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher.__init__:5 of
+msgid "Events isolation"
+msgstr "ایزوله‌سازی رویدادها"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher.__init__:6 of
+msgid "Disable FSM, note that if you disable FSM then you should not use storage and events isolation"
+msgstr "غیرفعال‌کردن FSM؛ توجه: اگر FSM را غیرفعال کنید نباید از storage و ایزوله‌سازی رویدادها استفاده کنید"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher.__init__:8 of
+msgid "Other arguments, will be passed as keyword arguments to handlers"
+msgstr "سایر آرگومان‌ها؛ به‌صورت آرگومان کلیدواژه‌ای به هندلرها پاس داده می‌شوند"
+
+#: ../../api/dispatcher/dispatcher.rst
+msgid "Return type"
+msgstr "نوع بازگشتی"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher.feed_raw_update:1 of
+msgid "Main entry point for incoming updates with automatic Dict->Update serializer"
+msgstr "نقطهٔ ورود اصلی آپدیت‌های ورودی با سریال‌ساز خودکار Dict->Update"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher.feed_update:1 of
+msgid "Main entry point for incoming updates Response of this method can be used as Webhook response"
+msgstr "نقطهٔ ورود اصلی آپدیت‌های ورودی؛ پاسخ این متد می‌تواند به‌عنوان پاسخ Webhook استفاده شود"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher.parent_router:1 of
+msgid "Dispatcher has no parent router and can't be included to any other routers or dispatchers"
+msgstr "دیسپچر روتِر والد ندارد و نمی‌تواند در هیچ روتِر یا دیسپچر دیگری قرار بگیرد"
+
+#: ../../api/dispatcher/dispatcher.rst
+msgid "Returns"
+msgstr "بازگشت‌ها"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher.run_polling:1 of
+msgid "Run many bots with polling"
+msgstr "اجرای چند بات با پولینگ"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher.run_polling:3
+#: aiorubi.dispatcher.dispatcher.Dispatcher.start_polling:3 of
+msgid "Bot instances (one or more)"
+msgstr "نمونه‌های Bot (یک یا چند)"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher.run_polling:4
+#: aiorubi.dispatcher.dispatcher.Dispatcher.start_polling:4 of
+msgid "Maximum number of updates to fetch per request"
+msgstr "حداکثر تعداد آپدیت برای دریافت در هر درخواست"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher.run_polling:5
+#: aiorubi.dispatcher.dispatcher.Dispatcher.start_polling:5 of
+msgid "Delay between polling requests when no updates are available"
+msgstr "تأخیر بین درخواست‌های پولینگ وقتی آپدیت جدیدی نیست"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher.run_polling:6
+#: aiorubi.dispatcher.dispatcher.Dispatcher.start_polling:6 of
+msgid "Run task for each event and no wait result"
+msgstr "برای هر رویداد یک task اجرا می‌کند و منتظر نتیجه نمی‌ماند"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher.run_polling:7
+#: aiorubi.dispatcher.dispatcher.Dispatcher.start_polling:7 of
+msgid "backoff-retry config"
+msgstr "پیکربندی backoff برای تلاش مجدد"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher.run_polling:8
+#: aiorubi.dispatcher.dispatcher.Dispatcher.start_polling:8 of
+msgid "handle signals (SIGINT/SIGTERM)"
+msgstr "مدیریت سیگنال‌ها (SIGINT/SIGTERM)"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher.run_polling:9
+#: aiorubi.dispatcher.dispatcher.Dispatcher.start_polling:9 of
+msgid "close bot sessions on shutdown"
+msgstr "بستن سشن‌های بات هنگام خاموشی"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher.run_polling:10
+#: aiorubi.dispatcher.dispatcher.Dispatcher.start_polling:10 of
+msgid "Maximum number of concurrent updates to process (None = no limit), used only if handle_as_tasks is True"
+msgstr "حداکثر تعداد آپدیت‌های همزمان برای پردازش (None = بدون محدودیت)؛ فقط وقتی handle_as_tasks برابر True باشد استفاده می‌شود"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher.run_polling:12
+#: aiorubi.dispatcher.dispatcher.Dispatcher.start_polling:12 of
+msgid "contextual data"
+msgstr "دادهٔ کانتکست"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher.silent_call_request:1 of
+msgid "Simulate answer into WebHook"
+msgstr "شبیه‌سازی پاسخ در WebHook"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher.start_polling:1 of
+msgid "Polling runner"
+msgstr "اجراکنندهٔ پولینگ"
+
+#: aiorubi.dispatcher.dispatcher.Dispatcher.stop_polling:1 of
+msgid "Execute this method if you want to stop polling programmatically"
+msgstr "اگر می‌خواهید پولینگ را به‌صورت برنامه‌ریزی‌شده متوقف کنید این متد را اجرا کنید"
+

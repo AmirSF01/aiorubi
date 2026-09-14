@@ -1,0 +1,69 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../guide/index.rst:3
+msgid "Guides"
+msgstr ""
+
+#: ../../guide/index.rst:5
+msgid "Concept-by-concept guides for aiorubi. Each page is self-contained; read them in order if you are new to the framework."
+msgstr ""
+
+#: ../../guide/index.rst:23
+msgid "Quick links"
+msgstr ""
+
+#: ../../guide/index.rst:25
+msgid ":doc:`dispatcher` — the root of the update pipeline: observers, polling and webhooks, workflow data."
+msgstr ""
+
+#: ../../guide/index.rst:27
+msgid ":doc:`router` — splitting a bot into mountable modules."
+msgstr ""
+
+#: ../../guide/index.rst:28
+msgid ":doc:`handlers` — function and class-based handlers, argument injection."
+msgstr ""
+
+#: ../../guide/index.rst:29
+msgid ":doc:`middlewares` — outer/inner middleware chains."
+msgstr ""
+
+#: ../../guide/index.rst:30
+msgid ":doc:`flags` — passing metadata from decorators to handlers."
+msgstr ""
+
+#: ../../guide/index.rst:31
+msgid ":doc:`filter` — built-in filters, MagicFilter (``F``) and custom filters."
+msgstr ""
+
+#: ../../guide/index.rst:32
+msgid ":doc:`fsm` — finite state machine: states, context, strategies."
+msgstr ""
+
+#: ../../guide/index.rst:33
+msgid ":doc:`storages` — Memory, Redis and MongoDB FSM storages, key builders."
+msgstr ""
+
+#: ../../guide/index.rst:34
+msgid ":doc:`scenes` — wizard-style multi-step dialogs on top of the FSM."
+msgstr ""
+
+#: ../../guide/index.rst:35
+msgid ":doc:`webhook` — receiving updates over HTTP with aiohttp."
+msgstr ""

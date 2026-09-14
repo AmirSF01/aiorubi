@@ -1,0 +1,85 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/dispatcher/router.rst:3
+msgid "Router"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/router.py:docstring of aiorubi.dispatcher.router.Router:1
+msgid "Router can route update, and it nested update types like messages, callback query, polls and all other event types."
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/router.py:docstring of aiorubi.dispatcher.router.Router:4
+msgid "Event handlers can be registered in observer by two ways:"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/router.py:docstring of aiorubi.dispatcher.router.Router:6
+msgid "By observer method - :obj:`router.<event_type>.register(handler, <filters, ...>)`"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/router.py:docstring of aiorubi.dispatcher.router.Router:7
+msgid "By decorator - :obj:`@router.<event_type>(<filters, ...>)`"
+msgstr ""
+
+#: ../../api/dispatcher/router.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/router.py:docstring of aiorubi.dispatcher.router.Router.__init__:1
+msgid "Optional router name, can be useful for debugging"
+msgstr ""
+
+#: ../../api/dispatcher/router.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/router.py:docstring of aiorubi.dispatcher.router.Router.emit_shutdown:1
+msgid "Recursively call shutdown callbacks to graceful shutdown"
+msgstr ""
+
+#: ../../api/dispatcher/router.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/router.py:docstring of aiorubi.dispatcher.router.Router.emit_startup:1
+msgid "Recursively call startup callbacks"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/router.py:docstring of aiorubi.dispatcher.router.Router.include_router:1
+msgid "Attach another router."
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/router.py:docstring of aiorubi.dispatcher.router.Router.include_routers:1
+msgid "Attach multiple routers."
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/router.py:docstring of aiorubi.dispatcher.router.Router.resolve_used_update_types:1
+msgid "Resolve registered event names"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/router.py:docstring of aiorubi.dispatcher.router.Router.resolve_used_update_types:3
+msgid "Is useful for getting updates only for registered event types."
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/router.py:docstring of aiorubi.dispatcher.router.Router.resolve_used_update_types:5
+msgid "skip specified event names"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/router.py:docstring of aiorubi.dispatcher.router.Router.resolve_used_update_types:6
+msgid "set of registered names"
+msgstr ""
