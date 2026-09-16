@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tutorial/02_commands.rst:5
+msgid "2. Commands & Filters"
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:7
+msgid "The greeting bot works, but it answers to *any* ``/start``-like text. In this chapter we will register several commands properly and learn how filters decide which handler runs."
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:13
+msgid "Built-in command filter"
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:15
+msgid ":class:`~aiorubi.filters.command.Command` is the filter you will use most often. It matches messages whose text starts with ``/`` followed by one of the given commands:"
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:30
+msgid "By default the filter:"
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:32
+msgid "matches only messages that begin with ``/`` (the prefix),"
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:33
+msgid "requires an exact, case-sensitive command match (pass ``ignore_case=True`` to relax this),"
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:35
+msgid "verifies the bot mention, if the command carries one (pass ``ignore_mention=True`` to ignore it)."
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:38
+msgid "``Command`` also accepts regular-expression patterns and :class:`~aiorubi.types.bot_command.BotCommand` objects, and exposes the parsed :class:`~aiorubi.filters.command.CommandObject` to the handler as the ``command`` argument:"
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:51
+msgid "Import ``CommandObject`` alongside ``Command``: ``from aiorubi.filters.command import Command, CommandObject``."
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:56
+msgid "Falling back for unknown text"
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:58
+msgid "Filters are checked **in registration order**. When none of the registered filters match, the update is marked as *unhandled*. Let's add a catch-all handler as the *last* registration:"
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:73
+msgid "Because handlers are checked in order, a catch-all handler with no filters must be registered **after** every other handler on the same observer. If you put it first, it will swallow everything."
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:79
+msgid "Magic filter F"
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:81
+msgid "Sometimes you need finer control than \"which command\". That is where the **magic filter** — the :data:`~aiorubi.F` object — comes in:"
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:98
+msgid "``F`` mirrors the attribute access of the event object, so ``F.text`` means \"the ``text`` attribute of the message\". Any comparison, ``.contains()``, ``.len()``, ``.startswith()`` … works. The full magic-filter DSL is covered in :doc:`/guide/filter`."
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:105
+msgid "Combining filters"
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:107
+msgid "Filters compose with ``&``, ``|`` and ``~``:"
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:137
+msgid "Passing extra data to handlers"
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:139
+msgid "Handlers can accept keyword arguments beyond the event. The dispatcher injects whatever it finds in ``workflow_data`` — the dict you passed to ``Dispatcher(...)`` — plus a few built-ins like ``bot`` and ``state``:"
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:152
+msgid "This mechanism — **dependency injection** — is the idiomatic way to share a database connection, config or service between handlers."
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:157
+msgid "Recap"
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:159
+msgid "In this chapter we registered multiple commands, learned the registration-order rule, met the magic filter ``F``, combined filters with boolean operators, and discovered dependency injection."
+msgstr ""
+
+#: ../../tutorial/02_commands.rst:163
+msgid "In the next chapter we will dive deeper into the ``Message`` model and all the media Rubika can deliver."
+msgstr ""

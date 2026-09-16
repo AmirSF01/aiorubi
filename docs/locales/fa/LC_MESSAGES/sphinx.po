@@ -1,0 +1,37 @@
+# Persian overrides for Sphinx's own UI strings (project-local).
+# Sphinx's stock fa catalog has a few awkward strings; these fix them.
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Bases: %s"
+msgstr "پایه‌ها: %s"
+
+msgid "Parameters"
+msgstr "پارامترها"
+
+msgid "Variables"
+msgstr "متغیرها"
+
+msgid "Raises"
+msgstr "استثناها"
+
+msgid "Returns"
+msgstr "بازگشت‌ها"
+
+msgid "Return type"
+msgstr "نوع بازگشتی"
+
+msgid "Yields"
+msgstr "تولید می‌کند"
+
+msgid "Examples"
+msgstr "مثال‌ها"
+
+msgid "Example"
+msgstr "مثال"

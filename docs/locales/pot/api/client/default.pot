@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/client/default.rst:3
+msgid "Default"
+msgstr ""
+
+#: ../../api/client/default.rst:5
+msgid "Default bot properties propagated into API method calls."
+msgstr ""
+
+#: ../../api/client/default.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../aiorubi/client/default.py:docstring of aiorubi.client.default.DefaultBotProperties:1
+msgid "Default bot properties."
+msgstr ""
+
+#: ../../api/client/default.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../aiorubi/client/default.py:docstring of aiorubi.client.default.DefaultBotProperties.allow_sending_without_reply:1
+msgid "Allows to send messages without reply."
+msgstr ""
+
+#: ../../../aiorubi/client/default.py:docstring of aiorubi.client.default.DefaultBotProperties.disable_notification:1
+msgid "Sends the message silently. Users will receive a notification with no sound."
+msgstr ""
+
+#: ../../../aiorubi/client/default.py:docstring of aiorubi.client.default.DefaultBotProperties.parse_mode:1
+msgid "Default parse mode for messages."
+msgstr ""

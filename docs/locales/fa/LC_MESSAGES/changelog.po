@@ -1,0 +1,157 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../changelog.rst:3
+msgid "Changelog"
+msgstr "تاریخچهٔ تغییرات"
+
+#: ../../changelog.rst:5
+msgid "All notable changes to this project will be documented in this file."
+msgstr "همهٔ تغییرات مهم این پروژه در این فایل ثبت خواهد شد."
+
+#: ../../changelog.rst:7
+msgid "The format is based on `Keep a Changelog <https://keepachangelog.com/en/1.1.0/>`_, and this project adheres to `Semantic Versioning <https://semver.org/spec/v2.0.0.html>`_."
+msgstr "قالب بر اساس `Keep a Changelog <https://keepachangelog.com/en/1.1.0/>`_ است و این پروژه از `Semantic Versioning <https://semver.org/spec/v2.0.0.html>`_ پیروی می‌کند."
+
+#: ../../changelog.rst:10
+msgid "This changelog is generated from the `release history <https://pypi.org/project/aiorubi/#history>`_ and the `git log <https://github.com/AmirSF01/aiorubi/commits/main>`_."
+msgstr "این تاریخچه از `سابقهٔ انتشارها <https://pypi.org/project/aiorubi/#history>`_ و `git log <https://github.com/AmirSF01/aiorubi/commits/main>`_ تولید شده است."
+
+#: ../../changelog.rst:16
+msgid "1.2.1 — 2026-08-11"
+msgstr "1.2.1 — 2026-08-11"
+
+#: ../../changelog.rst:18 ../../changelog.rst:53 ../../changelog.rst:62
+msgid "**Fixed**"
+msgstr "**اصلاح‌شده**"
+
+#: ../../changelog.rst:20
+msgid "Move ``FileType`` import out of the ``TYPE_CHECKING`` block in ``aiorubi.types.message`` (broke ``send_file`` at runtime in 1.2.0)."
+msgstr "انتقال import ‌``FileType`` از بلوک ``TYPE_CHECKING`` به بیرون در ``aiorubi.types.message`` (در 1.2.0 باعث خرابی ``send_file`` در زمان اجرا می‌شد)."
+
+#: ../../changelog.rst:25
+msgid "1.2.0 — 2026-08-07"
+msgstr "1.2.0 — 2026-08-07"
+
+#: ../../changelog.rst:27 ../../changelog.rst:36
+msgid "**Added**"
+msgstr "**افزوده‌شده**"
+
+#: ../../changelog.rst:29
+msgid "``reply_*`` / ``answer_*`` shortcuts on ``Message`` for file, gif, image, music, video, voice, contact, poll and location."
+msgstr "میان‌برهای ``reply_*`` / ``answer_*`` روی ``Message`` برای فایل، گیف، تصویر، موسیقی، ویدیو، ویس، مخاطب، نظرسنجی و موقعیت مکانی."
+
+#: ../../changelog.rst:34
+msgid "1.1.0 — 2026-08-07"
+msgstr "1.1.0 — 2026-08-07"
+
+#: ../../changelog.rst:38
+msgid "High-level :meth:`Bot.download() <aiorubi.client.bot.Bot.download>` method accepting a ``file_id`` string or any :class:`~aiorubi.types.downloadable.Downloadable` object."
+msgstr "متد سطح‌بالا :meth:`Bot.download() <aiorubi.client.bot.Bot.download>` که رشتهٔ ``file_id`` یا هر شیء :class:`~aiorubi.types.downloadable.Downloadable` را می‌پذیرد."
+
+#: ../../changelog.rst:41
+msgid ":class:`~aiorubi.types.downloadable.Downloadable` type."
+msgstr "نوع :class:`~aiorubi.types.downloadable.Downloadable`."
+
+#: ../../changelog.rst:42
+msgid ":meth:`Bot.download_file() <aiorubi.client.bot.Bot.download_file>` streaming downloader with configurable chunk size."
+msgstr "دانلودکنندهٔ استریمی :meth:`Bot.download_file() <aiorubi.client.bot.Bot.download_file>` با اندازهٔ chunk قابل‌تنظیم."
+
+#: ../../changelog.rst:45
+msgid "**Changed**"
+msgstr "**تغییریافته**"
+
+#: ../../changelog.rst:47
+msgid "Renamed internal ``build_form_data`` to ``build_payload``."
+msgstr "تغییر نام داخلی ``build_form_data`` به ``build_payload``."
+
+#: ../../changelog.rst:51
+msgid "1.0.8 — 2026-08-04"
+msgstr "1.0.8 — 2026-08-04"
+
+#: ../../changelog.rst:55
+msgid "Initialise the polling ``offset_id`` from the Rubika server clock instead of the local clock, preventing clock-skew duplicates."
+msgstr "مقداردهی اولیهٔ ``offset_id`` پولینگ از ساعت سرور روبیکا به‌جای ساعت لوکال، برای جلوگیری از تکرارهای ناشی از اختلاف ساعت."
+
+#: ../../changelog.rst:60
+msgid "1.0.7 — 2026-08-04"
+msgstr "1.0.7 — 2026-08-04"
+
+#: ../../changelog.rst:64
+msgid "Ensure bot info is loaded before use via ``on_startup`` and ``resolve_bot`` in the webhook handlers."
+msgstr "اطمینان از لودشدن اطلاعات بات قبل از استفاده از طریق ``on_startup`` و ``resolve_bot`` در هندلرهای وب‌هوک."
+
+#: ../../changelog.rst:66
+msgid "``Bot.id`` now raises a descriptive :class:`RuntimeError` when the bot info has not been loaded yet."
+msgstr "``Bot.id`` حالا وقتی اطلاعات بات هنوز لود نشده باشد یک :class:`RuntimeError` توصیفی پرتاب می‌کند."
+
+#: ../../changelog.rst:71
+msgid "1.0.6 — 2026-08-02"
+msgstr "1.0.6 — 2026-08-02"
+
+#: ../../changelog.rst:73
+msgid "Maintenance release (CI and packaging fixes)."
+msgstr "نسخهٔ نگهداری (اصلاحات CI و بسته‌بندی)."
+
+#: ../../changelog.rst:77
+msgid "1.0.5 — 2026-07-05"
+msgstr "1.0.5 — 2026-07-05"
+
+#: ../../changelog.rst:79
+msgid "Maintenance release."
+msgstr "نسخهٔ نگهداری."
+
+#: ../../changelog.rst:83
+msgid "1.0.0 — 2026-06-29"
+msgstr "1.0.0 — 2026-06-29"
+
+#: ../../changelog.rst:85
+msgid "**First stable release.**"
+msgstr "**اولین انتشار پایدار.**"
+
+#: ../../changelog.rst:87
+msgid "Full asynchronous Rubika Bot API client (:class:`~aiorubi.client.bot.Bot`)."
+msgstr "کلاینت کامل ناهمگام Rubika Bot API (:class:`~aiorubi.client.bot.Bot`)."
+
+#: ../../changelog.rst:89
+msgid "Dispatcher with routers, observers and middlewares."
+msgstr "دیسپچر با روتِرها، ناظرها و میان‌افزارها."
+
+#: ../../changelog.rst:90
+msgid "FSM with memory storage and scenes."
+msgstr "FSM با استورج حافظه و صحنه‌ها."
+
+#: ../../changelog.rst:91
+msgid "Built-in filters (``Command``, ``StateFilter``, ``MagicData``, …)."
+msgstr "فیلترهای داخلی (``Command``، ``StateFilter``، ``MagicData`` و …)."
+
+#: ../../changelog.rst:92
+msgid "Long polling with automatic backoff."
+msgstr "پولینگ بلند با backoff خودکار."
+
+#: ../../changelog.rst:93
+msgid "Webhook helpers for aiohttp."
+msgstr "کمکی‌های وب‌هوک برای aiohttp."
+
+#: ../../changelog.rst:97
+msgid "0.0.1 — 2026-02-18"
+msgstr "0.0.1 — 2026-02-18"
+
+#: ../../changelog.rst:99
+msgid "Reserved name, empty placeholder release."
+msgstr "نام رزروشده، انتشار placeholder خالی."
+

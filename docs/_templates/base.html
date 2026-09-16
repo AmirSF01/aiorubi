@@ -1,0 +1,14 @@
+{#
+  Adds dir="rtl" to <html> on the Persian build.
+
+  Runs in <head>, before the body paints, so there is no flash of LTR layout.
+  The "!base.html" prefix inherits everything else from furo unchanged.
+#}
+{% extends "!base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  {%- if language == "fa" %}
+  <script>document.documentElement.setAttribute("dir", "rtl");</script>
+  {%- endif %}
+{% endblock %}

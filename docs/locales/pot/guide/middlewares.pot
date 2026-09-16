@@ -1,0 +1,153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../guide/middlewares.rst:3
+msgid "Middlewares"
+msgstr ""
+
+#: ../../guide/middlewares.rst:5
+msgid "Middlewares wrap the handler call — the classic onion model. Use them for cross-cutting concerns: timing, database sessions, rate limiting, user throttling, context injection."
+msgstr ""
+
+#: ../../guide/middlewares.rst:19
+msgid "Inner vs outer middlewares"
+msgstr ""
+
+#: ../../guide/middlewares.rst:21
+msgid "Every observer has **two** middleware chains:"
+msgstr ""
+
+#: ../../guide/middlewares.rst:23
+msgid "``observer.outer_middleware(...)`` — runs *before* filters are checked, on every single event of that observer. Use for context that filters themselves need (the built-in FSM middleware is outer for exactly this reason)."
+msgstr ""
+
+#: ../../guide/middlewares.rst:27
+msgid "``observer.middleware(...)`` — runs only for events that already matched a handler, immediately around the handler call. Cheaper; use for per-handler work like opening a DB session."
+msgstr ""
+
+#: ../../guide/middlewares.rst:37
+msgid "Decorator and function-form middlewares"
+msgstr ""
+
+#: ../../guide/middlewares.rst:39
+msgid "Besides classes, both managers accept plain async callables:"
+msgstr ""
+
+#: ../../guide/middlewares.rst:51
+msgid "BaseMiddleware"
+msgstr ""
+
+#: ../../guide/middlewares.rst:53
+msgid "`aiorubi.dispatcher.middlewares.base.BaseMiddleware`"
+msgstr ""
+
+#: ../../guide/middlewares.rst:55
+msgid "The base class for class-based middlewares. Subclass it and override ``__call__(handler, event, data)``:"
+msgstr ""
+
+#: ../../guide/middlewares.rst:58
+msgid "``handler`` — the next step of the chain; always ``await handler(event, data)``."
+msgstr ""
+
+#: ../../guide/middlewares.rst:59
+msgid "``event`` — the event object for the observer."
+msgstr ""
+
+#: ../../guide/middlewares.rst:60
+msgid "``data`` — the context dict that will be given to filters and handlers; mutate it to inject dependencies:"
+msgstr ""
+
+#: ../../guide/middlewares.rst:71
+msgid "The ``data`` dict is exactly the context described in :doc:`handlers` — middleware entries become handler keyword arguments."
+msgstr ""
+
+#: ../../guide/middlewares.rst:76
+msgid "Skipping the rest of the chain"
+msgstr ""
+
+#: ../../guide/middlewares.rst:78
+msgid "Raise :class:`~aiorubi.dispatcher.event.bases.CancelHandler` from a middleware to stop processing this update entirely; a plain ``return`` without calling ``handler`` also cuts the chain short."
+msgstr ""
+
+#: ../../guide/middlewares.rst:83
+msgid "MiddlewareManager"
+msgstr ""
+
+#: ../../guide/middlewares.rst:85
+msgid "`aiorubi.dispatcher.middlewares.manager.MiddlewareManager`"
+msgstr ""
+
+#: ../../guide/middlewares.rst:87
+msgid "Each observer carries two instances (``observer.middleware`` and ``observer.outer_middleware``). ``wrap_middlewares(managers, callback)`` builds the onion at dispatch time — you normally never touch it directly."
+msgstr ""
+
+#: ../../guide/middlewares.rst:92
+msgid "Built-in middlewares"
+msgstr ""
+
+#: ../../guide/middlewares.rst:94
+msgid "The dispatcher installs three outer middlewares on the ``update`` observer (see :doc:`dispatcher`):"
+msgstr ""
+
+#: ../../guide/middlewares.rst:97
+msgid ":class:`~aiorubi.dispatcher.middlewares.error.ErrorsMiddleware` — converts handler exceptions into ``error``-observer events."
+msgstr ""
+
+#: ../../guide/middlewares.rst:99
+msgid ":class:`~aiorubi.dispatcher.middlewares.user_context.UserContextMiddleware` — puts ``event_context`` (a frozen dataclass with ``chat_id`` and ``user_id``), plus the compatibility aliases ``event_from_user`` and ``event_chat``, into the data."
+msgstr ""
+
+#: ../../guide/middlewares.rst:103
+msgid ":class:`~aiorubi.fsm.middleware.FSMContextMiddleware` — FSM support; acquires the event-isolation lock and provides ``state`` / ``raw_state`` / ``fsm_storage``."
+msgstr ""
+
+#: ../../guide/middlewares.rst:107
+msgid "Scenes add one more outer middleware (``ScenesManager`` injection) when a :class:`~aiorubi.fsm.scene.SceneRegistry` is created — see :doc:`scenes`."
+msgstr ""
+
+#: ../../guide/middlewares.rst:112
+msgid "Propagation order"
+msgstr ""
+
+#: ../../guide/middlewares.rst:114
+msgid "For a dispatch through routers ``dp → parent → child`` the observer's middlewares are collected **root first**: ``dp``'s outer middlewares run before ``parent``'s, which run before ``child``'s; the inner (per-handler) chain then wraps the winning handler. Filters and handlers always see the data as mutated by every middleware up to that point."
+msgstr ""
+
+#: ../../guide/middlewares.rst:121
+msgid "Practical recipe — throttling"
+msgstr ""
+
+#: ../../guide/middlewares.rst:142
+msgid "Register it as *inner* middleware on a high-traffic observer so the check only costs anything for events that would run a handler anyway; as *outer* middleware it would also gate router-level filter checks."
+msgstr ""
+
+#: ../../guide/middlewares.rst:147
+msgid "See also"
+msgstr ""
+
+#: ../../guide/middlewares.rst:149
+msgid ":doc:`dispatcher` — the built-in middlewares and install order."
+msgstr ""
+
+#: ../../guide/middlewares.rst:150
+msgid ":doc:`handlers` — how injected data reaches handlers."
+msgstr ""
+
+#: ../../guide/middlewares.rst:151
+msgid ":doc:`fsm` — the FSM middleware in depth."
+msgstr ""

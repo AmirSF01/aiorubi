@@ -1,0 +1,89 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tutorial/01_intro.rst:5
+msgid "1. Introduction"
+msgstr "۱. مقدمه"
+
+#: ../../tutorial/01_intro.rst:7
+msgid "In this chapter you will create the skeleton of the bot we will build throughout this tutorial: a **note-taking bot**. By the end of the tutorial it will be able to store notes per user, list them, delete them, and — along the way — you will have learned every major concept of the framework."
+msgstr "در این فصل اسکلت باتی را می‌سازید که در طول این آموزش می‌سازیم: یک **بات یادداشت‌بردار**. در پایان آموزش می‌تواند برای هر کاربر یادداشت ذخیره کند، فهرستشان کند، حذفشان کند — و در این مسیر همهٔ مفاهیم اصلی فریم‌ورک را یاد گرفته‌اید."
+
+#: ../../tutorial/01_intro.rst:13
+msgid "Our running project layout is deliberately simple: one file per chapter. Create a working directory::"
+msgstr "چیدمان پروژهٔ در حال اجرای ما عمداً ساده است: یک فایل برای هر فصل. یک پوشهٔ کاری بسازید::"
+
+#: ../../tutorial/01_intro.rst:22
+msgid "Getting a bot token"
+msgstr "گرفتن توکن بات"
+
+#: ../../tutorial/01_intro.rst:24
+msgid "Open `@BotFather <https://rubika.ir/BotFather>`_ in Rubika."
+msgstr "`@BotFather <https://rubika.ir/BotFather>`_ را در روبیکا باز کنید."
+
+#: ../../tutorial/01_intro.rst:25
+msgid "Send ``/newbot`` and follow the prompts."
+msgstr "``/newbot`` بفرستید و مراحل را دنبال کنید."
+
+#: ../../tutorial/01_intro.rst:26
+msgid "Copy the token — it looks like ``XjF7aBc...`` (starts with a capital letter)."
+msgstr "توکن را کپی کنید — شبیه ``XjF7aBc...`` است (با حرف بزرگ شروع می‌شود)."
+
+#: ../../tutorial/01_intro.rst:28
+msgid "Store it in an environment variable so it does not end up in your git history::"
+msgstr "آن را در یک متغیر محیطی ذخیره کنید تا به تاریخچهٔ git شما نرسد::"
+
+#: ../../tutorial/01_intro.rst:35
+msgid "Treat bot tokens like passwords. Anyone holding the token controls your bot. Never commit it, never paste it into screenshots."
+msgstr "با توکن‌های بات مثل رمز عبور رفتار کنید. هرکس توکن را داشته باشد بات شما را کنترل می‌کند. هرگز commit‌اش نکنید، هرگز در اسکرین‌شات نگذارید."
+
+#: ../../tutorial/01_intro.rst:40
+msgid "The skeleton"
+msgstr "اسکلت"
+
+#: ../../tutorial/01_intro.rst:42
+msgid "Create ``bot.py``:"
+msgstr "``bot.py`` را بسازید:"
+
+#: ../../tutorial/01_intro.rst:82
+msgid "Run it and send ``/start`` to your bot in Rubika — you should see the greeting. Everything else in this tutorial will expand on this file."
+msgstr "اجرااش کنید و در روبیکا ``/start`` برای باتتان بفرستید — باید پیام خوش‌آمد را ببینید. بقیهٔ این آموزش همین فایل را گسترش می‌دهد."
+
+#: ../../tutorial/01_intro.rst:87
+msgid "What we just learned"
+msgstr "چه چیزی یاد گرفتیم"
+
+#: ../../tutorial/01_intro.rst:89
+msgid ":class:`~aiorubi.client.bot.Bot` wraps the token and the HTTP session. ``await bot.me()`` caches the bot's own info."
+msgstr ":class:`~aiorubi.client.bot.Bot` توکن و سشن HTTP را در بر می‌گیرد. ``await bot.me()`` اطلاعات خود بات را کش می‌کند."
+
+#: ../../tutorial/01_intro.rst:91
+msgid ":class:`~aiorubi.dispatcher.dispatcher.Dispatcher` is the root router. ``@dp.new_message(...)`` registers a handler for text updates."
+msgstr ":class:`~aiorubi.dispatcher.dispatcher.Dispatcher` روتِر ریشه است. ``@dp.new_message(...)`` یک هندلر برای آپدیت‌های متنی ثبت می‌کند."
+
+#: ../../tutorial/01_intro.rst:94
+msgid "Handlers are plain ``async def`` functions. Their single positional argument is the *event* — here a :class:`~aiorubi.types.message.Message`."
+msgstr "هندلرها توابع ``async def`` ساده‌اند. تنها آرگومان موقعیتی‌شان *رویداد* است — اینجا یک :class:`~aiorubi.types.message.Message`."
+
+#: ../../tutorial/01_intro.rst:96
+msgid "``message.answer(text)`` is a shortcut that sends a message to the same chat without quoting."
+msgstr "``message.answer(text)`` میانبری است که به همان چت پیام می‌فرستد، بدون نقل‌قول."
+
+#: ../../tutorial/01_intro.rst:99
+msgid "In the next chapter we will add more commands and learn how filters make handler registration precise."
+msgstr "در فصل بعد دستورهای بیشتری اضافه می‌کنیم و یاد می‌گیریم فیلترها چطور ثبت هندلر را دقیق می‌کنند."
+

@@ -1,0 +1,238 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/fsm/scene.rst:3
+msgid "Scene"
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.Scene:1
+msgid "Represents a scene in a conversation flow."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.Scene:3
+msgid "A scene is a specific state in a conversation where certain actions can take place."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.Scene:5
+msgid "Each scene has a set of filters that determine when it should be triggered, and a set of handlers that define the actions to be executed when the scene is active."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.Scene:9
+msgid "This class is not meant to be used directly. Instead, it should be subclassed to define custom scenes."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.Scene.as_handler:0
+#: ../../api/fsm/scene.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.Scene.add_to_router:1
+msgid "Adds the scene to the given router."
+msgstr ""
+
+#: ../../api/fsm/scene.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.Scene.as_handler:0
+#: ../../api/fsm/scene.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.Scene.as_handler:1
+msgid "Create an entry point handler for the scene, can be used to simplify the handler that starts the scene."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.Scene.as_router:1
+msgid "Returns the scene as a router."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.Scene.as_router:3
+msgid "new router"
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard:1
+msgid "A class that represents a wizard for managing scenes in a Rubika bot."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard:3
+msgid "Instance of this class is passed to each scene as a parameter. So, you can use it to transition between scenes, get and set data, etc."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard:8
+msgid "This class is not meant to be used directly. Instead, it should be used as a parameter in the scene constructor."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.back:1
+msgid "This method is used to go back to the previous scene."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.back:3
+msgid "Keyword arguments that can be passed to the method."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.back:4
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.clear_data:3
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.enter:6
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.exit:4
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.goto:9
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.leave:6
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.retake:4
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.set_data:4
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.ScenesManager.close:4
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.ScenesManager.enter:7
+msgid "None"
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.clear_data:1
+msgid "Clears the data."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.enter:1
+msgid "Enter method is used to transition into a scene in the SceneWizard class. It sets the state, clears data and history if specified, and triggers entering event of the scene."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.enter:5
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.exit:3
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.leave:5
+msgid "Additional keyword arguments."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.exit:1
+msgid "Exit the current scene and enter the default scene/state."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.get_data:1
+msgid "This method returns the data stored in the current state."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.get_data:3
+msgid "A dictionary containing the data stored in the scene state."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.goto:1
+msgid "The `goto` method transitions to a new scene. It first calls the `leave` method to perform any necessary cleanup in the current scene, then calls the `enter` event to enter the specified scene."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.goto:5
+msgid "The scene to transition to. Can be either a `Scene` instance `State` instance or a string representing the scene."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.goto:7
+msgid "Additional keyword arguments to pass to the `enter` method of the scene manager."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.leave:1
+msgid "Leaves the current scene. This method is used to exit a scene and transition to the next scene."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.leave:4
+msgid "Whether to include history in the snapshot. Defaults to True."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.retake:1
+msgid "This method allows to re-enter the current scene."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.retake:3
+msgid "Additional keyword arguments to pass to the scene."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.set_data:1
+msgid "Sets custom data in the current state."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.set_data:3
+msgid "A mapping containing the custom data to be set in the current state."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.update_data:1
+msgid "This method updates the data stored in the current state"
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.update_data:3
+msgid "Optional mapping of data to update."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.update_data:4
+msgid "Additional key-value pairs of data to update."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneWizard.update_data:5
+msgid "Dictionary of updated data"
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.ScenesManager:1
+msgid "The ScenesManager class is responsible for managing scenes in an application. It provides methods for entering and exiting scenes, as well as retrieving the active scene."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.ScenesManager.close:1
+msgid "Close method is used to exit the currently active scene in the ScenesManager."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.ScenesManager.close:3
+msgid "Additional keyword arguments passed to the scene's exit method."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.ScenesManager.enter:1
+msgid "Enters the specified scene."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.ScenesManager.enter:3
+msgid "Optional Type[Scene], State or str representing the scene type to enter."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.ScenesManager.enter:4
+msgid "Optional bool indicating whether to check if there is an active scene to exit before entering the new scene. Defaults to True."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.ScenesManager.enter:6
+msgid "Additional keyword arguments to pass to the scene's wizard.enter() method."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneConfig.actions:1
+msgid "Scene actions"
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.utils.class_attrs_resolver.get_sorted_mro_attrs_resolver:1
+msgid "Attributes resolver."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.utils.class_attrs_resolver.get_sorted_mro_attrs_resolver:4
+msgid "This attribute should only be changed when you know what you are doing."
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneConfig.handlers:1
+msgid "Scene handlers"
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneConfig.inline_message_without_state:1
+msgid "Allow callback query without state"
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneConfig.reset_data_on_enter:1
+msgid "Reset scene data on enter"
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneConfig.reset_history_on_enter:1
+msgid "Reset scene history on enter"
+msgstr ""
+
+#: ../../../aiorubi/fsm/scene.py:docstring of aiorubi.fsm.scene.SceneConfig.state:1
+msgid "Scene state"
+msgstr ""

@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/dispatcher/middlewares.rst:3
+msgid "Middlewares"
+msgstr ""
+
+#: ../../api/dispatcher/middlewares.rst:5
+msgid "Middleware machinery for the update pipeline."
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/middlewares/base.py:docstring of aiorubi.dispatcher.middlewares.base.BaseMiddleware:1
+msgid "Generic middleware class"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/middlewares/base.py:docstring of aiorubi.dispatcher.middlewares.base.BaseMiddleware.__call__:1
+msgid "Execute middleware"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/middlewares/manager.py:docstring of aiorubi.dispatcher.middlewares.manager.MiddlewareManager.register:0
+#: ../../../aiorubi/dispatcher/middlewares/user_context.py:docstring of aiorubi.dispatcher.middlewares.user_context.UserContextMiddleware.resolve_event_context:0
+#: ../../api/dispatcher/middlewares.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/middlewares/base.py:docstring of aiorubi.dispatcher.middlewares.base.BaseMiddleware.__call__:3
+msgid "Wrapped handler in middlewares chain"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/middlewares/base.py:docstring of aiorubi.dispatcher.middlewares.base.BaseMiddleware.__call__:4
+msgid "Incoming event (Subclass of :class:`aiorubi.types.base.RubikaObject`)"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/middlewares/base.py:docstring of aiorubi.dispatcher.middlewares.base.BaseMiddleware.__call__:5
+msgid "Contextual data. Will be mapped to handler arguments"
+msgstr ""
+
+#: ../../api/dispatcher/middlewares.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/middlewares/base.py:docstring of aiorubi.dispatcher.middlewares.base.BaseMiddleware.__call__:6
+msgid ":class:`Any`"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/middlewares/manager.py:docstring of aiorubi.dispatcher.middlewares.manager.MiddlewareManager.register:0
+#: ../../../aiorubi/dispatcher/middlewares/user_context.py:docstring of aiorubi.dispatcher.middlewares.user_context.UserContextMiddleware.resolve_event_context:0
+#: ../../api/dispatcher/middlewares.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/middlewares/manager.py:docstring of aiorubi.dispatcher.middlewares.manager.MiddlewareManager.register:1
+msgid "Register a virtual subclass of an ABC."
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/middlewares/manager.py:docstring of aiorubi.dispatcher.middlewares.manager.MiddlewareManager.register:3
+msgid "Returns the subclass, to allow usage as a class decorator."
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/middlewares/user_context.py:docstring of aiorubi.dispatcher.middlewares.user_context.UserContextMiddleware.resolve_event_context:1
+msgid "Resolve chat and user instance from Update object"
+msgstr ""

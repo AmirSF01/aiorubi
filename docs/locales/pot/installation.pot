@@ -1,0 +1,217 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../installation.rst:3
+msgid "Installation"
+msgstr ""
+
+#: ../../installation.rst:7
+msgid "Stable release"
+msgstr ""
+
+#: ../../installation.rst:9
+msgid "You can install the latest stable version from PyPI:"
+msgstr ""
+
+#: ../../installation.rst:15
+msgid "That gives you the core runtime dependencies:"
+msgstr ""
+
+#: ../../installation.rst:17
+msgid "``aiohttp`` — HTTP client"
+msgstr ""
+
+#: ../../installation.rst:18
+msgid "``aiofiles`` — async file IO for sending files from disk"
+msgstr ""
+
+#: ../../installation.rst:19
+msgid "``pydantic`` — data models for every API object"
+msgstr ""
+
+#: ../../installation.rst:20
+msgid "``magic-filter`` — the filtering DSL powering ``F.text`` and friends"
+msgstr ""
+
+#: ../../installation.rst:21
+msgid "``certifi`` — bundled CA bundle for HTTPS"
+msgstr ""
+
+#: ../../installation.rst:22
+msgid "``typing-extensions``"
+msgstr ""
+
+#: ../../installation.rst:26
+msgid "Optional extras"
+msgstr ""
+
+#: ../../installation.rst:28
+msgid "The package ships several *extras* that you can opt into with the standard ``pip install aiorubi[extra1,extra2]`` syntax."
+msgstr ""
+
+#: ../../installation.rst:35
+msgid "Extra"
+msgstr ""
+
+#: ../../installation.rst:36
+msgid "Adds"
+msgstr ""
+
+#: ../../installation.rst:37
+msgid "Use it for"
+msgstr ""
+
+#: ../../installation.rst:38
+msgid "``fast``"
+msgstr ""
+
+#: ../../installation.rst:39
+msgid "``uvloop`` (Linux/macOS, PyPy excluded) and ``aiodns``"
+msgstr ""
+
+#: ../../installation.rst:40
+msgid "Faster event loop and DNS resolution. Recommended on production."
+msgstr ""
+
+#: ../../installation.rst:41
+msgid "``redis``"
+msgstr ""
+
+#: ../../installation.rst:42
+msgid "``redis[hiredis]``"
+msgstr ""
+
+#: ../../installation.rst:43
+msgid ":class:`RedisStorage <aiorubi.fsm.storage.redis.RedisStorage>` for the FSM."
+msgstr ""
+
+#: ../../installation.rst:45
+msgid "``mongo``"
+msgstr ""
+
+#: ../../installation.rst:46
+msgid "``motor`` (async) and ``pymongo``"
+msgstr ""
+
+#: ../../installation.rst:47
+msgid ":class:`MongoStorage <aiorubi.fsm.storage.mongo.MongoStorage>` and :class:`PyMongoStorage <aiorubi.fsm.storage.pymongo.PyMongoStorage>` for the FSM."
+msgstr ""
+
+#: ../../installation.rst:50
+msgid "``proxy``"
+msgstr ""
+
+#: ../../installation.rst:51
+msgid "``aiohttp-socks``"
+msgstr ""
+
+#: ../../installation.rst:52
+msgid "Connecting through SOCKS proxies."
+msgstr ""
+
+#: ../../installation.rst:53
+msgid "``i18n``"
+msgstr ""
+
+#: ../../installation.rst:54
+msgid "``Babel``"
+msgstr ""
+
+#: ../../installation.rst:55
+msgid "Internationalisation helpers."
+msgstr ""
+
+#: ../../installation.rst:56
+msgid "``docs``"
+msgstr ""
+
+#: ../../installation.rst:57
+msgid "``Sphinx`` and a few helpers"
+msgstr ""
+
+#: ../../installation.rst:58
+msgid "Building the documentation locally (this site)."
+msgstr ""
+
+#: ../../installation.rst:62
+msgid "Examples"
+msgstr ""
+
+#: ../../installation.rst:77
+msgid "From Git"
+msgstr ""
+
+#: ../../installation.rst:79
+msgid "If you need an unreleased change, install straight from GitHub:"
+msgstr ""
+
+#: ../../installation.rst:85
+msgid "To install a *specific* tag (for example ``v1.2.1``):"
+msgstr ""
+
+#: ../../installation.rst:93
+msgid "Verify the installation"
+msgstr ""
+
+#: ../../installation.rst:95
+msgid "The following one-liner should print the installed version and the Rubika Bot API version it targets:"
+msgstr ""
+
+#: ../../installation.rst:108
+msgid "System requirements"
+msgstr ""
+
+#: ../../installation.rst:110
+msgid "**Python:** 3.10, 3.11, 3.12, 3.13 or 3.14 (3.10 is the lower bound)."
+msgstr ""
+
+#: ../../installation.rst:111
+msgid "**OS:** any platform that can run ``asyncio`` and ``aiohttp``. Linux and macOS are the most tested; Windows works but most users run bots on a Linux VPS."
+msgstr ""
+
+#: ../../installation.rst:114
+msgid "**Disk space:** ~1 MB for the package itself, plus whatever your FSM storage needs."
+msgstr ""
+
+#: ../../installation.rst:119
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../installation.rst:121
+msgid "``pip install aiorubi`` fails with \"No matching distribution found\""
+msgstr ""
+
+#: ../../installation.rst:122
+msgid "You are probably on Python 3.9 or older. ``aiorubi`` requires 3.10+; upgrade Python or use a ``pyenv``/``uv`` environment."
+msgstr ""
+
+#: ../../installation.rst:125
+msgid "``Bot`` accepts any token string without validation"
+msgstr ""
+
+#: ../../installation.rst:126
+msgid "Token format is only *documented* to start with a capital letter; ``validate_token`` exists in ``aiorubi.utils.token`` but is not invoked automatically. If your token is rejected by the API (HTTP 401/403), double-check that no whitespace or newline was pasted in and that the token came from `@BotFather <https://rubika.ir/BotFather>`_."
+msgstr ""
+
+#: ../../installation.rst:133
+msgid "``RuntimeError: Bot ID is not available yet``"
+msgstr ""
+
+#: ../../installation.rst:134
+msgid "Some shortcut (e.g. ``bot.id``) needs the bot info to be loaded. Call ``await bot.me()`` (or ``await bot.get_me()``) before reading those attributes."
+msgstr ""

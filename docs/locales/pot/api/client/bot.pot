@@ -1,0 +1,346 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/client/bot.rst:3
+msgid "Bot"
+msgstr ""
+
+#: ../../api/client/bot.rst:7
+msgid "Automatically-generated reference of the :class:`~aiorubi.client.bot.Bot` class."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.ban_chat_member:0
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.get_file:0
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.send_file:0
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.send_location:0
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.unban_chat_member:0
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.upload_file:0
+#: ../../api/client/bot.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.ban_chat_member:0
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.get_file:0
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.send_file:0
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.send_location:0
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.unban_chat_member:0
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.upload_file:0
+#: ../../api/client/bot.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.__call__:1
+msgid "Call API method"
+msgstr ""
+
+#: ../../api/client/bot.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.__init__:1
+msgid "Bot class"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.__init__:3
+msgid "Rubika Bot token `Obtained from @BotFather <https://rubika.ir/BotFather>`_"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.__init__:4
+msgid "HTTP Client session (For example AiohttpSession). If not specified it will be automatically created."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.__init__:6
+msgid "Default bot properties. If specified it will be propagated into the API methods at runtime."
+msgstr ""
+
+#: ../../api/client/bot.rst:0
+msgid "Raises"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.__init__:8
+msgid "When token has invalid format this exception will be raised"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.ban_chat_member:1
+msgid "Use this method to ban a user in a group or a channel. Returns :code:`True` on success."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.ban_chat_member:4
+msgid "Source: https://rubika.ir/botapi/methods#_15"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.context:1
+msgid "Generate bot context"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.context:3
+msgid "close session on exit"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.delete_message:1
+msgid "Use this method to delete a message, including service messages. Returns :code:`True` on success."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.delete_message:4
+msgid "Source: https://rubika.ir/botapi/methods#_10"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.delete_message:6
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.edit_chat_keypad:6
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.edit_message_keypad:6
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.edit_message_text:7
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.remove_chat_keypad:6
+msgid "Unique identifier for the target chat"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.delete_message:7
+msgid "Identifier of the message to delete"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.delete_message:8
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.edit_chat_keypad:8
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.edit_message_keypad:9
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.edit_message_text:9
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.remove_chat_keypad:7
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.set_commands:7
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.update_bot_endpoints:8
+msgid "Request timeout"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.delete_message:9
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.edit_chat_keypad:9
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.edit_message_keypad:10
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.edit_message_text:10
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.remove_chat_keypad:8
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.set_commands:8
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.update_bot_endpoints:9
+msgid "Returns :code:`True` on success."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.download:1
+msgid "Download file by file_id or Downloadable object to destination."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.download:3
+msgid "If you want to automatically create destination (:class:`io.BytesIO`) use default value of destination and handle result of this method."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.download:6
+msgid "file_id or Downloadable object"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.download:7
+msgid "Filename, file path or instance of :class:`io.IOBase`. For e.g. :class:`io.BytesIO`, defaults to None"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.download:8
+msgid "Total timeout in seconds, defaults to 30"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.download:9
+msgid "File chunks size, defaults to 64 kb"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.download:10
+msgid "Go to start of file when downloading is finished. Used only for destination with :class:`typing.BinaryIO` type, defaults to True"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.edit_chat_keypad:1
+msgid "Use this method to edit the chat's keypad. Returns :code:`True` on success."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.edit_chat_keypad:4
+msgid "Source: https://rubika.ir/botapi/methods#keypad_2"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.edit_chat_keypad:7
+msgid "The new keypad"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.edit_message_keypad:1
+msgid "Use this method to edit only the keypad of messages. Returns :code:`True` on success."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.edit_message_keypad:4
+msgid "Source: https://botapi.rubika.ir/v3/editMessageKeypad"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.edit_message_keypad:7
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.edit_message_text:8
+msgid "Identifier of the message to edit"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.edit_message_keypad:8
+msgid "The new keypad to replace the current inline keypad of the message."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.edit_message_text:1
+msgid "Use this method to edit text messages. Returns :code:`True` on success."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.edit_message_text:4
+msgid "Source: https://rubika.ir/botapi/methods#_9"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.edit_message_text:6
+msgid "New text of the message"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.forward_message:1
+msgid "Forward messages of any kind."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.forward_message:3
+msgid "Unique identifier for the chat where the original message was sent."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.forward_message:4
+msgid "Unique identifier for the target chat."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.forward_message:5
+msgid "Message identifier in the chat specified in from_chat_id."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.forward_message:6
+msgid "Sends the message silently."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.forward_message:7
+msgid "Timeout for the request."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.forward_message:8
+msgid ":class:`MessageID` object."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.get_file:1
+msgid "Get url of a file to download."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.id:1
+msgid "Get bot ID"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.id:3
+msgid "If bot information has not been loaded yet."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.me:1
+msgid "Cached alias for getMe method"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.remove_chat_keypad:1
+msgid "Use this method to remove the chat's keypad. Returns :code:`True` on success."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.remove_chat_keypad:4
+msgid "Source: https://rubika.ir/botapi/methods#keypad_1"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.send_file:1
+msgid "Send a file, either by referencing an existing file_id or uploading a new InputFile."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.send_file:3
+msgid "Note: `file_type` is only used when uploading a new file (InputFile). It is ignored when `file` is a file_id (str)."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.send_gif:1
+msgid "Send a gif, either by referencing an existing file_id or uploading a new InputFile."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.send_gif:5
+msgid "When using a `file_id`, the file will be sent as a gif **only if** it was originally uploaded as a gif type; otherwise, it will be sent as its original type instead."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.send_image:1
+msgid "Send an image, either by referencing an existing file_id or uploading a new InputFile."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.send_image:5
+msgid "When using a `file_id`, the file will be sent as an image **only if** it was originally uploaded as an image type; otherwise, it will be sent as its original type instead."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.send_location:1
+msgid "Send a location."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.send_music:1
+msgid "Send music, either by referencing an existing file_id or uploading a new InputFile."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.send_music:5
+msgid "When using a `file_id`, the file will be sent as music **only if** it was originally uploaded as a music type; otherwise, it will be sent as its original type instead."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.send_video:1
+msgid "Send a video, either by referencing an existing file_id or uploading a new InputFile."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.send_video:5
+msgid "When using a `file_id`, the file will be sent as a video **only if** it was originally uploaded as a video type; otherwise, it will be sent as its original type instead."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.send_voice:1
+msgid "Send a voice, either by referencing an existing file_id or uploading a new InputFile."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.send_voice:5
+msgid "When using a `file_id`, the file will be sent as a voice **only if** it was originally uploaded as a voice type; otherwise, it will be sent as its original type instead."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.set_commands:1
+msgid "Use this method to change the list of the bot's commands. Returns :code:`True` on success."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.set_commands:4
+msgid "Source: https://botapi.rubika.ir/v3/setCommands"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.set_commands:6
+msgid "A list of bot commands to be set as the list of the bot's commands."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.unban_chat_member:1
+msgid "Use this method to unban a user in a group or a channel. Returns :code:`True` on success."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.unban_chat_member:4
+msgid "Source: https://rubika.ir/botapi/methods#_16"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.update_bot_endpoints:1
+msgid "Use this method to update the bot's endpoint URLs for different event types. Returns :code:`True` on success."
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.update_bot_endpoints:4
+msgid "Source: https://rubika.ir/botapi/methods#url-endpoint"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.update_bot_endpoints:6
+msgid "The new endpoint URL"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.update_bot_endpoints:7
+msgid "The type of endpoint (e.g., UpdateEndpointType.RECEIVE_UPDATE)"
+msgstr ""
+
+#: ../../../aiorubi/client/bot.py:docstring of aiorubi.client.bot.Bot.upload_file:1
+msgid "Internal method to upload files to Rubika's storage."
+msgstr ""

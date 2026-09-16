@@ -1,0 +1,59 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Middlewares"
+msgstr  "میان‌افزارها"
+
+msgid "Middleware machinery for the update pipeline."
+msgstr  "سازوکار میان‌افزار برای خط لولهٔ آپدیت‌ها."
+
+msgid "Generic middleware class"
+msgstr  "کلاس عمومی میان‌افزار"
+
+msgid "Execute middleware"
+msgstr  "اجرای میان‌افزار"
+
+msgid "Parameters"
+msgstr  "پارامترها"
+
+msgid "Wrapped handler in middlewares chain"
+msgstr  "هندلر پیچیده‌شده در زنجیرهٔ میان‌افزارها"
+
+msgid "Incoming event (Subclass of :class:`aiorubi.types.base.RubikaObject`)"
+msgstr  "رویداد ورودی (زیرکلاسِ :class:`aiorubi.types.base.RubikaObject`)"
+
+msgid "Contextual data. Will be mapped to handler arguments"
+msgstr  "دادهٔ کانتکست؛ به آرگومان‌های هندلر نگاشت می‌شود"
+
+msgid "Returns"
+msgstr  "بازگشت‌ها"
+
+msgid ":class:`Any`"
+msgstr  ":class:`Any`"
+
+msgid "Return type"
+msgstr  "نوع بازگشتی"
+
+msgid "Register a virtual subclass of an ABC."
+msgstr  "ثبت یک زیرکلاس مجازی از یک ABC."
+
+msgid "Returns the subclass, to allow usage as a class decorator."
+msgstr  "زیرکلاس را برمی‌گرداند تا بتوان از آن به‌عنوان دکوریتور کلاس استفاده کرد."
+
+msgid "Resolve chat and user instance from Update object"
+msgstr  "استخراج نمونهٔ چت و کاربر از شیء Update"
+

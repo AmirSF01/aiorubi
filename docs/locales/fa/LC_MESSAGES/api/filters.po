@@ -1,0 +1,144 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/filters.rst:3
+msgid "Filters"
+msgstr "فیلترها"
+
+#: ../../api/filters.rst:5
+msgid "All filters live in the :mod:`aiorubi.filters` package. The base class is exported as both ``Filter`` and ``BaseFilter``."
+msgstr "همهٔ فیلترها در پکیج :mod:`aiorubi.filters` زندگی می‌کنند. کلاس پایه هم به‌صورت ``Filter`` و هم ``BaseFilter`` صادر شده است."
+
+#: ../../api/filters.rst:9
+msgid "Base"
+msgstr "پایه"
+
+#: aiorubi.filters.base.Filter:1 of
+msgid "If you want to register own filters like builtin filters you will need to write subclass of this class with overriding the :code:`__call__` method and adding filter attributes."
+msgstr "اگر می‌خواهید فیلترهای خودتان را مثل فیلترهای داخلی ثبت کنید، باید زیرکلاسی از این کلاس بنویسید که متد :code:`__call__` را بازنویسی کند و ویژگی‌های فیلتر را اضافه کند."
+
+#: aiorubi.filters.base.Filter.update_handler_flags:1
+#: aiorubi.filters.command.Command.update_handler_flags:1 of
+msgid "Also if you want to extend handler flags with using this filter you should implement this method"
+msgstr "همچنین اگر می‌خواهید با این فیلتر فلگ‌های هندلر را گسترش دهید، باید این متد را پیاده‌سازی کنید"
+
+#: ../../api/filters.rst
+msgid "Parameters"
+msgstr "پارامترها"
+
+#: aiorubi.filters.base.Filter.update_handler_flags:4
+#: aiorubi.filters.command.Command.update_handler_flags:4 of
+msgid "existing flags, can be updated directly"
+msgstr "فلگ‌های موجود؛ می‌توان مستقیماً به‌روزرسانی‌شان کرد"
+
+#: ../../api/filters.rst
+msgid "Return type"
+msgstr "نوع بازگشتی"
+
+#: ../../api/filters.rst:15
+msgid "Command"
+msgstr "دستور"
+
+#: aiorubi.filters.command.Command:1 of
+msgid "This filter can be helpful for handling commands from the text messages."
+msgstr "این فیلتر برای مدیریت دستورها در پیام‌های متنی مفید است."
+
+#: aiorubi.filters.command.Command:3 of
+msgid "Works only with :class:`aiorubi.types.message.Message` events which have the :code:`text`."
+msgstr "فقط با رویدادهای :class:`aiorubi.types.message.Message` که :code:`text` دارند کار می‌کند."
+
+#: aiorubi.filters.command.Command.parse_command:1
+#: aiorubi.filters.command.CommandStart.parse_command:1 of
+msgid "Extract command from the text and validate"
+msgstr "استخراج دستور از متن و اعتبارسنجی"
+
+#: ../../api/filters.rst
+msgid "Returns"
+msgstr "بازگشت‌ها"
+
+#: aiorubi.filters.command.CommandObject:1 of
+msgid "Instance of this object is always has command and it prefix. Can be passed as keyword argument **command** to the handler"
+msgstr "نمونهٔ این شیء همیشه دستور و پیشوند آن را دارد. می‌توان آن را به‌عنوان آرگومان کلیدواژه‌ای **command** به هندلر پاس داد"
+
+#: aiorubi.filters.command.CommandObject.args:1 of
+msgid "Command argument"
+msgstr "آرگومان دستور"
+
+#: aiorubi.filters.command.CommandObject.command:1 of
+msgid "Command without prefix and mention"
+msgstr "دستور بدون پیشوند و منشن"
+
+#: aiorubi.filters.command.CommandObject.mention:1 of
+msgid "Mention (if available)"
+msgstr "منشن (در صورت وجود)"
+
+#: aiorubi.filters.command.CommandObject.mentioned:1 of
+msgid "This command has mention?"
+msgstr "آیا این دستور منشن دارد؟"
+
+#: aiorubi.filters.command.CommandObject.prefix:1 of
+msgid "Command prefix"
+msgstr "پیشوند دستور"
+
+#: aiorubi.filters.command.CommandObject.regexp_match:1 of
+msgid "Will be presented match result if the command is presented as regexp in filter"
+msgstr "اگر دستور در فیلتر به‌صورت regexp آمده باشد، نتیجهٔ match ارائه می‌شود"
+
+#: aiorubi.filters.command.CommandObject.text:1 of
+msgid "Generate original text from object"
+msgstr "ساخت متن اصلی از شیء"
+
+#: ../../api/filters.rst:27
+msgid "State"
+msgstr "حالت"
+
+#: aiorubi.filters.state.StateFilter:1 of
+msgid "State filter"
+msgstr "فیلتر حالت"
+
+#: ../../api/filters.rst:33
+msgid "Magic data"
+msgstr "دادهٔ جادویی"
+
+#: aiorubi.filters.magic_data.MagicData:1 of
+msgid "This filter helps to filter event with contextual data"
+msgstr "این فیلتر به فیلترکردن رویداد با دادهٔ کانتکستی کمک می‌کند"
+
+#: ../../api/filters.rst:39
+msgid "Exceptions"
+msgstr "استثناها"
+
+#: aiorubi.filters.exception.ExceptionTypeFilter:1 of
+msgid "Allows to match exception by type"
+msgstr "امکان تطبیق استثنا بر اساس نوع"
+
+#: aiorubi.filters.exception.ExceptionMessageFilter:1 of
+msgid "Allow to match exception by message"
+msgstr "امکان تطبیق استثنا بر اساس پیام"
+
+#: ../../api/filters.rst:48
+msgid "Logic combinators"
+msgstr "ترکیب‌کننده‌های منطقی"
+
+#: ../../api/filters.rst:57
+msgid "Magic filter"
+msgstr "فیلتر جادویی"
+
+#: ../../api/filters.rst:64
+msgid "The shared :class:`~aiorubi.utils.magic_filter.MagicFilter` root."
+msgstr "ریشهٔ مشترک :class:`~aiorubi.utils.magic_filter.MagicFilter`."
+

@@ -1,0 +1,116 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/webhook.rst:3
+msgid "Webhook"
+msgstr "وب‌هوک"
+
+#: ../../api/webhook.rst:5
+msgid "Webhook support built on top of aiohttp."
+msgstr "پشتیبانی وب‌هوک ساخته‌شده بر بستر aiohttp."
+
+#: ../../api/webhook.rst
+msgid "Parameters"
+msgstr "پارامترها"
+
+#: aiorubi.webhook.aiohttp_server.SimpleRequestHandler.__init__:1 of
+msgid "Handler for single Bot instance"
+msgstr "هندلر برای یک نمونهٔ Bot واحد"
+
+#: aiorubi.webhook.aiohttp_server.SimpleRequestHandler.__init__:3
+#: aiorubi.webhook.aiohttp_server.TokenBasedRequestHandler.__init__:9 of
+msgid "instance of :class:`aiorubi.dispatcher.dispatcher.Dispatcher`"
+msgstr "نمونه‌ای از :class:`aiorubi.dispatcher.dispatcher.Dispatcher`"
+
+#: aiorubi.webhook.aiohttp_server.SimpleRequestHandler.__init__:4
+#: aiorubi.webhook.aiohttp_server.TokenBasedRequestHandler.__init__:10 of
+msgid "immediately responds to the Rubika instead of a waiting end of handler process"
+msgstr "به‌جای منتظر ماندن برای پایان فرایند هندلر، بلافاصله به روبیکا پاسخ می‌دهد"
+
+#: aiorubi.webhook.aiohttp_server.SimpleRequestHandler.__init__:6 of
+msgid "instance of :class:`aiorubi.client.bot.Bot`"
+msgstr "نمونه‌ای از :class:`aiorubi.client.bot.Bot`"
+
+#: ../../api/webhook.rst
+#: aiorubi.webhook.aiohttp_server.SimpleRequestHandler.close of
+msgid "Return type"
+msgstr "نوع بازگشتی"
+
+#: aiorubi.webhook.aiohttp_server.SimpleRequestHandler.close:1 of
+msgid "Close bot session"
+msgstr "بستن سشن بات"
+
+#: aiorubi.webhook.aiohttp_server.SimpleRequestHandler.resolve_bot:1 of
+msgid "This method should be implemented in subclasses of this class."
+msgstr "این متد باید در زیرکلاس‌های این کلاس پیاده‌سازی شود."
+
+#: aiorubi.webhook.aiohttp_server.SimpleRequestHandler.resolve_bot:3 of
+msgid "Resolve Bot instance from request."
+msgstr "استخراج نمونهٔ Bot از درخواست."
+
+#: ../../api/webhook.rst
+msgid "Returns"
+msgstr "بازگشت‌ها"
+
+#: aiorubi.webhook.aiohttp_server.SimpleRequestHandler.resolve_bot:6 of
+msgid "Bot instance"
+msgstr "نمونهٔ Bot"
+
+#: aiorubi.webhook.aiohttp_server.TokenBasedRequestHandler.__init__:1 of
+msgid "Handler that supports multiple bots the context will be resolved from path variable 'bot_token'"
+msgstr "هندلری که چند بات را پشتیبانی می‌کند؛ کانتکست از متغیر مسیر 'bot_token' استخراج می‌شود"
+
+#: aiorubi.webhook.aiohttp_server.TokenBasedRequestHandler.__init__:6 of
+msgid "This handler is not recommended in due to token is available in URL and can be logged by reverse proxy server or other middleware."
+msgstr "این هندلر توصیه نمی‌شود، چون توکن در URL قرار می‌گیرد و ممکن است توسط reverse proxy یا میان‌افزارهای دیگر لاگ شود."
+
+#: aiorubi.webhook.aiohttp_server.TokenBasedRequestHandler.__init__:12 of
+msgid "kwargs that will be passed to new Bot instance"
+msgstr "kwargsهایی که به نمونهٔ جدید Bot پاس داده می‌شوند"
+
+#: aiorubi.webhook.aiohttp_server.TokenBasedRequestHandler.register:1 of
+msgid "Validate path, register route and shutdown callback"
+msgstr "اعتبارسنجی مسیر، ثبت route و کال‌بک shutdown"
+
+#: aiorubi.webhook.aiohttp_server.TokenBasedRequestHandler.register:3 of
+msgid "instance of aiohttp Application"
+msgstr "نمونه‌ای از aiohttp Application"
+
+#: aiorubi.webhook.aiohttp_server.TokenBasedRequestHandler.register:4 of
+msgid "route paths"
+msgstr "مسیرهای route"
+
+#: aiorubi.webhook.aiohttp_server.TokenBasedRequestHandler.resolve_bot:1 of
+msgid "Get bot token from a path and create or get from cache Bot instance"
+msgstr "گرفتن توکن بات از مسیر و ساخت یا گرفتن نمونهٔ Bot از کش"
+
+#: aiorubi.webhook.aiohttp_server.setup_application:1 of
+msgid "This function helps to configure a startup-shutdown process"
+msgstr "این تابع به پیکربندی فرایند راه‌اندازی-خاموشی کمک می‌کند"
+
+#: aiorubi.webhook.aiohttp_server.setup_application:3 of
+msgid "aiohttp application"
+msgstr "اپلیکیشن aiohttp"
+
+#: aiorubi.webhook.aiohttp_server.setup_application:4 of
+msgid "aiorubi dispatcher"
+msgstr "دیسپچر aiorubi"
+
+#: aiorubi.webhook.aiohttp_server.setup_application:5 of
+msgid "additional data"
+msgstr "داده‌های اضافی"
+

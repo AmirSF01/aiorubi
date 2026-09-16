@@ -1,0 +1,466 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/methods.rst:3
+msgid "Methods"
+msgstr ""
+
+#: ../../api/methods.rst:5
+msgid "Low-level API method objects. Each class corresponds to one Rubika Bot API endpoint and is callable via ``await bot(method_instance)``."
+msgstr ""
+
+#: ../../../aiorubi/methods/ban_chat_member.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/base.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/delete_message.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/edit_chat_keypad.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/edit_message_keypad.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/edit_message_text.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/forward_message.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/get_chat.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/get_file.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/get_me.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/get_updates.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/request_send_file.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/send_contact.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/send_file.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/send_location.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/send_message.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/send_poll.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/set_commands.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/unban_chat_member.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/update_bot_endpoints.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/upload_file.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../api/methods.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../aiorubi/methods/base.py:docstring of aiorubi.methods.base.RubikaMethod.build_request:1
+msgid "Builds the request object by separating InputFiles from other data."
+msgstr ""
+
+#: ../../../aiorubi/methods/ban_chat_member.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/base.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/base.py:docstring of aiorubi.methods.base.RubikaMethod.build_request:0
+#: ../../../aiorubi/methods/delete_message.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/edit_chat_keypad.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/edit_message_keypad.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/edit_message_text.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/forward_message.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/get_chat.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/get_file.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/get_me.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/get_updates.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/request_send_file.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/send_contact.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/send_file.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/send_location.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/send_message.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/send_poll.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/set_commands.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/unban_chat_member.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/update_bot_endpoints.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/methods/upload_file.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../api/methods.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../aiorubi/methods/ban_chat_member.py:docstring of aiorubi.methods.ban_chat_member.BanChatMember.model_config:1
+#: ../../../aiorubi/methods/base.py:docstring of aiorubi.methods.base.Request.model_config:1
+#: ../../../aiorubi/methods/base.py:docstring of aiorubi.methods.base.Response.model_config:1
+#: ../../../aiorubi/methods/base.py:docstring of aiorubi.methods.base.RubikaMethod.model_config:1
+#: ../../../aiorubi/methods/delete_message.py:docstring of aiorubi.methods.delete_message.DeleteMessage.model_config:1
+#: ../../../aiorubi/methods/edit_chat_keypad.py:docstring of aiorubi.methods.edit_chat_keypad.EditChatKeypad.model_config:1
+#: ../../../aiorubi/methods/edit_message_keypad.py:docstring of aiorubi.methods.edit_message_keypad.EditMessageKeypad.model_config:1
+#: ../../../aiorubi/methods/edit_message_text.py:docstring of aiorubi.methods.edit_message_text.EditMessageText.model_config:1
+#: ../../../aiorubi/methods/forward_message.py:docstring of aiorubi.methods.forward_message.ForwardMessage.model_config:1
+#: ../../../aiorubi/methods/get_chat.py:docstring of aiorubi.methods.get_chat.GetChat.model_config:1
+#: ../../../aiorubi/methods/get_file.py:docstring of aiorubi.methods.get_file.GetFile.model_config:1
+#: ../../../aiorubi/methods/get_me.py:docstring of aiorubi.methods.get_me.GetMe.model_config:1
+#: ../../../aiorubi/methods/get_updates.py:docstring of aiorubi.methods.get_updates.GetUpdates.model_config:1
+#: ../../../aiorubi/methods/request_send_file.py:docstring of aiorubi.methods.request_send_file.RequestSendFile.model_config:1
+#: ../../../aiorubi/methods/send_contact.py:docstring of aiorubi.methods.send_contact.SendContact.model_config:1
+#: ../../../aiorubi/methods/send_file.py:docstring of aiorubi.methods.send_file.SendFile.model_config:1
+#: ../../../aiorubi/methods/send_location.py:docstring of aiorubi.methods.send_location.SendLocation.model_config:1
+#: ../../../aiorubi/methods/send_message.py:docstring of aiorubi.methods.send_message.SendMessage.model_config:1
+#: ../../../aiorubi/methods/send_poll.py:docstring of aiorubi.methods.send_poll.SendPoll.model_config:1
+#: ../../../aiorubi/methods/set_commands.py:docstring of aiorubi.methods.set_commands.SetCommands.model_config:1
+#: ../../../aiorubi/methods/unban_chat_member.py:docstring of aiorubi.methods.unban_chat_member.UnbanChatMember.model_config:1
+#: ../../../aiorubi/methods/update_bot_endpoints.py:docstring of aiorubi.methods.update_bot_endpoints.UpdateBotEndpoints.model_config:1
+#: ../../../aiorubi/methods/upload_file.py:docstring of aiorubi.methods.upload_file.UploadFile.model_config:1
+msgid "Configuration for the model, should be a dictionary conforming to [`ConfigDict`][pydantic.config.ConfigDict]."
+msgstr ""
+
+#: ../../../aiorubi/methods/ban_chat_member.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/methods/base.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/methods/delete_message.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/methods/edit_chat_keypad.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/methods/edit_message_keypad.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/methods/edit_message_text.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/methods/forward_message.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/methods/get_chat.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/methods/get_file.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/methods/get_me.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/methods/get_updates.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/methods/request_send_file.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/methods/send_contact.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/methods/send_file.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/methods/send_location.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/methods/send_message.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/methods/send_poll.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/methods/set_commands.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/methods/unban_chat_member.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/methods/update_bot_endpoints.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/methods/upload_file.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+msgid "Override this method to perform additional initialization after `__init__` and `model_construct`. This is useful if you want to do some validation that requires the entire model to be initialized."
+msgstr ""
+
+#: ../../../aiorubi/methods/base.py:docstring of aiorubi.methods.base.Response.data:1
+msgid "Main data payload from Rubika."
+msgstr ""
+
+#: ../../../aiorubi/methods/base.py:docstring of aiorubi.methods.base.Response.dev_message:1
+msgid "Error description for developers."
+msgstr ""
+
+#: ../../../aiorubi/methods/base.py:docstring of aiorubi.methods.base.Response.status:1
+msgid "Response status (e.g., 'OK' or 'INVALID_ACCESS')."
+msgstr ""
+
+#: ../../api/methods.rst:18
+msgid "Chat members"
+msgstr ""
+
+#: ../../../aiorubi/methods/ban_chat_member.py:docstring of aiorubi.methods.ban_chat_member.BanChatMember:1
+msgid "Use this method to ban a user in a group or a channel. Returns :code:`True` on success."
+msgstr ""
+
+#: ../../../aiorubi/methods/ban_chat_member.py:docstring of aiorubi.methods.ban_chat_member.BanChatMember:4
+msgid "Source: https://rubika.ir/botapi/methods#_15"
+msgstr ""
+
+#: ../../../aiorubi/methods/ban_chat_member.py:docstring of aiorubi.methods.ban_chat_member.BanChatMember.chat_id:1
+#: ../../../aiorubi/methods/delete_message.py:docstring of aiorubi.methods.delete_message.DeleteMessage.chat_id:1
+#: ../../../aiorubi/methods/edit_chat_keypad.py:docstring of aiorubi.methods.edit_chat_keypad.EditChatKeypad.chat_id:1
+#: ../../../aiorubi/methods/edit_message_keypad.py:docstring of aiorubi.methods.edit_message_keypad.EditMessageKeypad.chat_id:1
+#: ../../../aiorubi/methods/edit_message_text.py:docstring of aiorubi.methods.edit_message_text.EditMessageText.chat_id:1
+#: ../../../aiorubi/methods/forward_message.py:docstring of aiorubi.methods.forward_message.ForwardMessage.to_chat_id:1
+#: ../../../aiorubi/methods/send_file.py:docstring of aiorubi.methods.send_file.SendFile.chat_id:1
+#: ../../../aiorubi/methods/send_location.py:docstring of aiorubi.methods.send_location.SendLocation.chat_id:1
+#: ../../../aiorubi/methods/send_message.py:docstring of aiorubi.methods.send_message.SendMessage.chat_id:1
+#: ../../../aiorubi/methods/send_poll.py:docstring of aiorubi.methods.send_poll.SendPoll.chat_id:1
+#: ../../../aiorubi/methods/unban_chat_member.py:docstring of aiorubi.methods.unban_chat_member.UnbanChatMember.chat_id:1
+msgid "Unique identifier for the target chat"
+msgstr ""
+
+#: ../../../aiorubi/methods/ban_chat_member.py:docstring of aiorubi.methods.ban_chat_member.BanChatMember.user_id:1
+#: ../../../aiorubi/methods/unban_chat_member.py:docstring of aiorubi.methods.unban_chat_member.UnbanChatMember.user_id:1
+msgid "Unique identifier of the target user"
+msgstr ""
+
+#: ../../../aiorubi/methods/unban_chat_member.py:docstring of aiorubi.methods.unban_chat_member.UnbanChatMember:1
+msgid "Use this method to unban a user in a group or a channel. Returns :code:`True` on success."
+msgstr ""
+
+#: ../../../aiorubi/methods/unban_chat_member.py:docstring of aiorubi.methods.unban_chat_member.UnbanChatMember:4
+msgid "Source: https://rubika.ir/botapi/methods#_16"
+msgstr ""
+
+#: ../../api/methods.rst:29
+msgid "Files"
+msgstr ""
+
+#: ../../../aiorubi/methods/get_file.py:docstring of aiorubi.methods.get_file.GetFile:1
+msgid "Use this method to get the download URL of a file. Returns a :class:`aiorubi.types.DownloadUrl` object."
+msgstr ""
+
+#: ../../../aiorubi/methods/get_file.py:docstring of aiorubi.methods.get_file.GetFile.file_id:1
+msgid "Identifier of the file to get information about."
+msgstr ""
+
+#: ../../../aiorubi/methods/request_send_file.py:docstring of aiorubi.methods.request_send_file.RequestSendFile:1
+msgid "Use this method to get an upload URL. Returns a :class:`aiorubi.types.UploadUrl` object."
+msgstr ""
+
+#: ../../../aiorubi/methods/send_file.py:docstring of aiorubi.methods.send_file.SendFile:1
+msgid "Use this method to send a file from the bot to a chat. Returns the sent :class:`MessageID` on success."
+msgstr ""
+
+#: ../../../aiorubi/methods/send_file.py:docstring of aiorubi.methods.send_file.SendFile:4
+msgid "Source: https://rubika.ir/botapi/methods#send-file"
+msgstr ""
+
+#: ../../../aiorubi/methods/send_file.py:docstring of aiorubi.methods.send_file.SendFile.chat_keypad:1
+#: ../../../aiorubi/methods/send_location.py:docstring of aiorubi.methods.send_location.SendLocation.chat_keypad:1
+#: ../../../aiorubi/methods/send_message.py:docstring of aiorubi.methods.send_message.SendMessage.chat_keypad:1
+#: ../../../aiorubi/methods/send_poll.py:docstring of aiorubi.methods.send_poll.SendPoll.chat_keypad:1
+msgid "*Optional*. Keypad attached to the chat"
+msgstr ""
+
+#: ../../../aiorubi/methods/send_file.py:docstring of aiorubi.methods.send_file.SendFile.chat_keypad_type:1
+#: ../../../aiorubi/methods/send_location.py:docstring of aiorubi.methods.send_location.SendLocation.chat_keypad_type:1
+#: ../../../aiorubi/methods/send_message.py:docstring of aiorubi.methods.send_message.SendMessage.chat_keypad_type:1
+#: ../../../aiorubi/methods/send_poll.py:docstring of aiorubi.methods.send_poll.SendPoll.chat_keypad_type:1
+msgid "*Optional*. Action to perform on the chat keypad"
+msgstr ""
+
+#: ../../../aiorubi/methods/send_file.py:docstring of aiorubi.methods.send_file.SendFile.disable_notification:1
+#: ../../../aiorubi/methods/send_location.py:docstring of aiorubi.methods.send_location.SendLocation.disable_notification:1
+#: ../../../aiorubi/methods/send_message.py:docstring of aiorubi.methods.send_message.SendMessage.disable_notification:1
+#: ../../../aiorubi/methods/send_poll.py:docstring of aiorubi.methods.send_poll.SendPoll.disable_notification:1
+msgid "*Optional*. If True, sends the message silently"
+msgstr ""
+
+#: ../../../aiorubi/methods/send_file.py:docstring of aiorubi.methods.send_file.SendFile.file_id:1
+msgid "Identifier of the file to send"
+msgstr ""
+
+#: ../../../aiorubi/methods/send_file.py:docstring of aiorubi.methods.send_file.SendFile.inline_keypad:1
+#: ../../../aiorubi/methods/send_location.py:docstring of aiorubi.methods.send_location.SendLocation.inline_keypad:1
+#: ../../../aiorubi/methods/send_message.py:docstring of aiorubi.methods.send_message.SendMessage.inline_keypad:1
+#: ../../../aiorubi/methods/send_poll.py:docstring of aiorubi.methods.send_poll.SendPoll.inline_keypad:1
+msgid "*Optional*. Inline keypad attached to the message"
+msgstr ""
+
+#: ../../../aiorubi/methods/send_file.py:docstring of aiorubi.methods.send_file.SendFile.metadata:1
+#: ../../../aiorubi/methods/send_message.py:docstring of aiorubi.methods.send_message.SendMessage.metadata:1
+msgid "*Optional*. Formatting metadata for the text (e.g. Bold, Italic, Mono)."
+msgstr ""
+
+#: ../../../aiorubi/methods/send_file.py:docstring of aiorubi.methods.send_file.SendFile.reply_to_message_id:1
+#: ../../../aiorubi/methods/send_location.py:docstring of aiorubi.methods.send_location.SendLocation.reply_to_message_id:1
+#: ../../../aiorubi/methods/send_message.py:docstring of aiorubi.methods.send_message.SendMessage.reply_to_message_id:1
+#: ../../../aiorubi/methods/send_poll.py:docstring of aiorubi.methods.send_poll.SendPoll.reply_to_message_id:1
+msgid "*Optional*. ID of the message to reply to"
+msgstr ""
+
+#: ../../../aiorubi/methods/send_file.py:docstring of aiorubi.methods.send_file.SendFile.text:1
+msgid "*Optional*. Caption of the file"
+msgstr ""
+
+#: ../../../aiorubi/methods/upload_file.py:docstring of aiorubi.methods.upload_file.UploadFile:1
+msgid "Fake method to reuse check_response() for upload endpoint."
+msgstr ""
+
+#: ../../../aiorubi/methods/upload_file.py:docstring of aiorubi.methods.upload_file.UploadFile:3
+msgid "Upload responses have the same {status, data} format as Bot API methods. This class lets us validate upload responses using the existing logic without duplicating code."
+msgstr ""
+
+#: ../../../aiorubi/methods/upload_file.py:docstring of aiorubi.methods.upload_file.UploadFile:7
+msgid "Not a real API method. Used internally only."
+msgstr ""
+
+#: ../../api/methods.rst:48
+msgid "Messaging"
+msgstr ""
+
+#: ../../../aiorubi/methods/send_message.py:docstring of aiorubi.methods.send_message.SendMessage.text:1
+msgid "Text of the message to send"
+msgstr ""
+
+#: ../../../aiorubi/methods/send_location.py:docstring of aiorubi.methods.send_location.SendLocation.latitude:1
+msgid "Latitude of the location"
+msgstr ""
+
+#: ../../../aiorubi/methods/send_location.py:docstring of aiorubi.methods.send_location.SendLocation.longitude:1
+msgid "Longitude of the location"
+msgstr ""
+
+#: ../../../aiorubi/methods/send_poll.py:docstring of aiorubi.methods.send_poll.SendPoll.allows_multiple_answers:1
+msgid "*Optional*. If True, users can select multiple answers"
+msgstr ""
+
+#: ../../../aiorubi/methods/send_poll.py:docstring of aiorubi.methods.send_poll.SendPoll.correct_option_index:1
+msgid "*Optional*. Index of the correct answer option, required for Quiz type"
+msgstr ""
+
+#: ../../../aiorubi/methods/send_poll.py:docstring of aiorubi.methods.send_poll.SendPoll.explanation:1
+msgid "*Optional*. Explanation shown when a user chooses the wrong answer in a Quiz"
+msgstr ""
+
+#: ../../../aiorubi/methods/send_poll.py:docstring of aiorubi.methods.send_poll.SendPoll.is_anonymous:1
+msgid "*Optional*. If True, the poll is anonymous"
+msgstr ""
+
+#: ../../../aiorubi/methods/send_poll.py:docstring of aiorubi.methods.send_poll.SendPoll.options:1
+msgid "List of answer options"
+msgstr ""
+
+#: ../../../aiorubi/methods/send_poll.py:docstring of aiorubi.methods.send_poll.SendPoll.question:1
+msgid "Poll question"
+msgstr ""
+
+#: ../../../aiorubi/methods/send_poll.py:docstring of aiorubi.methods.send_poll.SendPoll.type:1
+msgid "*Optional*. Type of the poll"
+msgstr ""
+
+#: ../../../aiorubi/methods/edit_message_text.py:docstring of aiorubi.methods.edit_message_text.EditMessageText:1
+msgid "This method is used to edit the text of a message sent by the bot. On success, the edited Message is returned, otherwise True is returned."
+msgstr ""
+
+#: ../../../aiorubi/methods/edit_message_text.py:docstring of aiorubi.methods.edit_message_text.EditMessageText:4
+msgid "Source: https://rubika.ir/botapi/methods#_9"
+msgstr ""
+
+#: ../../../aiorubi/methods/edit_message_keypad.py:docstring of aiorubi.methods.edit_message_keypad.EditMessageKeypad.message_id:1
+#: ../../../aiorubi/methods/edit_message_text.py:docstring of aiorubi.methods.edit_message_text.EditMessageText.message_id:1
+msgid "Identifier of the message to edit"
+msgstr ""
+
+#: ../../../aiorubi/methods/edit_message_text.py:docstring of aiorubi.methods.edit_message_text.EditMessageText.metadata:1
+msgid "Formatting metadata for the new text (e.g. Bold, Italic, Mono)."
+msgstr ""
+
+#: ../../../aiorubi/methods/edit_message_text.py:docstring of aiorubi.methods.edit_message_text.EditMessageText.text:1
+msgid "New text of the message"
+msgstr ""
+
+#: ../../../aiorubi/methods/delete_message.py:docstring of aiorubi.methods.delete_message.DeleteMessage:1
+msgid "Use this method to delete a message, including service messages. Returns :code:`True` on success."
+msgstr ""
+
+#: ../../../aiorubi/methods/delete_message.py:docstring of aiorubi.methods.delete_message.DeleteMessage:4
+msgid "Source: https://rubika.ir/botapi/methods#_10"
+msgstr ""
+
+#: ../../../aiorubi/methods/delete_message.py:docstring of aiorubi.methods.delete_message.DeleteMessage.message_id:1
+msgid "Identifier of the message to delete"
+msgstr ""
+
+#: ../../../aiorubi/methods/forward_message.py:docstring of aiorubi.methods.forward_message.ForwardMessage:1
+msgid "Use this method to forward messages of any kind. On success, the sent :class:`aiorubi.types.MessageID` is returned."
+msgstr ""
+
+#: ../../../aiorubi/methods/forward_message.py:docstring of aiorubi.methods.forward_message.ForwardMessage.disable_notification:1
+msgid "Sends the message silently. Users will receive a notification with no sound."
+msgstr ""
+
+#: ../../../aiorubi/methods/forward_message.py:docstring of aiorubi.methods.forward_message.ForwardMessage.from_chat_id:1
+msgid "Unique identifier for the chat where the original message was sent"
+msgstr ""
+
+#: ../../../aiorubi/methods/forward_message.py:docstring of aiorubi.methods.forward_message.ForwardMessage.message_id:1
+msgid "Message identifier in the chat specified in from_chat_id"
+msgstr ""
+
+#: ../../api/methods.rst:79
+msgid "Keypads"
+msgstr ""
+
+#: ../../../aiorubi/methods/edit_chat_keypad.py:docstring of aiorubi.methods.edit_chat_keypad.EditChatKeypad:1
+msgid "Use this method to edit or remove the chat's keypad. Returns :code:`True` on success."
+msgstr ""
+
+#: ../../../aiorubi/methods/edit_chat_keypad.py:docstring of aiorubi.methods.edit_chat_keypad.EditChatKeypad:4
+msgid "Source: https://rubika.ir/botapi/methods#keypad_1 Source: https://rubika.ir/botapi/methods#keypad_2"
+msgstr ""
+
+#: ../../../aiorubi/methods/edit_chat_keypad.py:docstring of aiorubi.methods.edit_chat_keypad.EditChatKeypad.chat_keypad:1
+msgid "The new keypad (Required if chat_keypad_type is 'New')"
+msgstr ""
+
+#: ../../../aiorubi/methods/edit_chat_keypad.py:docstring of aiorubi.methods.edit_chat_keypad.EditChatKeypad.chat_keypad_type:1
+msgid "The type of operation"
+msgstr ""
+
+#: ../../../aiorubi/methods/edit_message_keypad.py:docstring of aiorubi.methods.edit_message_keypad.EditMessageKeypad:1
+msgid "Use this method to edit only the reply markup of messages. Returns :code:`True` on success."
+msgstr ""
+
+#: ../../../aiorubi/methods/edit_message_keypad.py:docstring of aiorubi.methods.edit_message_keypad.EditMessageKeypad:4
+msgid "Source: https://rubika.ir/botapi/methods#inline-keypad"
+msgstr ""
+
+#: ../../../aiorubi/methods/edit_message_keypad.py:docstring of aiorubi.methods.edit_message_keypad.EditMessageKeypad.inline_keypad:1
+msgid "The new keypad to replace the current inline keypad of the message."
+msgstr ""
+
+#: ../../api/methods.rst:90
+msgid "Updates"
+msgstr ""
+
+#: ../../../aiorubi/methods/get_updates.py:docstring of aiorubi.methods.get_updates.GetUpdates:1
+msgid "Use this method to receive incoming updates using polling. Returns a :class:`aiorubi.types.GetUpdatesResponse` object."
+msgstr ""
+
+#: ../../../aiorubi/methods/get_updates.py:docstring of aiorubi.methods.get_updates.GetUpdates:4
+msgid "**Notes**"
+msgstr ""
+
+#: ../../../aiorubi/methods/get_updates.py:docstring of aiorubi.methods.get_updates.GetUpdates:6
+msgid "**1.** Use `next_offset_id` from the previous response as `offset_id` to prevent duplicates."
+msgstr ""
+
+#: ../../../aiorubi/methods/get_updates.py:docstring of aiorubi.methods.get_updates.GetUpdates:8
+msgid "**2.** Uses standard polling (not long polling); returns an immediate response."
+msgstr ""
+
+#: ../../../aiorubi/methods/get_updates.py:docstring of aiorubi.methods.get_updates.GetUpdates:10
+msgid "Source: https://rubika.ir/botapi/methods#_7"
+msgstr ""
+
+#: ../../../aiorubi/methods/get_updates.py:docstring of aiorubi.methods.get_updates.GetUpdates.limit:1
+msgid "Limits the number of updates to be retrieved."
+msgstr ""
+
+#: ../../../aiorubi/methods/get_updates.py:docstring of aiorubi.methods.get_updates.GetUpdates.offset_id:1
+msgid "Identifier of the update from which to start receiving. To get the next batch, use 'next_offset_id' from the previous response. If not specified, updates are returned starting from the oldest available update."
+msgstr ""
+
+#: ../../../aiorubi/methods/get_me.py:docstring of aiorubi.methods.get_me.GetMe:1
+msgid "A simple method for testing your bot's auth token. Returns basic information about the bot in form of a Bot object."
+msgstr ""
+
+#: ../../../aiorubi/methods/get_me.py:docstring of aiorubi.methods.get_me.GetMe:4
+msgid "Source: https://rubika.ir/botapi/methods#getMe"
+msgstr ""
+
+#: ../../../aiorubi/methods/get_chat.py:docstring of aiorubi.methods.get_chat.GetChat:1
+msgid "This method returns full information about a specific chat. Includes ID, name, type, and settings."
+msgstr ""
+
+#: ../../../aiorubi/methods/get_chat.py:docstring of aiorubi.methods.get_chat.GetChat.chat_id:1
+msgid "Unique identifier for the target chat."
+msgstr ""
+
+#: ../../../aiorubi/methods/set_commands.py:docstring of aiorubi.methods.set_commands.SetCommands:1
+msgid "Use this method to change the list of the bot's commands. Returns :code:`True` on success."
+msgstr ""
+
+#: ../../../aiorubi/methods/set_commands.py:docstring of aiorubi.methods.set_commands.SetCommands:4
+msgid "Source: https://rubika.ir/botapi/methods#commands"
+msgstr ""
+
+#: ../../../aiorubi/methods/set_commands.py:docstring of aiorubi.methods.set_commands.SetCommands.bot_commands:1
+msgid "A list of bot commands to be set as the list of the bot's commands."
+msgstr ""
+
+#: ../../../aiorubi/methods/update_bot_endpoints.py:docstring of aiorubi.methods.update_bot_endpoints.UpdateBotEndpoints:1
+msgid "Use this method to update the bot's endpoint URLs. Returns :code:`True` on success."
+msgstr ""
+
+#: ../../../aiorubi/methods/update_bot_endpoints.py:docstring of aiorubi.methods.update_bot_endpoints.UpdateBotEndpoints:4
+msgid "Source: https://rubika.ir/botapi/methods#url-endpoint"
+msgstr ""
+
+#: ../../../aiorubi/methods/update_bot_endpoints.py:docstring of aiorubi.methods.update_bot_endpoints.UpdateBotEndpoints.type:1
+msgid "The type of endpoint"
+msgstr ""
+
+#: ../../../aiorubi/methods/update_bot_endpoints.py:docstring of aiorubi.methods.update_bot_endpoints.UpdateBotEndpoints.url:1
+msgid "The new endpoint URL"
+msgstr ""

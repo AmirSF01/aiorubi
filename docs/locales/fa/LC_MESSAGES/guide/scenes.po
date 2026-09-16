@@ -1,0 +1,309 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../guide/scenes.rst:3
+msgid "Scenes"
+msgstr "صحنه‌ها"
+
+#: ../../guide/scenes.rst:5
+msgid "Scenes are a higher-level abstraction over the FSM (see :doc:`fsm`) for complex multi-step dialogs. A **scene** is a named state with its own handlers, and a **wizard** moves the user between scenes. Where plain FSM gives you *states*, scenes give you *rooms*: each room decides which messages it listens to and where to go next."
+msgstr "صحنه‌ها انتزاعی سطح‌بالاتر روی FSM (ببینید :doc:`fsm`) برای دیالوگ‌های پیچیدهٔ چندمرحله‌ای هستند. یک **صحنه** حالتی نام‌دار با هندلرهای مخصوص خودش است و یک **ویزارد** کاربر را بین صحنه‌ها جابه‌جا می‌کند. FSM ساده به شما *حالت* می‌دهد؛ صحنه‌ها به شما *اتاق* می‌دهند: هر اتاق تصمیم می‌گیرد به چه پیام‌هایی گوش بدهد و بعدش کجا برود."
+
+#: ../../guide/scenes.rst:11
+msgid "The scene machinery lives in :mod:`aiorubi.fsm.scene` and is a direct port of the aiogram 3.x scenes API — ``Scene``, ``SceneWizard``, ``ScenesManager`` and the ``on`` marker."
+msgstr "سازوکار صحنه‌ها در :mod:`aiorubi.fsm.scene` قرار دارد و پورت مستقیم API صحنه‌های aiogram 3.x است — ``Scene``، ``SceneWizard``، ``ScenesManager`` و مارکر ``on``."
+
+#: ../../guide/scenes.rst:16
+msgid "The four moving parts"
+msgstr "چهار قطعهٔ متحرک"
+
+#: ../../guide/scenes.rst:22
+msgid "Class"
+msgstr "کلاس"
+
+#: ../../guide/scenes.rst:23
+msgid "Role"
+msgstr "نقش"
+
+#: ../../guide/scenes.rst:24
+msgid ":class:`~aiorubi.fsm.scene.Scene`"
+msgstr ":class:`~aiorubi.fsm.scene.Scene`"
+
+#: ../../guide/scenes.rst:25
+msgid "Base class; you subclass it. Collects handlers and actions declared on the class into ``__scene_config__``."
+msgstr "کلاس پایه؛ شما از آن ارث می‌برید. هندلرها و اکشن‌های اعلان‌شده روی کلاس را در ``__scene_config__`` جمع می‌کند."
+
+#: ../../guide/scenes.rst:27
+msgid ":class:`~aiorubi.fsm.scene.SceneWizard`"
+msgstr ":class:`~aiorubi.fsm.scene.SceneWizard`"
+
+#: ../../guide/scenes.rst:28
+msgid "Injected into every scene instance as ``self.wizard``; performs transitions (``goto``, ``leave``, ``exit``, ``back``, ``retake``) and data access."
+msgstr "به‌عنوان ``self.wizard`` به هر نمونهٔ صحنه تزریق می‌شود؛ گذارها (``goto``، ``leave``، ``exit``، ``back``، ``retake``) و دسترسی به داده را انجام می‌دهد."
+
+#: ../../guide/scenes.rst:31
+msgid ":class:`~aiorubi.fsm.scene.ScenesManager`"
+msgstr ":class:`~aiorubi.fsm.scene.ScenesManager`"
+
+#: ../../guide/scenes.rst:32
+msgid "Created per update by the scenes middleware; enters/exits scenes and exposes ``manager.history``."
+msgstr "برای هر آپدیت توسط میان‌افزار صحنه‌ها ساخته می‌شود؛ صحنه‌ها را وارد/خارج می‌کند و ``manager.history`` را ارائه می‌دهد."
+
+#: ../../guide/scenes.rst:34
+msgid ":class:`~aiorubi.fsm.scene.SceneRegistry`"
+msgstr ":class:`~aiorubi.fsm.scene.SceneRegistry`"
+
+#: ../../guide/scenes.rst:35
+msgid "Maps state strings to scene classes and mounts the middleware on a router/dispatcher."
+msgstr "رشته‌های حالت را به کلاس‌های صحنه نگاشت می‌کند و میان‌افزار را روی روتِر/دیسپچر سوار می‌کند."
+
+#: ../../guide/scenes.rst:39
+msgid "Declaring a scene"
+msgstr "اعلان یک صحنه"
+
+#: ../../guide/scenes.rst:50
+msgid "Key points:"
+msgstr "نکات کلیدی:"
+
+#: ../../guide/scenes.rst:52
+msgid "``state=`` assigns the FSM state string for the whole scene (``\"dialog\"`` here). It is stored via the ordinary FSM pipeline, so all :doc:`storages <storages>` work unchanged."
+msgstr "``state=`` رشتهٔ حالت FSM را برای کل صحنه تعیین می‌کند (اینجا ``\"dialog\"``). از طریق خط لولهٔ معمولی FSM ذخیره می‌شود، پس همهٔ :doc:`استورج‌ها <storages>` بدون تغییر کار می‌کنند."
+
+#: ../../guide/scenes.rst:55
+msgid "``@on.new_message(...)`` marks a handler inside the scene — it is registered only while the scene's state is active. Available markers: ``on.new_message``, ``on.updated_message``, ``on.removed_message``, ``on.inline_message``. Every marker accepts the same filters as the regular observers (``Command``, ``F``, custom filters — see :doc:`filter`)."
+msgstr "``@on.new_message(...)`` یک هندلر داخل صحنه علامت‌گذاری می‌کند — فقط وقتی حالت صحنه فعال است ثبت می‌شود. مارکرهای موجود: ``on.new_message``، ``on.updated_message``، ``on.removed_message``، ``on.inline_message``. هر مارکر همان فیلترهای ناظرهای معمولی را می‌پذیرد (``Command``، ``F``، فیلترهای سفارشی — ببینید :doc:`filter`)."
+
+#: ../../guide/scenes.rst:61
+msgid "Handlers are plain methods: ``self`` is the scene instance, and the dispatcher-injected arguments (``message``, ``state``, …) follow the usual rules."
+msgstr "هندلرها متدهای معمولی‌اند: ``self`` نمونهٔ صحنه است و آرگومان‌های تزریق‌شده توسط دیسپچر (``message``، ``state`` و …) از قواعد همیشگی پیروی می‌کنند."
+
+#: ../../guide/scenes.rst:65
+msgid "The ``after=`` argument schedules a transition that runs *after* the handler returns: ``after=After.exit()``, ``after=After.back()`` or ``after=After.goto(OtherScene)``."
+msgstr "آرگومان ``after=`` یک گذار زمان‌بندی می‌کند که *بعد از* برگشتن هندلر اجرا می‌شود: ``after=After.exit()``، ``after=After.back()`` یا ``after=After.goto(OtherScene)``."
+
+#: ../../guide/scenes.rst:70
+msgid "Scene configuration"
+msgstr "پیکربندی صحنه"
+
+#: ../../guide/scenes.rst:72
+msgid "Class keyword arguments (also inherited from parent scene classes):"
+msgstr "آرگومان‌های کلیدواژه‌ای کلاس (که از کلاس‌های صحنهٔ والد هم به ارث می‌رسند):"
+
+#: ../../guide/scenes.rst:74
+msgid "``state: str | None`` — the FSM state of the scene."
+msgstr "``state: str | None`` — حالت FSM صحنه."
+
+#: ../../guide/scenes.rst:75
+msgid "``reset_data_on_enter: bool | None`` — wipe the FSM data when the scene is entered."
+msgstr "``reset_data_on_enter: bool | None`` — پاک‌کردن دادهٔ FSM هنگام ورود به صحنه."
+
+#: ../../guide/scenes.rst:77
+msgid "``reset_history_on_enter: bool | None`` — clear the scene history when the scene is entered."
+msgstr "``reset_history_on_enter: bool | None`` — پاک‌کردن تاریخچهٔ صحنه هنگام ورود به صحنه."
+
+#: ../../guide/scenes.rst:79
+msgid "``inline_message_without_state: bool | None`` — allow inline-message handlers to fire even when the state no longer matches."
+msgstr "``inline_message_without_state: bool | None`` — اجازه می‌دهد هندلرهای پیام درون‌خطی حتی وقتی حالت دیگر مطابقت ندارد اجرا شوند."
+
+#: ../../guide/scenes.rst:89
+msgid "SceneWizard"
+msgstr "SceneWizard"
+
+#: ../../guide/scenes.rst:91
+msgid "Transitions (all coroutines):"
+msgstr "گذارها (همگی coroutine):"
+
+#: ../../guide/scenes.rst:93
+msgid "``await wizard.enter(**kwargs)`` — (re)enter the current scene: applies the ``reset_*_on_enter`` flags, sets the scene state and fires the ``enter`` action."
+msgstr "``await wizard.enter(**kwargs)`` — ورود (مجدد) به صحنهٔ فعلی: فلگ‌های ``reset_*_on_enter`` را اعمال می‌کند، حالت صحنه را تنظیم می‌کند و اکشن ``enter`` را اجرا می‌کند."
+
+#: ../../guide/scenes.rst:96
+msgid "``await wizard.leave(**kwargs)`` — snapshot the current state+data into the history and fire the ``leave`` action."
+msgstr "``await wizard.leave(**kwargs)`` — اسنپ‌شات حالت+دادهٔ فعلی را در تاریخچه می‌گذارد و اکشن ``leave`` را اجرا می‌کند."
+
+#: ../../guide/scenes.rst:98
+msgid "``await wizard.goto(scene, **kwargs)`` — ``leave()`` the current scene, then enter ``scene`` (a ``Scene`` subclass, a ``State`` or a state string)."
+msgstr "``await wizard.goto(scene, **kwargs)`` — صحنهٔ فعلی را ``leave()`` می‌کند، سپس وارد ``scene`` می‌شود (یک زیرکلاس ``Scene``، یک ``State`` یا رشتهٔ حالت)."
+
+#: ../../guide/scenes.rst:101
+msgid "``await wizard.exit(**kwargs)`` — clear the history, fire the ``exit`` action, then reset the FSM state to ``None`` (leave the scene world)."
+msgstr "``await wizard.exit(**kwargs)`` — تاریخچه را پاک می‌کند، اکشن ``exit`` را اجرا می‌کند و بعد حالت FSM را به ``None`` برمی‌گرداند (خروج از دنیای صحنه‌ها)."
+
+#: ../../guide/scenes.rst:103
+msgid "``await wizard.back(**kwargs)`` — leave the current scene *without* snapshotting and roll the history back to the previous record, re-entering that scene with its saved state and data."
+msgstr "``await wizard.back(**kwargs)`` — صحنهٔ فعلی را *بدون* اسنپ‌شات ترک می‌کند و تاریخچه را به رکورد قبلی برمی‌گرداند؛ همان صحنه با حالت و دادهٔ ذخیره‌شده‌اش دوباره وارد می‌شود."
+
+#: ../../guide/scenes.rst:106
+msgid "``await wizard.retake(**kwargs)`` — re-enter the current scene (re-runs its ``enter`` action)."
+msgstr "``await wizard.retake(**kwargs)`` — دوباره وارد صحنهٔ فعلی می‌شود (اکشن ``enter`` را دوباره اجرا می‌کند)."
+
+#: ../../guide/scenes.rst:109
+msgid "Data shortcuts (they operate on the scene's FSM context):"
+msgstr "میان‌برهای داده (روی کانتکست FSM صحنه کار می‌کنند):"
+
+#: ../../guide/scenes.rst:111
+msgid "``wizard.get_data()``, ``wizard.set_data(mapping)``, ``wizard.update_data(mapping=None, **kwargs)``, ``wizard.get_value(key, default=None)``, ``wizard.clear_data()``."
+msgstr "``wizard.get_data()``، ``wizard.set_data(mapping)``، ``wizard.update_data(mapping=None, **kwargs)``، ``wizard.get_value(key, default=None)``، ``wizard.clear_data()``."
+
+#: ../../guide/scenes.rst:116
+msgid "Actions"
+msgstr "اکشن‌ها"
+
+#: ../../guide/scenes.rst:118
+msgid "Handlers can also be *actions* — they run on transitions instead of updates. Declare them with the same marker objects:"
+msgstr "هندلرها می‌توانند *اکشن* هم باشند — به‌جای آپدیت‌ها روی گذارها اجرا می‌شوند. آن‌ها را با همان اشیاء مارکر اعلان کنید:"
+
+#: ../../guide/scenes.rst:140
+msgid "``on.new_message.enter(SomeOtherScene)`` additionally jumps to the target scene after the handler runs. Plain handlers can be chained with transitions too: ``@on.new_message(F.text == \"next\").enter(NextScene)``, ``.leave()``, ``.exit()``, ``.back()``."
+msgstr "``on.new_message.enter(SomeOtherScene)`` بعد از اجرای هندلر به صحنهٔ مقصد هم می‌پرد. هندلرهای معمولی هم می‌توانند با گذارها زنجیر شوند: ``@on.new_message(F.text == \"next\").enter(NextScene)``، ``.leave()``، ``.exit()``، ``.back()``."
+
+#: ../../guide/scenes.rst:146
+msgid "ScenesManager and entering scenes"
+msgstr "ScenesManager و ورود به صحنه‌ها"
+
+#: ../../guide/scenes.rst:148
+msgid "The :class:`~aiorubi.fsm.scene.ScenesManager` is injected into handlers as the ``scenes`` argument once a registry is installed. Its methods:"
+msgstr "کلاس :class:`~aiorubi.fsm.scene.ScenesManager` به‌محض نصب رجیستری، به‌عنوان آرگومان ``scenes`` به هندلرها تزریق می‌شود. متدهایش:"
+
+#: ../../guide/scenes.rst:151
+msgid "``await scenes.enter(scene, **kwargs)`` — if another scene is active it is *exited* first, then the requested scene is entered. ``scene`` may be ``None`` to reset to the default (no-scene) state."
+msgstr "``await scenes.enter(scene, **kwargs)`` — اگر صحنهٔ دیگری فعال باشد اول *خارج* می‌شود، بعد صحنهٔ درخواستی وارد می‌شود. ``scene`` می‌تواند ``None`` باشد تا به حالت پیش‌فرض (بی‌صحنه) برگردد."
+
+#: ../../guide/scenes.rst:154
+msgid "``await scenes.close(**kwargs)`` — exit the active scene, if any."
+msgstr "``await scenes.close(**kwargs)`` — در صورت وجود، صحنهٔ فعال را خارج می‌کند."
+
+#: ../../guide/scenes.rst:156
+msgid "Two ways to start a scene:"
+msgstr "دو روش برای شروع یک صحنه:"
+
+#: ../../guide/scenes.rst:158
+msgid "**Registry** — register all scenes up-front:"
+msgstr "**رجیستری** — همهٔ صحنه‌ها را از قبل ثبت کنید:"
+
+#: ../../guide/scenes.rst:168
+msgid "**Entry handler** — turn a scene into a handler with ``Scene.as_handler()`` and attach it to a command:"
+msgstr "**هندلر ورودی** — صحنه را با ``Scene.as_handler()`` به یک هندلر تبدیل کنید و به یک دستور وصلش کنید:"
+
+#: ../../guide/scenes.rst:180
+msgid "or the one-liner equivalent:"
+msgstr "یا معادل تک‌خطی آن:"
+
+#: ../../guide/scenes.rst:187
+msgid "HistoryManager"
+msgstr "HistoryManager"
+
+#: ../../guide/scenes.rst:189
+msgid "Every :class:`~aiorubi.fsm.scene.ScenesManager` owns a :class:`~aiorubi.fsm.scene.HistoryManager` (``manager.history``) that remembers the last 10 scene snapshots — each a ``MemoryStorageRecord(state=..., data=...)``. Snapshots are stored in the FSM storage under the ``scenes_history`` destiny, so they survive restarts with persistent storages."
+msgstr "هر :class:`~aiorubi.fsm.scene.ScenesManager` یک :class:`~aiorubi.fsm.scene.HistoryManager` (``manager.history``) دارد که ۱۰ اسنپ‌شات آخر صحنه را به یاد دارد — هرکدام یک ``MemoryStorageRecord(state=..., data=...)``. اسنپ‌شات‌ها در استورج FSM زیر destiny ‌``scenes_history`` ذخیره می‌شوند، پس با استورج‌های ماندگار از ری‌استارت جان سالم می‌برند."
+
+#: ../../guide/scenes.rst:196
+msgid "``await manager.history.snapshot()`` — push the *current* state and data (done automatically by ``wizard.leave()``)."
+msgstr "``await manager.history.snapshot()`` — حالت و دادهٔ *فعلی* را push می‌کند (``wizard.leave()`` به‌طور خودکار انجامش می‌دهد)."
+
+#: ../../guide/scenes.rst:198
+msgid "``await manager.history.rollback() -> str | None`` — pop the latest snapshot and restore it (used by ``wizard.back()``)."
+msgstr "``await manager.history.rollback() -> str | None`` — آخرین اسنپ‌شات را pop و بازیابی می‌کند (``wizard.back()`` استفاده می‌کند)."
+
+#: ../../guide/scenes.rst:200
+msgid "``await manager.history.get()`` / ``.all()`` — peek at the last / all records without removing them."
+msgstr "``await manager.history.get()`` / ``.all()`` — نگاه به آخرین / همهٔ رکوردها بدون حذف‌شان."
+
+#: ../../guide/scenes.rst:202
+msgid "``await manager.history.clear()`` — forget the history (used by ``wizard.exit()`` and ``reset_history_on_enter``)."
+msgstr "``await manager.history.clear()`` — فراموشی تاریخچه (``wizard.exit()`` و ``reset_history_on_enter`` استفاده می‌کنند)."
+
+#: ../../guide/scenes.rst:206
+msgid "Mounting scenes: as_router and as_handler"
+msgstr "سوارکردن صحنه‌ها: as_router و as_handler"
+
+#: ../../guide/scenes.rst:208
+msgid "``Scene.as_router(name=None)`` returns a :class:`~aiorubi.dispatcher.router.Router` with the scene's handlers bound to its state via :class:`~aiorubi.filters.state.StateFilter`. Include it manually when you prefer explicit wiring:"
+msgstr "``Scene.as_router(name=None)`` یک :class:`~aiorubi.dispatcher.router.Router` برمی‌گرداند که هندلرهای صحنه با :class:`~aiorubi.filters.state.StateFilter` به حالتش مقید شده‌اند. اگر سیم‌کشی صریح را ترجیح می‌دهید، آن را دستی include کنید:"
+
+#: ../../guide/scenes.rst:218
+msgid "``Scene.as_handler(**kwargs)`` returns an async entry-point handler that enters the scene (see above). ``SceneRegistry.add(..., router=...)`` / ``registry.register(...)`` combine registration with router inclusion; a ``SceneException`` is raised if two scenes share one state string."
+msgstr "``Scene.as_handler(**kwargs)`` یک هندلر ورودی async برمی‌گرداند که صحنه را وارد می‌کند (بالا ببینید). ``SceneRegistry.add(..., router=...)`` / ``registry.register(...)`` ثبت و include روتِر را یکجا انجام می‌دهند؛ اگر دو صحنه یک رشتهٔ حالت مشترک داشته باشند ``SceneException`` پرتاب می‌شود."
+
+#: ../../guide/scenes.rst:224
+msgid "Full example — a multi-step form"
+msgstr "مثال کامل — یک فرم چندمرحله‌ای"
+
+#: ../../guide/scenes.rst:226
+msgid "form_bot.py"
+msgstr "form_bot.py"
+
+#: ../../guide/scenes.rst:298
+msgid "What happens, step by step:"
+msgstr "چه اتفاقی می‌افتد، قدم‌به‌قدم:"
+
+#: ../../guide/scenes.rst:300
+msgid "``/form`` — the entry handler calls ``scenes.enter(Form)``. The scene's ``enter`` action greets the user and the FSM state becomes ``\"form\"``."
+msgstr "``/form`` — هندلر ورودی ``scenes.enter(Form)`` را صدا می‌زند. اکشن ``enter`` صحنه به کاربر خوش‌آمد می‌گوید و حالت FSM می‌شود ``\"form\"``."
+
+#: ../../guide/scenes.rst:302
+msgid "The user's next message is matched by the ``F.text`` handler of the active scene (``Form``); ``goto(FormAge)`` snapshots ``Form`` into the history and enters the age scene, whose ``enter`` action (if any) fires."
+msgstr "پیام بعدی کاربر با هندلر ``F.text`` صحنهٔ فعال (``Form``) match می‌شود؛ ``goto(FormAge)`` اسنپ‌شات ``Form`` را در تاریخچه می‌گذارد و وارد صحنهٔ سن می‌شود که اکشن ``enter`` آن (در صورت وجود) اجرا می‌شود."
+
+#: ../../guide/scenes.rst:305
+msgid "``/back`` in the age scene calls ``wizard.back()``: the age scene is left *without* snapshotting, the last history record (``Form`` with its data) is rolled back and ``Form`` is re-entered."
+msgstr "``/back`` در صحنهٔ سن، ``wizard.back()`` را صدا می‌زند: صحنهٔ سن *بدون* اسنپ‌شات ترک می‌شود، آخرین رکورد تاریخچه (``Form`` با داده‌اش) برگردانده می‌شود و ``Form`` دوباره وارد می‌شود."
+
+#: ../../guide/scenes.rst:308
+msgid "``/cancel`` or finishing the last step calls ``wizard.exit()``: the history is cleared, the ``exit`` action says goodbye, and the FSM state is reset to ``None`` — the user is back in the \"no scene\" world."
+msgstr "``/cancel`` یا تمام‌کردن آخرین مرحله، ``wizard.exit()`` را صدا می‌زند: تاریخچه پاک می‌شود، اکشن ``exit`` خداحافظی می‌کند و حالت FSM به ``None`` برمی‌گردد — کاربر به دنیای «بی‌صحنه» برگشته است."
+
+#: ../../guide/scenes.rst:313
+msgid "Error handling"
+msgstr "مدیریت خطا"
+
+#: ../../guide/scenes.rst:315
+msgid "Scene errors raise :class:`~aiorubi.exceptions.SceneException` (a subclass of :class:`~aiorubi.exceptions.AiorubiError`), for example:"
+msgstr "خطاهای صحنه :class:`~aiorubi.exceptions.SceneException` پرتاب می‌کنند (زیرکلاس :class:`~aiorubi.exceptions.AiorubiError`)، مثلاً:"
+
+#: ../../guide/scenes.rst:318
+msgid "a scene state is not registered (``Scene ... is not registered``);"
+msgstr "حالت صحنه‌ای ثبت نشده باشد (``Scene ... is not registered``)؛"
+
+#: ../../guide/scenes.rst:319
+msgid "a duplicate state is registered in one registry;"
+msgstr "در یک رجیستری، حالت تکراری ثبت شود؛"
+
+#: ../../guide/scenes.rst:320
+msgid "a scene handler runs without the FSM pipeline (``Scene context key 'state' is not available...``) — this happens when ``disable_fsm=True``."
+msgstr "هندلر صحنه بدون خط لولهٔ FSM اجرا شود (``Scene context key 'state' is not available...``) — وقتی ``disable_fsm=True`` رخ می‌دهد."
+
+#: ../../guide/scenes.rst:324
+msgid "Handle them in an :doc:`error handler <handlers>`:"
+msgstr "آن‌ها را در یک :doc:`هندلر خطا <handlers>` مدیریت کنید:"
+
+#: ../../guide/scenes.rst:335
+msgid "See also"
+msgstr "همچنین ببینید"
+
+#: ../../guide/scenes.rst:337
+msgid ":doc:`fsm` — states, contexts and storages underneath."
+msgstr ":doc:`fsm` — حالت‌ها، کانتکست‌ها و استورج‌های زیربنایی."
+
+#: ../../guide/scenes.rst:338
+msgid ":doc:`storages` — where scene snapshots live (``scenes_history`` destiny)."
+msgstr ":doc:`storages` — جای زندگی اسنپ‌شات‌های صحنه (destiny ‌``scenes_history``)."
+
+#: ../../guide/scenes.rst:340
+msgid ":doc:`filter` — the filters accepted by ``@on.*`` decorators."
+msgstr ":doc:`filter` — فیلترهایی که دکوریتورهای ``@on.*`` می‌پذیرند."
+

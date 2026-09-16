@@ -1,0 +1,225 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../guide/dispatcher.rst:3
+msgid "Dispatcher"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:5
+msgid "The :class:`~aiorubi.dispatcher.dispatcher.Dispatcher` is the root router of the bot. It owns the update pipeline: incoming :class:`~aiorubi.types.update.Update` objects enter here, are split by update type, flow through the middleware chain (errors → user context → FSM) and reach the first matching handler."
+msgstr ""
+
+#: ../../guide/dispatcher.rst:12
+msgid "Creating a dispatcher"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:27
+msgid "All extra keyword arguments are kept in ``dp.workflow_data`` and passed to every handler as keyword arguments — a simple global context:"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:41
+msgid "The dispatcher is a :class:`~aiorubi.dispatcher.router.Router`, so all observer registration methods and ``include_router`` work on it. Unlike a plain router it **cannot** be included into another router — setting ``parent_router`` raises :class:`RuntimeError`."
+msgstr ""
+
+#: ../../guide/dispatcher.rst:47
+msgid "Observers"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:49
+msgid "Rubika delivers a single raw update type; the dispatcher's built-in ``update`` observer (``dp.update``) splits it into the specialised observers:"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:57
+msgid "Observer"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:58
+msgid "Event object"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:59
+msgid "``dp.new_message``"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:60
+msgid ":class:`~aiorubi.types.message.Message`"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:61
+msgid "``dp.updated_message``"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:62
+msgid ":class:`~aiorubi.types.message.Message` (with ``is_edited``)"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:63
+msgid "``dp.removed_message``"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:64
+msgid ":class:`~aiorubi.types.removed_message.RemovedMessage`"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:65
+msgid "``dp.inline_message``"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:66
+msgid ":class:`~aiorubi.types.inline_message.InlineMessage` (button clicks)"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:67
+msgid "``dp.started_bot``"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:68
+msgid ":class:`~aiorubi.types.started_bot.StartedBot`"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:69
+msgid "``dp.stopped_bot``"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:70
+msgid ":class:`~aiorubi.types.stopped_bot.StoppedBot`"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:71
+msgid "``dp.error`` (alias ``dp.errors``)"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:72
+msgid ":class:`~aiorubi.types.error_event.ErrorEvent`"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:74
+msgid "Registration uses either the decorator or the explicit form — both are equivalent:"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:84
+msgid "Unknown update types (new Rubika API features) are warned about and skipped. Because a handler never fires for them, keep your aiorubi version up to date."
+msgstr ""
+
+#: ../../guide/dispatcher.rst:89
+msgid "Polling"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:93
+msgid "Starts the long-polling loop for one or more bots:"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:102
+msgid "Notable parameters:"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:104
+msgid "``handle_as_tasks=True`` — process each update in its own :class:`asyncio.Task` (concurrent); ``False`` awaits updates serially."
+msgstr ""
+
+#: ../../guide/dispatcher.rst:106
+msgid "``tasks_concurrency_limit`` — cap concurrent updates (a semaphore), only with ``handle_as_tasks=True``."
+msgstr ""
+
+#: ../../guide/dispatcher.rst:108
+msgid "``backoff_config`` — :class:`~aiorubi.utils.backoff.BackoffConfig` for retry delays when the API is unreachable; polling never dies on network errors."
+msgstr ""
+
+#: ../../guide/dispatcher.rst:111
+msgid "``handle_signals`` — SIGINT/SIGTERM stop the loop gracefully."
+msgstr ""
+
+#: ../../guide/dispatcher.rst:113
+msgid "``await dp.stop_polling()`` stops the loop programmatically; it raises :class:`RuntimeError` if polling is not running."
+msgstr ""
+
+#: ../../guide/dispatcher.rst:117
+msgid "Lifecycle hooks"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:129
+msgid "``await dp.emit_startup()`` / ``await dp.emit_shutdown()`` propagate the event through all included routers."
+msgstr ""
+
+#: ../../guide/dispatcher.rst:133
+msgid "Webhooks"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:137
+msgid "Entry point for HTTP-delivered updates. Returns a :class:`~aiorubi.methods.base.RubikaMethod` to answer synchronously, or ``None``. If the handler takes longer than ``_timeout`` (55 s; Rubika allows 60), the handler moves to the background and any returned method is sent later via a *silent call*."
+msgstr ""
+
+#: ../../guide/dispatcher.rst:149
+msgid "Lower-level entry points:"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:151
+msgid "``await dp.feed_update(bot, update)`` — a parsed :class:`~aiorubi.types.update.Update`."
+msgstr ""
+
+#: ../../guide/dispatcher.rst:153
+msgid "``await dp.feed_raw_update(bot, update_dict)`` — a raw dict; validated for you."
+msgstr ""
+
+#: ../../guide/dispatcher.rst:155
+msgid "``await dp.silent_call_request(bot, method)`` — fire a method ignoring API errors (used for delayed webhook answers)."
+msgstr ""
+
+#: ../../guide/dispatcher.rst:158
+msgid "See :doc:`webhook` for the aiohttp server wiring."
+msgstr ""
+
+#: ../../guide/dispatcher.rst:161
+msgid "Built-in middlewares"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:163
+msgid "The dispatcher installs, in order, on the ``update`` observer:"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:165
+msgid ":class:`~aiorubi.dispatcher.middlewares.error.ErrorsMiddleware` — catches handler exceptions and routes them to ``dp.error`` handlers."
+msgstr ""
+
+#: ../../guide/dispatcher.rst:167
+msgid ":class:`~aiorubi.dispatcher.middlewares.user_context.UserContextMiddleware` — caches ``event_context`` / ``event_from_user`` / ``event_chat``."
+msgstr ""
+
+#: ../../guide/dispatcher.rst:169
+msgid ":class:`~aiorubi.fsm.middleware.FSMContextMiddleware` — the FSM (skipped with ``disable_fsm=True``); adds ``state``, ``raw_state``, ``fsm_storage``."
+msgstr ""
+
+#: ../../guide/dispatcher.rst:173
+msgid "``dp.storage`` is a read-only alias for ``dp.fsm.storage``; ``dp.fsm`` is the middleware instance itself."
+msgstr ""
+
+#: ../../guide/dispatcher.rst:177
+msgid "See also"
+msgstr ""
+
+#: ../../guide/dispatcher.rst:179
+msgid ":doc:`router` — organising handlers across routers."
+msgstr ""
+
+#: ../../guide/dispatcher.rst:180
+msgid ":doc:`fsm` — the FSM configuration arguments in detail."
+msgstr ""
+
+#: ../../guide/dispatcher.rst:181
+msgid ":doc:`webhook` — webhook deployment."
+msgstr ""

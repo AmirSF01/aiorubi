@@ -79,6 +79,7 @@ docs = [
     "sphinx-intl~=2.2.0",
     "sphinx-autobuild~=2024.9.3",
     "sphinx-copybutton~=0.5.2",
+    "sphinx-design~=0.6.1",
     "furo~=2024.8.6",
     "Sphinx-Substitution-Extensions~=2024.8.6",
     "towncrier~=24.8.0",

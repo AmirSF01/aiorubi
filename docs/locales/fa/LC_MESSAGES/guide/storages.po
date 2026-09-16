@@ -1,0 +1,310 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../guide/storages.rst:3
+msgid "FSM storages"
+msgstr "استورج‌های FSM"
+
+#: ../../guide/storages.rst:5
+msgid "The FSM (see :doc:`fsm`) delegates persistence to a *storage*. aiorubi ships one for every common backend and a small interface for writing your own. All storages implement the same contract, so switching is a one-line change at the :class:`~aiorubi.dispatcher.dispatcher.Dispatcher`:"
+msgstr "FSM (ببینید :doc:`fsm`) کار ماندگارسازی را به یک *استورج* می‌سپارد. aiorubi برای هر بک‌اند رایج یکی دارد و یک رابط کوچک برای نوشتن استورج اختصاصی. همهٔ استورج‌ها یک قرارداد مشترک دارند، پس تعویضشان فقط یک خط تغییر در :class:`~aiorubi.dispatcher.dispatcher.Dispatcher` است:"
+
+#: ../../guide/storages.rst:17
+msgid "At shutdown the dispatcher closes the storage for you (``dispatcher.fsm.close`` is registered as a shutdown callback), so connections are released when ``await dp.stop_polling()`` / the polling loop ends."
+msgstr "هنگام خاموشی، دیسپچر خودش استورج را می‌بندد (``dispatcher.fsm.close`` به‌عنوان کال‌بک shutdown ثبت شده است)؛ پس اتصال‌ها وقتی ``await dp.stop_polling()`` اجرا شود یا حلقهٔ پولینگ تمام شود آزاد می‌شوند."
+
+#: ../../guide/storages.rst:22
+msgid "BaseStorage — the interface"
+msgstr "BaseStorage — رابط"
+
+#: ../../guide/storages.rst:24
+msgid "``aiorubi.fsm.storage.base.BaseStorage``"
+msgstr "``aiorubi.fsm.storage.base.BaseStorage``"
+
+#: ../../guide/storages.rst:26
+msgid "Abstract base class for all storages. To implement a custom storage, subclass it and override the abstract methods:"
+msgstr "کلاس پایهٔ انتزاعی همهٔ استورج‌ها. برای پیاده‌سازی استورج سفارشی، از آن ارث ببرید و متدهای انتزاعی را بازنویسی کنید:"
+
+#: ../../guide/storages.rst:33
+msgid "Method"
+msgstr "متد"
+
+#: ../../guide/storages.rst:34
+msgid "Semantics"
+msgstr "معنا"
+
+#: ../../guide/storages.rst:35
+msgid "``set_state(key, state=None)``"
+msgstr "``set_state(key, state=None)``"
+
+#: ../../guide/storages.rst:36
+msgid "Store state (``State``, ``str`` or ``None``)."
+msgstr "ذخیرهٔ حالت (``State``، ``str`` یا ``None``)."
+
+#: ../../guide/storages.rst:37
+msgid "``get_state(key) -> str | None``"
+msgstr "``get_state(key) -> str | None``"
+
+#: ../../guide/storages.rst:38
+msgid "Read the current state string."
+msgstr "خواندن رشتهٔ حالت فعلی."
+
+#: ../../guide/storages.rst:39
+msgid "``set_data(key, data)``"
+msgstr "``set_data(key, data)``"
+
+#: ../../guide/storages.rst:40
+msgid "**Replace** the data dict. Must raise :class:`~aiorubi.exceptions.DataNotDictLikeError` for non-dict input."
+msgstr "**جایگزینی** کامل دیکشنری داده. برای ورودی غیر دیکشنری باید :class:`~aiorubi.exceptions.DataNotDictLikeError` پرتاب کند."
+
+#: ../../guide/storages.rst:42
+msgid "``get_data(key) -> dict[str, Any]``"
+msgstr "``get_data(key) -> dict[str, Any]``"
+
+#: ../../guide/storages.rst:43
+msgid "Read the data dict (empty dict when unset)."
+msgstr "خواندن دیکشنری داده (وقتی تنظیم نشده، دیکشنری خالی)."
+
+#: ../../guide/storages.rst:44
+msgid "``get_value(storage_key, dict_key, default=None)``"
+msgstr "``get_value(storage_key, dict_key, default=None)``"
+
+#: ../../guide/storages.rst:45
+msgid "Read one key of the data. A concrete implementation exists on ``BaseStorage`` itself (it calls ``get_data``); override for efficiency."
+msgstr "خواندن یک کلید از داده. پیاده‌سازی مشخصی روی خود ``BaseStorage`` وجود دارد (``get_data`` را صدا می‌زند)؛ برای بهینگی بازنویسی کنید."
+
+#: ../../guide/storages.rst:48
+msgid "``update_data(key, data) -> dict``"
+msgstr "``update_data(key, data) -> dict``"
+
+#: ../../guide/storages.rst:49
+msgid "Merge and return new data. Also implemented on the base class via get → merge → set; MongoDB storages override it with an atomic ``$set``."
+msgstr "ادغام و برگرداندن دادهٔ جدید. روی کلاس پایه هم با get → merge → set پیاده‌سازی شده؛ استورج‌های MongoDB آن را با ``$set`` اتمیک بازنویسی می‌کنند."
+
+#: ../../guide/storages.rst:52
+msgid "``close()``"
+msgstr "``close()``"
+
+#: ../../guide/storages.rst:53
+msgid "Release connections. Called on dispatcher shutdown."
+msgstr "آزادکردن اتصال‌ها. هنگام خاموشی دیسپچر صدا زده می‌شود."
+
+#: ../../guide/storages.rst:55
+msgid "Every method receives a :class:`~aiorubi.fsm.storage.base.StorageKey` — the frozen dataclass ``(bot_id, chat_id, user_id, destiny)`` described in :doc:`fsm`."
+msgstr "هر متد یک :class:`~aiorubi.fsm.storage.base.StorageKey` می‌گیرد — همان dataclass تغییرناپذیر ``(bot_id, chat_id, user_id, destiny)`` که در :doc:`fsm` توضیح داده شد."
+
+#: ../../guide/storages.rst:60
+msgid "MemoryStorage"
+msgstr "MemoryStorage"
+
+#: ../../guide/storages.rst:62
+msgid "``aiorubi.fsm.storage.memory.MemoryStorage``"
+msgstr "``aiorubi.fsm.storage.memory.MemoryStorage``"
+
+#: ../../guide/storages.rst:64
+msgid "The default storage. Keeps records in a ``defaultdict[StorageKey, MemoryStorageRecord]`` where each record holds ``state`` and ``data``; ``get_data`` returns defensive copies."
+msgstr "استورج پیش‌فرض. رکوردها را در ``defaultdict[StorageKey, MemoryStorageRecord]`` نگه می‌دارد که هر رکورد ``state`` و ``data`` دارد؛ ``get_data`` کپی محافظت‌شده برمی‌گرداند."
+
+#: ../../guide/storages.rst:70
+msgid "Data lives in the process memory and is lost on restart. Do not use in production unless losing all dialogs is acceptable."
+msgstr "داده در حافظهٔ پروسه است و با ری‌استارت از بین می‌رود. مگر از دست رفتن همهٔ دیالوگ‌ها قابل‌قبول باشد، در production استفاده نکنید."
+
+#: ../../guide/storages.rst:73
+msgid "It requires no dependencies and is the right choice for tests and quick prototypes. ``MemoryStorage`` also provides :class:`~aiorubi.fsm.storage.memory.DisabledEventIsolation` and :class:`~aiorubi.fsm.storage.memory.SimpleEventIsolation` (an ``asyncio.Lock`` per key) for :ref:`event isolation <event-isolation>`."
+msgstr "هیچ وابستگی‌ای لازم ندارد و انتخاب درستی برای تست‌ها و نمونه‌های اولیهٔ سریع است. ``MemoryStorage`` برای :ref:`ایزوله‌سازی رویداد <event-isolation>` هم :class:`~aiorubi.fsm.storage.memory.DisabledEventIsolation` و :class:`~aiorubi.fsm.storage.memory.SimpleEventIsolation` (یک ``asyncio.Lock`` برای هر کلید) ارائه می‌دهد."
+
+#: ../../guide/storages.rst:80
+msgid "RedisStorage"
+msgstr "RedisStorage"
+
+#: ../../guide/storages.rst:82
+msgid "`aiorubi.fsm.storage.redis.RedisStorage(redis, key_builder=None, state_ttl=None, data_ttl=None, json_loads=json.loads, json_dumps=json.dumps)`"
+msgstr "`aiorubi.fsm.storage.redis.RedisStorage(redis, key_builder=None, state_ttl=None, data_ttl=None, json_loads=json.loads, json_dumps=json.dumps)`"
+
+#: ../../guide/storages.rst:84
+msgid "Persists state and data as Redis keys built by the key builder (see `Key builders`_): state under ``...:state``, data JSON-serialised under ``...:data``. Setting an empty dict *deletes* the data key; setting state ``None`` deletes the state key."
+msgstr "حالت و داده را به‌صورت کلیدهای Redis که سازندهٔ کلید می‌سازد ماندگار می‌کند (بخش `Key builders`_ را ببینید): حالت زیر ``...:state`` و داده به‌صورت JSON زیر ``...:data``. تنظیم دیکشنری خالی، کلید داده را *حذف* می‌کند؛ تنظیم حالت ``None`` کلید حالت را حذف می‌کند."
+
+#: ../../guide/storages.rst:89
+msgid "Install with the ``redis`` extra:"
+msgstr "نصب با اکسترای ``redis``:"
+
+#: ../../guide/storages.rst:95
+msgid "Two construction styles:"
+msgstr "دو سبک ساخت:"
+
+#: ../../guide/storages.rst:112
+msgid "Optional arguments:"
+msgstr "آرگومان‌های اختیاری:"
+
+#: ../../guide/storages.rst:114
+msgid "``state_ttl`` / ``data_ttl`` — expiry for the respective keys, anything accepted by redis-py as ``ex=`` (seconds or ``timedelta``). Without TTLs records live forever."
+msgstr "``state_ttl`` / ``data_ttl`` — انقضای کلیدهای مربوطه؛ هر چیزی که redis-py به‌عنوان ``ex=`` بپذیرد (ثانیه یا ``timedelta``). بدون TTL رکوردها برای همیشه می‌مانند."
+
+#: ../../guide/storages.rst:117
+msgid "``json_loads`` / ``json_dumps`` — swap the JSON codec, e.g. for ``orjson``."
+msgstr "``json_loads`` / ``json_dumps`` — تعویض کدک JSON، مثلاً برای ``orjson``."
+
+#: ../../guide/storages.rst:119
+msgid "``key_builder`` — custom :class:`~aiorubi.fsm.storage.base.KeyBuilder`."
+msgstr "``key_builder`` — یک :class:`~aiorubi.fsm.storage.base.KeyBuilder` سفارشی."
+
+#: ../../guide/storages.rst:122
+msgid "RedisEventIsolation"
+msgstr "RedisEventIsolation"
+
+#: ../../guide/storages.rst:124
+msgid "`aiorubi.fsm.storage.redis.RedisEventIsolation(redis, key_builder=None, lock_kwargs=None)`"
+msgstr "`aiorubi.fsm.storage.redis.RedisEventIsolation(redis, key_builder=None, lock_kwargs=None)`"
+
+#: ../../guide/storages.rst:126
+#, python-brace-format
+msgid "A Redis-based lock (default ``{\"timeout\": 60}``) so that event isolation works across *multiple bot processes* sharing one Redis. The shorthand is ``RedisStorage.create_isolation()`` which reuses the storage's client and key builder:"
+msgstr "یک قفل مبتنی بر Redis (پیش‌فرض ``{\"timeout\": 60}``) تا ایزوله‌سازی رویداد بین *چند پروسهٔ بات* که یک Redis مشترک دارند هم کار کند. شکل کوتاه‌اش ``RedisStorage.create_isolation()`` است که کلاینت و سازندهٔ کلید استورج را دوباره استفاده می‌کند:"
+
+#: ../../guide/storages.rst:139
+msgid "Event isolation"
+msgstr "ایزوله‌سازی رویدادها"
+
+#: ../../guide/storages.rst:141
+msgid "Polling processes updates as concurrent tasks, so two messages from the same user may race on one FSM cell. The ``events_isolation=`` argument of the dispatcher wraps each stateful dispatch in a lock:"
+msgstr "پولینگ آپدیت‌ها را به‌صورت taskهای همزمان پردازش می‌کند، پس دو پیام از یک کاربر ممکن است روی یک سلول FSM با هم مسابقه کنند. آرگومان ``events_isolation=`` دیسپچر هر dispatch حالت‌دار را در یک قفل می‌پیچد:"
+
+#: ../../guide/storages.rst:145
+msgid ":class:`~aiorubi.fsm.storage.memory.DisabledEventIsolation` — default, no locking."
+msgstr ":class:`~aiorubi.fsm.storage.memory.DisabledEventIsolation` — پیش‌فرض، بدون قفل."
+
+#: ../../guide/storages.rst:147
+msgid ":class:`~aiorubi.fsm.storage.memory.SimpleEventIsolation` — in-process ``asyncio.Lock`` per key."
+msgstr ":class:`~aiorubi.fsm.storage.memory.SimpleEventIsolation` — ``asyncio.Lock`` درون‌پردازشی برای هر کلید."
+
+#: ../../guide/storages.rst:149
+msgid ":class:`~aiorubi.fsm.storage.redis.RedisEventIsolation` — cross-process Redis lock."
+msgstr ":class:`~aiorubi.fsm.storage.redis.RedisEventIsolation` — قفل Redis بین‌پردازشی."
+
+#: ../../guide/storages.rst:152
+msgid "The current state string is read **after** the lock is acquired, so handlers always observe a consistent ``raw_state``."
+msgstr "رشتهٔ حالت فعلی **بعد از** گرفتن قفل خوانده می‌شود، پس هندلرها همیشه یک ``raw_state`` سازگار می‌بینند."
+
+#: ../../guide/storages.rst:156
+msgid "MongoStorage (motor) — deprecated"
+msgstr "MongoStorage (motor) — منسوخ"
+
+#: ../../guide/storages.rst:158
+msgid "`aiorubi.fsm.storage.mongo.MongoStorage(client, key_builder=None, db_name=\"aiorubi_fsm\", collection_name=\"states_and_data\")`"
+msgstr "`aiorubi.fsm.storage.mongo.MongoStorage(client, key_builder=None, db_name=\"aiorubi_fsm\", collection_name=\"states_and_data\")`"
+
+#: ../../guide/storages.rst:162
+msgid "**Deprecated.** Use :class:`~aiorubi.fsm.storage.pymongo.PyMongoStorage` instead; this class will be removed in a future version."
+msgstr "**منسوخ شده.** به‌جایش از :class:`~aiorubi.fsm.storage.pymongo.PyMongoStorage` استفاده کنید؛ این کلاس در نسخهٔ آینده حذف خواهد شد."
+
+#: ../../guide/storages.rst:165
+msgid "Motor-based MongoDB storage. Install with the ``mongo`` extra:"
+msgstr "استورج MongoDB مبتنی بر Motor. با اکسترای ``mongo`` نصب کنید:"
+
+#: ../../guide/storages.rst:171
+msgid "State and data live in a single document per :class:`StorageKey`, with ``_id`` produced by the key builder:"
+msgstr "حالت و داده در یک سند برای هر :class:`StorageKey` زندگی می‌کنند که ``_id`` آن توسط سازندهٔ کلید تولید می‌شود:"
+
+#: ../../guide/storages.rst:184
+msgid "``update_data`` is executed as an atomic ``$set`` on the ``data.*`` fields rather than read-modify-write."
+msgstr "``update_data`` به‌صورت ``$set`` اتمیک روی فیلدهای ``data.*`` اجرا می‌شود، نه خواندن-تغییر-نوشتن."
+
+#: ../../guide/storages.rst:188
+msgid "PymongoStorage"
+msgstr "PymongoStorage"
+
+#: ../../guide/storages.rst:190
+msgid "`aiorubi.fsm.storage.pymongo.PyMongoStorage(client, key_builder=None, db_name=\"aiorubi_fsm\", collection_name=\"states_and_data\")`"
+msgstr "`aiorubi.fsm.storage.pymongo.PyMongoStorage(client, key_builder=None, db_name=\"aiorubi_fsm\", collection_name=\"states_and_data\")`"
+
+#: ../../guide/storages.rst:192
+msgid "The maintained MongoDB storage, built on pymongo's native ``AsyncMongoClient`` (same document layout and atomic ``update_data`` as ``MongoStorage``):"
+msgstr "استورج MongoDB پشتیبانی‌شده، ساخته‌شده روی ``AsyncMongoClient`` بومی pymongo (همان چیدمان سند و ``update_data`` اتمیک مثل ``MongoStorage``):"
+
+#: ../../guide/storages.rst:207
+msgid "or construct it from an existing client:"
+msgstr "یا آن را از یک کلاینت موجود بسازید:"
+
+#: ../../guide/storages.rst:217
+msgid "Key builders"
+msgstr "سازنده‌های کلید"
+
+#: ../../guide/storages.rst:219
+msgid "A key builder converts a :class:`~aiorubi.fsm.storage.base.StorageKey` into the string actually used inside the database. Both Redis and MongoDB storages accept ``key_builder=``."
+msgstr "سازندهٔ کلید یک :class:`~aiorubi.fsm.storage.base.StorageKey` را به رشته‌ای تبدیل می‌کند که واقعاً داخل دیتابیس استفاده می‌شود. هر دو استورج Redis و MongoDB ``key_builder=`` می‌پذیرند."
+
+#: ../../guide/storages.rst:224
+msgid "DefaultKeyBuilder"
+msgstr "DefaultKeyBuilder"
+
+#: ../../guide/storages.rst:226
+msgid "`aiorubi.fsm.storage.base.DefaultKeyBuilder(prefix=\"fsm\", separator=\":\", with_bot_id=False, with_destiny=False)`"
+msgstr "`aiorubi.fsm.storage.base.DefaultKeyBuilder(prefix=\"fsm\", separator=\":\", with_bot_id=False, with_destiny=False)`"
+
+#: ../../guide/storages.rst:228
+msgid "Generates ``<prefix>:<bot_id?>:<chat_id>:<user_id>:<destiny?>:<part?>``:"
+msgstr "تولید می‌کند ``<prefix>:<bot_id?>:<chat_id>:<user_id>:<destiny?>:<part?>``:"
+
+#: ../../guide/storages.rst:240
+msgid "Notes:"
+msgstr "نکات:"
+
+#: ../../guide/storages.rst:242
+msgid "``with_bot_id=True`` is required when *several bots* share one database, otherwise their keys collide."
+msgstr "وقتی *چند بات* یک دیتابیس مشترک دارند ``with_bot_id=True`` لازم است، وگرنه کلیدهایشان برخورد می‌کند."
+
+#: ../../guide/storages.rst:244
+msgid "``with_destiny=True`` is required when you use non-default destinies (e.g. the scenes history writes to destiny ``\"scenes_history\"``); otherwise the builder raises :class:`ValueError` instead of silently mixing namespaces."
+msgstr "وقتی از destinyهای غیرپیش‌فرض استفاده می‌کنید ``with_destiny=True`` لازم است (مثلاً تاریخچهٔ صحنه‌ها در destiny ‌``\"scenes_history\"`` می‌نویسد)؛ وگرنه سازندهٔ کلید به‌جای قاطی‌کردن بی‌سروصدای فضاهای نام، :class:`ValueError` پرتاب می‌کند."
+
+#: ../../guide/storages.rst:248
+msgid "``separator`` may be any string; for MongoDB ``_id`` values a different separator can help readability."
+msgstr "``separator`` می‌تواند هر رشته‌ای باشد؛ برای مقادیر ``_id`` در MongoDB، جداکنندهٔ متفاوت به خوانایی کمک می‌کند."
+
+#: ../../guide/storages.rst:252
+msgid "Custom key builders"
+msgstr "سازنده‌های کلید سفارشی"
+
+#: ../../guide/storages.rst:254
+msgid "Subclass :class:`~aiorubi.fsm.storage.base.KeyBuilder` and implement ``build(key, part)`` where ``part`` is ``\"state\"``, ``\"data\"``, ``\"lock\"`` or ``None``:"
+msgstr "از :class:`~aiorubi.fsm.storage.base.KeyBuilder` ارث ببرید و ``build(key, part)`` را پیاده کنید که ``part`` یکی از ``\"state\"``، ``\"data\"``، ``\"lock\"`` یا ``None`` است:"
+
+#: ../../guide/storages.rst:277
+msgid "Writing your own storage"
+msgstr "نوشتن استورج اختصاصی"
+
+#: ../../guide/storages.rst:279
+msgid "Combine the interface and the key builder knowledge above:"
+msgstr "رابط بالا و دانش سازندهٔ کلید را ترکیب کنید:"
+
+#: ../../guide/storages.rst:316
+msgid "Register it with ``Dispatcher(storage=SQLiteStorage(\"bot.db\"))`` — no other code changes are needed."
+msgstr "با ``Dispatcher(storage=SQLiteStorage(\"bot.db\"))`` ثبتش کنید — هیچ تغییر کد دیگری لازم نیست."
+
+#: ../../guide/storages.rst:320
+msgid "See also"
+msgstr "همچنین ببینید"
+
+#: ../../guide/storages.rst:322
+msgid ":doc:`fsm` — how the storage is used by the FSM middleware."
+msgstr ":doc:`fsm` — استورج چطور توسط میان‌افزار FSM استفاده می‌شود."
+
+#: ../../guide/storages.rst:323
+msgid ":doc:`scenes` — scenes keep their history in a separate *destiny* of the same storage."
+msgstr ":doc:`scenes` — صحنه‌ها تاریخچه‌شان را در یک *destiny* جداگانه از همان استورج نگه می‌دارند."
+

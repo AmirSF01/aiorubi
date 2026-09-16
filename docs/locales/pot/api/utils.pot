@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/utils.rst:3
+msgid "Utils"
+msgstr ""
+
+#: ../../api/utils.rst:5
+msgid "Helper utilities. These are considered *stable enough to use* but are not part of the semver contract."
+msgstr ""
+
+#: ../../../aiorubi/utils/deep_linking.py:docstring of aiorubi.utils.payload.decode_payload:0
+#: ../../../aiorubi/utils/deep_linking.py:docstring of aiorubi.utils.payload.encode_payload:0
+#: ../../api/utils.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../aiorubi/utils/deep_linking.py:docstring of aiorubi.utils.payload.decode_payload:0
+#: ../../../aiorubi/utils/deep_linking.py:docstring of aiorubi.utils.payload.encode_payload:0
+#: ../../api/utils.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../aiorubi/utils/deep_linking.py:docstring of aiorubi.utils.deep_linking.create_deep_link:1
+msgid "Create deep link."
+msgstr ""
+
+#: ../../../aiorubi/utils/deep_linking.py:docstring of aiorubi.utils.deep_linking.create_deep_link:4
+msgid "any string-convertible data"
+msgstr ""
+
+#: ../../../aiorubi/utils/deep_linking.py:docstring of aiorubi.utils.deep_linking.create_deep_link:5
+#: ../../../aiorubi/utils/deep_linking.py:docstring of aiorubi.utils.deep_linking.create_start_link:7
+msgid "encode payload with base64url or custom encoder"
+msgstr ""
+
+#: ../../../aiorubi/utils/deep_linking.py:docstring of aiorubi.utils.deep_linking.create_deep_link:6
+#: ../../../aiorubi/utils/deep_linking.py:docstring of aiorubi.utils.deep_linking.create_start_link:8
+msgid "custom encoder callable"
+msgstr ""
+
+#: ../../api/utils.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../aiorubi/utils/deep_linking.py:docstring of aiorubi.utils.deep_linking.create_deep_link:7
+msgid "deeplink"
+msgstr ""
+
+#: ../../../aiorubi/utils/deep_linking.py:docstring of aiorubi.utils.deep_linking.create_start_link:1
+msgid "Create 'st' deep link with your payload."
+msgstr ""
+
+#: ../../../aiorubi/utils/deep_linking.py:docstring of aiorubi.utils.deep_linking.create_start_link:3
+msgid "If you need to encode payload or pass special characters - set encode as True"
+msgstr ""
+
+#: ../../../aiorubi/utils/deep_linking.py:docstring of aiorubi.utils.deep_linking.create_start_link:5
+msgid "bot instance"
+msgstr ""
+
+#: ../../../aiorubi/utils/deep_linking.py:docstring of aiorubi.utils.deep_linking.create_start_link:6
+msgid "args passed with /start"
+msgstr ""
+
+#: ../../../aiorubi/utils/deep_linking.py:docstring of aiorubi.utils.deep_linking.create_start_link:9
+msgid "link"
+msgstr ""
+
+#: ../../../aiorubi/utils/deep_linking.py:docstring of aiorubi.utils.payload.decode_payload:1
+msgid "Decode URL-safe base64url payload with decoder."
+msgstr ""
+
+#: ../../../aiorubi/utils/deep_linking.py:docstring of aiorubi.utils.payload.encode_payload:1
+msgid "Encode payload with encoder."
+msgstr ""
+
+#: ../../../aiorubi/utils/deep_linking.py:docstring of aiorubi.utils.payload.encode_payload:3
+msgid "Result also will be encoded with URL-safe base64url."
+msgstr ""
+
+#: ../../../aiorubi/utils/token.py:docstring of aiorubi.utils.token.validate_token:1
+msgid "Validate Rubika token"
+msgstr ""

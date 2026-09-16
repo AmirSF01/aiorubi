@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../guide/flags.rst:3
+msgid "Flags"
+msgstr ""
+
+#: ../../guide/flags.rst:5
+msgid "Flags are small pieces of metadata attached to a handler *at registration time* and readable from middlewares, other handlers of the same dispatch, and utility code. Where middlewares inject per-update data, flags carry per-handler configuration."
+msgstr ""
+
+#: ../../guide/flags.rst:11
+msgid "Declaring flags"
+msgstr ""
+
+#: ../../guide/flags.rst:13
+msgid "The global ``flags`` object (exported from :mod:`aiorubi`) generates a flag decorator for any attribute name:"
+msgstr ""
+
+#: ../../guide/flags.rst:24
+msgid "``flags.<name>`` with no call simply marks the handler with ``{\"<name>\": True}``. To attach a value, call the decorator:"
+msgstr ""
+
+#: ../../guide/flags.rst:34
+msgid "Keyword form builds an :class:`AttrDict` value — useful for grouped settings:"
+msgstr ""
+
+#: ../../guide/flags.rst:42
+msgid "The decorator is chainable: multiple ``@flags.*`` lines stack, and re-declaring the same name replaces its value."
+msgstr ""
+
+#: ../../guide/flags.rst:45
+msgid "Flags may also be attached to any callable — class-based handlers included:"
+msgstr ""
+
+#: ../../guide/flags.rst:55
+msgid "Reading flags"
+msgstr ""
+
+#: ../../guide/flags.rst:57
+msgid "Three helpers live in :mod:`aiorubi.dispatcher.flags`:"
+msgstr ""
+
+#: ../../guide/flags.rst:59
+msgid "``extract_flags(obj)`` — all flags of a handler."
+msgstr ""
+
+#: ../../guide/flags.rst:60
+msgid "``get_flag(handler, name, default=None)`` — one flag."
+msgstr ""
+
+#: ../../guide/flags.rst:61
+msgid "``check_flags(handler, magic)`` — query flags with a magic-filter expression, e.g. ``check_flags(handler, F.admin_only)``."
+msgstr ""
+
+#: ../../guide/flags.rst:64
+msgid "Inside a middleware the handler object is available under the ``\"handler\"`` key of ``data``:"
+msgstr ""
+
+#: ../../guide/flags.rst:76
+msgid "Because flags are stored on the handler object (``handler.flags``), they cost nothing per update until read."
+msgstr ""
+
+#: ../../guide/flags.rst:80
+msgid "Built-in flag usage"
+msgstr ""
+
+#: ../../guide/flags.rst:82
+msgid "Filters can contribute flags at registration time: :class:`~aiorubi.filters.command.Command` appends itself to the ``commands`` flag (``update_handler_flags``) — used by command-listing tooling."
+msgstr ""
+
+#: ../../guide/flags.rst:86
+msgid "The ``chat_action`` flag is recognised by aiogram-compatible tooling; aiorubi does not ship a built-in runner for it (no chat-action API on Rubika), but the flag slot is reserved."
+msgstr ""
+
+#: ../../guide/flags.rst:91
+msgid "Writing flag-driven extensions"
+msgstr ""
+
+#: ../../guide/flags.rst:93
+msgid "Flags shine when combined with middlewares or the observer registry to build conventions:"
+msgstr ""
+
+#: ../../guide/flags.rst:112
+msgid "Notes and pitfalls"
+msgstr ""
+
+#: ../../guide/flags.rst:114
+msgid "Flag names must not start with an underscore — ``flags._private`` raises :class:`AttributeError`."
+msgstr ""
+
+#: ../../guide/flags.rst:116
+msgid "``@flags.x`` and ``@flags.x(...)`` both return the original callable, so flag decorators never change the handler's signature or break :doc:`argument injection <handlers>`."
+msgstr ""
+
+#: ../../guide/flags.rst:119
+msgid "Flags are registration-time only: changing them at runtime means mutating ``handler.flags`` directly (supported, but unusual)."
+msgstr ""
+
+#: ../../guide/flags.rst:121
+msgid "Order with the observer decorator matters — put ``@dp.new_message(...)`` *above* the flags so the flags are already attached when the handler is registered (decorators apply bottom-up)."
+msgstr ""
+
+#: ../../guide/flags.rst:126
+msgid "See also"
+msgstr ""
+
+#: ../../guide/flags.rst:128
+msgid ":doc:`middlewares` — the usual consumers of flags."
+msgstr ""
+
+#: ../../guide/flags.rst:129
+msgid ":doc:`filter` — MagicFilter, which ``check_flags`` reuses."
+msgstr ""

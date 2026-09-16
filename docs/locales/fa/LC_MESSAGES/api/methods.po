@@ -1,0 +1,407 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/methods.rst:3
+msgid "Methods"
+msgstr "متدها"
+
+#: ../../api/methods.rst:5
+msgid "Low-level API method objects. Each class corresponds to one Rubika Bot API endpoint and is callable via ``await bot(method_instance)``."
+msgstr "اشیاء متد API سطح‌پایین. هر کلاس متناظر با یک endpoint از Rubika Bot API است و از طریق ``await bot(method_instance)`` قابل فراخوانی است."
+
+#: ../../api/methods.rst
+#: aiorubi.client.context_controller.BotContextController.model_post_init of
+msgid "Parameters"
+msgstr "پارامترها"
+
+#: aiorubi.methods.base.RubikaMethod.build_request:1 of
+msgid "Builds the request object by separating InputFiles from other data."
+msgstr "شیء درخواست را با جداکردن InputFileها از داده‌های دیگر می‌سازد."
+
+#: ../../api/methods.rst
+#: aiorubi.client.context_controller.BotContextController.model_post_init
+#: aiorubi.methods.base.RubikaMethod.build_request of
+msgid "Return type"
+msgstr "نوع بازگشتی"
+
+#: aiorubi.methods.ban_chat_member.BanChatMember.model_config:1
+#: aiorubi.methods.base.Request.model_config:1
+#: aiorubi.methods.base.Response.model_config:1
+#: aiorubi.methods.base.RubikaMethod.model_config:1
+#: aiorubi.methods.delete_message.DeleteMessage.model_config:1
+#: aiorubi.methods.edit_chat_keypad.EditChatKeypad.model_config:1
+#: aiorubi.methods.edit_message_keypad.EditMessageKeypad.model_config:1
+#: aiorubi.methods.edit_message_text.EditMessageText.model_config:1
+#: aiorubi.methods.forward_message.ForwardMessage.model_config:1
+#: aiorubi.methods.get_chat.GetChat.model_config:1
+#: aiorubi.methods.get_file.GetFile.model_config:1
+#: aiorubi.methods.get_me.GetMe.model_config:1
+#: aiorubi.methods.get_updates.GetUpdates.model_config:1
+#: aiorubi.methods.request_send_file.RequestSendFile.model_config:1
+#: aiorubi.methods.send_contact.SendContact.model_config:1
+#: aiorubi.methods.send_file.SendFile.model_config:1
+#: aiorubi.methods.send_location.SendLocation.model_config:1
+#: aiorubi.methods.send_message.SendMessage.model_config:1
+#: aiorubi.methods.send_poll.SendPoll.model_config:1
+#: aiorubi.methods.set_commands.SetCommands.model_config:1
+#: aiorubi.methods.unban_chat_member.UnbanChatMember.model_config:1
+#: aiorubi.methods.update_bot_endpoints.UpdateBotEndpoints.model_config:1
+#: aiorubi.methods.upload_file.UploadFile.model_config:1 of
+msgid "Configuration for the model, should be a dictionary conforming to [`ConfigDict`][pydantic.config.ConfigDict]."
+msgstr "پیکربندی مدل؛ باید دیکشنری‌ای مطابق [`ConfigDict`][pydantic.config.ConfigDict] باشد."
+
+#: aiorubi.client.context_controller.BotContextController.model_post_init:1 of
+msgid "Override this method to perform additional initialization after `__init__` and `model_construct`. This is useful if you want to do some validation that requires the entire model to be initialized."
+msgstr "این متد را برای انجام مقداردهی اضافی پس از `__init__` و `model_construct` بازنویسی (override) کنید. اگر اعتبارسنجی‌ای می‌خواهید که به مقداردهی کامل مدل نیاز دارد، این روش مفید است."
+
+#: aiorubi.methods.base.Response.data:1 of
+msgid "Main data payload from Rubika."
+msgstr "بار اصلی داده از روبیکا."
+
+#: aiorubi.methods.base.Response.dev_message:1 of
+msgid "Error description for developers."
+msgstr "توضیح خطا برای توسعه‌دهندگان."
+
+#: aiorubi.methods.base.Response.status:1 of
+msgid "Response status (e.g., 'OK' or 'INVALID_ACCESS')."
+msgstr "وضعیت پاسخ (مثلاً 'OK' یا 'INVALID_ACCESS')."
+
+#: ../../api/methods.rst:18
+msgid "Chat members"
+msgstr "اعضای چت"
+
+#: aiorubi.methods.ban_chat_member.BanChatMember:1 of
+msgid "Use this method to ban a user in a group or a channel. Returns :code:`True` on success."
+msgstr "از این متد برای مسدودکردن یک کاربر در گروه یا کانال استفاده کنید. در صورت موفقیت :code:`True` برمی‌گرداند."
+
+#: aiorubi.methods.ban_chat_member.BanChatMember:4 of
+msgid "Source: https://rubika.ir/botapi/methods#_15"
+msgstr "منبع: https://rubika.ir/botapi/methods#_15"
+
+#: aiorubi.methods.ban_chat_member.BanChatMember.chat_id:1
+#: aiorubi.methods.delete_message.DeleteMessage.chat_id:1
+#: aiorubi.methods.edit_chat_keypad.EditChatKeypad.chat_id:1
+#: aiorubi.methods.edit_message_keypad.EditMessageKeypad.chat_id:1
+#: aiorubi.methods.edit_message_text.EditMessageText.chat_id:1
+#: aiorubi.methods.forward_message.ForwardMessage.to_chat_id:1
+#: aiorubi.methods.send_file.SendFile.chat_id:1
+#: aiorubi.methods.send_location.SendLocation.chat_id:1
+#: aiorubi.methods.send_message.SendMessage.chat_id:1
+#: aiorubi.methods.send_poll.SendPoll.chat_id:1
+#: aiorubi.methods.unban_chat_member.UnbanChatMember.chat_id:1 of
+msgid "Unique identifier for the target chat"
+msgstr "شناسهٔ یکتای چت هدف"
+
+#: aiorubi.methods.ban_chat_member.BanChatMember.user_id:1
+#: aiorubi.methods.unban_chat_member.UnbanChatMember.user_id:1 of
+msgid "Unique identifier of the target user"
+msgstr "شناسهٔ یکتای کاربر هدف"
+
+#: aiorubi.methods.unban_chat_member.UnbanChatMember:1 of
+msgid "Use this method to unban a user in a group or a channel. Returns :code:`True` on success."
+msgstr "از این متد برای رفع‌مسدودی یک کاربر در گروه یا کانال استفاده کنید. در صورت موفقیت :code:`True` برمی‌گرداند."
+
+#: aiorubi.methods.unban_chat_member.UnbanChatMember:4 of
+msgid "Source: https://rubika.ir/botapi/methods#_16"
+msgstr "منبع: https://rubika.ir/botapi/methods#_16"
+
+#: ../../api/methods.rst:29
+msgid "Files"
+msgstr "فایل‌ها"
+
+#: aiorubi.methods.get_file.GetFile:1 of
+msgid "Use this method to get the download URL of a file. Returns a :class:`aiorubi.types.DownloadUrl` object."
+msgstr "از این متد برای گرفتن URL دانلود یک فایل استفاده کنید. یک شیء :class:`aiorubi.types.DownloadUrl` برمی‌گرداند."
+
+#: aiorubi.methods.get_file.GetFile.file_id:1 of
+msgid "Identifier of the file to get information about."
+msgstr "شناسهٔ فایلی که باید درباره‌اش اطلاعات گرفت."
+
+#: aiorubi.methods.request_send_file.RequestSendFile:1 of
+msgid "Use this method to get an upload URL. Returns a :class:`aiorubi.types.UploadUrl` object."
+msgstr "از این متد برای گرفتن URL آپلود استفاده کنید. یک شیء :class:`aiorubi.types.UploadUrl` برمی‌گرداند."
+
+#: aiorubi.methods.send_file.SendFile:1 of
+msgid "Use this method to send a file from the bot to a chat. Returns the sent :class:`MessageID` on success."
+msgstr "از این متد برای ارسال فایل از بات به یک چت استفاده کنید. در صورت موفقیت :class:`MessageID` ارسال‌شده را برمی‌گرداند."
+
+#: aiorubi.methods.send_file.SendFile:4 of
+msgid "Source: https://rubika.ir/botapi/methods#send-file"
+msgstr "منبع: https://rubika.ir/botapi/methods#send-file"
+
+#: aiorubi.methods.send_file.SendFile.chat_keypad:1
+#: aiorubi.methods.send_location.SendLocation.chat_keypad:1
+#: aiorubi.methods.send_message.SendMessage.chat_keypad:1
+#: aiorubi.methods.send_poll.SendPoll.chat_keypad:1 of
+msgid "*Optional*. Keypad attached to the chat"
+msgstr "*اختیاری*. کیبورد پیوست‌شده به چت"
+
+#: aiorubi.methods.send_file.SendFile.chat_keypad_type:1
+#: aiorubi.methods.send_location.SendLocation.chat_keypad_type:1
+#: aiorubi.methods.send_message.SendMessage.chat_keypad_type:1
+#: aiorubi.methods.send_poll.SendPoll.chat_keypad_type:1 of
+msgid "*Optional*. Action to perform on the chat keypad"
+msgstr "*اختیاری*. عملی که روی کیبورد چت انجام می‌شود"
+
+#: aiorubi.methods.send_file.SendFile.disable_notification:1
+#: aiorubi.methods.send_location.SendLocation.disable_notification:1
+#: aiorubi.methods.send_message.SendMessage.disable_notification:1
+#: aiorubi.methods.send_poll.SendPoll.disable_notification:1 of
+msgid "*Optional*. If True, sends the message silently"
+msgstr "*اختیاری*. اگر True باشد، پیام بی‌صدا ارسال می‌شود"
+
+#: aiorubi.methods.send_file.SendFile.file_id:1 of
+msgid "Identifier of the file to send"
+msgstr "شناسهٔ فایلی که باید ارسال شود"
+
+#: aiorubi.methods.send_file.SendFile.inline_keypad:1
+#: aiorubi.methods.send_location.SendLocation.inline_keypad:1
+#: aiorubi.methods.send_message.SendMessage.inline_keypad:1
+#: aiorubi.methods.send_poll.SendPoll.inline_keypad:1 of
+msgid "*Optional*. Inline keypad attached to the message"
+msgstr "*اختیاری*. کیبورد درون‌خطی پیوست‌شده به پیام"
+
+#: aiorubi.methods.send_file.SendFile.metadata:1
+#: aiorubi.methods.send_message.SendMessage.metadata:1 of
+msgid "*Optional*. Formatting metadata for the text (e.g. Bold, Italic, Mono)."
+msgstr "*اختیاری*. متادیتای قالب‌بندی متن (مثلاً Bold، Italic، Mono)."
+
+#: aiorubi.methods.send_file.SendFile.reply_to_message_id:1
+#: aiorubi.methods.send_location.SendLocation.reply_to_message_id:1
+#: aiorubi.methods.send_message.SendMessage.reply_to_message_id:1
+#: aiorubi.methods.send_poll.SendPoll.reply_to_message_id:1 of
+msgid "*Optional*. ID of the message to reply to"
+msgstr "*اختیاری*. شناسهٔ پیامی که باید به آن پاسخ داد"
+
+#: aiorubi.methods.send_file.SendFile.text:1 of
+msgid "*Optional*. Caption of the file"
+msgstr "*اختیاری*. کپشن فایل"
+
+#: aiorubi.methods.upload_file.UploadFile:1 of
+msgid "Fake method to reuse check_response() for upload endpoint."
+msgstr "متد ساختگی برای استفادهٔ دوباره از check_response() در endpoint آپلود."
+
+#: aiorubi.methods.upload_file.UploadFile:3 of
+#, python-brace-format
+msgid "Upload responses have the same {status, data} format as Bot API methods. This class lets us validate upload responses using the existing logic without duplicating code."
+msgstr "پاسخ‌های آپلود همان قالب {status, data} متدهای Bot API را دارند. این کلاس اجازه می‌دهد پاسخ‌های آپلود را با منطق موجود اعتبارسنجی کنیم بدون تکرار کد."
+
+#: aiorubi.methods.upload_file.UploadFile:7 of
+msgid "Not a real API method. Used internally only."
+msgstr "متد واقعی API نیست. فقط به‌صورت داخلی استفاده می‌شود."
+
+#: ../../api/methods.rst:48
+msgid "Messaging"
+msgstr "پیام‌رسانی"
+
+#: aiorubi.methods.send_message.SendMessage.text:1 of
+msgid "Text of the message to send"
+msgstr "متن پیام برای ارسال"
+
+#: aiorubi.methods.send_location.SendLocation.latitude:1 of
+msgid "Latitude of the location"
+msgstr "عرض جغرافیایی موقعیت"
+
+#: aiorubi.methods.send_location.SendLocation.longitude:1 of
+msgid "Longitude of the location"
+msgstr "طول جغرافیایی موقعیت"
+
+#: aiorubi.methods.send_poll.SendPoll.allows_multiple_answers:1 of
+msgid "*Optional*. If True, users can select multiple answers"
+msgstr "*اختیاری*. اگر True باشد، کاربران می‌توانند چند گزینه انتخاب کنند"
+
+#: aiorubi.methods.send_poll.SendPoll.correct_option_index:1 of
+msgid "*Optional*. Index of the correct answer option, required for Quiz type"
+msgstr "*اختیاری*. اندیس گزینهٔ صحیح؛ برای نوع Quiz الزامی است"
+
+#: aiorubi.methods.send_poll.SendPoll.explanation:1 of
+msgid "*Optional*. Explanation shown when a user chooses the wrong answer in a Quiz"
+msgstr "*اختیاری*. توضیحی که وقتی کاربر در یک Quiz گزینهٔ غلط را انتخاب کند نمایش داده می‌شود"
+
+#: aiorubi.methods.send_poll.SendPoll.is_anonymous:1 of
+msgid "*Optional*. If True, the poll is anonymous"
+msgstr "*اختیاری*. اگر True باشد، نظرسنجی ناشناس است"
+
+#: aiorubi.methods.send_poll.SendPoll.options:1 of
+msgid "List of answer options"
+msgstr "فهرست گزینه‌های پاسخ"
+
+#: aiorubi.methods.send_poll.SendPoll.question:1 of
+msgid "Poll question"
+msgstr "سؤال نظرسنجی"
+
+#: aiorubi.methods.send_poll.SendPoll.type:1 of
+msgid "*Optional*. Type of the poll"
+msgstr "*اختیاری*. نوع نظرسنجی"
+
+#: aiorubi.methods.edit_message_text.EditMessageText:1 of
+msgid "This method is used to edit the text of a message sent by the bot. On success, the edited Message is returned, otherwise True is returned."
+msgstr "این متد برای ویرایش متن پیامِ ارسال‌شده توسط بات استفاده می‌شود. در صورت موفقیت، Message ویرایش‌شده برگردانده می‌شود، وگرنه True برگردانده می‌شود."
+
+#: aiorubi.methods.edit_message_text.EditMessageText:4 of
+msgid "Source: https://rubika.ir/botapi/methods#_9"
+msgstr "منبع: https://rubika.ir/botapi/methods#_9"
+
+#: aiorubi.methods.edit_message_keypad.EditMessageKeypad.message_id:1
+#: aiorubi.methods.edit_message_text.EditMessageText.message_id:1 of
+msgid "Identifier of the message to edit"
+msgstr "شناسهٔ پیامی که باید ویرایش شود"
+
+#: aiorubi.methods.edit_message_text.EditMessageText.metadata:1 of
+msgid "Formatting metadata for the new text (e.g. Bold, Italic, Mono)."
+msgstr "متادیتای قالب‌بندی متن جدید (مثلاً Bold، Italic، Mono)."
+
+#: aiorubi.methods.edit_message_text.EditMessageText.text:1 of
+msgid "New text of the message"
+msgstr "متن جدید پیام"
+
+#: aiorubi.methods.delete_message.DeleteMessage:1 of
+msgid "Use this method to delete a message, including service messages. Returns :code:`True` on success."
+msgstr "از این متد برای حذف یک پیام، از جمله پیام‌های سیستمی، استفاده کنید. در صورت موفقیت :code:`True` برمی‌گرداند."
+
+#: aiorubi.methods.delete_message.DeleteMessage:4 of
+msgid "Source: https://rubika.ir/botapi/methods#_10"
+msgstr "منبع: https://rubika.ir/botapi/methods#_10"
+
+#: aiorubi.methods.delete_message.DeleteMessage.message_id:1 of
+msgid "Identifier of the message to delete"
+msgstr "شناسهٔ پیامی که باید حذف شود"
+
+#: aiorubi.methods.forward_message.ForwardMessage:1 of
+msgid "Use this method to forward messages of any kind. On success, the sent :class:`aiorubi.types.MessageID` is returned."
+msgstr "از این متد برای فوروارد پیام‌ها از هر نوعی استفاده کنید. در صورت موفقیت :class:`aiorubi.types.MessageID` ارسال‌شده برمی‌گردد."
+
+#: aiorubi.methods.forward_message.ForwardMessage.disable_notification:1 of
+msgid "Sends the message silently. Users will receive a notification with no sound."
+msgstr "پیام را بی‌صدا ارسال می‌کند. کاربران اعلانی بدون صدا دریافت خواهند کرد."
+
+#: aiorubi.methods.forward_message.ForwardMessage.from_chat_id:1 of
+msgid "Unique identifier for the chat where the original message was sent"
+msgstr "شناسهٔ یکتای چیتی که پیام اصلی در آن ارسال شده است"
+
+#: aiorubi.methods.forward_message.ForwardMessage.message_id:1 of
+msgid "Message identifier in the chat specified in from_chat_id"
+msgstr "شناسهٔ پیام در چیتی که در from_chat_id مشخص شده است"
+
+#: ../../api/methods.rst:79
+msgid "Keypads"
+msgstr "کیبوردها"
+
+#: aiorubi.methods.edit_chat_keypad.EditChatKeypad:1 of
+msgid "Use this method to edit or remove the chat's keypad. Returns :code:`True` on success."
+msgstr "از این متد برای ویرایش یا حذف کیبورد چت استفاده کنید. در صورت موفقیت :code:`True` برمی‌گرداند."
+
+#: aiorubi.methods.edit_chat_keypad.EditChatKeypad:4 of
+msgid "Source: https://rubika.ir/botapi/methods#keypad_1 Source: https://rubika.ir/botapi/methods#keypad_2"
+msgstr "منبع: https://rubika.ir/botapi/methods#keypad_1 منبع: https://rubika.ir/botapi/methods#keypad_2"
+
+#: aiorubi.methods.edit_chat_keypad.EditChatKeypad.chat_keypad:1 of
+msgid "The new keypad (Required if chat_keypad_type is 'New')"
+msgstr "کیبورد جدید (اگر chat_keypad_type برابر 'New' باشد الزامی است)"
+
+#: aiorubi.methods.edit_chat_keypad.EditChatKeypad.chat_keypad_type:1 of
+msgid "The type of operation"
+msgstr "نوع عملیات"
+
+#: aiorubi.methods.edit_message_keypad.EditMessageKeypad:1 of
+msgid "Use this method to edit only the reply markup of messages. Returns :code:`True` on success."
+msgstr "از این متد برای ویرایش فقط کیبورد پاسخِ پیام‌ها استفاده کنید. در صورت موفقیت :code:`True` برمی‌گرداند."
+
+#: aiorubi.methods.edit_message_keypad.EditMessageKeypad:4 of
+msgid "Source: https://rubika.ir/botapi/methods#inline-keypad"
+msgstr "منبع: https://rubika.ir/botapi/methods#inline-keypad"
+
+#: aiorubi.methods.edit_message_keypad.EditMessageKeypad.inline_keypad:1 of
+msgid "The new keypad to replace the current inline keypad of the message."
+msgstr "کیبورد جدید برای جایگزینی کیبورد درون‌خطی فعلی پیام."
+
+#: ../../api/methods.rst:90
+msgid "Updates"
+msgstr "آپدیت‌ها"
+
+#: aiorubi.methods.get_updates.GetUpdates:1 of
+msgid "Use this method to receive incoming updates using polling. Returns a :class:`aiorubi.types.GetUpdatesResponse` object."
+msgstr "از این متد برای دریافت آپدیت‌های ورودی با پولینگ استفاده کنید. یک شیء :class:`aiorubi.types.GetUpdatesResponse` برمی‌گرداند."
+
+#: aiorubi.methods.get_updates.GetUpdates:4 of
+msgid "**Notes**"
+msgstr "**نکات**"
+
+#: aiorubi.methods.get_updates.GetUpdates:6 of
+msgid "**1.** Use `next_offset_id` from the previous response as `offset_id` to prevent duplicates."
+msgstr "**۱.** از `next_offset_id` پاسخ قبلی به‌عنوان `offset_id` استفاده کنید تا از تکرار جلوگیری شود."
+
+#: aiorubi.methods.get_updates.GetUpdates:8 of
+msgid "**2.** Uses standard polling (not long polling); returns an immediate response."
+msgstr "**۲.** از پولینگ استاندارد استفاده می‌کند (نه پولینگ بلند)؛ بلافاصله پاسخ برمی‌گرداند."
+
+#: aiorubi.methods.get_updates.GetUpdates:10 of
+msgid "Source: https://rubika.ir/botapi/methods#_7"
+msgstr "منبع: https://rubika.ir/botapi/methods#_7"
+
+#: aiorubi.methods.get_updates.GetUpdates.limit:1 of
+msgid "Limits the number of updates to be retrieved."
+msgstr "تعداد آپدیت‌هایی که باید دریافت شود را محدود می‌کند."
+
+#: aiorubi.methods.get_updates.GetUpdates.offset_id:1 of
+msgid "Identifier of the update from which to start receiving. To get the next batch, use 'next_offset_id' from the previous response. If not specified, updates are returned starting from the oldest available update."
+msgstr "شناسهٔ آپدیتتی که دریافت از آن شروع می‌شود. برای گرفتن دستهٔ بعدی، از 'next_offset_id' پاسخ قبلی استفاده کنید. اگر مشخص نشود، آپدیت‌ها از قدیمی‌ترین آپدیتِ موجود برگردانده می‌شوند."
+
+#: aiorubi.methods.get_me.GetMe:1 of
+msgid "A simple method for testing your bot's auth token. Returns basic information about the bot in form of a Bot object."
+msgstr "متدی ساده برای تست توکن احراز هویت بات شما. اطلاعات پایهٔ بات را در قالب یک شیء Bot برمی‌گرداند."
+
+#: aiorubi.methods.get_me.GetMe:4 of
+msgid "Source: https://rubika.ir/botapi/methods#getMe"
+msgstr "منبع: https://rubika.ir/botapi/methods#getMe"
+
+#: aiorubi.methods.get_chat.GetChat:1 of
+msgid "This method returns full information about a specific chat. Includes ID, name, type, and settings."
+msgstr "این متد اطلاعات کامل یک چت مشخص را برمی‌گرداند؛ شامل شناسه، نام، نوع و تنظیمات."
+
+#: aiorubi.methods.get_chat.GetChat.chat_id:1 of
+msgid "Unique identifier for the target chat."
+msgstr "شناسهٔ یکتای چت هدف."
+
+#: aiorubi.methods.set_commands.SetCommands:1 of
+msgid "Use this method to change the list of the bot's commands. Returns :code:`True` on success."
+msgstr "از این متد برای تغییر فهرست دستورهای بات استفاده کنید. در صورت موفقیت :code:`True` برمی‌گرداند."
+
+#: aiorubi.methods.set_commands.SetCommands:4 of
+msgid "Source: https://rubika.ir/botapi/methods#commands"
+msgstr "منبع: https://rubika.ir/botapi/methods#commands"
+
+#: aiorubi.methods.set_commands.SetCommands.bot_commands:1 of
+msgid "A list of bot commands to be set as the list of the bot's commands."
+msgstr "فهرست دستورهای بات که باید به‌عنوان فهرست دستورهای بات تنظیم شود."
+
+#: aiorubi.methods.update_bot_endpoints.UpdateBotEndpoints:1 of
+msgid "Use this method to update the bot's endpoint URLs. Returns :code:`True` on success."
+msgstr "از این متد برای به‌روزرسانی URLهای endpoint بات استفاده کنید. در صورت موفقیت :code:`True` برمی‌گرداند."
+
+#: aiorubi.methods.update_bot_endpoints.UpdateBotEndpoints:4 of
+msgid "Source: https://rubika.ir/botapi/methods#url-endpoint"
+msgstr "منبع: https://rubika.ir/botapi/methods#url-endpoint"
+
+#: aiorubi.methods.update_bot_endpoints.UpdateBotEndpoints.type:1 of
+msgid "The type of endpoint"
+msgstr "نوع endpoint"
+
+#: aiorubi.methods.update_bot_endpoints.UpdateBotEndpoints.url:1 of
+msgid "The new endpoint URL"
+msgstr "URL جدید endpoint"
+
