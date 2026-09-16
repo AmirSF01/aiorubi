@@ -1,6 +1,8 @@
 # aiorubi — بستهٔ مرجع داخلی برای نوشتن مستندات
 
 > **هدف:** این فایل یک reference داخلی برای نویسندگان و reviewerهای مستندات aiorubi است. هر چیزی که در مستندات رسمی گفته می‌شود باید با این فایل cross-check شود. هر جایی که بین این فایل و کد واقعی پکیج اختلاف وجود داشت، **کد ارجح است**.
+>
+> برای عامل‌های کدنویسی (coding agents) یک skill مستقل به زبان انگلیسی در [`skill/SKILL.md`](skill/SKILL.md) و `skill/references/` موجود است.
 
 **منبع:** کلون رسمی از <https://github.com/AmirSF01/aiorubi> (commit `cd822a7`، نسخه 1.2.1، Aug 11 2026).
 **PyPI:** <https://pypi.org/project/aiorubi/>

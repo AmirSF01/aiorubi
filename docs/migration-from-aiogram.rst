@@ -13,6 +13,9 @@ This page is a **field guide** for the 10 % that isn't.
 If you have never used aiogram before, you can safely skip this
 chapter and jump straight to :doc:`tutorial/index`.
 
+For a condensed, code-verified version of this field guide aimed at
+coding agents, see ``docs/skill/SKILL.md``.
+
 
 What stays the same
 -------------------
@@ -28,8 +31,8 @@ What stays the same
 * **Scenes**: ``Scene``, ``SceneWizard``, ``ScenesManager`` — identical
   API.
 * **Filters**: ``Command``, ``CommandStart``, ``StateFilter``,
-  ``MagicData``, ``ExceptionTypeFilter``, ``F`` and friends. (A
-  ``CallbackData`` factory is not shipped yet — see
+  ``MagicData``, ``ExceptionTypeFilter``, ``F`` and friends. (The
+  callback-data factory is called ``ButtonId`` — see
   :doc:`guide/filter` for the available toolkit.)
 * **Middlewares**: outer/inner semantics, ``BaseMiddleware``,
   ``MiddlewareManager``.
@@ -260,7 +263,7 @@ quick reference for ``sed`` / IDE find-and-replace:
    * - ``CallbackQuery``
      - ``InlineMessage``
    * - ``CallbackData(...)`` factory
-     - not shipped yet — filter on ``aux_data.button_id``
+     - ``aiorubi.filters.callback_data.ButtonId`` factory
 
 
 When *not* to migrate

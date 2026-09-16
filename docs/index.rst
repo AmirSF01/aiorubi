@@ -51,6 +51,12 @@ Features
 
    Although the *patterns* mirror aiogram 3.x, ``aiorubi`` targets the Rubika Bot API, **not** the Telegram Bot API. Identifiers such as ``chat_id`` and ``message_id`` are ``str`` (not ``int``) and message structure differs — see :doc:`migration-from-aiogram`.
 
+.. tip::
+
+   Coding agents (Claude Code, Cursor, ...) can load a ready-made, code-verified
+   skill for working with this library from ``docs/skill/SKILL.md`` and the
+   reference sheets in ``docs/skill/references/``.
+
 Installation
 ------------
 
