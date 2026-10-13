@@ -6,6 +6,7 @@ from .edit_message_keypad import EditMessageKeypad
 from .edit_message_text import EditMessageText
 from .forward_message import ForwardMessage
 from .get_chat import GetChat
+from .get_chat_member import GetChatMember
 from .get_file import GetFile
 from .get_me import GetMe
 from .get_updates import GetUpdates
@@ -28,6 +29,7 @@ __all__ = (
     "EditMessageText",
     "ForwardMessage",
     "GetChat",
+    "GetChatMember",
     "GetFile",
     "GetMe",
     "GetUpdates",
