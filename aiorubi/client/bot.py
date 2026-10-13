@@ -25,6 +25,7 @@ from ..methods import (
     RubikaMethod,
     ForwardMessage,
     GetChat,
+    GetChatMember,
     GetFile,
     GetMe,
     GetUpdates,
@@ -51,6 +52,7 @@ from ..types import (
     GetUpdatesResponse,
     MessageID,
     Chat,
+    ChatMember,
     Keypad,
     MetaData,
     InputFile,
@@ -291,6 +293,15 @@ class Bot:
         request_timeout: int | None = None,
     ) -> Chat:
         call = GetChat(chat_id=chat_id)
+        return await self(call, request_timeout=request_timeout)
+
+    async def get_chat_member(
+        self,
+        chat_id: str,
+        user_id: str,
+        request_timeout: int | None = None,
+    ) -> ChatMember:
+        call = GetChatMember(chat_id=chat_id, user_id=user_id)
         return await self(call, request_timeout=request_timeout)
 
     async def get_file(
