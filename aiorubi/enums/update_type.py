@@ -17,3 +17,5 @@ class UpdateType(str, Enum):
 
     STARTED_BOT = "StartedBot"
     STOPPED_BOT = "StoppedBot"
+
+    EVENT_DATA = "EventData"

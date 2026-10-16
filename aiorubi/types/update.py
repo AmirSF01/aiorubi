@@ -6,6 +6,7 @@ from typing import TYPE_CHECKING, Any, cast
 from ..utils.mypy_hacks import lru_cache
 from ..enums import UpdateType
 from .base import RubikaObject
+from .event_data import EventData
 from .removed_message import RemovedMessage
 from .started_bot import StartedBot
 from .stopped_bot import StoppedBot
@@ -39,6 +40,7 @@ class Update(RubikaObject):
     """*Optional*. Present when the user has started/unblocked the bot."""
     stopped_bot: StoppedBot | None = None
     """*Optional*. Present when the user has stopped/blocked the bot."""
+    event_data: EventData | None = None
     update_time: DateTime | None = None
     """Unix timestamp of when the update was received."""
 
@@ -137,6 +139,7 @@ class Update(RubikaObject):
             UpdateType.INLINE_MESSAGE: "inline_message",
             UpdateType.STARTED_BOT: "started_bot",
             UpdateType.STOPPED_BOT: "stopped_bot",
+            UpdateType.EVENT_DATA: "event_data"
         }
         try:
             return type_map[self.type]

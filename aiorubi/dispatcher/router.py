@@ -41,6 +41,7 @@ class Router:
         self.inline_message = RubikaEventObserver(router=self, event_name="inline_message")
         self.started_bot = RubikaEventObserver(router=self, event_name="started_bot")
         self.stopped_bot = RubikaEventObserver(router=self, event_name="stopped_bot")
+        self.event_data = RubikaEventObserver(router=self, event_name="event_data")
 
         self.errors = self.error = RubikaEventObserver(router=self, event_name="error")
 
@@ -54,6 +55,7 @@ class Router:
             "inline_message": self.inline_message,
             "started_bot": self.started_bot,
             "stopped_bot": self.stopped_bot,
+            "event_data": self.event_data,
             "error": self.errors
         }
 
