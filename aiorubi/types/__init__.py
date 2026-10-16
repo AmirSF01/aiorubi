@@ -3,6 +3,7 @@ from typing import Literal, Optional, Union
 from .base import RubikaObject
 from .chat import Chat
 from .chat_member import ChatMember
+from .event_data import EventData
 from .file import File
 from .location import Location
 from .sticker import Sticker
@@ -49,6 +50,7 @@ __all__ = [
     "RubikaObject",
     "Chat",
     "ChatMember",
+    "EventData",
     "File",
     "Location",
     "Sticker",

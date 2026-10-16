@@ -8,6 +8,7 @@ from .button_textbox_type_line import ButtonTextboxTypeLine
 from .button_type import ButtonType
 from .chat_keypad_type import ChatKeypadType
 from .chat_type import ChatType
+from .event_type import EventType
 from .file_type import FileType
 from .forwarded_from_type import ForwardedFromType
 from .message_sender_type import MessageSenderType
@@ -29,6 +30,7 @@ __all__ = (
     "ButtonType",
     "ChatKeypadType",
     "ChatType",
+    "EventType",
     "FileType",
     "ForwardedFromType",
     "MessageSenderType",
