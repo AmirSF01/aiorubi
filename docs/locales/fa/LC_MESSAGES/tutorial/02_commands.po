@@ -1,0 +1,113 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tutorial/02_commands.rst:5
+msgid "2. Commands & Filters"
+msgstr "۲. دستورها و فیلترها"
+
+#: ../../tutorial/02_commands.rst:7
+msgid "The greeting bot works, but it answers to *any* ``/start``-like text. In this chapter we will register several commands properly and learn how filters decide which handler runs."
+msgstr "بات خوش‌آمدگوی کار می‌کند، ولی به *هر* متنی شبیه ``/start`` جواب می‌دهد. در این فصل چند دستور را درست ثبت می‌کنیم و یاد می‌گیریم فیلترها چطور تصمیم می‌گیرند کدام هندلر اجرا شود."
+
+#: ../../tutorial/02_commands.rst:13
+msgid "Built-in command filter"
+msgstr "فیلتر دستور داخلی"
+
+#: ../../tutorial/02_commands.rst:15
+msgid ":class:`~aiorubi.filters.command.Command` is the filter you will use most often. It matches messages whose text starts with ``/`` followed by one of the given commands:"
+msgstr ":class:`~aiorubi.filters.command.Command` فیلتری است که بیشتر از همه استفاده می‌کنید. با پیام‌هایی match می‌شود که متن‌شان با ``/`` شروع شود و بعدش یکی از دستورهای داده‌شده بیاید:"
+
+#: ../../tutorial/02_commands.rst:30
+msgid "By default the filter:"
+msgstr "به‌طور پیش‌فرض این فیلتر:"
+
+#: ../../tutorial/02_commands.rst:32
+msgid "matches only messages that begin with ``/`` (the prefix),"
+msgstr "فقط پیام‌هایی را match می‌کند که با ``/`` (پیشوند) شروع شوند،"
+
+#: ../../tutorial/02_commands.rst:33
+msgid "requires an exact, case-sensitive command match (pass ``ignore_case=True`` to relax this),"
+msgstr "match دقیق و حساس به بزرگی/کوچکی دستور می‌خواهد (برای آزادسازی ``ignore_case=True`` بدهید)،"
+
+#: ../../tutorial/02_commands.rst:35
+msgid "verifies the bot mention, if the command carries one (pass ``ignore_mention=True`` to ignore it)."
+msgstr "منشن بات را بررسی می‌کند، اگر دستور همراهش باشد (برای نادیده‌گرفتن ``ignore_mention=True`` بدهید)."
+
+#: ../../tutorial/02_commands.rst:38
+msgid "``Command`` also accepts regular-expression patterns and :class:`~aiorubi.types.bot_command.BotCommand` objects, and exposes the parsed :class:`~aiorubi.filters.command.CommandObject` to the handler as the ``command`` argument:"
+msgstr "``Command`` الگوهای عبارت باقاعده و اشیاء :class:`~aiorubi.types.bot_command.BotCommand` را هم می‌پذیرد و :class:`~aiorubi.filters.command.CommandObject` تجزیه‌شده را به‌عنوان آرگومان ``command`` به هندلر می‌دهد:"
+
+#: ../../tutorial/02_commands.rst:51
+msgid "Import ``CommandObject`` alongside ``Command``: ``from aiorubi.filters.command import Command, CommandObject``."
+msgstr "``CommandObject`` را کنار ``Command`` ایمپورت کنید: ``from aiorubi.filters.command import Command, CommandObject``."
+
+#: ../../tutorial/02_commands.rst:56
+msgid "Falling back for unknown text"
+msgstr "fallback برای متن ناشناخته"
+
+#: ../../tutorial/02_commands.rst:58
+msgid "Filters are checked **in registration order**. When none of the registered filters match, the update is marked as *unhandled*. Let's add a catch-all handler as the *last* registration:"
+msgstr "فیلترها **به ترتیب ثبت** بررسی می‌شوند. وقتی هیچ‌کدام از فیلترهای ثبت‌شده match نشوند، آپدیت *بی‌مدیره* علامت می‌خورد. یک هندلر catch-all به‌عنوان *آخرین* ثبت اضافه کنیم:"
+
+#: ../../tutorial/02_commands.rst:73
+msgid "Because handlers are checked in order, a catch-all handler with no filters must be registered **after** every other handler on the same observer. If you put it first, it will swallow everything."
+msgstr "چون هندلرها به ترتیب بررسی می‌شوند، هندلر catch-all بدون فیلتر باید **بعد از** هر هندلر دیگر روی همان ناظر ثبت شود. اگر اول بگذاریدش، همه‌چیز را می‌بلعد."
+
+#: ../../tutorial/02_commands.rst:79
+msgid "Magic filter F"
+msgstr "فیلتر جادویی F"
+
+#: ../../tutorial/02_commands.rst:81
+msgid "Sometimes you need finer control than \"which command\". That is where the **magic filter** — the :data:`~aiorubi.F` object — comes in:"
+msgstr "گاهی کنترل ظریف‌تری از «کدام دستور» لازم دارید. آنجاست که **فیلتر جادویی** — شیء :data:`~aiorubi.F` — وارد می‌شود:"
+
+#: ../../tutorial/02_commands.rst:98
+msgid "``F`` mirrors the attribute access of the event object, so ``F.text`` means \"the ``text`` attribute of the message\". Any comparison, ``.contains()``, ``.len()``, ``.startswith()`` … works. The full magic-filter DSL is covered in :doc:`/guide/filter`."
+msgstr "``F`` دسترسی به ویژگی‌های شیء رویداد را آینه می‌کند، پس ``F.text`` یعنی «ویژگی ``text`` پیام». هر مقایسه‌ای، ``.contains()``، ``.len()``، ``.startswith()`` و … کار می‌کند. DSL کامل فیلتر-جادویی در :doc:`/guide/filter` پوشش داده شده است."
+
+#: ../../tutorial/02_commands.rst:105
+msgid "Combining filters"
+msgstr "ترکیب فیلترها"
+
+#: ../../tutorial/02_commands.rst:107
+msgid "Filters compose with ``&``, ``|`` and ``~``:"
+msgstr "فیلترها با ``&``، ``|`` و ``~`` ترکیب می‌شوند:"
+
+#: ../../tutorial/02_commands.rst:137
+msgid "Passing extra data to handlers"
+msgstr "پاس‌دادن دادهٔ اضافی به هندلرها"
+
+#: ../../tutorial/02_commands.rst:139
+msgid "Handlers can accept keyword arguments beyond the event. The dispatcher injects whatever it finds in ``workflow_data`` — the dict you passed to ``Dispatcher(...)`` — plus a few built-ins like ``bot`` and ``state``:"
+msgstr "هندلرها می‌توانند آرگومان‌های کلیدواژه‌ای فراتر از رویداد بپذیرند. دیسپچر هرچه در ``workflow_data`` پیدا کند تزریق می‌کند — دیکشنری‌ای که به ``Dispatcher(...)`` داده‌اید — به‌علاوهٔ چند داخلی مثل ``bot`` و ``state``:"
+
+#: ../../tutorial/02_commands.rst:152
+msgid "This mechanism — **dependency injection** — is the idiomatic way to share a database connection, config or service between handlers."
+msgstr "این سازوکار — **تزریق وابستگی** — راه اصولی به‌اشتراک‌گذاری اتصال دیتابیس، پیکربندی یا سرویس بین هندلرهاست."
+
+#: ../../tutorial/02_commands.rst:157
+msgid "Recap"
+msgstr "جمع‌بندی"
+
+#: ../../tutorial/02_commands.rst:159
+msgid "In this chapter we registered multiple commands, learned the registration-order rule, met the magic filter ``F``, combined filters with boolean operators, and discovered dependency injection."
+msgstr "در این فصل چند دستور ثبت کردیم، قانون ترتیب ثبت را یاد گرفتیم، فیلتر جادویی ``F`` را دیدیم، فیلترها را با عملگرهای بولی ترکیب کردیم و تزریق وابستگی را کشف کردیم."
+
+#: ../../tutorial/02_commands.rst:163
+msgid "In the next chapter we will dive deeper into the ``Message`` model and all the media Rubika can deliver."
+msgstr "در فصل بعد عمیق‌تر به مدل ``Message`` و همهٔ رسانه‌هایی که روبیکا می‌تواند تحویل بدهد می‌رویم."
+

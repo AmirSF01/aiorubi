@@ -1,0 +1,32 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Strategy"
+msgstr  "استراتژی"
+
+msgid "FSM strategy for storage key generation."
+msgstr  "استراتژی FSM برای ساخت کلید استورج."
+
+msgid "State will be stored for each chat globally without separating by users."
+msgstr  "حالت برای هر چت به‌صورت سراسری و بدون تفکیک کاربران ذخیره می‌شود."
+
+msgid "State will be stored globally for each user globally."
+msgstr  "حالت برای هر کاربر به‌صورت سراسری ذخیره می‌شود."
+
+msgid "State will be stored for each user in chat."
+msgstr  "حالت برای هر کاربر در هر چت ذخیره می‌شود."
+

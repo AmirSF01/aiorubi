@@ -1,0 +1,141 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../guide/router.rst:3
+msgid "Router"
+msgstr "روتِر"
+
+#: ../../guide/router.rst:5
+msgid "A :class:`~aiorubi.dispatcher.router.Router` groups handlers so a bot can be split into reusable modules — an admin module, a games module, a payments module — each mounted into the main dispatcher."
+msgstr "یک :class:`~aiorubi.dispatcher.router.Router` هندلرها را گروه‌بندی می‌کند تا بات به ماژول‌های قابل‌استفادهٔ مجدد تقسیم شود — یک ماژول مدیریت، یک ماژول بازی، یک ماژول پرداخت — که هرکدام در دیسپچر اصلی سوار می‌شوند."
+
+#: ../../guide/router.rst:10
+msgid "Creating and registering handlers"
+msgstr "ساخت و ثبت هندلرها"
+
+#: ../../guide/router.rst:27
+msgid "Observers are the same as on the dispatcher: ``new_message``, ``updated_message``, ``removed_message``, ``inline_message``, ``started_bot``, ``stopped_bot`` and ``error`` / ``errors``, plus the lifecycle observers ``startup`` / ``shutdown``. All of them support the decorator and ``register`` forms and accept any :doc:`filters <filter>`."
+msgstr "ناظرها همان دیسپچر هستند: ``new_message``، ``updated_message``، ``removed_message``، ``inline_message``، ``started_bot``، ``stopped_bot`` و ``error`` / ``errors``، به‌علاوهٔ ناظرهای چرخهٔ عمر ``startup`` / ``shutdown``. همه از فرم دکوریتور و ``register`` پشتیبانی می‌کنند و هر :doc:`فیلتری <filter>` را می‌پذیرند."
+
+#: ../../guide/router.rst:35
+msgid "Including routers"
+msgstr "include‌کردن روتِرها"
+
+#: ../../guide/router.rst:37
+msgid "Routers form a tree. The dispatcher is always the root; child routers are visited after the parent's own handlers:"
+msgstr "روتِرها یک درخت می‌سازند. دیسپچر همیشه ریشه است؛ روتِرهای فرزند بعد از هندلرهای خودِ والد بازدید می‌شوند:"
+
+#: ../../guide/router.rst:55
+msgid "``include_router`` attaches the child (setting its read-only ``parent_router``), and nesting works to any depth:"
+msgstr "``include_router`` فرزند را وصل می‌کند (``parent_router`` فقط‌خواندنی‌اش را تنظیم می‌کند) و تو در تو بودن تا هر عمقی کار می‌کند:"
+
+#: ../../guide/router.rst:62
+msgid "Both methods return the router, so chaining is possible. A :class:`RuntimeError` is raised when you try to include the dispatcher itself into anything."
+msgstr "هر دو متد روتِر را برمی‌گردانند، پس زنجیره‌سازی ممکن است. اگر سعی کنید خود دیسپچر را داخل چیزی include کنید :class:`RuntimeError` پرتاب می‌شود."
+
+#: ../../guide/router.rst:67
+msgid "Propagation order"
+msgstr "ترتیب انتشار"
+
+#: ../../guide/router.rst:69
+msgid "When an update arrives it flows depth-first through the tree in registration order:"
+msgstr "وقتی آپدیت می‌رسد، به‌صورت اول-عمق در ترتیب ثبت از درخت عبور می‌کند:"
+
+#: ../../guide/router.rst:72
+msgid "outer middlewares of the matching observer, from root to leaf;"
+msgstr "میان‌افزارهای بیرونیِ ناظر منطبق، از ریشه تا برگ؛"
+
+#: ../../guide/router.rst:73
+msgid "the root router's handlers (top to bottom);"
+msgstr "هندلرهای روتِر ریشه (بالا به پایین)؛"
+
+#: ../../guide/router.rst:74
+msgid "each included router's handlers in inclusion order, recursing into their sub-routers."
+msgstr "هندلرهای هر روتِر include‌شده به ترتیب include، با بازگشت به زیرروتِرهایشان."
+
+#: ../../guide/router.rst:77
+msgid "The **first handler whose filters all pass** wins; the remaining routers never see the update unless the handler raises :class:`~aiorubi.dispatcher.event.bases.SkipHandler`. Register the most specific routers first."
+msgstr "**اولین هندلری که همهٔ فیلترهایش پاس شود** برنده است؛ بقیهٔ روتِرها هرگز آپدیت را نمی‌بینند مگر اینکه هندلر :class:`~aiorubi.dispatcher.event.bases.SkipHandler` پرتاب کند. مشخص‌ترین روتِرها را اول ثبت کنید."
+
+#: ../../guide/router.rst:83
+msgid "Router-level filters"
+msgstr "فیلترهای سطح روتِر"
+
+#: ../../guide/router.rst:85
+msgid "``observer.filter(...)`` attaches filters to *every* handler of that observer, checked before the handler's own filters — ideal for guards:"
+msgstr "``observer.filter(...)`` فیلترها را به *هر* هندلر آن ناظر وصل می‌کند و قبل از فیلترهای خودِ هندلر بررسی می‌شود — ایدئال برای نگهبان‌ها (guards):"
+
+#: ../../guide/router.rst:95
+msgid "Router-level filters apply to all handlers registered on that observer of that router *and are not inherited* by included sub-routers (their observers are separate objects)."
+msgstr "فیلترهای سطح روتِر روی همهٔ هندلرهای ثبت‌شده روی آن ناظرِ آن روتِر اعمال می‌شوند و توسط زیرروتِرهای include‌شده *به ارث نمی‌رسند* (ناظرهایشان اشیاء جدا هستند)."
+
+#: ../../guide/router.rst:100
+msgid "Observer name"
+msgstr "نام ناظر"
+
+#: ../../guide/router.rst:102
+msgid "Every observer has an ``event_name`` attribute; the ``resolve_used_update_types()`` method walks the whole tree and returns the event names that actually have handlers — polling and webhook helpers can use it to fetch only relevant update types."
+msgstr "هر ناظر یک ویژگی ``event_name`` دارد؛ متد ``resolve_used_update_types()`` کل درخت را می‌پیماید و نام رویدادهایی که واقعاً هندلر دارند را برمی‌گرداند — کمکی‌های پولینگ و وب‌هوک می‌توانند از آن برای گرفتن فقط انواع آپدیت مرتبط استفاده کنند."
+
+#: ../../guide/router.rst:108
+msgid "Lifecycle"
+msgstr "چرخهٔ عمر"
+
+#: ../../guide/router.rst:118
+msgid "Events emitted on the dispatcher (``dp.emit_startup()`` / ``dp.emit_shutdown()``) propagate through the whole tree, so each module manages its own resources."
+msgstr "رویدادهای صادرشده روی دیسپچر (``dp.emit_startup()`` / ``dp.emit_shutdown()``) در کل درخت منتشر می‌شوند، پس هر ماژول منابع خودش را مدیریت می‌کند."
+
+#: ../../guide/router.rst:123
+msgid "Chain helpers"
+msgstr "کمکی‌های زنجیره"
+
+#: ../../guide/router.rst:125
+msgid "``router.chain_head`` — iterate from the root down to *this* router."
+msgstr "``router.chain_head`` — از ریشه تا *این* روتِر پیمایش می‌کند."
+
+#: ../../guide/router.rst:126
+msgid "``router.chain_tail`` — iterate from *this* router down to the last sub-router."
+msgstr "``router.chain_tail`` — از *این* روتِر تا آخرین زیرروتِر پیمایش می‌کند."
+
+#: ../../guide/router.rst:129
+msgid "These generators power the middleware resolution and the propagation walk; you rarely need them directly, but they are handy for debugging the router tree."
+msgstr "این جنراتورها موتور resolve میان‌افزار و پیمایش انتشارند؛ به‌ندرت مستقیم لازم‌شان دارید، ولی برای دیباگ درخت روتِر handy هستند."
+
+#: ../../guide/router.rst:134
+msgid "Typical project layout"
+msgstr "چیدمان معمول پروژه"
+
+#: ../../guide/router.rst:161
+msgid "Each module owns its filters, middlewares and lifecycle hooks — the entry point only wires them together."
+msgstr "هر ماژول فیلترها، میان‌افزارها و قلاب‌های چرخهٔ عمر خودش را دارد — نقطهٔ ورود فقط آن‌ها را به هم وصل می‌کند."
+
+#: ../../guide/router.rst:165
+msgid "See also"
+msgstr "همچنین ببینید"
+
+#: ../../guide/router.rst:167
+msgid ":doc:`dispatcher` — the root router and its extra abilities."
+msgstr ":doc:`dispatcher` — روتِر ریشه و قابلیت‌های اضافه‌اش."
+
+#: ../../guide/router.rst:168
+msgid ":doc:`middlewares` — middleware scoping per router/observer."
+msgstr ":doc:`middlewares` — دامنهٔ میان‌افزار به تفکیک روتِر/ناظر."
+
+#: ../../guide/router.rst:169
+msgid ":doc:`handlers` — writing the handlers themselves."
+msgstr ":doc:`handlers` — نوشتن خود هندلرها."
+

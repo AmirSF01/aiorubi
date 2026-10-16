@@ -1,0 +1,56 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Guides"
+msgstr   "راهنماها"
+
+msgid "Concept-by-concept guides for aiorubi. Each page is self-contained; read them in order if you are new to the framework."
+msgstr  "راهنماهای مفهومی aiorubi. هر صفحه مستقل است؛ اگر با فریم‌ورک آشنا نیستید آن‌ها را به‌ترتیب بخوانید."
+
+msgid "Quick links"
+msgstr   "لینک‌های سریع"
+
+msgid ":doc:`dispatcher` — the root of the update pipeline: observers, polling and webhooks, workflow data."
+msgstr  ":doc:`dispatcher` — ریشهٔ خط لولهٔ آپدیت‌ها: ناظرها، پولینگ و وب‌هوک، داده‌های workflow."
+
+msgid ":doc:`router` — splitting a bot into mountable modules."
+msgstr   ":doc:`router` — تقسیم بات به ماژول‌های قابل نصب."
+
+msgid ":doc:`handlers` — function and class-based handlers, argument injection."
+msgstr  ":doc:`handlers` — هندلرهای تابعی و کلاس‌محور، تزریق آرگومان."
+
+msgid ":doc:`middlewares` — outer/inner middleware chains."
+msgstr   ":doc:`middlewares` — زنجیرهٔ میان‌افزارهای بیرونی/درونی."
+
+msgid ":doc:`flags` — passing metadata from decorators to handlers."
+msgstr   ":doc:`flags` — انتقال متادیتا از دکوریتورها به هندلرها."
+
+msgid ":doc:`filter` — built-in filters, MagicFilter (``F``) and custom filters."
+msgstr  ":doc:`filter` — فیلترهای داخلی، MagicFilter (``F``) و فیلترهای سفارشی."
+
+msgid ":doc:`fsm` — finite state machine: states, context, strategies."
+msgstr   ":doc:`fsm` — ماشین حالت متناهی: حالت‌ها، کانتکست و استراتژی‌ها."
+
+msgid ":doc:`storages` — Memory, Redis and MongoDB FSM storages, key builders."
+msgstr   ":doc:`storages` — استورج‌های FSM حافظه، Redis و MongoDB به‌همراه سازندهٔ کلیدها."
+
+msgid ":doc:`scenes` — wizard-style multi-step dialogs on top of the FSM."
+msgstr   ":doc:`scenes` — گفتگوهای چندمرحله‌ای به سبک جادوگر بر فراز FSM."
+
+msgid ":doc:`webhook` — receiving updates over HTTP with aiohttp."
+msgstr   ":doc:`webhook` — دریافت آپدیت‌ها از طریق HTTP با aiohttp."
+

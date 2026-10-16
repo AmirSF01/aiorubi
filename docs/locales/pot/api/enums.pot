@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/enums.rst:3
+msgid "Enums"
+msgstr ""
+
+#: ../../../aiorubi/enums/update_type.py:docstring of aiorubi.enums.update_type.UpdateType:1
+msgid "This object represents a type of update."
+msgstr ""
+
+#: ../../../aiorubi/enums/button_calendar_type.py:docstring of aiorubi.enums.button_calendar_type.ButtonCalendarType:3
+#: ../../../aiorubi/enums/button_location_type.py:docstring of aiorubi.enums.button_location_type.ButtonLocationType:3
+#: ../../../aiorubi/enums/button_selection_get.py:docstring of aiorubi.enums.button_selection_get.ButtonSelectionGet:3
+#: ../../../aiorubi/enums/button_selection_search.py:docstring of aiorubi.enums.button_selection_search.ButtonSelectionSearch:3
+#: ../../../aiorubi/enums/button_selection_type.py:docstring of aiorubi.enums.button_selection_type.ButtonSelectionType:3
+#: ../../../aiorubi/enums/button_textbox_type_keypad.py:docstring of aiorubi.enums.button_textbox_type_keypad.ButtonTextboxTypeKeypad:3
+#: ../../../aiorubi/enums/button_textbox_type_line.py:docstring of aiorubi.enums.button_textbox_type_line.ButtonTextboxTypeLine:3
+#: ../../../aiorubi/enums/chat_keypad_type.py:docstring of aiorubi.enums.chat_keypad_type.ChatKeypadType:3
+#: ../../../aiorubi/enums/chat_type.py:docstring of aiorubi.enums.chat_type.ChatType:3
+#: ../../../aiorubi/enums/file_type.py:docstring of aiorubi.enums.file_type.FileType:3
+#: ../../../aiorubi/enums/forwarded_from_type.py:docstring of aiorubi.enums.forwarded_from_type.ForwardedFromType:3
+#: ../../../aiorubi/enums/message_sender_type.py:docstring of aiorubi.enums.message_sender_type.MessageSenderType:3
+#: ../../../aiorubi/enums/poll_status.py:docstring of aiorubi.enums.poll_status.PollStatus:3
+#: ../../../aiorubi/enums/update_endpoint_type.py:docstring of aiorubi.enums.update_endpoint_type.UpdateEndpointType:3
+#: ../../../aiorubi/enums/update_type.py:docstring of aiorubi.enums.update_type.UpdateType:3
+msgid "Source: https://rubika.ir/botapi/models#enums"
+msgstr ""
+
+#: ../../../aiorubi/enums/update_type.py:docstring of aiorubi.enums.update_type.UpdateType.INLINE_MESSAGE:1
+msgid "Added for abstraction (not in official API)."
+msgstr ""
+
+#: ../../../aiorubi/enums/chat_type.py:docstring of aiorubi.enums.chat_type.ChatType:1
+msgid "This object represents a chat type."
+msgstr ""
+
+#: ../../../aiorubi/enums/chat_keypad_type.py:docstring of aiorubi.enums.chat_keypad_type.ChatKeypadType:1
+msgid "This object represents a type of chat keypad update."
+msgstr ""
+
+#: ../../../aiorubi/enums/file_type.py:docstring of aiorubi.enums.file_type.FileType:1
+msgid "This object represents a type of file."
+msgstr ""
+
+#: ../../../aiorubi/enums/button_type.py:docstring of aiorubi.enums.button_type.ButtonType:1
+msgid "Represents the type of behavior and display of a button."
+msgstr ""
+
+#: ../../../aiorubi/enums/button_type.py:docstring of aiorubi.enums.button_type.ButtonType:3
+msgid "Source: https://rubika.ir/botapi/models#buttontypeenum"
+msgstr ""
+
+#: ../../../aiorubi/enums/poll_type.py:docstring of aiorubi.enums.poll_type.PollType:1
+msgid "This object represents a type of poll."
+msgstr ""
+
+#: ../../../aiorubi/enums/poll_status.py:docstring of aiorubi.enums.poll_status.PollStatus:1
+msgid "This object represents a status of a poll."
+msgstr ""
+
+#: ../../../aiorubi/enums/message_sender_type.py:docstring of aiorubi.enums.message_sender_type.MessageSenderType:1
+msgid "This object represents a type of message sender."
+msgstr ""
+
+#: ../../../aiorubi/enums/update_endpoint_type.py:docstring of aiorubi.enums.update_endpoint_type.UpdateEndpointType:1
+msgid "This object represents a type of update endpoint."
+msgstr ""
+
+#: ../../../aiorubi/enums/metadata_type.py:docstring of aiorubi.enums.metadata_type.MetadataType:1
+msgid "This object represents a type of metadata."
+msgstr ""
+
+#: ../../../aiorubi/enums/metadata_type.py:docstring of aiorubi.enums.metadata_type.MetadataType:3
+msgid "Source: https://rubika.ir/botapi/models#metadataTypeEnum"
+msgstr ""
+
+#: ../../../aiorubi/enums/forwarded_from_type.py:docstring of aiorubi.enums.forwarded_from_type.ForwardedFromType:1
+msgid "This object represents a type of forwarded message source."
+msgstr ""
+
+#: ../../../aiorubi/enums/button_textbox_type_line.py:docstring of aiorubi.enums.button_textbox_type_line.ButtonTextboxTypeLine:1
+msgid "This object represents an input line mode for textbox button."
+msgstr ""
+
+#: ../../../aiorubi/enums/button_textbox_type_keypad.py:docstring of aiorubi.enums.button_textbox_type_keypad.ButtonTextboxTypeKeypad:1
+msgid "This object represents a type of keypad for textbox button."
+msgstr ""
+
+#: ../../../aiorubi/enums/button_selection_type.py:docstring of aiorubi.enums.button_selection_type.ButtonSelectionType:1
+msgid "This object represents a type of button selection display."
+msgstr ""
+
+#: ../../../aiorubi/enums/button_selection_search.py:docstring of aiorubi.enums.button_selection_search.ButtonSelectionSearch:1
+msgid "This object represents a search type for button selection."
+msgstr ""
+
+#: ../../../aiorubi/enums/button_selection_get.py:docstring of aiorubi.enums.button_selection_get.ButtonSelectionGet:1
+msgid "This object represents a get type for button selection."
+msgstr ""
+
+#: ../../../aiorubi/enums/button_location_type.py:docstring of aiorubi.enums.button_location_type.ButtonLocationType:1
+msgid "This object represents a type of button location."
+msgstr ""
+
+#: ../../../aiorubi/enums/button_calendar_type.py:docstring of aiorubi.enums.button_calendar_type.ButtonCalendarType:1
+msgid "This object represents a type of button calendar."
+msgstr ""

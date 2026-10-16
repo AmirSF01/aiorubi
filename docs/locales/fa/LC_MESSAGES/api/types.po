@@ -1,0 +1,994 @@
+# Persian translations for aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 00:00+0000\n"
+"PO-Revision-Date: 2026-09-09 00:00+0000\n"
+"Last-Translator: Mehdi\n"
+"Language-Team: fa\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+
+msgid "Types"
+msgstr "تایپ‌ها"
+
+#: ../../api/types.rst:5
+msgid "All pydantic models representing Rubika Bot API objects. They all inherit from :class:`~aiorubi.types.base.RubikaObject`."
+msgstr "همهٔ مدل‌های pydantic که اشیاء Rubika Bot API را نشان می‌دهند. همه از :class:`~aiorubi.types.base.RubikaObject` ارث می‌برند."
+
+#: ../../api/types.rst:9
+msgid "Base"
+msgstr "پایه"
+
+#: ../../api/types.rst
+#: aiorubi.client.context_controller.BotContextController.model_post_init
+#: aiorubi.types.base.RubikaObject.remove_unset
+#: aiorubi.types.metadata.MetaData.unwrap_metadata of
+msgid "Parameters"
+msgstr "پارامترها"
+
+#: aiorubi.types.aux_data.AuxData.model_config:1
+#: aiorubi.types.base.RubikaObject.model_config:1
+#: aiorubi.types.bot_command.BotCommand.model_config:1
+#: aiorubi.types.bot_info.BotInfo.model_config:1
+#: aiorubi.types.button.Button.model_config:1
+#: aiorubi.types.button_calendar.ButtonCalendar.model_config:1
+#: aiorubi.types.button_location.ButtonLocation.model_config:1
+#: aiorubi.types.button_number_picker.ButtonNumberPicker.model_config:1
+#: aiorubi.types.button_selection.ButtonSelection.model_config:1
+#: aiorubi.types.button_selection_item.ButtonSelectionItem.model_config:1
+#: aiorubi.types.button_string_picker.ButtonStringPicker.model_config:1
+#: aiorubi.types.button_textbox.ButtonTextbox.model_config:1
+#: aiorubi.types.chat.Chat.model_config:1
+#: aiorubi.types.contact_message.ContactMessage.model_config:1
+#: aiorubi.types.download_url.DownloadUrl.model_config:1
+#: aiorubi.types.error_event.ErrorEvent.model_config:1
+#: aiorubi.types.file.File.model_config:1
+#: aiorubi.types.forwarded_from.ForwardedFrom.model_config:1
+#: aiorubi.types.forwarded_no_link.ForwardedNoLink.model_config:1
+#: aiorubi.types.get_updates_response.GetUpdatesResponse.model_config:1
+#: aiorubi.types.inline_message.InlineMessage.model_config:1
+#: aiorubi.types.keypad.Keypad.model_config:1
+#: aiorubi.types.keypad_row.KeypadRow.model_config:1
+#: aiorubi.types.location.Location.model_config:1
+#: aiorubi.types.message.Message.model_config:1
+#: aiorubi.types.message_id.MessageID.model_config:1
+#: aiorubi.types.message_keypad_update.MessageKeypadUpdate.model_config:1
+#: aiorubi.types.message_text_update.MessageTextUpdate.model_config:1
+#: aiorubi.types.metadata.MetaData.model_config:1
+#: aiorubi.types.metadata.MetaDataPart.model_config:1
+#: aiorubi.types.poll.Poll.model_config:1
+#: aiorubi.types.poll_status.PollStatus.model_config:1
+#: aiorubi.types.removed_message.RemovedMessage.model_config:1
+#: aiorubi.types.response_parameters.ResponseParameters.model_config:1
+#: aiorubi.types.started_bot.StartedBot.model_config:1
+#: aiorubi.types.sticker.Sticker.model_config:1
+#: aiorubi.types.stopped_bot.StoppedBot.model_config:1
+#: aiorubi.types.update.Update.model_config:1
+#: aiorubi.types.update_endpoint_status.UpdateEndpointsStatus.model_config:1
+#: aiorubi.types.upload_url.UploadUrl.model_config:1 of
+msgid "Configuration for the model, should be a dictionary conforming to [`ConfigDict`][pydantic.config.ConfigDict]."
+msgstr "پیکربندی مدل؛ باید دیکشنری‌ای مطابق [`ConfigDict`][pydantic.config.ConfigDict] باشد."
+
+#: aiorubi.client.context_controller.BotContextController.model_post_init:1 of
+msgid ""
+"Override this method to perform additional initialization after "
+"`__init__` and `model_construct`. This is useful if you want to do some "
+"validation that requires the entire model to be initialized."
+msgstr ""
+"این متد را برای انجام مقداردهی اضافی پس از `__init__` و `model_construct`"
+" بازنویسی (override) کنید. اگر اعتبارسنجی‌ای می‌خواهید که به مقداردهی "
+"کامل مدل نیاز دارد، این روش مفید است."
+
+#: ../../api/types.rst
+#: aiorubi.client.context_controller.BotContextController.model_post_init
+#: aiorubi.types.base.RubikaObject.remove_unset
+#: aiorubi.types.metadata.MetaData.unwrap_metadata
+#: aiorubi.types.metadata.MetaData.wrap_metadata of
+msgid "Return type"
+msgstr "نوع بازگشتی"
+
+#: aiorubi.types.base.RubikaObject.remove_unset:1 of
+msgid "Remove UNSET before fields validation."
+msgstr "حذف UNSET پیش از اعتبارسنجی فیلدها."
+
+#: aiorubi.types.base.RubikaObject.remove_unset:3 of
+msgid ""
+"We use UNSET as a sentinel value for `parse_mode` and replace it to real "
+"value later. It isn't a problem when it's just default value for a model "
+"field, but UNSET might be passed to a model initialization from "
+"`Bot.method_name`, so we must take care of it and remove it before fields"
+" validation."
+msgstr ""
+"ما از UNSET به‌عنوان مقدار نگهبان (sentinel) برای `parse_mode` استفاده "
+"می‌کنیم و بعداً آن را با مقدار واقعی جایگزین می‌کنیم. وقتی فقط مقدار "
+"پیش‌فرض یک فیلد مدل باشد مشکلی نیست، ولی UNSET ممکن است از "
+"`Bot.method_name` به مقداردهی مدل پاس داده شود، پس باید قبل از اعتبارسنجی"
+" فیلدها آن را مدیریت و حذف کنیم."
+
+#: ../../api/types.rst:15
+msgid "Update types"
+msgstr "انواع آپدیت"
+
+#: aiorubi.types.update.Update:1 of
+msgid "This object represents an incoming update."
+msgstr "این شیء نشان‌دهندهٔ یک آپدیت ورودی است."
+
+#: aiorubi.types.removed_message.RemovedMessage:3 aiorubi.types.update.Update:3
+#: of
+msgid "Source: https://rubika.ir/botapi/models#update"
+msgstr "منبع: https://rubika.ir/botapi/models#update"
+
+#: aiorubi.types.message.Message.chat_id:1
+#: aiorubi.types.update.Update.chat_id:1 of
+msgid "Unique identifier for the chat where the update occurred."
+msgstr "شناسهٔ یکتای چیتی که آپدیت در آن رخ داده است."
+
+#: aiorubi.types.update.Update.inline_message:1 of
+msgid "*Optional*. Inline message event (button click / inline interaction)."
+msgstr "*اختیاری*. رویداد پیام درون‌خطی (کلیک دکمه / تعامل درون‌خطی)."
+
+#: aiorubi.types.update.Update.new_message:1 of
+msgid "*Optional*. New incoming message of any kind."
+msgstr "*اختیاری*. پیام ورودی جدید از هر نوعی."
+
+#: aiorubi.types.update.Update.removed_message:1 of
+msgid "*Optional*. Identifier of the message that was removed. Parsed from removed_message_id."
+msgstr "*اختیاری*. شناسهٔ پیامی که حذف شده است. از removed_message_id تجزیه می‌شود."
+
+#: aiorubi.types.update.Update.started_bot:1 of
+msgid "*Optional*. Present when the user has started/unblocked the bot."
+msgstr "*اختیاری*. وقتی کاربر بات را استارت/رفع‌مسدودی کرده حضور دارد."
+
+#: aiorubi.types.update.Update.stopped_bot:1 of
+msgid "*Optional*. Present when the user has stopped/blocked the bot."
+msgstr "*اختیاری*. وقتی کاربر بات را متوقف/مسدود کرده حضور دارد."
+
+#: aiorubi.types.update.Update.type:1 of
+msgid "The type of update (e.g., NewMessage, EditMessage, RemoveMessage)."
+msgstr "نوع آپدیت (مثلاً NewMessage، EditMessage، RemoveMessage)."
+
+#: aiorubi.types.update.Update.update_time:1 of
+msgid "Unix timestamp of when the update was received."
+msgstr "مهر زمانی یونیکسِ زمان دریافت آپدیت."
+
+#: aiorubi.types.update.Update.updated_message:1 of
+msgid "*Optional*. New version of a message that is known to the bot and was edited."
+msgstr "*اختیاری*. نسخهٔ جدید پیامی که برای بات شناخته‌شده است و ویرایش شده."
+
+#: aiorubi.types.message.Message:1 of
+msgid "This object represents a message in Rubika."
+msgstr "این شیء نشان‌دهندهٔ یک پیام در روبیکا است."
+
+#: aiorubi.types.message.Message:3 of
+msgid "Source: https://rubika.ir/botapi/models#message"
+msgstr "منبع: https://rubika.ir/botapi/models#message"
+
+#: aiorubi.types.message.Message.aux_data:1 of
+msgid "*Optional*. Auxiliary data associated with the message."
+msgstr "*اختیاری*. دادهٔ کمکی مرتبط با پیام."
+
+#: aiorubi.types.message.Message.contact_message:1 of
+msgid "*Optional*. Message is a shared contact, information about the contact."
+msgstr "*اختیاری*. پیام یک مخاطب به‌اشتراک‌گذاشته است؛ اطلاعاتی دربارهٔ مخاطب."
+
+#: aiorubi.types.message.Message.file:1 of
+msgid "*Optional*. Message is a file, information about the file."
+msgstr "*اختیاری*. پیام یک فایل است؛ اطلاعاتی دربارهٔ فایل."
+
+#: aiorubi.types.message.Message.forwarded_from:1 of
+msgid "*Optional*. For forwarded messages, information about the original sender."
+msgstr "*اختیاری*. برای پیام‌های فورواردشده، اطلاعاتی دربارهٔ فرستندهٔ اصلی."
+
+#: aiorubi.types.message.Message.forwarded_no_link:1 of
+msgid "*Optional*. Text to display instead of a user link for private forwarders."
+msgstr ""
+"*اختیاری*. متنی که به‌جای لینک کاربر برای فورواردکننده‌های خصوصی نمایش "
+"داده می‌شود."
+
+#: aiorubi.types.message.Message.is_edited:1 of
+msgid "*Optional*. True, if the message was edited."
+msgstr "*اختیاری*. اگر پیام ویرایش شده باشد True است."
+
+#: aiorubi.types.message.Message.location:1 of
+msgid "*Optional*. Message is a shared location, information about the location."
+msgstr ""
+"*اختیاری*. پیام یک موقعیت مکانی به‌اشتراک‌گذاشته است؛ اطلاعاتی دربارهٔ "
+"موقعیت."
+
+#: aiorubi.types.message.Message.message_id:1 of
+msgid "Unique message identifier."
+msgstr "شناسهٔ یکتای پیام."
+
+#: aiorubi.types.message.Message.metadata:1 of
+msgid "*Optional*. Special entities like bold, italic, links, etc. that appear in the text."
+msgstr "*اختیاری*. موجودیت‌های ویژه مثل ضخیم، ایتالیک، لینک و غیره که در متن ظاهر می‌شوند."
+
+#: aiorubi.types.message.Message.poll:1 of
+msgid "*Optional*. Message is a native poll, information about the poll."
+msgstr "*اختیاری*. پیام یک نظرسنجی بومی است؛ اطلاعاتی دربارهٔ نظرسنجی."
+
+#: aiorubi.types.message.Message.reply_to_message_id:1 of
+msgid "*Optional*. For replies, identifier of the original message."
+msgstr "*اختیاری*. برای پاسخ‌ها، شناسهٔ پیام اصلی."
+
+#: aiorubi.types.message.Message.sender_id:1 of
+msgid "Unique identifier of the sender."
+msgstr "شناسهٔ یکتای فرستنده."
+
+#: aiorubi.types.message.Message.sender_type:1 of
+msgid "Type of the message sender (e.g., User, Bot)."
+msgstr "نوع فرستندهٔ پیام (مثلاً User، Bot)."
+
+#: aiorubi.types.message.Message.sticker:1 of
+msgid "*Optional*. Message is a sticker, information about the sticker."
+msgstr "*اختیاری*. پیام یک استیکر است؛ اطلاعاتی دربارهٔ استیکر."
+
+#: aiorubi.types.message.Message.text:1 of
+msgid "*Optional*. For text messages, the actual UTF-8 text of the message."
+msgstr "*اختیاری*. برای پیام‌های متنی، متن واقعی UTF-8 پیام."
+
+#: aiorubi.types.message.Message.time:1 of
+msgid "Date the message was sent in Unix time."
+msgstr "تاریخ ارسال پیام به زمان یونیکس."
+
+#: aiorubi.types.inline_message.InlineMessage:1 of
+msgid ""
+"This object represents a message when a user interacts with its inline "
+"keypad."
+msgstr "این شیء پیامی را نمایندگی می‌کند که کاربر با کیبورد درون‌خطی آن تعامل کرده است."
+
+
+#: aiorubi.types.inline_message.InlineMessage:3 of
+msgid "Source: https://rubika.ir/botapi/models#inlinemessage"
+msgstr "منبع: https://rubika.ir/botapi/models#inlinemessage"
+
+#: aiorubi.types.inline_message.InlineMessage.aux_data:1 of
+msgid "*Optional*. Auxiliary data (like button_id) associated with the click."
+msgstr "*اختیاری*. دادهٔ کمکی (مثل button_id) مرتبط با کلیک."
+
+#: aiorubi.types.inline_message.InlineMessage.chat_id:1 of
+msgid "Unique identifier of the chat where the message is located."
+msgstr "شناسهٔ یکتای چیتی که پیام در آن قرار دارد."
+
+#: aiorubi.types.inline_message.InlineMessage.file:1 of
+msgid "*Optional*. File attached to the message, if available."
+msgstr "*اختیاری*. فایل پیوست‌شده به پیام، در صورت وجود."
+
+#: aiorubi.types.inline_message.InlineMessage.location:1 of
+msgid "*Optional*. Location attached to the message, if available."
+msgstr "*اختیاری*. موقعیت مکانی پیوست‌شده به پیام، در صورت وجود."
+
+#: aiorubi.types.inline_message.InlineMessage.message_id:1 of
+msgid "Unique identifier of the message containing the inline keypad."
+msgstr "شناسهٔ یکتای پیامی که کیبورد درون‌خطی را دارد."
+
+#: aiorubi.types.inline_message.InlineMessage.sender_id:1 of
+msgid "Unique identifier of the user who clicked the button."
+msgstr "شناسهٔ یکتای کاربری که دکمه را کلیک کرده است."
+
+#: aiorubi.types.inline_message.InlineMessage.text:1 of
+msgid "*Optional*. Text of the message, if available."
+msgstr "*اختیاری*. متن پیام، در صورت وجود."
+
+#: aiorubi.types.removed_message.RemovedMessage:1 of
+msgid "This object is received when a message is deleted in a Rubika chat."
+msgstr "این شیء زمانی دریافت می‌شود که پیامی در یک چت روبیکا حذف شود."
+
+#: aiorubi.types.removed_message.RemovedMessage.chat_id:1 of
+msgid ""
+"Unique identifier of the chat where the message was removed. Injected "
+"automatically from the parent Update object."
+msgstr "شناسهٔ یکتای چیتی که پیام از آن حذف شده است. به‌طور خودکار از شیء Update والد تزریق می‌شود."
+
+
+#: aiorubi.types.removed_message.RemovedMessage.message_id:1 of
+msgid "Unique identifier of the removed message."
+msgstr "شناسهٔ یکتای پیام حذف‌شده."
+
+#: aiorubi.types.started_bot.StartedBot:1 of
+msgid "This object represents the event where a user started the bot."
+msgstr "این شیء نشان‌دهندهٔ رویدادی است که در آن کاربر بات را استارت کرده است."
+
+#: aiorubi.types.started_bot.StartedBot.chat_id:1 of
+msgid "Unique identifier of the chat that started the bot."
+msgstr "شناسهٔ یکتای چیتی که بات را استارت کرده است."
+
+#: aiorubi.types.stopped_bot.StoppedBot:1 of
+msgid "This object represents the event where a user stopped (blocked) the bot."
+msgstr ""
+"این شیء نشان‌دهندهٔ رویدادی است که در آن کاربر بات را متوقف (مسدود) کرده "
+"است."
+
+#: aiorubi.types.stopped_bot.StoppedBot.chat_id:1 of
+msgid "Unique identifier of the chat that stopped the bot."
+msgstr "شناسهٔ یکتای چیتی که بات را متوقف کرده است."
+
+#: ../../api/types.rst:39
+msgid "Content"
+msgstr "محتوا"
+
+#: aiorubi.types.file.File:1 of
+msgid "This object represents a file in Rubika."
+msgstr "این شیء نشان‌دهندهٔ یک فایل در روبیکا است."
+
+#: aiorubi.types.file.File:3 of
+msgid "Source: https://rubika.ir/botapi/models#file"
+msgstr "منبع: https://rubika.ir/botapi/models#file"
+
+#: aiorubi.types.file.File.file_id:1 of
+msgid "Unique identifier for this file."
+msgstr "شناسهٔ یکتای این فایل."
+
+#: aiorubi.types.file.File.file_name:1 of
+msgid "*Optional*. File name."
+msgstr "*اختیاری*. نام فایل."
+
+#: aiorubi.types.file.File.size:1 of
+msgid "*Optional*. File size in bytes."
+msgstr "*اختیاری*. حجم فایل به بایت."
+
+#: aiorubi.types.sticker.Sticker:1 of
+msgid "This object represents a sticker."
+msgstr "این شیء نشان‌دهندهٔ یک استیکر است."
+
+#: aiorubi.types.sticker.Sticker:3 of
+msgid "Source: https://rubika.ir/botapi/models#sticker"
+msgstr "منبع: https://rubika.ir/botapi/models#sticker"
+
+#: aiorubi.types.sticker.Sticker.emoji_character:1 of
+msgid "*Optional*. Emoji associated with the sticker."
+msgstr "*اختیاری*. ایموجی مرتبط با استیکر."
+
+#: aiorubi.types.sticker.Sticker.file:1 of
+msgid "Information about the sticker file."
+msgstr "اطلاعات فایل استیکر."
+
+#: aiorubi.types.sticker.Sticker.sticker_id:1 of
+msgid "Unique identifier for this sticker."
+msgstr "شناسهٔ یکتای این استیکر."
+
+#: aiorubi.types.location.Location:1 of
+msgid "This object represents a geographic location."
+msgstr "این شیء نشان‌دهندهٔ یک موقعیت جغرافیایی است."
+
+#: aiorubi.types.location.Location:3 of
+msgid "Source: https://rubika.ir/botapi/models#location"
+msgstr "منبع: https://rubika.ir/botapi/models#location"
+
+#: aiorubi.types.location.Location.latitude:1 of
+msgid "Latitude as defined by sender."
+msgstr "عرض جغرافیایی مطابق تعریف فرستنده."
+
+#: aiorubi.types.location.Location.longitude:1 of
+msgid "Longitude as defined by sender."
+msgstr "طول جغرافیایی مطابق تعریف فرستنده."
+
+#: aiorubi.types.contact_message.ContactMessage:1 of
+msgid "This object represents a shared contact."
+msgstr "این شیء نشان‌دهندهٔ یک مخاطب به‌اشتراک‌گذاشته است."
+
+#: aiorubi.types.contact_message.ContactMessage:3 of
+msgid "Source: https://rubika.ir/botapi/models#contactmessage"
+msgstr "منبع: https://rubika.ir/botapi/models#contactmessage"
+
+#: aiorubi.types.contact_message.ContactMessage.first_name:1 of
+msgid "Contact's first name."
+msgstr "نام مخاطب."
+
+#: aiorubi.types.contact_message.ContactMessage.last_name:1 of
+msgid "*Optional*. Contact's last name."
+msgstr "*اختیاری*. نام خانوادگی مخاطب."
+
+#: aiorubi.types.contact_message.ContactMessage.phone_number:1 of
+msgid "Contact's phone number."
+msgstr "شماره تلفن مخاطب."
+
+#: aiorubi.types.poll.Poll:1 of
+msgid "This object contains information about a poll."
+msgstr "این شیء اطلاعاتی دربارهٔ یک نظرسنجی دارد."
+
+#: aiorubi.types.poll.Poll:3 of
+msgid "Source: https://rubika.ir/botapi/models#poll"
+msgstr "منبع: https://rubika.ir/botapi/models#poll"
+
+#: aiorubi.types.poll.Poll.options:1 of
+msgid "List of poll options."
+msgstr "فهرست گزینه‌های نظرسنجی."
+
+#: aiorubi.types.poll.Poll.poll_status:1 of
+msgid "Current status of the poll."
+msgstr "وضعیت فعلی نظرسنجی."
+
+#: aiorubi.types.poll.Poll.question:1 of
+msgid "The question of the poll."
+msgstr "سؤال نظرسنجی."
+
+#: aiorubi.types.poll_status.PollStatus:1 of
+msgid "This object contains the current status of a poll."
+msgstr "این شیء وضعیت فعلی یک نظرسنجی را نگه می‌دارد."
+
+#: aiorubi.types.poll_status.PollStatus:3 of
+msgid "Source: https://rubika.ir/botapi/models#pollstatus"
+msgstr "منبع: https://rubika.ir/botapi/models#pollstatus"
+
+#: aiorubi.types.poll_status.PollStatus.percent_vote_options:1 of
+msgid "List of vote percentages for each option."
+msgstr "فهرست درصد آرا برای هر گزینه."
+
+#: aiorubi.types.poll_status.PollStatus.selection_index:1 of
+msgid "Index of the option chosen by the user. Returns -1 if no option is selected."
+msgstr "اندیس گزینهٔ انتخاب‌شده توسط کاربر. اگر گزینه‌ای انتخاب نشده باشد -1 برمی‌گرداند."
+
+#: aiorubi.types.poll_status.PollStatus.show_total_votes:1 of
+msgid "True, if the total number of votes should be displayed to the user."
+msgstr "اگر باید تعداد کل آرا به کاربر نمایش داده شود True است."
+
+#: aiorubi.types.poll_status.PollStatus.state:1 of
+msgid "Current state of the poll (e.g., 'Open' or 'Closed')."
+msgstr "وضعیت فعلی نظرسنجی (مثلاً 'Open' یا 'Closed')."
+
+#: aiorubi.types.poll_status.PollStatus.total_vote:1 of
+msgid "Total number of votes cast in the poll."
+msgstr "تعداد کل آرا داده‌شده در نظرسنجی."
+
+#: aiorubi.types.forwarded_from.ForwardedFrom:1
+#: aiorubi.types.forwarded_no_link.ForwardedNoLink:1 of
+msgid "This object represents information about a forwarded message."
+msgstr "این شیء اطلاعاتی دربارهٔ یک پیام فورواردشده دارد."
+
+#: aiorubi.types.forwarded_from.ForwardedFrom:3 of
+msgid "Source: https://rubika.ir/botapi/models#forwardedfrom"
+msgstr "منبع: https://rubika.ir/botapi/models#forwardedfrom"
+
+#: aiorubi.types.forwarded_from.ForwardedFrom.from_chat_id:1 of
+msgid "Identifier of the source chat from which the message was forwarded."
+msgstr "شناسهٔ چت مبدأ که پیام از آن فوروارد شده است."
+
+#: aiorubi.types.forwarded_from.ForwardedFrom.from_sender_id:1 of
+msgid "*Optional*. Identifier of the original sender of the message."
+msgstr "*اختیاری*. شناسهٔ فرستندهٔ اصلی پیام."
+
+#: aiorubi.types.forwarded_from.ForwardedFrom.message_id:1 of
+msgid "Identifier of the original message that was forwarded."
+msgstr "شناسهٔ پیام اصلی که فوروارد شده است."
+
+#: aiorubi.types.forwarded_from.ForwardedFrom.type_from:1 of
+msgid "Type of the forward source (User, Channel or Bot)."
+msgstr "نوع مبدأ فوروارد (User، Channel یا Bot)."
+
+#: aiorubi.types.forwarded_no_link.ForwardedNoLink.from_title:1 of
+msgid "Title of the forward source."
+msgstr "عنوان مبدأ فوروارد."
+
+#: aiorubi.types.aux_data.AuxData:1 of
+msgid ""
+"This object represents auxiliary data associated with messages and button"
+" clicks."
+msgstr "این شیء دادهٔ کمکی مرتبط با پیام‌ها و کلیک دکمه‌ها را نمایندگی می‌کند."
+
+
+#: aiorubi.types.aux_data.AuxData:3 of
+msgid "Source: https://rubika.ir/botapi/models#auxdata"
+msgstr "منبع: https://rubika.ir/botapi/models#auxdata"
+
+#: aiorubi.types.aux_data.AuxData.button_id:1 of
+msgid "Optional. The identifier of the button that was clicked."
+msgstr "اختیاری. شناسهٔ دکمه‌ای که کلیک شده است."
+
+#: aiorubi.types.aux_data.AuxData.start_id:1 of
+msgid "Optional. The start parameter from a deep link (e.g., st=...)."
+msgstr "اختیاری. پارامتر start از یک دیپ‌لینک (مثل st=...)."
+
+#: aiorubi.types.metadata.MetaData:1 of
+msgid "A smart container for MetaDataPart objects."
+msgstr "ظرف هوشمند برای اشیاء MetaDataPart."
+
+#: aiorubi.types.metadata.MetaData:3 of
+msgid "This model acts as a List in Python but automatically wraps/unwraps the 'meta_data_parts' layer required by Rubika's API."
+msgstr "این مدل در پایتون مثل یک List عمل می‌کند ولی لایهٔ 'meta_data_parts' موردنیاز API روبیکا را به‌طور خودکار wrap/unwrap می‌کند."
+
+#: aiorubi.types.metadata.MetaData:6 of
+msgid "Note: The 'metadata' wrapper structure is undocumented in some parts of the official Rubika API reference."
+msgstr "نکته: ساختار پوششی 'metadata' در برخی بخش‌های مرجع رسمی API روبیکا مستند نشده است."
+
+#: aiorubi.types.metadata.MetaData.unwrap_metadata:1 of
+msgid "Unwraps the 'meta_data_parts' key if the incoming data is a dict. This ensures the model can be initialized from raw API responses."
+msgstr "اگر دادهٔ ورودی دیکشنری باشد کلید 'meta_data_parts' را باز می‌کند. این تضمین می‌کند مدل بتواند از پاسخ‌های خام API مقداردهی شود."
+
+#: aiorubi.types.metadata.MetaData.wrap_metadata:1 of
+msgid "Wraps the list into the 'meta_data_parts' key during serialization. This prepares the data for the Rubika API request format."
+msgstr "در زمان سریال‌سازی، فهرست را داخل کلید 'meta_data_parts' می‌پیچد. این کار داده را برای قالب درخواست API روبیکا آماده می‌کند."
+
+#: aiorubi.types.metadata.MetaDataPart:1 of
+msgid "Represents a single formatting entity within a message text."
+msgstr "یک موجودیت قالب‌بندی داخل متن پیام را نشان می‌دهد."
+
+#: aiorubi.types.metadata.MetaDataPart:3 of
+msgid "This model includes fields discovered through community research and reverse engineering, as some are not officially documented in the Rubika Bot API docs."
+msgstr "این مدل فیلدهایی دارد که از طریق پژوهش جامعهٔ کاربری و مهندسی معکوس کشف شده‌اند، چون برخی در مستندات رسمی Rubika Bot API مستند نشده‌اند."
+
+#: aiorubi.types.metadata.MetaDataPart.from_index:1 of
+msgid "Offset in UTF-16 code units to the start of the entity"
+msgstr "آفست به واحدهای کد UTF-16 تا ابتدای موجودیت"
+
+#: aiorubi.types.metadata.MetaDataPart.length:1 of
+msgid "Length of the entity in UTF-16 code units"
+msgstr "طول موجودیت به واحدهای کد UTF-16"
+
+#: aiorubi.types.metadata.MetaDataPart.link_url:1 of
+msgid "*Optional*. URL for 'Link' type entities. (Not found in official docs)"
+msgstr "*اختیاری*. URL برای موجودیت‌های نوع 'Link'. (در مستندات رسمی نیست)"
+
+#: aiorubi.types.metadata.MetaDataPart.mention_text_user_id:1 of
+msgid ""
+"*Optional*. Target User ID for 'MentionText' entities. (Not found in "
+"official docs)"
+msgstr "*اختیاری*. شناسهٔ کاربر مقصد برای موجودیت‌های 'MentionText'. (در مستندات رسمی نیست)"
+
+
+#: aiorubi.types.metadata.MetaDataPart.type:1 of
+msgid "Type of the entity (e.g., 'Bold', 'Italic', 'Link', 'MentionText')"
+msgstr "نوع موجودیت (مثلاً 'Bold'، 'Italic'، 'Link'، 'MentionText')"
+
+#: ../../api/types.rst:78
+msgid "Keypads and buttons"
+msgstr "کیبوردها و دکمه‌ها"
+
+#: aiorubi.types.keypad.Keypad:1 of
+msgid "This object represents a keypad (inline or chat) with rows of buttons."
+msgstr "این شیء یک کیبورد (درون‌خطی یا چت) با ردیف‌هایی از دکمه‌ها را نشان می‌دهد."
+
+#: aiorubi.types.keypad.Keypad:3 of
+msgid "Source: https://rubika.ir/botapi/models#keypad"
+msgstr "منبع: https://rubika.ir/botapi/models#keypad"
+
+#: aiorubi.types.keypad.Keypad.one_time_keyboard:1 of
+msgid "*Optional*. Requests clients to hide the keypad as soon as it's been used."
+msgstr "*اختیاری*. از کلاینت‌ها می‌خواهد کیبورد را به‌محض استفاده مخفی کنند."
+
+#: aiorubi.types.keypad.Keypad.resize_keyboard:1 of
+msgid ""
+"*Optional*. Requests clients to rescale the keypad vertically for optimal"
+" fit."
+msgstr "*اختیاری*. از کلاینت‌ها می‌خواهد کیبورد را برای جاگرفتن بهتر عموداً تغییر اندازه دهند."
+
+
+#: aiorubi.types.keypad.Keypad.rows:1 of
+msgid "List of keypad rows, each containing buttons."
+msgstr "فهرست ردیف‌های کیبورد که هرکدام شامل دکمه‌هایی است."
+
+#: aiorubi.types.keypad_row.KeypadRow:1 of
+msgid "This object represents a row of buttons in a keypad."
+msgstr "این شیء یک ردیف دکمه در کیبورد را نشان می‌دهد."
+
+#: aiorubi.types.keypad_row.KeypadRow:3 of
+msgid "Source: https://rubika.ir/botapi/models#keypadrow"
+msgstr "منبع: https://rubika.ir/botapi/models#keypadrow"
+
+#: aiorubi.types.keypad_row.KeypadRow.buttons:1 of
+msgid "List of buttons in a single row."
+msgstr "فهرست دکمه‌ها در یک ردیف."
+
+#: aiorubi.types.button.Button:1 of
+msgid "This object represents an interactive button in a message or keypad."
+msgstr "این شیء یک دکمهٔ تعاملی در پیام یا کیبورد را نشان می‌دهد."
+
+#: aiorubi.types.button.Button:3 of
+msgid "Source: https://rubika.ir/botapi/models#button"
+msgstr "منبع: https://rubika.ir/botapi/models#button"
+
+#: aiorubi.types.button.Button.button_calendar:1 of
+msgid "*Optional*. Data for a calendar button."
+msgstr "*اختیاری*. دادهٔ دکمهٔ تقویم."
+
+#: aiorubi.types.button.Button.button_location:1 of
+msgid "*Optional*. Data for a location selection button."
+msgstr "*اختیاری*. دادهٔ دکمهٔ انتخاب موقعیت مکانی."
+
+#: aiorubi.types.button.Button.button_number_picker:1 of
+msgid "*Optional*. Data for a number picker button."
+msgstr "*اختیاری*. دادهٔ دکمهٔ انتخابگر عدد."
+
+#: aiorubi.types.button.Button.button_selection:1 of
+msgid "*Optional*. Data for a selection list button."
+msgstr "*اختیاری*. دادهٔ دکمهٔ فهرست انتخاب."
+
+#: aiorubi.types.button.Button.button_string_picker:1 of
+msgid "*Optional*. Data for a string picker button."
+msgstr "*اختیاری*. دادهٔ دکمهٔ انتخابگر رشته."
+
+#: aiorubi.types.button.Button.button_text:1 of
+msgid "Text displayed on the button."
+msgstr "متنی که روی دکمه نمایش داده می‌شود."
+
+#: aiorubi.types.button.Button.button_textbox:1 of
+msgid "*Optional*. Data for a text input button."
+msgstr "*اختیاری*. دادهٔ دکمهٔ ورودی متن."
+
+#: aiorubi.types.button.Button.id:1 of
+msgid "Unique identifier for the button."
+msgstr "شناسهٔ یکتای دکمه."
+
+#: aiorubi.types.button.Button.type:1 of
+msgid "Type of the button (defines its behavior)."
+msgstr "نوع دکمه (رفتارش را تعیین می‌کند)."
+
+#: aiorubi.types.button_selection.ButtonSelection:1 of
+msgid "This object represents the settings for a selection button."
+msgstr "این شیء تنظیمات دکمهٔ انتخاب را نشان می‌دهد."
+
+#: aiorubi.types.button_selection.ButtonSelection:3 of
+msgid "Source: https://rubika.ir/botapi/models#buttonselection"
+msgstr "منبع: https://rubika.ir/botapi/models#buttonselection"
+
+#: aiorubi.types.button_selection.ButtonSelection.columns_count:1 of
+msgid "Number of columns to display items in."
+msgstr "تعداد ستون‌ها برای نمایش گزینه‌ها."
+
+#: aiorubi.types.button_selection.ButtonSelection.get_type:1 of
+msgid "Type of item retrieval (e.g., Offline/Sync)."
+msgstr "نوع دریافت آیتم (مثلاً Offline/Sync)."
+
+#: aiorubi.types.button_selection.ButtonSelection.is_multi_selection:1 of
+msgid "True, if the user can select multiple options."
+msgstr "اگر کاربر بتواند چند گزینه انتخاب کند True است."
+
+#: aiorubi.types.button_selection.ButtonSelection.items:1 of
+msgid "List of items to be displayed in the selection."
+msgstr "فهرست آیتم‌هایی که در انتخاب نمایش داده می‌شوند."
+
+#: aiorubi.types.button_selection.ButtonSelection.search_type:1 of
+msgid "Type of search functionality."
+msgstr "نوع قابلیت جستجو."
+
+#: aiorubi.types.button_selection.ButtonSelection.selection_id:1 of
+msgid "Unique identifier for the selection list."
+msgstr "شناسهٔ یکتای فهرست انتخاب."
+
+#: aiorubi.types.button_selection.ButtonSelection.title:1 of
+msgid "*Optional*. Title of the selection menu."
+msgstr "*اختیاری*. عنوان منوی انتخاب."
+
+#: aiorubi.types.button_selection_item.ButtonSelectionItem:1 of
+msgid "This object represents an item in a selection list."
+msgstr "این شیء یک آیتم در فهرست انتخاب را نشان می‌دهد."
+
+#: aiorubi.types.button_selection_item.ButtonSelectionItem:3 of
+msgid "Source: https://rubika.ir/botapi/models#buttonselectionitem"
+msgstr "منبع: https://rubika.ir/botapi/models#buttonselectionitem"
+
+#: aiorubi.types.button_selection_item.ButtonSelectionItem.image_url:1 of
+msgid "*Optional*. URL of the image associated with the option."
+msgstr "*اختیاری*. URL تصویر مرتبط با گزینه."
+
+#: aiorubi.types.button_selection_item.ButtonSelectionItem.text:1 of
+msgid "Text of the button."
+msgstr "متن دکمه."
+
+#: aiorubi.types.button_selection_item.ButtonSelectionItem.type:1 of
+msgid "Type of the button selection display."
+msgstr "نوع نمایش انتخاب دکمه."
+
+#: aiorubi.types.button_calendar.ButtonCalendar:1 of
+msgid "This object represents the settings for a calendar button."
+msgstr "این شیء تنظیمات دکمهٔ تقویم را نشان می‌دهد."
+
+#: aiorubi.types.button_calendar.ButtonCalendar:3 of
+msgid "Source: https://rubika.ir/botapi/models#buttoncalendar"
+msgstr "منبع: https://rubika.ir/botapi/models#buttoncalendar"
+
+#: aiorubi.types.button_calendar.ButtonCalendar.default_value:1 of
+msgid "*Optional*. Initial date displayed to the user."
+msgstr "*اختیاری*. تاریخ اولیه‌ای که به کاربر نمایش داده می‌شود."
+
+#: aiorubi.types.button_calendar.ButtonCalendar.max_year:1 of
+msgid "Maximum selectable year in the calendar."
+msgstr "بیشترین سال قابل انتخاب در تقویم."
+
+#: aiorubi.types.button_calendar.ButtonCalendar.min_year:1 of
+msgid "Minimum selectable year in the calendar."
+msgstr "کمترین سال قابل انتخاب در تقویم."
+
+#: aiorubi.types.button_calendar.ButtonCalendar.title:1 of
+msgid "Title of the calendar button."
+msgstr "عنوان دکمهٔ تقویم."
+
+#: aiorubi.types.button_calendar.ButtonCalendar.type:1 of
+msgid "Type of the calendar (e.g., Persian or Gregorian)."
+msgstr "نوع تقویم (مثلاً هجری شمسی یا میلادی)."
+
+#: aiorubi.types.button_number_picker.ButtonNumberPicker:1 of
+msgid "This object represents the settings for a number picker button."
+msgstr "این شیء تنظیمات دکمهٔ انتخابگر عدد را نشان می‌دهد."
+
+#: aiorubi.types.button_number_picker.ButtonNumberPicker:3 of
+msgid "Source: https://rubika.ir/botapi/models#buttonnumberpicker"
+msgstr "منبع: https://rubika.ir/botapi/models#buttonnumberpicker"
+
+#: aiorubi.types.button_number_picker.ButtonNumberPicker.default_value:1 of
+msgid "*Optional*. Initial value displayed to the user."
+msgstr "*اختیاری*. مقدار اولیه‌ای که به کاربر نمایش داده می‌شود."
+
+#: aiorubi.types.button_number_picker.ButtonNumberPicker.max_value:1 of
+msgid "Maximum selectable value."
+msgstr "بیشترین مقدار قابل انتخاب."
+
+#: aiorubi.types.button_number_picker.ButtonNumberPicker.min_value:1 of
+msgid "Minimum selectable value."
+msgstr "کمترین مقدار قابل انتخاب."
+
+#: aiorubi.types.button_number_picker.ButtonNumberPicker.title:1 of
+msgid "Title of the button."
+msgstr "عنوان دکمه."
+
+#: aiorubi.types.button_string_picker.ButtonStringPicker:1 of
+msgid "This object represents the settings for a string picker button."
+msgstr "این شیء تنظیمات دکمهٔ انتخابگر رشته را نشان می‌دهد."
+
+#: aiorubi.types.button_string_picker.ButtonStringPicker:3 of
+msgid "Source: https://rubika.ir/botapi/models#buttonstringpicker"
+msgstr "منبع: https://rubika.ir/botapi/models#buttonstringpicker"
+
+#: aiorubi.types.button_string_picker.ButtonStringPicker.default_value:1 of
+msgid "*Optional*. The initial string value displayed to the user."
+msgstr "*اختیاری*. مقدار رشته‌ای اولیه‌ای که به کاربر نمایش داده می‌شود."
+
+#: aiorubi.types.button_string_picker.ButtonStringPicker.items:1 of
+msgid "List of strings representing the selectable options."
+msgstr "فهرست رشته‌هایی که گزینه‌های قابل انتخاب را نشان می‌دهند."
+
+#: aiorubi.types.button_string_picker.ButtonStringPicker.title:1 of
+msgid "*Optional*. Title of the string picker button."
+msgstr "*اختیاری*. عنوان دکمهٔ انتخابگر رشته."
+
+#: aiorubi.types.button_textbox.ButtonTextbox:1 of
+msgid "This object represents the settings for a textbox input button."
+msgstr "این شیء تنظیمات دکمهٔ ورودی جعبهٔ متن را نشان می‌دهد."
+
+#: aiorubi.types.button_textbox.ButtonTextbox:3 of
+msgid "Source: https://rubika.ir/botapi/models#buttontextbox"
+msgstr "منبع: https://rubika.ir/botapi/models#buttontextbox"
+
+#: aiorubi.types.button_textbox.ButtonTextbox.default_value:1 of
+msgid "*Optional*. Initial value displayed in the textbox."
+msgstr "*اختیاری*. مقدار اولیه‌ای که در جعبهٔ متن نمایش داده می‌شود."
+
+#: aiorubi.types.button_textbox.ButtonTextbox.place_holder:1 of
+msgid "*Optional*. Placeholder text displayed in the input field."
+msgstr "*اختیاری*. متن placeholder که در فیلد ورودی نمایش داده می‌شود."
+
+#: aiorubi.types.button_textbox.ButtonTextbox.title:1 of
+msgid "*Optional*. Title of the textbox button."
+msgstr "*اختیاری*. عنوان دکمهٔ جعبهٔ متن."
+
+#: aiorubi.types.button_textbox.ButtonTextbox.type_keypad:1 of
+msgid "Type of keypad displayed for text input (e.g., String or Numeric)."
+msgstr "نوع کیبورد نمایش‌داده‌شده برای ورودی متن (مثلاً String یا Numeric)."
+
+#: aiorubi.types.button_textbox.ButtonTextbox.type_line:1 of
+msgid "Determines if the text input is single-line or multi-line."
+msgstr "تعیین می‌کند ورودی متن تک‌خطی باشد یا چندخطی."
+
+#: aiorubi.types.button_location.ButtonLocation:1 of
+msgid "This object represents the settings for a location input button."
+msgstr "این شیء تنظیمات دکمهٔ ورودی موقعیت مکانی را نشان می‌دهد."
+
+#: aiorubi.types.button_location.ButtonLocation:3 of
+msgid "Source: https://rubika.ir/botapi/models#buttonlocation"
+msgstr "منبع: https://rubika.ir/botapi/models#buttonlocation"
+
+#: aiorubi.types.button_location.ButtonLocation.default_map_location:1 of
+msgid "The initial coordinates for the center of the map view."
+msgstr "مختصات اولیه برای مرکز نمای نقشه."
+
+#: aiorubi.types.button_location.ButtonLocation.default_pointer_location:1 of
+msgid "The initial coordinates for the map pointer."
+msgstr "مختصات اولیه نشانگر نقشه."
+
+#: aiorubi.types.button_location.ButtonLocation.title:1 of
+msgid "*Optional*. Title of the location button."
+msgstr "*اختیاری*. عنوان دکمهٔ موقعیت مکانی."
+
+#: aiorubi.types.button_location.ButtonLocation.type:1 of
+msgid "Type of map interaction (e.g., Pick or View)."
+msgstr "نوع تعامل با نقشه (مثلاً Pick یا View)."
+
+#: ../../api/types.rst:111
+msgid "Bot & chat"
+msgstr "بات و چت"
+
+#: aiorubi.types.bot_info.BotInfo:1 of
+msgid "This object represents a Rubika bot's public information."
+msgstr "این شیء اطلاعات عمومی یک بات روبیکا را نشان می‌دهد."
+
+#: aiorubi.types.bot_info.BotInfo:3 of
+msgid "Source: https://rubika.ir/botapi/models#bot"
+msgstr "منبع: https://rubika.ir/botapi/models#bot"
+
+#: aiorubi.types.bot_info.BotInfo.avatar:1 of
+msgid "*Optional*. Bot's profile picture."
+msgstr "*اختیاری*. تصویر پروفایل بات."
+
+#: aiorubi.types.bot_info.BotInfo.bot_id:1 of
+msgid "Unique identifier for this bot."
+msgstr "شناسهٔ یکتای این بات."
+
+#: aiorubi.types.bot_info.BotInfo.bot_title:1 of
+msgid "Display title of the bot."
+msgstr "عنوان نمایشی بات."
+
+#: aiorubi.types.bot_info.BotInfo.description:1 of
+msgid "*Optional*. Bot's description."
+msgstr "*اختیاری*. توضیحات بات."
+
+#: aiorubi.types.bot_info.BotInfo.share_url:1 of
+msgid "*Optional*. Shareable link for the bot."
+msgstr "*اختیاری*. لینک قابل اشتراک‌گذاری بات."
+
+#: aiorubi.types.bot_info.BotInfo.start_message:1 of
+msgid "*Optional*. The message shown to users when they start the bot."
+msgstr "*اختیاری*. پیامی که هنگام استارت بات به کاربران نشان داده می‌شود."
+
+#: aiorubi.types.bot_info.BotInfo.username:1 of
+msgid "*Optional*. Bot's username."
+msgstr "*اختیاری*. نام کاربری بات."
+
+#: aiorubi.types.bot_command.BotCommand:1 of
+msgid "This object represents one bot command."
+msgstr "این شیء یک دستور بات را نشان می‌دهد."
+
+#: aiorubi.types.bot_command.BotCommand:3 of
+msgid "Source: https://rubika.ir/botapi/models#botcommand"
+msgstr "منبع: https://rubika.ir/botapi/models#botcommand"
+
+#: aiorubi.types.bot_command.BotCommand.command:1 of
+msgid "Text of the command; 1-32 characters. Can contain only lowercase English letters, digits and underscores."
+msgstr "متن دستور؛ ۱ تا ۳۲ کاراکتر. فقط می‌تواند شامل حروف کوچک انگلیسی، ارقام و زیرخط باشد."
+
+#: aiorubi.types.bot_command.BotCommand.description:1 of
+msgid "Description of the command; 1-256 characters."
+msgstr "توضیح دستور؛ ۱ تا ۲۵۶ کاراکتر."
+
+#: aiorubi.types.chat.Chat:1 of
+msgid "This object represents a chat in Rubika. It can be a private conversation with a user, a group, or a channel."
+msgstr "این شیء یک چت در روبیکا را نشان می‌دهد. می‌تواند گفتگوی خصوصی با یک کاربر، یک گروه یا یک کانال باشد."
+
+#: aiorubi.types.chat.Chat:4 of
+msgid "Source: https://rubika.ir/botapi/models#chat"
+msgstr "منبع: https://rubika.ir/botapi/models#chat"
+
+#: aiorubi.types.chat.Chat.chat_id:1 of
+msgid "Unique identifier for this chat."
+msgstr "شناسهٔ یکتای این چت."
+
+#: aiorubi.types.chat.Chat.chat_type:1 of
+msgid "Type of the chat, can be either 'User', 'Bot', 'Group' or 'Channel'"
+msgstr "نوع چت؛ می‌تواند 'User'، 'Bot'، 'Group' یا 'Channel' باشد"
+
+#: aiorubi.types.chat.Chat.first_name:1 of
+msgid "*Optional*. First name of the other party in a private chat."
+msgstr "*اختیاری*. نام طرف مقابل در چت خصوصی."
+
+#: aiorubi.types.chat.Chat.full_name:1 of
+msgid "Get full name of the chat."
+msgstr "گرفتن نام کامل چت."
+
+#: aiorubi.types.chat.Chat.full_name:3 of
+msgid "For private chat it is first_name + last_name. For other chat types it is title."
+msgstr "برای چت خصوصی first_name + last_name است. برای سایر انواع چت، title است."
+
+#: aiorubi.types.chat.Chat.last_name:1 of
+msgid "*Optional*. Last name of the other party in a private chat."
+msgstr "*اختیاری*. نام خانوادگی طرف مقابل در چت خصوصی."
+
+#: aiorubi.types.chat.Chat.title:1 of
+msgid "*Optional*. Title, for groups and channels."
+msgstr "*اختیاری*. عنوان، برای گروه‌ها و کانال‌ها."
+
+#: aiorubi.types.chat.Chat.user_id:1 of
+msgid "*Optional*. Unique identifier for the user in private chats."
+msgstr "*اختیاری*. شناسهٔ یکتای کاربر در چت‌های خصوصی."
+
+#: aiorubi.types.chat.Chat.username:1 of
+msgid "*Optional*. Username of the chat or user if available."
+msgstr "*اختیاری*. نام کاربری چت یا کاربر، در صورت وجود."
+
+#: ../../api/types.rst:123
+msgid "Files transfer"
+msgstr "انتقال فایل‌ها"
+
+#: aiorubi.types.input_file.InputFile:1 of
+msgid "This object represents the contents of a file to be uploaded. In Rubika, this is used to stream file data to the 'upload_url' obtained from 'requestSendFile'."
+msgstr "این شیء محتوای فایلی که باید آپلود شود را نشان می‌دهد. در روبیکا برای استریم دادهٔ فایل به 'upload_url' دریافت‌شده از 'requestSendFile' استفاده می‌شود."
+
+#: aiorubi.types.get_updates_response.GetUpdatesResponse:1 of
+msgid "This object represents the response from getUpdates method. It contains a list of updates and the ID for the next request."
+msgstr "این شیء پاسخ متد getUpdates را نشان می‌دهد. شامل فهرستی از آپدیت‌ها و شناسهٔ درخواست بعدی است."
+
+#: aiorubi.types.get_updates_response.GetUpdatesResponse.next_offset_id:1 of
+msgid "The identifier to be used as 'offset_id' in the next request."
+msgstr "شناسه‌ای که به‌عنوان 'offset_id' در درخواست بعدی استفاده می‌شود."
+
+#: aiorubi.types.get_updates_response.GetUpdatesResponse.updates:1 of
+msgid "An array of incoming updates."
+msgstr "آرایه‌ای از آپدیت‌های ورودی."
+
+#: aiorubi.types.update_endpoint_status.UpdateEndpointsStatus.status:1 of
+msgid "The status of the update process"
+msgstr "وضعیت فرایند دریافت آپدیت"
+
+#: ../../api/types.rst:144
+msgid "Misc"
+msgstr "متفرقه"
+
+#: aiorubi.types.error_event.ErrorEvent:1 of
+msgid "Internal event, should be used to receive errors while processing Updates from Rubika"
+msgstr "رویداد داخلی؛ برای دریافت خطاهای حین پردازش آپدیت‌های روبیکا استفاده می‌شود"
+
+#: aiorubi.types.error_event.ErrorEvent.exception:1 of
+msgid "Exception"
+msgstr "استثنا"
+
+#: aiorubi.types.error_event.ErrorEvent.update:1 of
+msgid "Received update"
+msgstr "آپدیت دریافت‌شده"
+
+#: aiorubi.types.response_parameters.ResponseParameters:1 of
+msgid "Describes why a request was unsuccessful."
+msgstr "توضیح می‌دهد چرا یک درخواست ناموفق بوده است."
+
+#: aiorubi.types.response_parameters.ResponseParameters:3 of
+msgid "In Rubika, this model captures the error details provided in the 'dev_message' and 'status' fields."
+msgstr "در روبیکا این مدل جزئیات خطای ارائه‌شده در فیلدهای 'dev_message' و 'status' را ثبت می‌کند."
+
+#: aiorubi.types.response_parameters.ResponseParameters.dev_message:1 of
+msgid "*Optional*. Detailed error message from Rubika API."
+msgstr "*اختیاری*. پیام خطای تفصیلی از API روبیکا."
+
+#: aiorubi.types.response_parameters.ResponseParameters.migrate_to_chat_id:1 of
+msgid "*Optional*. The group has been migrated to a supergroup with the specified identifier."
+msgstr "*اختیاری*. گروه به یک ابرگروه با شناسهٔ مشخص مهاجرت کرده است."
+
+#: aiorubi.types.response_parameters.ResponseParameters.retry_after:1 of
+msgid "*Optional*. In case of exceeding flood control, the number of seconds left to wait before the request can be repeated"
+msgstr "*اختیاری*. در صورت عبور از محدودیت flood، تعداد ثانیه‌های باقی‌مانده تا امکان تکرار درخواست"
+
+#: aiorubi.types.message_keypad_update.MessageKeypadUpdate:1 of
+msgid "This object is used to update an inline keypad in response to a button click."
+msgstr "این شیء برای به‌روزرسانی کیبورد درون‌خطی در پاسخ به کلیک دکمه استفاده می‌شود."
+
+#: aiorubi.types.message_keypad_update.MessageKeypadUpdate:3 of
+msgid "Source: https://rubika.ir/botapi/models#messagekeypadupdate"
+msgstr "منبع: https://rubika.ir/botapi/models#messagekeypadupdate"
+
+#: aiorubi.types.message_keypad_update.MessageKeypadUpdate.inline_keypad:1 of
+msgid "The new inline keypad to replace the existing one."
+msgstr "کیبورد درون‌خطی جدید برای جایگزینی کیبورد فعلی."
+
+#: aiorubi.types.message_keypad_update.MessageKeypadUpdate.message_id:1 of
+msgid "Unique identifier of the message whose keypad is being updated."
+msgstr "شناسهٔ یکتای پیامی که کیبورد آن به‌روزرسانی می‌شود."
+
+#: aiorubi.types.message_text_update.MessageTextUpdate:1 of
+msgid "This object represents a text update for a message. It is returned when the text of a message changes as a result of interaction with an Inline Keypad."
+msgstr "این شیء یک به‌روزرسانی متنی برای پیام را نشان می‌دهد. زمانی برگردانده می‌شود که متن پیام در اثر تعامل با کیبورد درون‌خطی تغییر کند."
+
+#: aiorubi.types.message_text_update.MessageTextUpdate:5 of
+msgid "Source: https://rubika.ir/botapi/models#messagetextupdate"
+msgstr "منبع: https://rubika.ir/botapi/models#messagetextupdate"
+
+#: aiorubi.types.message_text_update.MessageTextUpdate.message_id:1 of
+msgid "Unique identifier of the message that was updated."
+msgstr "شناسهٔ یکتای پیامی که به‌روزرسانی شده است."
+
+#: aiorubi.types.message_text_update.MessageTextUpdate.text:1 of
+msgid "The new text of the message after the update."
+msgstr "متن جدید پیام پس از به‌روزرسانی."
+

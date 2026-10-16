@@ -1,0 +1,1072 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/types.rst:3
+msgid "Types"
+msgstr ""
+
+#: ../../api/types.rst:5
+msgid "All pydantic models representing Rubika Bot API objects. They all inherit from :class:`~aiorubi.types.base.RubikaObject`."
+msgstr ""
+
+#: ../../api/types.rst:9
+msgid "Base"
+msgstr ""
+
+#: ../../../aiorubi/types/aux_data.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/base.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/base.py:docstring of aiorubi.types.base.RubikaObject.remove_unset:0
+#: ../../../aiorubi/types/bot_command.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/bot_info.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/button.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/button_calendar.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/button_location.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/button_number_picker.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/button_selection.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/button_selection_item.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/button_string_picker.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/button_textbox.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/chat.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/contact_message.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/download_url.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/error_event.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/file.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/forwarded_from.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/forwarded_no_link.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/get_updates_response.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/inline_message.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/keypad.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/keypad_row.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/location.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/message_id.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/message_keypad_update.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/message_text_update.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/metadata.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/metadata.py:docstring of aiorubi.types.metadata.MetaData.unwrap_metadata:0
+#: ../../../aiorubi/types/poll.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/poll_status.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/removed_message.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/response_parameters.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/started_bot.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/sticker.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/stopped_bot.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/update.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/update_endpoint_status.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/upload_url.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../api/types.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../aiorubi/types/aux_data.py:docstring of aiorubi.types.aux_data.AuxData.model_config:1
+#: ../../../aiorubi/types/base.py:docstring of aiorubi.types.base.RubikaObject.model_config:1
+#: ../../../aiorubi/types/bot_command.py:docstring of aiorubi.types.bot_command.BotCommand.model_config:1
+#: ../../../aiorubi/types/bot_info.py:docstring of aiorubi.types.bot_info.BotInfo.model_config:1
+#: ../../../aiorubi/types/button.py:docstring of aiorubi.types.button.Button.model_config:1
+#: ../../../aiorubi/types/button_calendar.py:docstring of aiorubi.types.button_calendar.ButtonCalendar.model_config:1
+#: ../../../aiorubi/types/button_location.py:docstring of aiorubi.types.button_location.ButtonLocation.model_config:1
+#: ../../../aiorubi/types/button_number_picker.py:docstring of aiorubi.types.button_number_picker.ButtonNumberPicker.model_config:1
+#: ../../../aiorubi/types/button_selection.py:docstring of aiorubi.types.button_selection.ButtonSelection.model_config:1
+#: ../../../aiorubi/types/button_selection_item.py:docstring of aiorubi.types.button_selection_item.ButtonSelectionItem.model_config:1
+#: ../../../aiorubi/types/button_string_picker.py:docstring of aiorubi.types.button_string_picker.ButtonStringPicker.model_config:1
+#: ../../../aiorubi/types/button_textbox.py:docstring of aiorubi.types.button_textbox.ButtonTextbox.model_config:1
+#: ../../../aiorubi/types/chat.py:docstring of aiorubi.types.chat.Chat.model_config:1
+#: ../../../aiorubi/types/contact_message.py:docstring of aiorubi.types.contact_message.ContactMessage.model_config:1
+#: ../../../aiorubi/types/download_url.py:docstring of aiorubi.types.download_url.DownloadUrl.model_config:1
+#: ../../../aiorubi/types/error_event.py:docstring of aiorubi.types.error_event.ErrorEvent.model_config:1
+#: ../../../aiorubi/types/file.py:docstring of aiorubi.types.file.File.model_config:1
+#: ../../../aiorubi/types/forwarded_from.py:docstring of aiorubi.types.forwarded_from.ForwardedFrom.model_config:1
+#: ../../../aiorubi/types/forwarded_no_link.py:docstring of aiorubi.types.forwarded_no_link.ForwardedNoLink.model_config:1
+#: ../../../aiorubi/types/get_updates_response.py:docstring of aiorubi.types.get_updates_response.GetUpdatesResponse.model_config:1
+#: ../../../aiorubi/types/inline_message.py:docstring of aiorubi.types.inline_message.InlineMessage.model_config:1
+#: ../../../aiorubi/types/keypad.py:docstring of aiorubi.types.keypad.Keypad.model_config:1
+#: ../../../aiorubi/types/keypad_row.py:docstring of aiorubi.types.keypad_row.KeypadRow.model_config:1
+#: ../../../aiorubi/types/location.py:docstring of aiorubi.types.location.Location.model_config:1
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.types.message.Message.model_config:1
+#: ../../../aiorubi/types/message_id.py:docstring of aiorubi.types.message_id.MessageID.model_config:1
+#: ../../../aiorubi/types/message_keypad_update.py:docstring of aiorubi.types.message_keypad_update.MessageKeypadUpdate.model_config:1
+#: ../../../aiorubi/types/message_text_update.py:docstring of aiorubi.types.message_text_update.MessageTextUpdate.model_config:1
+#: ../../../aiorubi/types/metadata.py:docstring of aiorubi.types.metadata.MetaData.model_config:1
+#: ../../../aiorubi/types/metadata.py:docstring of aiorubi.types.metadata.MetaDataPart.model_config:1
+#: ../../../aiorubi/types/poll.py:docstring of aiorubi.types.poll.Poll.model_config:1
+#: ../../../aiorubi/types/poll_status.py:docstring of aiorubi.types.poll_status.PollStatus.model_config:1
+#: ../../../aiorubi/types/removed_message.py:docstring of aiorubi.types.removed_message.RemovedMessage.model_config:1
+#: ../../../aiorubi/types/response_parameters.py:docstring of aiorubi.types.response_parameters.ResponseParameters.model_config:1
+#: ../../../aiorubi/types/started_bot.py:docstring of aiorubi.types.started_bot.StartedBot.model_config:1
+#: ../../../aiorubi/types/sticker.py:docstring of aiorubi.types.sticker.Sticker.model_config:1
+#: ../../../aiorubi/types/stopped_bot.py:docstring of aiorubi.types.stopped_bot.StoppedBot.model_config:1
+#: ../../../aiorubi/types/update.py:docstring of aiorubi.types.update.Update.model_config:1
+#: ../../../aiorubi/types/update_endpoint_status.py:docstring of aiorubi.types.update_endpoint_status.UpdateEndpointsStatus.model_config:1
+#: ../../../aiorubi/types/upload_url.py:docstring of aiorubi.types.upload_url.UploadUrl.model_config:1
+msgid "Configuration for the model, should be a dictionary conforming to [`ConfigDict`][pydantic.config.ConfigDict]."
+msgstr ""
+
+#: ../../../aiorubi/types/aux_data.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/base.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/bot_command.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/bot_info.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/button.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/button_calendar.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/button_location.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/button_number_picker.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/button_selection.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/button_selection_item.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/button_string_picker.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/button_textbox.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/chat.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/contact_message.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/download_url.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/error_event.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/file.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/forwarded_from.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/forwarded_no_link.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/get_updates_response.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/inline_message.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/keypad.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/keypad_row.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/location.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/message_id.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/message_keypad_update.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/message_text_update.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/metadata.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/poll.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/poll_status.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/removed_message.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/response_parameters.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/started_bot.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/sticker.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/stopped_bot.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/update.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/update_endpoint_status.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+#: ../../../aiorubi/types/upload_url.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:1
+msgid "Override this method to perform additional initialization after `__init__` and `model_construct`. This is useful if you want to do some validation that requires the entire model to be initialized."
+msgstr ""
+
+#: ../../../aiorubi/types/aux_data.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/base.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/base.py:docstring of aiorubi.types.base.RubikaObject.remove_unset:0
+#: ../../../aiorubi/types/bot_command.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/bot_info.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/button.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/button_calendar.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/button_location.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/button_number_picker.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/button_selection.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/button_selection_item.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/button_string_picker.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/button_textbox.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/chat.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/contact_message.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/download_url.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/error_event.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/file.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/forwarded_from.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/forwarded_no_link.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/get_updates_response.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/inline_message.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/keypad.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/keypad_row.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/location.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/message_id.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/message_keypad_update.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/message_text_update.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/metadata.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/metadata.py:docstring of aiorubi.types.metadata.MetaData.unwrap_metadata:0
+#: ../../../aiorubi/types/metadata.py:docstring of aiorubi.types.metadata.MetaData.wrap_metadata:0
+#: ../../../aiorubi/types/poll.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/poll_status.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/removed_message.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/response_parameters.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/started_bot.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/sticker.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/stopped_bot.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/update.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/update_endpoint_status.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../../aiorubi/types/upload_url.py:docstring of aiorubi.client.context_controller.BotContextController.model_post_init:0
+#: ../../api/types.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../aiorubi/types/base.py:docstring of aiorubi.types.base.RubikaObject.remove_unset:1
+msgid "Remove UNSET before fields validation."
+msgstr ""
+
+#: ../../../aiorubi/types/base.py:docstring of aiorubi.types.base.RubikaObject.remove_unset:3
+msgid "We use UNSET as a sentinel value for `parse_mode` and replace it to real value later. It isn't a problem when it's just default value for a model field, but UNSET might be passed to a model initialization from `Bot.method_name`, so we must take care of it and remove it before fields validation."
+msgstr ""
+
+#: ../../api/types.rst:15
+msgid "Update types"
+msgstr ""
+
+#: ../../../aiorubi/types/update.py:docstring of aiorubi.types.update.Update:1
+msgid "This object represents an incoming update."
+msgstr ""
+
+#: ../../../aiorubi/types/removed_message.py:docstring of aiorubi.types.removed_message.RemovedMessage:3
+#: ../../../aiorubi/types/update.py:docstring of aiorubi.types.update.Update:3
+msgid "Source: https://rubika.ir/botapi/models#update"
+msgstr ""
+
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.types.message.Message.chat_id:1
+#: ../../../aiorubi/types/update.py:docstring of aiorubi.types.update.Update.chat_id:1
+msgid "Unique identifier for the chat where the update occurred."
+msgstr ""
+
+#: ../../../aiorubi/types/update.py:docstring of aiorubi.types.update.Update.inline_message:1
+msgid "*Optional*. Inline message event (button click / inline interaction)."
+msgstr ""
+
+#: ../../../aiorubi/types/update.py:docstring of aiorubi.types.update.Update.new_message:1
+msgid "*Optional*. New incoming message of any kind."
+msgstr ""
+
+#: ../../../aiorubi/types/update.py:docstring of aiorubi.types.update.Update.removed_message:1
+msgid "*Optional*. Identifier of the message that was removed. Parsed from removed_message_id."
+msgstr ""
+
+#: ../../../aiorubi/types/update.py:docstring of aiorubi.types.update.Update.started_bot:1
+msgid "*Optional*. Present when the user has started/unblocked the bot."
+msgstr ""
+
+#: ../../../aiorubi/types/update.py:docstring of aiorubi.types.update.Update.stopped_bot:1
+msgid "*Optional*. Present when the user has stopped/blocked the bot."
+msgstr ""
+
+#: ../../../aiorubi/types/update.py:docstring of aiorubi.types.update.Update.type:1
+msgid "The type of update (e.g., NewMessage, EditMessage, RemoveMessage)."
+msgstr ""
+
+#: ../../../aiorubi/types/update.py:docstring of aiorubi.types.update.Update.update_time:1
+msgid "Unix timestamp of when the update was received."
+msgstr ""
+
+#: ../../../aiorubi/types/update.py:docstring of aiorubi.types.update.Update.updated_message:1
+msgid "*Optional*. New version of a message that is known to the bot and was edited."
+msgstr ""
+
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.types.message.Message:1
+msgid "This object represents a message in Rubika."
+msgstr ""
+
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.types.message.Message:3
+msgid "Source: https://rubika.ir/botapi/models#message"
+msgstr ""
+
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.types.message.Message.aux_data:1
+msgid "*Optional*. Auxiliary data associated with the message."
+msgstr ""
+
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.types.message.Message.contact_message:1
+msgid "*Optional*. Message is a shared contact, information about the contact."
+msgstr ""
+
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.types.message.Message.file:1
+msgid "*Optional*. Message is a file, information about the file."
+msgstr ""
+
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.types.message.Message.forwarded_from:1
+msgid "*Optional*. For forwarded messages, information about the original sender."
+msgstr ""
+
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.types.message.Message.forwarded_no_link:1
+msgid "*Optional*. Text to display instead of a user link for private forwarders."
+msgstr ""
+
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.types.message.Message.is_edited:1
+msgid "*Optional*. True, if the message was edited."
+msgstr ""
+
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.types.message.Message.location:1
+msgid "*Optional*. Message is a shared location, information about the location."
+msgstr ""
+
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.types.message.Message.message_id:1
+msgid "Unique message identifier."
+msgstr ""
+
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.types.message.Message.metadata:1
+msgid "*Optional*. Special entities like bold, italic, links, etc. that appear in the text."
+msgstr ""
+
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.types.message.Message.poll:1
+msgid "*Optional*. Message is a native poll, information about the poll."
+msgstr ""
+
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.types.message.Message.reply_to_message_id:1
+msgid "*Optional*. For replies, identifier of the original message."
+msgstr ""
+
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.types.message.Message.sender_id:1
+msgid "Unique identifier of the sender."
+msgstr ""
+
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.types.message.Message.sender_type:1
+msgid "Type of the message sender (e.g., User, Bot)."
+msgstr ""
+
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.types.message.Message.sticker:1
+msgid "*Optional*. Message is a sticker, information about the sticker."
+msgstr ""
+
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.types.message.Message.text:1
+msgid "*Optional*. For text messages, the actual UTF-8 text of the message."
+msgstr ""
+
+#: ../../../aiorubi/types/message.py:docstring of aiorubi.types.message.Message.time:1
+msgid "Date the message was sent in Unix time."
+msgstr ""
+
+#: ../../../aiorubi/types/inline_message.py:docstring of aiorubi.types.inline_message.InlineMessage:1
+msgid "This object represents a message when a user interacts with its inline keypad."
+msgstr ""
+
+#: ../../../aiorubi/types/inline_message.py:docstring of aiorubi.types.inline_message.InlineMessage:3
+msgid "Source: https://rubika.ir/botapi/models#inlinemessage"
+msgstr ""
+
+#: ../../../aiorubi/types/inline_message.py:docstring of aiorubi.types.inline_message.InlineMessage.aux_data:1
+msgid "*Optional*. Auxiliary data (like button_id) associated with the click."
+msgstr ""
+
+#: ../../../aiorubi/types/inline_message.py:docstring of aiorubi.types.inline_message.InlineMessage.chat_id:1
+msgid "Unique identifier of the chat where the message is located."
+msgstr ""
+
+#: ../../../aiorubi/types/inline_message.py:docstring of aiorubi.types.inline_message.InlineMessage.file:1
+msgid "*Optional*. File attached to the message, if available."
+msgstr ""
+
+#: ../../../aiorubi/types/inline_message.py:docstring of aiorubi.types.inline_message.InlineMessage.location:1
+msgid "*Optional*. Location attached to the message, if available."
+msgstr ""
+
+#: ../../../aiorubi/types/inline_message.py:docstring of aiorubi.types.inline_message.InlineMessage.message_id:1
+msgid "Unique identifier of the message containing the inline keypad."
+msgstr ""
+
+#: ../../../aiorubi/types/inline_message.py:docstring of aiorubi.types.inline_message.InlineMessage.sender_id:1
+msgid "Unique identifier of the user who clicked the button."
+msgstr ""
+
+#: ../../../aiorubi/types/inline_message.py:docstring of aiorubi.types.inline_message.InlineMessage.text:1
+msgid "*Optional*. Text of the message, if available."
+msgstr ""
+
+#: ../../../aiorubi/types/removed_message.py:docstring of aiorubi.types.removed_message.RemovedMessage:1
+msgid "This object is received when a message is deleted in a Rubika chat."
+msgstr ""
+
+#: ../../../aiorubi/types/removed_message.py:docstring of aiorubi.types.removed_message.RemovedMessage.chat_id:1
+msgid "Unique identifier of the chat where the message was removed. Injected automatically from the parent Update object."
+msgstr ""
+
+#: ../../../aiorubi/types/removed_message.py:docstring of aiorubi.types.removed_message.RemovedMessage.message_id:1
+msgid "Unique identifier of the removed message."
+msgstr ""
+
+#: ../../../aiorubi/types/started_bot.py:docstring of aiorubi.types.started_bot.StartedBot:1
+msgid "This object represents the event where a user started the bot."
+msgstr ""
+
+#: ../../../aiorubi/types/started_bot.py:docstring of aiorubi.types.started_bot.StartedBot.chat_id:1
+msgid "Unique identifier of the chat that started the bot."
+msgstr ""
+
+#: ../../../aiorubi/types/stopped_bot.py:docstring of aiorubi.types.stopped_bot.StoppedBot:1
+msgid "This object represents the event where a user stopped (blocked) the bot."
+msgstr ""
+
+#: ../../../aiorubi/types/stopped_bot.py:docstring of aiorubi.types.stopped_bot.StoppedBot.chat_id:1
+msgid "Unique identifier of the chat that stopped the bot."
+msgstr ""
+
+#: ../../api/types.rst:39
+msgid "Content"
+msgstr ""
+
+#: ../../../aiorubi/types/file.py:docstring of aiorubi.types.file.File:1
+msgid "This object represents a file in Rubika."
+msgstr ""
+
+#: ../../../aiorubi/types/file.py:docstring of aiorubi.types.file.File:3
+msgid "Source: https://rubika.ir/botapi/models#file"
+msgstr ""
+
+#: ../../../aiorubi/types/file.py:docstring of aiorubi.types.file.File.file_id:1
+msgid "Unique identifier for this file."
+msgstr ""
+
+#: ../../../aiorubi/types/file.py:docstring of aiorubi.types.file.File.file_name:1
+msgid "*Optional*. File name."
+msgstr ""
+
+#: ../../../aiorubi/types/file.py:docstring of aiorubi.types.file.File.size:1
+msgid "*Optional*. File size in bytes."
+msgstr ""
+
+#: ../../../aiorubi/types/sticker.py:docstring of aiorubi.types.sticker.Sticker:1
+msgid "This object represents a sticker."
+msgstr ""
+
+#: ../../../aiorubi/types/sticker.py:docstring of aiorubi.types.sticker.Sticker:3
+msgid "Source: https://rubika.ir/botapi/models#sticker"
+msgstr ""
+
+#: ../../../aiorubi/types/sticker.py:docstring of aiorubi.types.sticker.Sticker.emoji_character:1
+msgid "*Optional*. Emoji associated with the sticker."
+msgstr ""
+
+#: ../../../aiorubi/types/sticker.py:docstring of aiorubi.types.sticker.Sticker.file:1
+msgid "Information about the sticker file."
+msgstr ""
+
+#: ../../../aiorubi/types/sticker.py:docstring of aiorubi.types.sticker.Sticker.sticker_id:1
+msgid "Unique identifier for this sticker."
+msgstr ""
+
+#: ../../../aiorubi/types/location.py:docstring of aiorubi.types.location.Location:1
+msgid "This object represents a geographic location."
+msgstr ""
+
+#: ../../../aiorubi/types/location.py:docstring of aiorubi.types.location.Location:3
+msgid "Source: https://rubika.ir/botapi/models#location"
+msgstr ""
+
+#: ../../../aiorubi/types/location.py:docstring of aiorubi.types.location.Location.latitude:1
+msgid "Latitude as defined by sender."
+msgstr ""
+
+#: ../../../aiorubi/types/location.py:docstring of aiorubi.types.location.Location.longitude:1
+msgid "Longitude as defined by sender."
+msgstr ""
+
+#: ../../../aiorubi/types/contact_message.py:docstring of aiorubi.types.contact_message.ContactMessage:1
+msgid "This object represents a shared contact."
+msgstr ""
+
+#: ../../../aiorubi/types/contact_message.py:docstring of aiorubi.types.contact_message.ContactMessage:3
+msgid "Source: https://rubika.ir/botapi/models#contactmessage"
+msgstr ""
+
+#: ../../../aiorubi/types/contact_message.py:docstring of aiorubi.types.contact_message.ContactMessage.first_name:1
+msgid "Contact's first name."
+msgstr ""
+
+#: ../../../aiorubi/types/contact_message.py:docstring of aiorubi.types.contact_message.ContactMessage.last_name:1
+msgid "*Optional*. Contact's last name."
+msgstr ""
+
+#: ../../../aiorubi/types/contact_message.py:docstring of aiorubi.types.contact_message.ContactMessage.phone_number:1
+msgid "Contact's phone number."
+msgstr ""
+
+#: ../../../aiorubi/types/poll.py:docstring of aiorubi.types.poll.Poll:1
+msgid "This object contains information about a poll."
+msgstr ""
+
+#: ../../../aiorubi/types/poll.py:docstring of aiorubi.types.poll.Poll:3
+msgid "Source: https://rubika.ir/botapi/models#poll"
+msgstr ""
+
+#: ../../../aiorubi/types/poll.py:docstring of aiorubi.types.poll.Poll.options:1
+msgid "List of poll options."
+msgstr ""
+
+#: ../../../aiorubi/types/poll.py:docstring of aiorubi.types.poll.Poll.poll_status:1
+msgid "Current status of the poll."
+msgstr ""
+
+#: ../../../aiorubi/types/poll.py:docstring of aiorubi.types.poll.Poll.question:1
+msgid "The question of the poll."
+msgstr ""
+
+#: ../../../aiorubi/types/poll_status.py:docstring of aiorubi.types.poll_status.PollStatus:1
+msgid "This object contains the current status of a poll."
+msgstr ""
+
+#: ../../../aiorubi/types/poll_status.py:docstring of aiorubi.types.poll_status.PollStatus:3
+msgid "Source: https://rubika.ir/botapi/models#pollstatus"
+msgstr ""
+
+#: ../../../aiorubi/types/poll_status.py:docstring of aiorubi.types.poll_status.PollStatus.percent_vote_options:1
+msgid "List of vote percentages for each option."
+msgstr ""
+
+#: ../../../aiorubi/types/poll_status.py:docstring of aiorubi.types.poll_status.PollStatus.selection_index:1
+msgid "Index of the option chosen by the user. Returns -1 if no option is selected."
+msgstr ""
+
+#: ../../../aiorubi/types/poll_status.py:docstring of aiorubi.types.poll_status.PollStatus.show_total_votes:1
+msgid "True, if the total number of votes should be displayed to the user."
+msgstr ""
+
+#: ../../../aiorubi/types/poll_status.py:docstring of aiorubi.types.poll_status.PollStatus.state:1
+msgid "Current state of the poll (e.g., 'Open' or 'Closed')."
+msgstr ""
+
+#: ../../../aiorubi/types/poll_status.py:docstring of aiorubi.types.poll_status.PollStatus.total_vote:1
+msgid "Total number of votes cast in the poll."
+msgstr ""
+
+#: ../../../aiorubi/types/forwarded_from.py:docstring of aiorubi.types.forwarded_from.ForwardedFrom:1
+#: ../../../aiorubi/types/forwarded_no_link.py:docstring of aiorubi.types.forwarded_no_link.ForwardedNoLink:1
+msgid "This object represents information about a forwarded message."
+msgstr ""
+
+#: ../../../aiorubi/types/forwarded_from.py:docstring of aiorubi.types.forwarded_from.ForwardedFrom:3
+msgid "Source: https://rubika.ir/botapi/models#forwardedfrom"
+msgstr ""
+
+#: ../../../aiorubi/types/forwarded_from.py:docstring of aiorubi.types.forwarded_from.ForwardedFrom.from_chat_id:1
+msgid "Identifier of the source chat from which the message was forwarded."
+msgstr ""
+
+#: ../../../aiorubi/types/forwarded_from.py:docstring of aiorubi.types.forwarded_from.ForwardedFrom.from_sender_id:1
+msgid "*Optional*. Identifier of the original sender of the message."
+msgstr ""
+
+#: ../../../aiorubi/types/forwarded_from.py:docstring of aiorubi.types.forwarded_from.ForwardedFrom.message_id:1
+msgid "Identifier of the original message that was forwarded."
+msgstr ""
+
+#: ../../../aiorubi/types/forwarded_from.py:docstring of aiorubi.types.forwarded_from.ForwardedFrom.type_from:1
+msgid "Type of the forward source (User, Channel or Bot)."
+msgstr ""
+
+#: ../../../aiorubi/types/forwarded_no_link.py:docstring of aiorubi.types.forwarded_no_link.ForwardedNoLink.from_title:1
+msgid "Title of the forward source."
+msgstr ""
+
+#: ../../../aiorubi/types/aux_data.py:docstring of aiorubi.types.aux_data.AuxData:1
+msgid "This object represents auxiliary data associated with messages and button clicks."
+msgstr ""
+
+#: ../../../aiorubi/types/aux_data.py:docstring of aiorubi.types.aux_data.AuxData:3
+msgid "Source: https://rubika.ir/botapi/models#auxdata"
+msgstr ""
+
+#: ../../../aiorubi/types/aux_data.py:docstring of aiorubi.types.aux_data.AuxData.button_id:1
+msgid "Optional. The identifier of the button that was clicked."
+msgstr ""
+
+#: ../../../aiorubi/types/aux_data.py:docstring of aiorubi.types.aux_data.AuxData.start_id:1
+msgid "Optional. The start parameter from a deep link (e.g., st=...)."
+msgstr ""
+
+#: ../../../aiorubi/types/metadata.py:docstring of aiorubi.types.metadata.MetaData:1
+msgid "A smart container for MetaDataPart objects."
+msgstr ""
+
+#: ../../../aiorubi/types/metadata.py:docstring of aiorubi.types.metadata.MetaData:3
+msgid "This model acts as a List in Python but automatically wraps/unwraps the 'meta_data_parts' layer required by Rubika's API."
+msgstr ""
+
+#: ../../../aiorubi/types/metadata.py:docstring of aiorubi.types.metadata.MetaData:6
+msgid "Note: The 'metadata' wrapper structure is undocumented in some parts of the official Rubika API reference."
+msgstr ""
+
+#: ../../../aiorubi/types/metadata.py:docstring of aiorubi.types.metadata.MetaData.unwrap_metadata:1
+msgid "Unwraps the 'meta_data_parts' key if the incoming data is a dict. This ensures the model can be initialized from raw API responses."
+msgstr ""
+
+#: ../../../aiorubi/types/metadata.py:docstring of aiorubi.types.metadata.MetaData.wrap_metadata:1
+msgid "Wraps the list into the 'meta_data_parts' key during serialization. This prepares the data for the Rubika API request format."
+msgstr ""
+
+#: ../../../aiorubi/types/metadata.py:docstring of aiorubi.types.metadata.MetaDataPart:1
+msgid "Represents a single formatting entity within a message text."
+msgstr ""
+
+#: ../../../aiorubi/types/metadata.py:docstring of aiorubi.types.metadata.MetaDataPart:3
+msgid "This model includes fields discovered through community research and reverse engineering, as some are not officially documented in the Rubika Bot API docs."
+msgstr ""
+
+#: ../../../aiorubi/types/metadata.py:docstring of aiorubi.types.metadata.MetaDataPart.from_index:1
+msgid "Offset in UTF-16 code units to the start of the entity"
+msgstr ""
+
+#: ../../../aiorubi/types/metadata.py:docstring of aiorubi.types.metadata.MetaDataPart.length:1
+msgid "Length of the entity in UTF-16 code units"
+msgstr ""
+
+#: ../../../aiorubi/types/metadata.py:docstring of aiorubi.types.metadata.MetaDataPart.link_url:1
+msgid "*Optional*. URL for 'Link' type entities. (Not found in official docs)"
+msgstr ""
+
+#: ../../../aiorubi/types/metadata.py:docstring of aiorubi.types.metadata.MetaDataPart.mention_text_user_id:1
+msgid "*Optional*. Target User ID for 'MentionText' entities. (Not found in official docs)"
+msgstr ""
+
+#: ../../../aiorubi/types/metadata.py:docstring of aiorubi.types.metadata.MetaDataPart.type:1
+msgid "Type of the entity (e.g., 'Bold', 'Italic', 'Link', 'MentionText')"
+msgstr ""
+
+#: ../../api/types.rst:78
+msgid "Keypads and buttons"
+msgstr ""
+
+#: ../../../aiorubi/types/keypad.py:docstring of aiorubi.types.keypad.Keypad:1
+msgid "This object represents a keypad (inline or chat) with rows of buttons."
+msgstr ""
+
+#: ../../../aiorubi/types/keypad.py:docstring of aiorubi.types.keypad.Keypad:3
+msgid "Source: https://rubika.ir/botapi/models#keypad"
+msgstr ""
+
+#: ../../../aiorubi/types/keypad.py:docstring of aiorubi.types.keypad.Keypad.one_time_keyboard:1
+msgid "*Optional*. Requests clients to hide the keypad as soon as it's been used."
+msgstr ""
+
+#: ../../../aiorubi/types/keypad.py:docstring of aiorubi.types.keypad.Keypad.resize_keyboard:1
+msgid "*Optional*. Requests clients to rescale the keypad vertically for optimal fit."
+msgstr ""
+
+#: ../../../aiorubi/types/keypad.py:docstring of aiorubi.types.keypad.Keypad.rows:1
+msgid "List of keypad rows, each containing buttons."
+msgstr ""
+
+#: ../../../aiorubi/types/keypad_row.py:docstring of aiorubi.types.keypad_row.KeypadRow:1
+msgid "This object represents a row of buttons in a keypad."
+msgstr ""
+
+#: ../../../aiorubi/types/keypad_row.py:docstring of aiorubi.types.keypad_row.KeypadRow:3
+msgid "Source: https://rubika.ir/botapi/models#keypadrow"
+msgstr ""
+
+#: ../../../aiorubi/types/keypad_row.py:docstring of aiorubi.types.keypad_row.KeypadRow.buttons:1
+msgid "List of buttons in a single row."
+msgstr ""
+
+#: ../../../aiorubi/types/button.py:docstring of aiorubi.types.button.Button:1
+msgid "This object represents an interactive button in a message or keypad."
+msgstr ""
+
+#: ../../../aiorubi/types/button.py:docstring of aiorubi.types.button.Button:3
+msgid "Source: https://rubika.ir/botapi/models#button"
+msgstr ""
+
+#: ../../../aiorubi/types/button.py:docstring of aiorubi.types.button.Button.button_calendar:1
+msgid "*Optional*. Data for a calendar button."
+msgstr ""
+
+#: ../../../aiorubi/types/button.py:docstring of aiorubi.types.button.Button.button_location:1
+msgid "*Optional*. Data for a location selection button."
+msgstr ""
+
+#: ../../../aiorubi/types/button.py:docstring of aiorubi.types.button.Button.button_number_picker:1
+msgid "*Optional*. Data for a number picker button."
+msgstr ""
+
+#: ../../../aiorubi/types/button.py:docstring of aiorubi.types.button.Button.button_selection:1
+msgid "*Optional*. Data for a selection list button."
+msgstr ""
+
+#: ../../../aiorubi/types/button.py:docstring of aiorubi.types.button.Button.button_string_picker:1
+msgid "*Optional*. Data for a string picker button."
+msgstr ""
+
+#: ../../../aiorubi/types/button.py:docstring of aiorubi.types.button.Button.button_text:1
+msgid "Text displayed on the button."
+msgstr ""
+
+#: ../../../aiorubi/types/button.py:docstring of aiorubi.types.button.Button.button_textbox:1
+msgid "*Optional*. Data for a text input button."
+msgstr ""
+
+#: ../../../aiorubi/types/button.py:docstring of aiorubi.types.button.Button.id:1
+msgid "Unique identifier for the button."
+msgstr ""
+
+#: ../../../aiorubi/types/button.py:docstring of aiorubi.types.button.Button.type:1
+msgid "Type of the button (defines its behavior)."
+msgstr ""
+
+#: ../../../aiorubi/types/button_selection.py:docstring of aiorubi.types.button_selection.ButtonSelection:1
+msgid "This object represents the settings for a selection button."
+msgstr ""
+
+#: ../../../aiorubi/types/button_selection.py:docstring of aiorubi.types.button_selection.ButtonSelection:3
+msgid "Source: https://rubika.ir/botapi/models#buttonselection"
+msgstr ""
+
+#: ../../../aiorubi/types/button_selection.py:docstring of aiorubi.types.button_selection.ButtonSelection.columns_count:1
+msgid "Number of columns to display items in."
+msgstr ""
+
+#: ../../../aiorubi/types/button_selection.py:docstring of aiorubi.types.button_selection.ButtonSelection.get_type:1
+msgid "Type of item retrieval (e.g., Offline/Sync)."
+msgstr ""
+
+#: ../../../aiorubi/types/button_selection.py:docstring of aiorubi.types.button_selection.ButtonSelection.is_multi_selection:1
+msgid "True, if the user can select multiple options."
+msgstr ""
+
+#: ../../../aiorubi/types/button_selection.py:docstring of aiorubi.types.button_selection.ButtonSelection.items:1
+msgid "List of items to be displayed in the selection."
+msgstr ""
+
+#: ../../../aiorubi/types/button_selection.py:docstring of aiorubi.types.button_selection.ButtonSelection.search_type:1
+msgid "Type of search functionality."
+msgstr ""
+
+#: ../../../aiorubi/types/button_selection.py:docstring of aiorubi.types.button_selection.ButtonSelection.selection_id:1
+msgid "Unique identifier for the selection list."
+msgstr ""
+
+#: ../../../aiorubi/types/button_selection.py:docstring of aiorubi.types.button_selection.ButtonSelection.title:1
+msgid "*Optional*. Title of the selection menu."
+msgstr ""
+
+#: ../../../aiorubi/types/button_selection_item.py:docstring of aiorubi.types.button_selection_item.ButtonSelectionItem:1
+msgid "This object represents an item in a selection list."
+msgstr ""
+
+#: ../../../aiorubi/types/button_selection_item.py:docstring of aiorubi.types.button_selection_item.ButtonSelectionItem:3
+msgid "Source: https://rubika.ir/botapi/models#buttonselectionitem"
+msgstr ""
+
+#: ../../../aiorubi/types/button_selection_item.py:docstring of aiorubi.types.button_selection_item.ButtonSelectionItem.image_url:1
+msgid "*Optional*. URL of the image associated with the option."
+msgstr ""
+
+#: ../../../aiorubi/types/button_selection_item.py:docstring of aiorubi.types.button_selection_item.ButtonSelectionItem.text:1
+msgid "Text of the button."
+msgstr ""
+
+#: ../../../aiorubi/types/button_selection_item.py:docstring of aiorubi.types.button_selection_item.ButtonSelectionItem.type:1
+msgid "Type of the button selection display."
+msgstr ""
+
+#: ../../../aiorubi/types/button_calendar.py:docstring of aiorubi.types.button_calendar.ButtonCalendar:1
+msgid "This object represents the settings for a calendar button."
+msgstr ""
+
+#: ../../../aiorubi/types/button_calendar.py:docstring of aiorubi.types.button_calendar.ButtonCalendar:3
+msgid "Source: https://rubika.ir/botapi/models#buttoncalendar"
+msgstr ""
+
+#: ../../../aiorubi/types/button_calendar.py:docstring of aiorubi.types.button_calendar.ButtonCalendar.default_value:1
+msgid "*Optional*. Initial date displayed to the user."
+msgstr ""
+
+#: ../../../aiorubi/types/button_calendar.py:docstring of aiorubi.types.button_calendar.ButtonCalendar.max_year:1
+msgid "Maximum selectable year in the calendar."
+msgstr ""
+
+#: ../../../aiorubi/types/button_calendar.py:docstring of aiorubi.types.button_calendar.ButtonCalendar.min_year:1
+msgid "Minimum selectable year in the calendar."
+msgstr ""
+
+#: ../../../aiorubi/types/button_calendar.py:docstring of aiorubi.types.button_calendar.ButtonCalendar.title:1
+msgid "Title of the calendar button."
+msgstr ""
+
+#: ../../../aiorubi/types/button_calendar.py:docstring of aiorubi.types.button_calendar.ButtonCalendar.type:1
+msgid "Type of the calendar (e.g., Persian or Gregorian)."
+msgstr ""
+
+#: ../../../aiorubi/types/button_number_picker.py:docstring of aiorubi.types.button_number_picker.ButtonNumberPicker:1
+msgid "This object represents the settings for a number picker button."
+msgstr ""
+
+#: ../../../aiorubi/types/button_number_picker.py:docstring of aiorubi.types.button_number_picker.ButtonNumberPicker:3
+msgid "Source: https://rubika.ir/botapi/models#buttonnumberpicker"
+msgstr ""
+
+#: ../../../aiorubi/types/button_number_picker.py:docstring of aiorubi.types.button_number_picker.ButtonNumberPicker.default_value:1
+msgid "*Optional*. Initial value displayed to the user."
+msgstr ""
+
+#: ../../../aiorubi/types/button_number_picker.py:docstring of aiorubi.types.button_number_picker.ButtonNumberPicker.max_value:1
+msgid "Maximum selectable value."
+msgstr ""
+
+#: ../../../aiorubi/types/button_number_picker.py:docstring of aiorubi.types.button_number_picker.ButtonNumberPicker.min_value:1
+msgid "Minimum selectable value."
+msgstr ""
+
+#: ../../../aiorubi/types/button_number_picker.py:docstring of aiorubi.types.button_number_picker.ButtonNumberPicker.title:1
+msgid "Title of the button."
+msgstr ""
+
+#: ../../../aiorubi/types/button_string_picker.py:docstring of aiorubi.types.button_string_picker.ButtonStringPicker:1
+msgid "This object represents the settings for a string picker button."
+msgstr ""
+
+#: ../../../aiorubi/types/button_string_picker.py:docstring of aiorubi.types.button_string_picker.ButtonStringPicker:3
+msgid "Source: https://rubika.ir/botapi/models#buttonstringpicker"
+msgstr ""
+
+#: ../../../aiorubi/types/button_string_picker.py:docstring of aiorubi.types.button_string_picker.ButtonStringPicker.default_value:1
+msgid "*Optional*. The initial string value displayed to the user."
+msgstr ""
+
+#: ../../../aiorubi/types/button_string_picker.py:docstring of aiorubi.types.button_string_picker.ButtonStringPicker.items:1
+msgid "List of strings representing the selectable options."
+msgstr ""
+
+#: ../../../aiorubi/types/button_string_picker.py:docstring of aiorubi.types.button_string_picker.ButtonStringPicker.title:1
+msgid "*Optional*. Title of the string picker button."
+msgstr ""
+
+#: ../../../aiorubi/types/button_textbox.py:docstring of aiorubi.types.button_textbox.ButtonTextbox:1
+msgid "This object represents the settings for a textbox input button."
+msgstr ""
+
+#: ../../../aiorubi/types/button_textbox.py:docstring of aiorubi.types.button_textbox.ButtonTextbox:3
+msgid "Source: https://rubika.ir/botapi/models#buttontextbox"
+msgstr ""
+
+#: ../../../aiorubi/types/button_textbox.py:docstring of aiorubi.types.button_textbox.ButtonTextbox.default_value:1
+msgid "*Optional*. Initial value displayed in the textbox."
+msgstr ""
+
+#: ../../../aiorubi/types/button_textbox.py:docstring of aiorubi.types.button_textbox.ButtonTextbox.place_holder:1
+msgid "*Optional*. Placeholder text displayed in the input field."
+msgstr ""
+
+#: ../../../aiorubi/types/button_textbox.py:docstring of aiorubi.types.button_textbox.ButtonTextbox.title:1
+msgid "*Optional*. Title of the textbox button."
+msgstr ""
+
+#: ../../../aiorubi/types/button_textbox.py:docstring of aiorubi.types.button_textbox.ButtonTextbox.type_keypad:1
+msgid "Type of keypad displayed for text input (e.g., String or Numeric)."
+msgstr ""
+
+#: ../../../aiorubi/types/button_textbox.py:docstring of aiorubi.types.button_textbox.ButtonTextbox.type_line:1
+msgid "Determines if the text input is single-line or multi-line."
+msgstr ""
+
+#: ../../../aiorubi/types/button_location.py:docstring of aiorubi.types.button_location.ButtonLocation:1
+msgid "This object represents the settings for a location input button."
+msgstr ""
+
+#: ../../../aiorubi/types/button_location.py:docstring of aiorubi.types.button_location.ButtonLocation:3
+msgid "Source: https://rubika.ir/botapi/models#buttonlocation"
+msgstr ""
+
+#: ../../../aiorubi/types/button_location.py:docstring of aiorubi.types.button_location.ButtonLocation.default_map_location:1
+msgid "The initial coordinates for the center of the map view."
+msgstr ""
+
+#: ../../../aiorubi/types/button_location.py:docstring of aiorubi.types.button_location.ButtonLocation.default_pointer_location:1
+msgid "The initial coordinates for the map pointer."
+msgstr ""
+
+#: ../../../aiorubi/types/button_location.py:docstring of aiorubi.types.button_location.ButtonLocation.title:1
+msgid "*Optional*. Title of the location button."
+msgstr ""
+
+#: ../../../aiorubi/types/button_location.py:docstring of aiorubi.types.button_location.ButtonLocation.type:1
+msgid "Type of map interaction (e.g., Pick or View)."
+msgstr ""
+
+#: ../../api/types.rst:111
+msgid "Bot & chat"
+msgstr ""
+
+#: ../../../aiorubi/types/bot_info.py:docstring of aiorubi.types.bot_info.BotInfo:1
+msgid "This object represents a Rubika bot's public information."
+msgstr ""
+
+#: ../../../aiorubi/types/bot_info.py:docstring of aiorubi.types.bot_info.BotInfo:3
+msgid "Source: https://rubika.ir/botapi/models#bot"
+msgstr ""
+
+#: ../../../aiorubi/types/bot_info.py:docstring of aiorubi.types.bot_info.BotInfo.avatar:1
+msgid "*Optional*. Bot's profile picture."
+msgstr ""
+
+#: ../../../aiorubi/types/bot_info.py:docstring of aiorubi.types.bot_info.BotInfo.bot_id:1
+msgid "Unique identifier for this bot."
+msgstr ""
+
+#: ../../../aiorubi/types/bot_info.py:docstring of aiorubi.types.bot_info.BotInfo.bot_title:1
+msgid "Display title of the bot."
+msgstr ""
+
+#: ../../../aiorubi/types/bot_info.py:docstring of aiorubi.types.bot_info.BotInfo.description:1
+msgid "*Optional*. Bot's description."
+msgstr ""
+
+#: ../../../aiorubi/types/bot_info.py:docstring of aiorubi.types.bot_info.BotInfo.share_url:1
+msgid "*Optional*. Shareable link for the bot."
+msgstr ""
+
+#: ../../../aiorubi/types/bot_info.py:docstring of aiorubi.types.bot_info.BotInfo.start_message:1
+msgid "*Optional*. The message shown to users when they start the bot."
+msgstr ""
+
+#: ../../../aiorubi/types/bot_info.py:docstring of aiorubi.types.bot_info.BotInfo.username:1
+msgid "*Optional*. Bot's username."
+msgstr ""
+
+#: ../../../aiorubi/types/bot_command.py:docstring of aiorubi.types.bot_command.BotCommand:1
+msgid "This object represents one bot command."
+msgstr ""
+
+#: ../../../aiorubi/types/bot_command.py:docstring of aiorubi.types.bot_command.BotCommand:3
+msgid "Source: https://rubika.ir/botapi/models#botcommand"
+msgstr ""
+
+#: ../../../aiorubi/types/bot_command.py:docstring of aiorubi.types.bot_command.BotCommand.command:1
+msgid "Text of the command; 1-32 characters. Can contain only lowercase English letters, digits and underscores."
+msgstr ""
+
+#: ../../../aiorubi/types/bot_command.py:docstring of aiorubi.types.bot_command.BotCommand.description:1
+msgid "Description of the command; 1-256 characters."
+msgstr ""
+
+#: ../../../aiorubi/types/chat.py:docstring of aiorubi.types.chat.Chat:1
+msgid "This object represents a chat in Rubika. It can be a private conversation with a user, a group, or a channel."
+msgstr ""
+
+#: ../../../aiorubi/types/chat.py:docstring of aiorubi.types.chat.Chat:4
+msgid "Source: https://rubika.ir/botapi/models#chat"
+msgstr ""
+
+#: ../../../aiorubi/types/chat.py:docstring of aiorubi.types.chat.Chat.chat_id:1
+msgid "Unique identifier for this chat."
+msgstr ""
+
+#: ../../../aiorubi/types/chat.py:docstring of aiorubi.types.chat.Chat.chat_type:1
+msgid "Type of the chat, can be either 'User', 'Bot', 'Group' or 'Channel'"
+msgstr ""
+
+#: ../../../aiorubi/types/chat.py:docstring of aiorubi.types.chat.Chat.first_name:1
+msgid "*Optional*. First name of the other party in a private chat."
+msgstr ""
+
+#: ../../../aiorubi/types/chat.py:docstring of aiorubi.types.chat.Chat.full_name:1
+msgid "Get full name of the chat."
+msgstr ""
+
+#: ../../../aiorubi/types/chat.py:docstring of aiorubi.types.chat.Chat.full_name:3
+msgid "For private chat it is first_name + last_name. For other chat types it is title."
+msgstr ""
+
+#: ../../../aiorubi/types/chat.py:docstring of aiorubi.types.chat.Chat.last_name:1
+msgid "*Optional*. Last name of the other party in a private chat."
+msgstr ""
+
+#: ../../../aiorubi/types/chat.py:docstring of aiorubi.types.chat.Chat.title:1
+msgid "*Optional*. Title, for groups and channels."
+msgstr ""
+
+#: ../../../aiorubi/types/chat.py:docstring of aiorubi.types.chat.Chat.user_id:1
+msgid "*Optional*. Unique identifier for the user in private chats."
+msgstr ""
+
+#: ../../../aiorubi/types/chat.py:docstring of aiorubi.types.chat.Chat.username:1
+msgid "*Optional*. Username of the chat or user if available."
+msgstr ""
+
+#: ../../api/types.rst:123
+msgid "Files transfer"
+msgstr ""
+
+#: ../../../aiorubi/types/input_file.py:docstring of aiorubi.types.input_file.InputFile:1
+msgid "This object represents the contents of a file to be uploaded. In Rubika, this is used to stream file data to the 'upload_url' obtained from 'requestSendFile'."
+msgstr ""
+
+#: ../../../aiorubi/types/get_updates_response.py:docstring of aiorubi.types.get_updates_response.GetUpdatesResponse:1
+msgid "This object represents the response from getUpdates method. It contains a list of updates and the ID for the next request."
+msgstr ""
+
+#: ../../../aiorubi/types/get_updates_response.py:docstring of aiorubi.types.get_updates_response.GetUpdatesResponse.next_offset_id:1
+msgid "The identifier to be used as 'offset_id' in the next request."
+msgstr ""
+
+#: ../../../aiorubi/types/get_updates_response.py:docstring of aiorubi.types.get_updates_response.GetUpdatesResponse.updates:1
+msgid "An array of incoming updates."
+msgstr ""
+
+#: ../../../aiorubi/types/update_endpoint_status.py:docstring of aiorubi.types.update_endpoint_status.UpdateEndpointsStatus.status:1
+msgid "The status of the update process"
+msgstr ""
+
+#: ../../api/types.rst:144
+msgid "Misc"
+msgstr ""
+
+#: ../../../aiorubi/types/error_event.py:docstring of aiorubi.types.error_event.ErrorEvent:1
+msgid "Internal event, should be used to receive errors while processing Updates from Rubika"
+msgstr ""
+
+#: ../../../aiorubi/types/error_event.py:docstring of aiorubi.types.error_event.ErrorEvent.exception:1
+msgid "Exception"
+msgstr ""
+
+#: ../../../aiorubi/types/error_event.py:docstring of aiorubi.types.error_event.ErrorEvent.update:1
+msgid "Received update"
+msgstr ""
+
+#: ../../../aiorubi/types/response_parameters.py:docstring of aiorubi.types.response_parameters.ResponseParameters:1
+msgid "Describes why a request was unsuccessful."
+msgstr ""
+
+#: ../../../aiorubi/types/response_parameters.py:docstring of aiorubi.types.response_parameters.ResponseParameters:3
+msgid "In Rubika, this model captures the error details provided in the 'dev_message' and 'status' fields."
+msgstr ""
+
+#: ../../../aiorubi/types/response_parameters.py:docstring of aiorubi.types.response_parameters.ResponseParameters.dev_message:1
+msgid "*Optional*. Detailed error message from Rubika API."
+msgstr ""
+
+#: ../../../aiorubi/types/response_parameters.py:docstring of aiorubi.types.response_parameters.ResponseParameters.migrate_to_chat_id:1
+msgid "*Optional*. The group has been migrated to a supergroup with the specified identifier."
+msgstr ""
+
+#: ../../../aiorubi/types/response_parameters.py:docstring of aiorubi.types.response_parameters.ResponseParameters.retry_after:1
+msgid "*Optional*. In case of exceeding flood control, the number of seconds left to wait before the request can be repeated"
+msgstr ""
+
+#: ../../../aiorubi/types/message_keypad_update.py:docstring of aiorubi.types.message_keypad_update.MessageKeypadUpdate:1
+msgid "This object is used to update an inline keypad in response to a button click."
+msgstr ""
+
+#: ../../../aiorubi/types/message_keypad_update.py:docstring of aiorubi.types.message_keypad_update.MessageKeypadUpdate:3
+msgid "Source: https://rubika.ir/botapi/models#messagekeypadupdate"
+msgstr ""
+
+#: ../../../aiorubi/types/message_keypad_update.py:docstring of aiorubi.types.message_keypad_update.MessageKeypadUpdate.inline_keypad:1
+msgid "The new inline keypad to replace the existing one."
+msgstr ""
+
+#: ../../../aiorubi/types/message_keypad_update.py:docstring of aiorubi.types.message_keypad_update.MessageKeypadUpdate.message_id:1
+msgid "Unique identifier of the message whose keypad is being updated."
+msgstr ""
+
+#: ../../../aiorubi/types/message_text_update.py:docstring of aiorubi.types.message_text_update.MessageTextUpdate:1
+msgid "This object represents a text update for a message. It is returned when the text of a message changes as a result of interaction with an Inline Keypad."
+msgstr ""
+
+#: ../../../aiorubi/types/message_text_update.py:docstring of aiorubi.types.message_text_update.MessageTextUpdate:5
+msgid "Source: https://rubika.ir/botapi/models#messagetextupdate"
+msgstr ""
+
+#: ../../../aiorubi/types/message_text_update.py:docstring of aiorubi.types.message_text_update.MessageTextUpdate.message_id:1
+msgid "Unique identifier of the message that was updated."
+msgstr ""
+
+#: ../../../aiorubi/types/message_text_update.py:docstring of aiorubi.types.message_text_update.MessageTextUpdate.text:1
+msgid "The new text of the message after the update."
+msgstr ""

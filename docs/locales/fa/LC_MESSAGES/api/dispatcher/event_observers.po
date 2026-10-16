@@ -1,0 +1,62 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Event observers"
+msgstr  "ناظران رویداد"
+
+msgid "Internals of the event propagation system."
+msgstr  "سازوکار داخلی سیستم انتشار رویداد."
+
+msgid "Simple events observer"
+msgstr  "ناظر رویداد ساده"
+
+msgid "Is used for managing events is not related with Rubika (For example startup/shutdown processes)"
+msgstr  "برای مدیریت رویدادهای غیرمرتبط با روبیکا استفاده می‌شود (مثلاً فرایندهای راه‌اندازی/خاموشی)"
+
+msgid "Handlers can be registered via decorator or method"
+msgstr  "هندلرها با دکوریتور یا متد قابل ثبت هستند"
+
+msgid "Register callback with filters"
+msgstr  "ثبت کال‌بک همراه با فیلترها"
+
+msgid "Parameters"
+msgstr  "پارامترها"
+
+msgid "Return type"
+msgstr  "نوع بازگشتی"
+
+msgid "Propagate event to handlers. Handler will be called when all its filters is pass."
+msgstr  "رویداد به هندلرها منتقل می‌شود. هندلری فراخوانی می‌شود که همهٔ فیلترهایش عبور کنند."
+
+msgid "Event observer for Rubika events"
+msgstr  "ناظر رویداد برای رویدادهای روبیکا"
+
+msgid "Here you can register handler with filter. This observer will stop event propagation when first handler is pass."
+msgstr  "اینجا می‌توانید هندلر همراه فیلتر ثبت کنید. این ناظر انتشار رویداد را با اولین هندلرِ مطابق متوقف می‌کند."
+
+msgid "Register filter for all handlers of this event observer"
+msgstr  "ثبت فیلتر برای همهٔ هندلرهای این ناظر رویداد"
+
+msgid "positional filters"
+msgstr  "فیلترهای موقعیتی"
+
+msgid "Register event handler"
+msgstr  "ثبت هندلر رویداد"
+
+msgid "Propagate event to handlers and stops propagation on first match. Handler will be called when all its filters are pass."
+msgstr  "رویداد به هندلرها منتقل می‌شود و با اولین مطابقت، انتشار متوقف می‌گردد. هندلری فراخوانی می‌شود که همهٔ فیلترهایش عبور کنند."
+

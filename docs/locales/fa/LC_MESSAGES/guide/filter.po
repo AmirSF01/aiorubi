@@ -1,0 +1,305 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../guide/filter.rst:3
+msgid "Filters"
+msgstr "فیلترها"
+
+#: ../../guide/filter.rst:5
+msgid "Filters decide whether an update should reach a handler. Every observer call — ``@dp.new_message(...)``, ``@router.inline_message(...)`` — accepts an arbitrary number of filters as positional arguments. All filters must pass for the handler to be triggered, and the observer stops propagation at the **first** matching handler."
+msgstr "فیلترها تصمیم می‌گیرند آیا آپدیت به هندلر برسد یا نه. هر فراخوانی ناظر — ``@dp.new_message(...)``، ``@router.inline_message(...)`` — تعداد دلخواهی فیلتر را به‌عنوان آرگومان‌های موقعیتی می‌پذیرد. برای اجرای هندلر، همهٔ فیلترها باید پاس شوند و ناظر انتشار را در **اولین** هندلر منطبق متوقف می‌کند."
+
+#: ../../guide/filter.rst:18
+msgid "Built-in filters"
+msgstr "فیلترهای داخلی"
+
+#: ../../guide/filter.rst:20
+msgid "All of these live in :mod:`aiorubi.filters` (re-exported from ``aiorubi.filters.command``, ``...state``, etc.): ``Command``, ``CommandStart``, ``CommandObject``, ``StateFilter``, ``MagicData``, ``ExceptionTypeFilter``, ``ExceptionMessageFilter``, the combinators ``and_f`` / ``or_f`` / ``invert_f``, and the base class ``Filter`` (alias ``BaseFilter``)."
+msgstr "همهٔ این‌ها در :mod:`aiorubi.filters` زندگی می‌کنند (بازصادرشده از ``aiorubi.filters.command``، ``...state`` و غیره): ``Command``، ``CommandStart``، ``CommandObject``، ``StateFilter``، ``MagicData``، ``ExceptionTypeFilter``، ``ExceptionMessageFilter``، ترکیب‌کننده‌های ``and_f`` / ``or_f`` / ``invert_f`` و کلاس پایهٔ ``Filter`` (مستعار ``BaseFilter``)."
+
+#: ../../guide/filter.rst:28
+msgid "Command"
+msgstr "دستور"
+
+#: ../../guide/filter.rst:30
+msgid "`aiorubi.filters.command.Command(*values, commands=None, prefix=\"/\", ignore_case=False, ignore_mention=False, magic=None)`"
+msgstr "`aiorubi.filters.command.Command(*values, commands=None, prefix=\"/\", ignore_case=False, ignore_mention=False, magic=None)`"
+
+#: ../../guide/filter.rst:32
+msgid "Matches text messages that start with one of the given commands. Works only with :class:`~aiorubi.types.message.Message` events that have a ``text``."
+msgstr "با پیام‌های متنی که با یکی از دستورهای داده‌شده شروع شوند match می‌شود. فقط با رویدادهای :class:`~aiorubi.types.message.Message` که ``text`` دارند کار می‌کند."
+
+#: ../../guide/filter.rst:35
+msgid "``values`` / ``commands`` — command names (``\"start\"``) or compiled regular expressions; ``BotCommand`` objects are accepted too."
+msgstr "``values`` / ``commands`` — نام دستورها (``\"start\"``) یا عبارت‌های باقاعدهٔ کامپایل‌شده؛ اشیاء ``BotCommand`` هم پذیرفته می‌شوند."
+
+#: ../../guide/filter.rst:37
+msgid "``prefix`` — allowed prefix characters, default ``\"/\"``. Pass ``\"/!\"`` to accept both ``/start`` and ``!start``."
+msgstr "``prefix`` — کاراکترهای پیشوند مجاز، پیش‌فرض ``\"/\"``. برای پذیرفتن هم ``/start`` و هم ``!start`` مقدار ``\"/!\"`` بدهید."
+
+#: ../../guide/filter.rst:39
+msgid "``ignore_case`` — case-fold matching (does not apply to regexp patterns)."
+msgstr "``ignore_case`` — تطبیق بدون حساسیت به بزرگی/کوچکی حروف (روی الگوهای regexp اثر ندارد)."
+
+#: ../../guide/filter.rst:40
+msgid "``ignore_mention`` — by default a command addressed to another bot (``/start@other_bot``) does not match; set ``True`` to ignore the mention."
+msgstr "``ignore_mention`` — به‌طور پیش‌فرض دستوری که به بات دیگری خطاب شده (``/start@other_bot``) match نمی‌شود؛ برای نادیده‌گرفتن منشن ``True`` بگذارید."
+
+#: ../../guide/filter.rst:43
+msgid "``magic`` — an extra :class:`~aiorubi.utils.magic_filter.MagicFilter` applied to the parsed :class:`~aiorubi.filters.command.CommandObject`."
+msgstr "``magic`` — یک :class:`~aiorubi.utils.magic_filter.MagicFilter` اضافی که روی :class:`~aiorubi.filters.command.CommandObject` تجزیه‌شده اعمال می‌شود."
+
+#: ../../guide/filter.rst:46
+msgid "When the filter passes it injects the ``command`` keyword argument — a frozen dataclass with ``prefix``, ``command``, ``mention``, ``args``, ``regexp_match`` and the helpers ``.mentioned`` and ``.text``:"
+msgstr "وقتی فیلتر پاس شود آرگومان کلیدواژه‌ای ``command`` را تزریق می‌کند — یک dataclass تغییرناپذیر با ``prefix``، ``command``، ``mention``، ``args``، ``regexp_match`` و کمکی‌های ``.mentioned`` و ``.text``:"
+
+#: ../../guide/filter.rst:56
+msgid ":class:`~aiorubi.filters.command.CommandStart` is a shortcut for ``Command(\"start\")`` with deep-link validation: ``CommandStart(deep_link=True, deep_link_encoded=True)`` requires a payload argument and base64-decodes it."
+msgstr ":class:`~aiorubi.filters.command.CommandStart` میان‌بری برای ``Command(\"start\")`` با اعتبارسنجی دیپ‌لینک است: ``CommandStart(deep_link=True, deep_link_encoded=True)`` آرگومان payload می‌خواهد و آن را base64-کدگشایی می‌کند."
+
+#: ../../guide/filter.rst:62
+msgid "StateFilter"
+msgstr "StateFilter"
+
+#: ../../guide/filter.rst:64
+msgid "`aiorubi.filters.state.StateFilter(*states)`"
+msgstr "`aiorubi.filters.state.StateFilter(*states)`"
+
+#: ../../guide/filter.rst:66
+msgid "Checks the update against the current FSM state (see :doc:`fsm`). Accepts any mix of :class:`~aiorubi.fsm.state.State` objects, ``StatesGroup`` classes/instances, raw strings, ``None`` and the ``\"*\"`` wildcard — at least one is required:"
+msgstr "آپدیت را با حالت فعلی FSM مقایسه می‌کند (ببینید :doc:`fsm`). هر ترکیبی از اشیاء :class:`~aiorubi.fsm.state.State`، کلاس‌ها/نمونه‌های ``StatesGroup``، رشته‌های خام، ``None`` و wildcard ‌``\"*\"`` را می‌پذیرد — حداقل یکی لازم است:"
+
+#: ../../guide/filter.rst:79
+msgid "Subclassing a ``StatesGroup`` includes the parent's states in the check. Passing a :class:`~aiorubi.fsm.state.State` as decorator filter is equivalent to the plain ``Form.name`` shorthand shown in :doc:`fsm`."
+msgstr "زیرکلاس‌کردن یک ``StatesGroup`` حالت‌های والد را هم در بررسی وارد می‌کند. پاس‌دادن یک :class:`~aiorubi.fsm.state.State` به‌عنوان فیلتر دکوریتور، هم‌ارز میان‌بر سادهٔ ``Form.name`` است که در :doc:`fsm` دیدید."
+
+#: ../../guide/filter.rst:84
+msgid "CallbackData (ButtonId)"
+msgstr "CallbackData (ButtonId)"
+
+#: ../../guide/filter.rst:86
+msgid "Rubika inline keypads carry a ``button_id`` string in the ``aux_data`` of an :class:`~aiorubi.types.inline_message.InlineMessage`. The :mod:`aiorubi.filters.callback_data` module provides a structured wrapper for it:"
+msgstr "کیبوردهای درون‌خطی روبیکا یک رشتهٔ ``button_id`` در ``aux_data`` یک :class:`~aiorubi.types.inline_message.InlineMessage` حمل می‌کنند. ماژول :mod:`aiorubi.filters.callback_data` یک پوشش ساختاریافته برای آن فراهم می‌کند:"
+
+#: ../../guide/filter.rst:91
+msgid "``aiorubi.filters.callback_data.ButtonId``"
+msgstr "``aiorubi.filters.callback_data.ButtonId``"
+
+#: ../../guide/filter.rst:93
+msgid "A pydantic model base class. Subclass it with a required ``prefix=`` keyword and declare the payload fields; then use ``.pack()`` when building keypads and ``.filter()`` as the handler filter:"
+msgstr "یک کلاس پایهٔ مدل pydantic. با کلیدواژهٔ الزامی ``prefix=`` از آن ارث ببرید و فیلدهای payload را اعلان کنید؛ بعد موقع ساخت کیبورد از ``.pack()`` و به‌عنوان فیلتر هندلر از ``.filter()`` استفاده کنید:"
+
+#: ../../guide/filter.rst:117
+msgid "``Nav.filter(rule=None)`` returns an :class:`~aiorubi.filters.callback_data.InlineMessageFilter` which unpacks the incoming ``button_id`` and injects it as the ``button_id`` argument. Encodable field types: ``str``, ``int``, ``float``, ``bool``, ``Enum``, ``UUID``, ``Decimal``, ``Fraction`` and ``None`` (optional fields). The packed id must stay under 64 bytes."
+msgstr "``Nav.filter(rule=None)`` یک :class:`~aiorubi.filters.callback_data.InlineMessageFilter` برمی‌گرداند که ``button_id`` ورودی را باز می‌کند و به‌عنوان آرگومان ``button_id`` تزریق می‌کند. انواع فیلد قابل‌کدگذاری: ``str``، ``int``، ``float``، ``bool``، ``Enum``، ``UUID``، ``Decimal``، ``Fraction`` و ``None`` (فیلدهای اختیاری). شناسهٔ فشرده باید زیر ۶۴ بایت بماند."
+
+#: ../../guide/filter.rst:125
+msgid "MagicData"
+msgstr "MagicData"
+
+#: ../../guide/filter.rst:127
+msgid "`aiorubi.filters.magic_data.MagicData(magic_data: MagicFilter)`"
+msgstr "`aiorubi.filters.magic_data.MagicData(magic_data: MagicFilter)`"
+
+#: ../../guide/filter.rst:129
+msgid "Resolves a magic-filter expression against the whole handler *context* — the event (as ``F.event``) plus every keyword the dispatcher provides (``bot``, ``state``, ``raw_state``, ``event_chat``, ``event_from_user``, …):"
+msgstr "یک عبارت فیلتر-جادویی را روی کل *کانتکست* هندلر resolve می‌کند — رویداد (به‌صورت ``F.event``) به‌علاوهٔ هر کلیدواژه‌ای که دیسپچر ارائه می‌دهد (``bot``، ``state``، ``raw_state``، ``event_chat``، ``event_from_user`` و …):"
+
+#: ../../guide/filter.rst:142
+msgid "ExceptionTypeFilter / ExceptionMessageFilter"
+msgstr "ExceptionTypeFilter / ExceptionMessageFilter"
+
+#: ../../guide/filter.rst:144
+msgid "For the ``error`` observer, whose event is an :class:`~aiorubi.types.error_event.ErrorEvent`:"
+msgstr "برای ناظر ``error`` که رویدادش یک :class:`~aiorubi.types.error_event.ErrorEvent` است:"
+
+#: ../../guide/filter.rst:157
+msgid "``ExceptionMessageFilter`` injects the regexp match as ``match_exception``."
+msgstr "``ExceptionMessageFilter`` نتیجهٔ match کردن regexp را به‌عنوان ``match_exception`` تزریق می‌کند."
+
+#: ../../guide/filter.rst:161
+msgid "MagicFilter — the ``F`` object"
+msgstr "MagicFilter — شیء ``F``"
+
+#: ../../guide/filter.rst:163
+msgid "``F`` (exported from :mod:`aiorubi`) is a :class:`aiorubi.utils.magic_filter.MagicFilter` instance. Indexing or calling attributes on it *builds* a filter expression; the expression is resolved against the event when a filter check runs:"
+msgstr "``F`` (صادرشده از :mod:`aiorubi`) یک نمونهٔ :class:`aiorubi.utils.magic_filter.MagicFilter` است. اندیس‌گذاری یا فراخوانی ویژگی‌ها روی آن، یک عبارت فیلتر *می‌سازد*؛ عبارت هنگام اجرای بررسی فیلتر روی رویداد resolve می‌شود:"
+
+#: ../../guide/filter.rst:180
+msgid "The result of any expression is a valid filter, so you can mix ``F`` with the built-ins freely."
+msgstr "نتیجهٔ هر عبارتی یک فیلتر معتبر است، پس می‌توانید ``F`` را آزادانه با فیلترهای داخلی ترکیب کنید."
+
+#: ../../guide/filter.rst:184
+msgid "Storing results with ``as_()``"
+msgstr "ذخیرهٔ نتایج با ``as_()``"
+
+#: ../../guide/filter.rst:186
+msgid "aiorubi extends the upstream magic-filter with ``as_(name)``: when the filter passes, the resolved value is injected into the handler under ``name``:"
+msgstr "aiorubi فیلتر-جادویی بالادستی را با ``as_(name)`` گسترش می‌دهد: وقتی فیلتر پاس شود، مقدار resolve‌شده زیر ``name`` به هندلر تزریق می‌شود:"
+
+#: ../../guide/filter.rst:197
+msgid "Writing custom filters"
+msgstr "نوشتن فیلترهای سفارشی"
+
+#: ../../guide/filter.rst:200
+msgid "Async and sync function filters"
+msgstr "فیلترهای تابعی async و sync"
+
+#: ../../guide/filter.rst:202
+msgid "The simplest filter is a function. It receives the event plus the same contextual keyword arguments as a handler and returns ``bool`` — or a ``dict`` whose entries are injected into the handler:"
+msgstr "ساده‌ترین فیلتر یک تابع است. رویداد به‌علاوهٔ همان آرگومان‌های کلیدواژه‌ای کانتکستی هندلر را می‌گیرد و ``bool`` برمی‌گرداند — یا یک ``dict`` که مقادیرش به هندلر تزریق می‌شوند:"
+
+#: ../../guide/filter.rst:213
+msgid "Synchronous functions work too — they are executed in a thread via :func:`asyncio.to_thread`, so long CPU-bound checks do not block the loop."
+msgstr "توابع همگام هم کار می‌کنند — از طریق :func:`asyncio.to_thread` در یک thread اجرا می‌شوند، پس بررسی‌های طولانی CPU-محور حلقه را مسدود نمی‌کنند."
+
+#: ../../guide/filter.rst:217
+msgid "Class-based filters"
+msgstr "فیلترهای کلاس‌محور"
+
+#: ../../guide/filter.rst:219
+msgid "Subclass :class:`~aiorubi.filters.base.Filter` and override the async ``__call__``. Constructor arguments make the filter configurable and instances are reusable:"
+msgstr "از :class:`~aiorubi.filters.base.Filter` ارث ببرید و ``__call__`` ناهمگام را بازنویسی کنید. آرگومان‌های سازنده فیلتر را قابل‌تنظیم می‌کنند و نمونه‌ها قابل استفادهٔ مجددند:"
+
+#: ../../guide/filter.rst:243
+msgid "Returning ``False`` skips the handler; returning ``True`` passes; returning a ``dict`` passes **and** merges the entries into the handler kwargs."
+msgstr "برگرداندن ``False`` هندلر را رد می‌کند؛ ``True`` پاس می‌کند؛ برگرداندن یک ``dict`` پاس می‌کند **و** مقادیرش را در kwargs هندلر ادغام می‌کند."
+
+#: ../../guide/filter.rst:246
+msgid "Lambdas and ``F`` both work as drop-in callables — the dispatcher detects ``MagicFilter`` instances (including the plain ``magic_filter`` package object) automatically."
+msgstr "lambda و ``F`` هر دو به‌عنوان فراخوانی‌پذیر آماده کار می‌کنند — دیسپچر نمونه‌های ``MagicFilter`` (از جمله شیء سادهٔ پکیج ``magic_filter``) را به‌طور خودکار تشخیص می‌دهد."
+
+#: ../../guide/filter.rst:251
+msgid "Combining filters"
+msgstr "ترکیب فیلترها"
+
+#: ../../guide/filter.rst:253
+msgid "**Positional arguments** on an observer are combined with logical AND: all must pass."
+msgstr "**آرگومان‌های موقعیتی** روی یک ناظر با AND منطقی ترکیب می‌شوند: همه باید پاس شوند."
+
+#: ../../guide/filter.rst:255
+msgid "``&`` / ``|`` / ``~`` on magic-filter expressions build combined expressions."
+msgstr "``&`` / ``|`` / ``~`` روی عبارت‌های فیلتر-جادویی، عبارت‌های ترکیبی می‌سازند."
+
+#: ../../guide/filter.rst:257
+msgid "``and_f``, ``or_f`` and ``invert_f`` combine arbitrary filters (class-based or functions):"
+msgstr "``and_f``، ``or_f`` و ``invert_f`` فیلترهای دلخواه (کلاس‌محور یا تابعی) را ترکیب می‌کنند:"
+
+#: ../../guide/filter.rst:267
+msgid "``~filter`` (invert) works on any :class:`~aiorubi.filters.base.Filter` instance."
+msgstr "``~filter`` (وارونگی) روی هر نمونهٔ :class:`~aiorubi.filters.base.Filter` کار می‌کند."
+
+#: ../../guide/filter.rst:271
+msgid "Filter order and short-circuiting"
+msgstr "ترتیب فیلترها و کوتاه‌کردن مسیر"
+
+#: ../../guide/filter.rst:273
+msgid "Two independent short-circuits are at play:"
+msgstr "دو کوتاه‌کردن مسیرِ مستقل در کار است:"
+
+#: ../../guide/filter.rst:275
+msgid "**Within one handler** — filters are checked in declaration order and the check stops at the first failure. Put cheap filters first:"
+msgstr "**داخل یک هندلر** — فیلترها به ترتیب اعلان بررسی می‌شوند و بررسی در اولین شکست متوقف می‌شود. فیلترهای ارزان را اول بگذارید:"
+
+#: ../../guide/filter.rst:284
+msgid "**Within one observer** — handlers are evaluated in registration order and propagation stops at the first fully matching handler. A handler can pass control to the next one by raising :class:`~aiorubi.dispatcher.event.bases.SkipHandler`. Router-level filters (``observer.filter(...)``) are checked before handler filters."
+msgstr "**داخل یک ناظر** — هندلرها به ترتیب ثبت ارزیابی می‌شوند و انتشار در اولین هندلرِ کاملاً منطبق متوقف می‌شود. هندلر می‌تواند با پرتاب :class:`~aiorubi.dispatcher.event.bases.SkipHandler` کنترل را به بعدی بدهد. فیلترهای سطح روتِر (``observer.filter(...)``) قبل از فیلترهای هندلر بررسی می‌شوند."
+
+#: ../../guide/filter.rst:291
+msgid "How filters receive data"
+msgstr "فیلترها چطور داده دریافت می‌کنند"
+
+#: ../../guide/filter.rst:293
+msgid "Every filter call receives ``(event, **context)``. The context is built by the middleware chain and includes at least:"
+msgstr "هر فراخوانی فیلتر ``(event, **context)`` می‌گیرد. کانتکست توسط زنجیرهٔ میان‌افزارها ساخته می‌شود و حداقل شامل:"
+
+#: ../../guide/filter.rst:300
+msgid "Key"
+msgstr "کلید"
+
+#: ../../guide/filter.rst:301
+msgid "Provided by"
+msgstr "ارائه‌دهنده"
+
+#: ../../guide/filter.rst:302
+msgid "``bot``"
+msgstr "``bot``"
+
+#: ../../guide/filter.rst:303
+msgid "The :class:`~aiorubi.client.bot.Bot` instance (always present)."
+msgstr "نمونهٔ :class:`~aiorubi.client.bot.Bot` (همیشه هست)."
+
+#: ../../guide/filter.rst:304
+msgid "``event_update``"
+msgstr "``event_update``"
+
+#: ../../guide/filter.rst:305
+msgid "The raw :class:`~aiorubi.types.update.Update` envelope."
+msgstr "پاکت خام :class:`~aiorubi.types.update.Update`."
+
+#: ../../guide/filter.rst:306
+msgid "``event_context``, ``event_from_user``, ``event_chat``"
+msgstr "``event_context``، ``event_from_user``، ``event_chat``"
+
+#: ../../guide/filter.rst:307
+msgid ":class:`~aiorubi.dispatcher.middlewares.user_context.UserContextMiddleware`."
+msgstr ":class:`~aiorubi.dispatcher.middlewares.user_context.UserContextMiddleware`."
+
+#: ../../guide/filter.rst:308
+msgid "``state``, ``raw_state``, ``fsm_storage``"
+msgstr "``state``، ``raw_state``، ``fsm_storage``"
+
+#: ../../guide/filter.rst:309
+msgid "The FSM middleware (unless FSM is disabled) — see :doc:`fsm`."
+msgstr "میان‌افزار FSM (مگر FSM غیرفعال باشد) — ببینید :doc:`fsm`."
+
+#: ../../guide/filter.rst:310
+msgid "``scenes``"
+msgstr "``scenes``"
+
+#: ../../guide/filter.rst:311
+msgid "The scenes middleware, when a :class:`~aiorubi.fsm.scene.SceneRegistry` is installed — see :doc:`scenes`."
+msgstr "میان‌افزار صحنه‌ها، وقتی یک :class:`~aiorubi.fsm.scene.SceneRegistry` نصب شده — ببینید :doc:`scenes`."
+
+#: ../../guide/filter.rst:314
+msgid "dict results of earlier filters"
+msgstr "نتایج dict فیلترهای قبلی"
+
+#: ../../guide/filter.rst:315
+msgid "e.g. ``command``, ``button_id``, ``match_exception``."
+msgstr "مثلاً ``command``، ``button_id``، ``match_exception``."
+
+#: ../../guide/filter.rst:317
+msgid "Type your filter's ``__call__`` with only the parameters it needs — any declared parameter name is matched from the context, exactly like handler dependency injection."
+msgstr "``__call__`` فیلترتان را فقط با پارامترهایی که لازم دارد type کنید — هر نام پارامتر اعلان‌شده از کانتکست match می‌شود، دقیقاً مثل تزریق وابستگی هندلر."
+
+#: ../../guide/filter.rst:322
+msgid "See also"
+msgstr "همچنین ببینید"
+
+#: ../../guide/filter.rst:324
+msgid ":doc:`fsm` — state filters and the ``raw_state`` value."
+msgstr ":doc:`fsm` — فیلترهای حالت و مقدار ``raw_state``."
+
+#: ../../guide/filter.rst:325
+msgid ":doc:`scenes` — scenes use the same filter syntax inside ``@scene.on.new_message(...)``."
+msgstr ":doc:`scenes` — صحنه‌ها داخل ``@scene.on.new_message(...)`` از همان سینتکس فیلتر استفاده می‌کنند."
+
+#: ../../guide/filter.rst:327
+msgid ":doc:`dispatcher` — observer registration order and router filters."
+msgstr ":doc:`dispatcher` — ترتیب ثبت ناظرها و فیلترهای روتِر."
+

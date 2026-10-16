@@ -1,0 +1,221 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tutorial/03_messages_and_filters.rst:5
+msgid "3. Messages, media & event types"
+msgstr "۳. پیام‌ها، رسانه و انواع رویداد"
+
+#: ../../tutorial/03_messages_and_filters.rst:7
+msgid "Rubika delivers several kinds of updates. So far we only handled ``new_message``. In this chapter we will look at the ``Message`` model, the other observers, and how to react to media."
+msgstr "روبیکا چند نوع آپدیت می‌فرستد. تا اینجا فقط ``new_message`` را مدیریت کردیم. در این فصل مدل ``Message``، ناظرهای دیگر و نحوهٔ واکنش به رسانه را می‌بینیم."
+
+#: ../../tutorial/03_messages_and_filters.rst:13
+msgid "The Message model"
+msgstr "مدل Message"
+
+#: ../../tutorial/03_messages_and_filters.rst:15
+msgid "Every message — text, image, voice, poll, … — is one :class:`~aiorubi.types.message.Message` object. Content lives in dedicated attributes:"
+msgstr "هر پیام — متن، تصویر، ویس، نظرسنجی و … — یک شیء :class:`~aiorubi.types.message.Message` است. محتوا در ویژگی‌های مخصوص قرار دارد:"
+
+#: ../../tutorial/03_messages_and_filters.rst:23
+msgid "Attribute"
+msgstr "ویژگی"
+
+#: ../../tutorial/03_messages_and_filters.rst:24
+msgid "Present when"
+msgstr "حاضر وقتی که"
+
+#: ../../tutorial/03_messages_and_filters.rst:25
+msgid "``text``"
+msgstr "``text``"
+
+#: ../../tutorial/03_messages_and_filters.rst:26
+msgid "plain text message"
+msgstr "پیام متنی ساده"
+
+#: ../../tutorial/03_messages_and_filters.rst:27
+msgid "``file``"
+msgstr "``file``"
+
+#: ../../tutorial/03_messages_and_filters.rst:28
+msgid "image, video, voice, music, gif or generic file"
+msgstr "تصویر، ویدیو، ویس، موسیقی، گیف یا فایل عمومی"
+
+#: ../../tutorial/03_messages_and_filters.rst:29
+msgid "``sticker``"
+msgstr "``sticker``"
+
+#: ../../tutorial/03_messages_and_filters.rst:30
+msgid "sticker message"
+msgstr "پیام استیکر"
+
+#: ../../tutorial/03_messages_and_filters.rst:31
+msgid "``location``"
+msgstr "``location``"
+
+#: ../../tutorial/03_messages_and_filters.rst:32
+msgid "shared location"
+msgstr "موقعیت مکانی به‌اشتراک‌گذاشته"
+
+#: ../../tutorial/03_messages_and_filters.rst:33
+msgid "``contact_message``"
+msgstr "``contact_message``"
+
+#: ../../tutorial/03_messages_and_filters.rst:34
+msgid "shared contact"
+msgstr "مخاطب به‌اشتراک‌گذاشته"
+
+#: ../../tutorial/03_messages_and_filters.rst:35
+msgid "``poll``"
+msgstr "``poll``"
+
+#: ../../tutorial/03_messages_and_filters.rst:36
+msgid "native poll"
+msgstr "نظرسنجی بومی"
+
+#: ../../tutorial/03_messages_and_filters.rst:38
+msgid "Exactly one of them is set (plus always ``message_id``, ``time``, ``sender_id``, ``chat_id``)."
+msgstr "دقیقاً یکی از آن‌ها مقدار دارد (به‌علاوه همیشه ``message_id``، ``time``، ``sender_id``، ``chat_id``)."
+
+#: ../../tutorial/03_messages_and_filters.rst:51
+msgid "``F.file`` is truthy only when the message actually carries a file."
+msgstr "``F.file`` فقط وقتی truthy است که پیام واقعاً فایل داشته باشد."
+
+#: ../../tutorial/03_messages_and_filters.rst:55
+msgid "Other observers"
+msgstr "ناظرهای دیگر"
+
+#: ../../tutorial/03_messages_and_filters.rst:57
+msgid "A :class:`Router <aiorubi.dispatcher.router.Router>` exposes one observer per Rubika update type:"
+msgstr "یک :class:`Router <aiorubi.dispatcher.router.Router>` برای هر نوع آپدیت روبیکا یک ناظر ارائه می‌دهد:"
+
+#: ../../tutorial/03_messages_and_filters.rst:63
+msgid "Observer"
+msgstr "ناظر"
+
+#: ../../tutorial/03_messages_and_filters.rst:64
+msgid "Event object"
+msgstr "شیء رویداد"
+
+#: ../../tutorial/03_messages_and_filters.rst:65
+msgid "``new_message``"
+msgstr "``new_message``"
+
+#: ../../tutorial/03_messages_and_filters.rst:66
+msgid ":class:`~aiorubi.types.message.Message`"
+msgstr ":class:`~aiorubi.types.message.Message`"
+
+#: ../../tutorial/03_messages_and_filters.rst:67
+msgid "``updated_message``"
+msgstr "``updated_message``"
+
+#: ../../tutorial/03_messages_and_filters.rst:68
+msgid ":class:`~aiorubi.types.message.Message` (edited version)"
+msgstr ":class:`~aiorubi.types.message.Message` (نسخهٔ ویرایش‌شده)"
+
+#: ../../tutorial/03_messages_and_filters.rst:69
+msgid "``removed_message``"
+msgstr "``removed_message``"
+
+#: ../../tutorial/03_messages_and_filters.rst:70
+msgid ":class:`~aiorubi.types.removed_message.RemovedMessage`"
+msgstr ":class:`~aiorubi.types.removed_message.RemovedMessage`"
+
+#: ../../tutorial/03_messages_and_filters.rst:71
+msgid "``inline_message``"
+msgstr "``inline_message``"
+
+#: ../../tutorial/03_messages_and_filters.rst:72
+msgid ":class:`~aiorubi.types.inline_message.InlineMessage`"
+msgstr ":class:`~aiorubi.types.inline_message.InlineMessage`"
+
+#: ../../tutorial/03_messages_and_filters.rst:73
+msgid "``started_bot``"
+msgstr "``started_bot``"
+
+#: ../../tutorial/03_messages_and_filters.rst:74
+msgid ":class:`~aiorubi.types.started_bot.StartedBot`"
+msgstr ":class:`~aiorubi.types.started_bot.StartedBot`"
+
+#: ../../tutorial/03_messages_and_filters.rst:75
+msgid "``stopped_bot``"
+msgstr "``stopped_bot``"
+
+#: ../../tutorial/03_messages_and_filters.rst:76
+msgid ":class:`~aiorubi.types.stopped_bot.StoppedBot`"
+msgstr ":class:`~aiorubi.types.stopped_bot.StoppedBot`"
+
+#: ../../tutorial/03_messages_and_filters.rst:77
+msgid "``errors``"
+msgstr "``errors``"
+
+#: ../../tutorial/03_messages_and_filters.rst:78
+msgid ":class:`~aiorubi.types.error_event.ErrorEvent`"
+msgstr ":class:`~aiorubi.types.error_event.ErrorEvent`"
+
+#: ../../tutorial/03_messages_and_filters.rst:80
+msgid "Example — reacting to edits:"
+msgstr "مثال — واکنش به ویرایش‌ها:"
+
+#: ../../tutorial/03_messages_and_filters.rst:90
+msgid "Message shortcuts"
+msgstr "میان‌برهای Message"
+
+#: ../../tutorial/03_messages_and_filters.rst:92
+msgid "The ``Message`` object carries shortcuts for the most common replies. Each has a ``reply_*`` (quotes the message) and an ``answer_*`` (does not quote) variant:"
+msgstr "شیء ``Message`` میان‌برهای رایج‌ترین پاسخ‌ها را دارد. هرکدام یک نسخهٔ ``reply_*`` (پیام را نقل می‌کند) و ``answer_*`` (نقل نمی‌کند) دارد:"
+
+#: ../../tutorial/03_messages_and_filters.rst:105
+msgid "All of them accept the same optional keyword arguments as their ``Bot.send_*`` counterpart (``inline_keypad``, ``chat_keypad``, ``metadata``, ``disable_notification``, …)."
+msgstr "همهٔ آن‌ها همان آرگومان‌های کلیدواژه‌ای اختیاری همتای ``Bot.send_*`` خود را می‌پذیرند (``inline_keypad``، ``chat_keypad``، ``metadata``، ``disable_notification`` و …)."
+
+#: ../../tutorial/03_messages_and_filters.rst:111
+msgid "Reply and answer — the difference"
+msgstr "reply و answer — تفاوت"
+
+#: ../../tutorial/03_messages_and_filters.rst:121
+msgid "Inside a ``new_message`` handler both go to the same ``chat_id`` — ``reply`` merely sets ``reply_to_message_id``."
+msgstr "داخل هندلر ``new_message`` هر دو به همان ``chat_id`` می‌روند — ``reply`` فقط ``reply_to_message_id`` را تنظیم می‌کند."
+
+#: ../../tutorial/03_messages_and_filters.rst:126
+msgid "sender_id — the user behind the message"
+msgstr "sender_id — کاربرِ پشت پیام"
+
+#: ../../tutorial/03_messages_and_filters.rst:128
+msgid "Rubika messages carry the sender id as a string:"
+msgstr "پیام‌های روبیکا شناسهٔ فرستنده را به‌صورت رشته حمل می‌کنند:"
+
+#: ../../tutorial/03_messages_and_filters.rst:142
+msgid "These ids are **strings** (e.g. ``\"3827491023\"``), never integers. Storing them in a JSON column or dict key works out of the box."
+msgstr "این شناسه‌ها **رشته‌اند** (مثلاً ``\"3827491023\"``)، هرگز عدد صحیح نیستند. ذخیره‌شان در ستون JSON یا کلید دیکشنری بدون هیچ کاری جواب می‌دهد."
+
+#: ../../tutorial/03_messages_and_filters.rst:147
+msgid "Errors as an event"
+msgstr "خطاها به‌عنوان یک رویداد"
+
+#: ../../tutorial/03_messages_and_filters.rst:149
+msgid "Exceptions raised inside any handler are caught by the built-in error middleware and routed to the ``errors`` observer. We will use this in chapter 8 to build a proper error handler."
+msgstr "استثناهای پرتاب‌شده داخل هر هندلر توسط میان‌افزار خطای داخلی گرفته می‌شوند و به ناظر ``errors`` می‌روند. در فصل ۸ از این برای ساخت یک هندلر خطای درست استفاده می‌کنیم."
+
+#: ../../tutorial/03_messages_and_filters.rst:155
+msgid "Recap"
+msgstr "جمع‌بندی"
+
+#: ../../tutorial/03_messages_and_filters.rst:157
+msgid "You now know the ``Message`` model, all seven observers, and the ``reply_*``/``answer_*`` shortcut family. Next: interactive keypads — the heart of any Rubika bot."
+msgstr "الان مدل ``Message``، هر هفت ناظر و خانوادهٔ میان‌برهای ``reply_*``/``answer_*`` را می‌شناسید. بعدی: کیبوردهای تعاملی — قلب هر بات روبیکا."
+

@@ -1,0 +1,213 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../guide/handlers.rst:3
+msgid "Handlers"
+msgstr "هندلرها"
+
+#: ../../guide/handlers.rst:5
+msgid "A handler is the code that runs when an update passes all filters of one observer. Handlers are plain ``async`` callables registered on an observer with either the decorator or the ``register`` form (see :doc:`router`)."
+msgstr "هندلر کدی است که وقتی آپدیت همهٔ فیلترهای یک ناظر را پاس می‌کند اجرا می‌شود. هندلرها فراخوانی‌پذیرهای ``async`` ساده‌اند که با دکوریتور یا فرم ``register`` روی یک ناظر ثبت می‌شوند (ببینید :doc:`router`)."
+
+#: ../../guide/handlers.rst:17
+msgid "Argument injection"
+msgstr "تزریق آرگومان"
+
+#: ../../guide/handlers.rst:19
+msgid "Handlers do not receive a fixed positional list — aiorubi inspects the signature and passes only the names the handler declares, drawn from the update context. Declare exactly what you need:"
+msgstr "هندلرها فهرست موقعیتی ثابتی نمی‌گیرند — aiorubi امضا را بررسی می‌کند و فقط نام‌هایی که هندلر اعلان کرده را از کانتکست آپدیت پاس می‌دهد. دقیقاً همان چیزی که لازم دارید را اعلان کنید:"
+
+#: ../../guide/handlers.rst:27
+msgid "Name"
+msgstr "نام"
+
+#: ../../guide/handlers.rst:28
+msgid "Value"
+msgstr "مقدار"
+
+#: ../../guide/handlers.rst:29
+msgid "``message``, ``inline_message``, ``event``"
+msgstr "``message``، ``inline_message``، ``event``"
+
+#: ../../guide/handlers.rst:30
+msgid "The event object for the observer (a :class:`~aiorubi.types.message.Message`, an :class:`~aiorubi.types.inline_message.InlineMessage`, …)."
+msgstr "شیء رویدادِ ناظر (یک :class:`~aiorubi.types.message.Message`، یک :class:`~aiorubi.types.inline_message.InlineMessage` و …)."
+
+#: ../../guide/handlers.rst:33
+msgid "``bot``"
+msgstr "``bot``"
+
+#: ../../guide/handlers.rst:34
+msgid "The :class:`~aiorubi.client.bot.Bot` instance."
+msgstr "نمونهٔ :class:`~aiorubi.client.bot.Bot`."
+
+#: ../../guide/handlers.rst:35
+msgid "``event_update``"
+msgstr "``event_update``"
+
+#: ../../guide/handlers.rst:36
+msgid "The raw :class:`~aiorubi.types.update.Update` envelope."
+msgstr "پاکت خام :class:`~aiorubi.types.update.Update`."
+
+#: ../../guide/handlers.rst:37
+msgid "``state`` / ``raw_state``"
+msgstr "``state`` / ``raw_state``"
+
+#: ../../guide/handlers.rst:38
+msgid "The FSM context / state string (see :doc:`fsm`)."
+msgstr "کانتکست FSM / رشتهٔ حالت (ببینید :doc:`fsm`)."
+
+#: ../../guide/handlers.rst:39
+msgid "``scenes``"
+msgstr "``scenes``"
+
+#: ../../guide/handlers.rst:40
+msgid "The :class:`~aiorubi.fsm.scene.ScenesManager`, when scenes are installed (see :doc:`scenes`)."
+msgstr ":class:`~aiorubi.fsm.scene.ScenesManager`، وقتی صحنه‌ها نصب شده‌اند (ببینید :doc:`scenes`)."
+
+#: ../../guide/handlers.rst:42
+msgid "``command``"
+msgstr "``command``"
+
+#: ../../guide/handlers.rst:43
+msgid "The :class:`~aiorubi.filters.command.CommandObject`, injected by the ``Command`` filter."
+msgstr ":class:`~aiorubi.filters.command.CommandObject`، تزریق‌شده توسط فیلتر ``Command``."
+
+#: ../../guide/handlers.rst:45
+msgid "``button_id``"
+msgstr "``button_id``"
+
+#: ../../guide/handlers.rst:46
+msgid "The unpacked ``ButtonId``, injected by ``ButtonId.filter()``."
+msgstr "``ButtonId`` باز‌شده، تزریق‌شده توسط ``ButtonId.filter()``."
+
+#: ../../guide/handlers.rst:47
+msgid "any workflow-data key"
+msgstr "هر کلید workflow-data"
+
+#: ../../guide/handlers.rst:48
+msgid "Values from ``Dispatcher(**kwargs)`` / ``dp[\"key\"] = ...``."
+msgstr "مقادیر از ``Dispatcher(**kwargs)`` / ``dp[\"key\"] = ...``."
+
+#: ../../guide/handlers.rst:49
+msgid "``**kwargs``"
+msgstr "``**kwargs``"
+
+#: ../../guide/handlers.rst:50
+msgid "Everything at once."
+msgstr "همه‌چیز یکجا."
+
+#: ../../guide/handlers.rst:58
+msgid "Unknown declared names are simply not passed; a handler that declares a name absent from the context gets nothing for it — use ``**kwargs`` or a default value if you are unsure."
+msgstr "نام‌های اعلان‌شدهٔ ناشناخته اصلاً پاس داده نمی‌شوند؛ هندلری که نامی غایب از کانتکست را اعلان کند، برای آن چیزی نمی‌گیرد — اگر مطمئن نیستید از ``**kwargs`` یا مقدار پیش‌فرض استفاده کنید."
+
+#: ../../guide/handlers.rst:62
+msgid "The first positional parameter conventionally receives the event, but the mechanism is name-based: ``(message)`` and ``(msg=message)``-style names only matter for readability. Anything your handler does not declare is not passed at all."
+msgstr "اولین پارامتر موقعیتی، طبق قرارداد، رویداد را می‌گیرد ولی سازوکار مبتنی بر نام است: نام‌هایی مثل ``(message)`` و ``(msg=message)`` فقط برای خوانایی مهم‌اند. هرچه هندلر اعلان نکند اصلاً پاس داده نمی‌شود."
+
+#: ../../guide/handlers.rst:68
+msgid "Message shortcuts"
+msgstr "میان‌برهای Message"
+
+#: ../../guide/handlers.rst:70
+msgid ":class:`~aiorubi.types.message.Message` carries shortcuts that build and bind API calls:"
+msgstr ":class:`~aiorubi.types.message.Message` میان‌برهایی دارد که فراخوانی‌های API را می‌سازند و می‌بندند:"
+
+#: ../../guide/handlers.rst:84
+msgid "All of them accept the keyword arguments of the underlying ``Bot.send_message`` / ``Bot.send_file`` (``inline_keypad=``, ``chat_keypad=``, ``metadata=``, …). :class:`InlineMessage` provides ``answer(text, **kwargs)`` for reacting to button clicks."
+msgstr "همهٔ آن‌ها آرگومان‌های کلیدواژه‌ای ``Bot.send_message`` / ``Bot.send_file`` زیرین را می‌پذیرند (``inline_keypad=``، ``chat_keypad=``، ``metadata=`` و …). :class:`InlineMessage` برای واکنش به کلیک دکمه‌ها ``answer(text, **kwargs)`` ارائه می‌دهد."
+
+#: ../../guide/handlers.rst:90
+msgid "Class-based handlers"
+msgstr "هندلرهای کلاس‌محور"
+
+#: ../../guide/handlers.rst:92
+msgid "Subclass :class:`~aiorubi.handlers.base.BaseHandler` and implement ``handle()``. The class is registered like a function; instantiation happens per update:"
+msgstr "از :class:`~aiorubi.handlers.base.BaseHandler` ارث ببرید و ``handle()`` را پیاده کنید. کلاس مثل یک تابع ثبت می‌شود؛ نمونه‌سازی برای هر آپدیت انجام می‌شود:"
+
+#: ../../guide/handlers.rst:107
+msgid "Available inside ``handle()``:"
+msgstr "داخل ``handle()`` در دسترس است:"
+
+#: ../../guide/handlers.rst:109
+msgid "``self.event`` — the event object."
+msgstr "``self.event`` — شیء رویداد."
+
+#: ../../guide/handlers.rst:110
+msgid "``self.data`` — the whole context dict (including ``state``, filters' injected values, workflow data)."
+msgstr "``self.data`` — کل دیکشنری کانتکست (شامل ``state``، مقادیر تزریق‌شدهٔ فیلترها، دادهٔ workflow)."
+
+#: ../../guide/handlers.rst:112
+msgid "``self.bot`` — shortcut property for ``self.data[\"bot\"]``."
+msgstr "``self.bot`` — ویژگی میان‌بر برای ``self.data[\"bot\"]``."
+
+#: ../../guide/handlers.rst:113
+msgid "``self.update`` — the raw :class:`~aiorubi.types.update.Update` envelope."
+msgstr "``self.update`` — پاکت خام :class:`~aiorubi.types.update.Update`."
+
+#: ../../guide/handlers.rst:115
+msgid "Class-based handlers are convenient when a handler needs constructor-time configuration shared across updates:"
+msgstr "هندلرهای کلاس‌محور وقتی مناسب‌اند که هندلر به پیکربندی زمانِ سازنده نیاز داشته باشد که بین آپدیت‌ها مشترک است:"
+
+#: ../../guide/handlers.rst:128
+msgid "Controlling propagation"
+msgstr "کنترل انتشار"
+
+#: ../../guide/handlers.rst:130
+msgid "Return normally — the observer stops; no other handler runs."
+msgstr "عادی برگردید — ناظر متوقف می‌شود؛ هندلر دیگری اجرا نمی‌شود."
+
+#: ../../guide/handlers.rst:131
+msgid "Raise :class:`~aiorubi.dispatcher.event.bases.SkipHandler` (or call ``skip()``) — the observer continues with the *next* handler:"
+msgstr ":class:`~aiorubi.dispatcher.event.bases.SkipHandler` پرتاب کنید (یا ``skip()`` صدا بزنید) — ناظر با هندلر *بعدی* ادامه می‌دهد:"
+
+#: ../../guide/handlers.rst:143
+msgid "Returning a :class:`~aiorubi.methods.base.RubikaMethod` from a webhook dispatch answers the webhook with that method."
+msgstr "برگرداندن یک :class:`~aiorubi.methods.base.RubikaMethod` از dispatch وب‌هوک، وب‌هوک را با آن متد پاسخ می‌دهد."
+
+#: ../../guide/handlers.rst:146
+msgid "A handler may also be registered with no filters at all — it then matches every event of that observer and is typically used as the fallback:"
+msgstr "هندلر را می‌توان بدون هیچ فیلتری هم ثبت کرد — در این صورت با هر رویداد آن ناظر match می‌شود و معمولاً به‌عنوان fallback استفاده می‌شود:"
+
+#: ../../guide/handlers.rst:156
+msgid "Error handlers"
+msgstr "هندلرهای خطا"
+
+#: ../../guide/handlers.rst:158
+msgid "Exceptions escaping any handler are caught by the built-in :class:`~aiorubi.dispatcher.middlewares.error.ErrorsMiddleware` and routed to the ``error`` observer. The event there is an :class:`~aiorubi.types.error_event.ErrorEvent` wrapping ``exception`` and the original ``update``:"
+msgstr "استثناهای فراری از هر هندلر توسط :class:`~aiorubi.dispatcher.middlewares.error.ErrorsMiddleware` داخلی گرفته می‌شوند و به ناظر ``error`` می‌روند. رویداد آنجا یک :class:`~aiorubi.types.error_event.ErrorEvent` است که ``exception`` و ``update`` اصلی را در بر دارد:"
+
+#: ../../guide/handlers.rst:172
+msgid "Combine with :class:`~aiorubi.filters.exception.ExceptionTypeFilter` / ``ExceptionMessageFilter`` (see :doc:`filter`) to specialise."
+msgstr "برای تخصصی‌کردن با :class:`~aiorubi.filters.exception.ExceptionTypeFilter` / ``ExceptionMessageFilter`` ترکیب کنید (ببینید :doc:`filter`)."
+
+#: ../../guide/handlers.rst:176
+msgid "See also"
+msgstr "همچنین ببینید"
+
+#: ../../guide/handlers.rst:178
+msgid ":doc:`filter` — everything about filters."
+msgstr ":doc:`filter` — همه‌چیز دربارهٔ فیلترها."
+
+#: ../../guide/handlers.rst:179
+msgid ":doc:`fsm` — the ``state`` argument in detail."
+msgstr ":doc:`fsm` — آرگومان ``state`` با جزئیات."
+
+#: ../../guide/handlers.rst:180
+msgid ":doc:`middlewares` — wrapping handlers with cross-cutting logic."
+msgstr ":doc:`middlewares` — پیچیدن هندلرها با منطق مشترک."
+

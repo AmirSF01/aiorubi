@@ -1,0 +1,146 @@
+# Persian translations for aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 00:00+0000\n"
+"PO-Revision-Date: 2026-09-09 00:00+0000\n"
+"Last-Translator: Mehdi\n"
+"Language-Team: fa\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+
+msgid "Getting started"
+msgstr "شروع کار"
+
+#: ../../index.rst:106
+msgid "Tutorial"
+msgstr "آموزش گام‌به‌گام"
+
+#: ../../index.rst:112
+msgid "Guides"
+msgstr "راهنماها"
+
+#: ../../index.rst:118
+msgid "API Reference"
+msgstr "مرجع API"
+
+#: ../../index.rst:124
+msgid "Project"
+msgstr "پروژه"
+
+#: ../../index.rst:3
+msgid "aiorubi |version| documentation"
+msgstr "مستندات aiorubi |version|"
+
+#: ../../index.rst:7
+msgid "**aiorubi** is a modern, fully asynchronous library for the `Rubika Bot API <https://rubika.ir/botapi>`_ written in Python 3.10+ using :doc:`asyncio <python:library/asyncio>` and `aiohttp <https://github.com/aio-libs/aiohttp>`_."
+msgstr "**aiorubi** یک کتابخانهٔ مدرن و کاملاً ناهمگام برای `Rubika Bot API <https://rubika.ir/botapi>`_ است که با پایتون ۳.۱۰ به بالا و با :doc:`asyncio <python:library/asyncio>` و `aiohttp <https://github.com/aio-libs/aiohttp>`_ نوشته شده است."
+
+#: ../../index.rst:12
+msgid "It is heavily inspired by `aiogram <https://docs.aiogram.dev/>`_ and brings the same ergonomic API surface — *Routers*, *Dispatchers*, *Filters*, *Finite State Machines*, *Middlewares* — to the Rubika messaging platform."
+msgstr "این کتابخانه به‌شدت از `aiogram <https://docs.aiogram.dev/>`_ الهام گرفته و همان API ارگونومیک — *روتِرها*، *دیسپچرها*، *فیلترها*، *ماشین حالت متناهی*، *میان‌افزارها* — را به پلتفرم پیام‌رسان روبیکا می‌آورد."
+
+#: ../../index.rst:22
+msgid "🚀 Quickstart"
+msgstr "🚀 شروع سریع"
+
+#: ../../index.rst:26
+msgid "Get your first bot running in under five minutes."
+msgstr "اولین بات خود را در کمتر از پنج دقیقه راه بیندازید."
+
+#: ../../index.rst:28
+msgid "📚 Tutorial"
+msgstr "📚 آموزش گام‌به‌گام"
+
+
+#: ../../index.rst:32
+msgid "Step-by-step lessons from ``/start`` to webhooks."
+msgstr "درس‌های گام‌به‌گام از ``/start`` تا وب‌هوک."
+
+#: ../../index.rst:34
+msgid "🧭 Guides"
+msgstr "🧭 راهنماها"
+
+#: ../../index.rst:38
+msgid "In-depth discussion of every framework concept."
+msgstr "بررسی عمیق هر مفهوم فریم‌ورک."
+
+#: ../../index.rst:40
+msgid "🛠 API Reference"
+msgstr "🛠 مرجع API"
+
+
+#: ../../index.rst:44
+msgid "Auto-generated reference for every public class and function."
+msgstr "مرجع خودکار تولیدشده برای همهٔ کلاس‌ها و توابع عمومی."
+
+#: ../../index.rst:48
+msgid "Features"
+msgstr "ویژگی‌ها"
+
+#: ../../index.rst:50
+msgid "**Asynchronous first** — built on top of ``asyncio`` and ``aiohttp``."
+msgstr "**ناهمگام در اولویت** — ساخته‌شده بر بستر ``asyncio`` و ``aiohttp``."
+
+#: ../../index.rst:51
+msgid "**Routers & Dispatchers** — split your bot into reusable, mountable modules exactly like aiogram."
+msgstr "**روتِرها و دیسپچرها** — بات خود را دقیقاً مثل aiogram به ماژول‌های قابل‌استفادهٔ مجدد و قابل نصب تقسیم کنید."
+
+#: ../../index.rst:53
+msgid "**Finite State Machines** — declarative conversation flows with :class:`StatesGroup` and :class:`FSMContext`, with swappable storages (memory, Redis, MongoDB)."
+msgstr "**ماشین حالت متناهی** — جریان‌های گفتگوی اعلانی با :class:`StatesGroup` و :class:`FSMContext`، همراه با استورج‌های قابل تعویض (حافظه، Redis، MongoDB)."
+
+#: ../../index.rst:56
+msgid "**Scenes** — higher-level wizard abstraction for multi-step dialogs."
+msgstr "**صحنه‌ها** — انتزاع سطح بالاترِ جادوگر برای گفتگوهای چندمرحله‌ای."
+
+#: ../../index.rst:57
+msgid "**Filters** — :doc:`MagicFilter <guide/filter>` (``F.text``, ``F.sender_id``, …), :class:`Command`, :class:`ButtonId` callback-data factory, :class:`StateFilter`, and custom filter composition."
+msgstr "**فیلترها** — :doc:`MagicFilter <guide/filter>` (``F.text``، ``F.sender_id`` و …)، :class:`Command`، کارخانهٔ دادهٔ دکمهٔ :class:`ButtonId`، :class:`StateFilter` و ترکیب فیلترهای سفارشی."
+
+#: ../../index.rst:61
+msgid "**Middlewares** — both *outer* and *inner* middleware chains per observer, including a built-in error middleware."
+msgstr "**میان‌افزارها** — زنجیرهٔ میان‌افزارهای *بیرونی* و *درونی* برای هر ناظر، شامل میان‌افزار داخلی مدیریت خطا."
+
+#: ../../index.rst:63
+msgid "**Flags** — propagate contextual flags from decorator to handler."
+msgstr "**فلگ‌ها** — انتقال فلگ‌های کانتکست از دکوریتور به هندلر."
+
+#: ../../index.rst:64
+msgid "**Keypads** — inline keypads, chat keypads, calendars, number pickers, text boxes, location pickers, selection lists."
+msgstr "**کیبوردها** — کیبورد درون‌خطی، کیبورد چت، تقویم، انتخابگر عدد، جعبهٔ متن، انتخابگر موقعیت و فهرست‌های انتخاب."
+
+#: ../../index.rst:66
+msgid "**Webhook & Long-polling** — equally first-class, with aiohttp-based webhook helpers."
+msgstr "**وب‌هوک و پولینگ بلند** — هر دو درجه‌یک، همراه ابزارهای وب‌هوک مبتنی بر aiohttp."
+
+#: ../../index.rst:68
+msgid "**Fully typed** — annotated with ``typing`` and ``pydantic`` models; great IDE auto-completion."
+msgstr "**کاملاً type-annotated** — با ``typing`` و مدل‌های ``pydantic``؛ تکمیل خودکار عالی در IDE."
+
+#: ../../index.rst:73
+msgid "Although the *patterns* mirror aiogram 3.x, ``aiorubi`` targets the Rubika Bot API, **not** the Telegram Bot API. Identifiers such as ``chat_id`` and ``message_id`` are ``str`` (not ``int``) and message structure differs — see :doc:`migration-from-aiogram`."
+msgstr "اگرچه *الگوها* آینهٔ aiogram 3.x هستند، ``aiorubi`` برای Rubika Bot API است، **نه** Telegram Bot API. شناسه‌هایی مثل ``chat_id`` و ``message_id`` از نوع ``str`` هستند (نه ``int``) و ساختار پیام هم متفاوت است — :doc:`migration-from-aiogram` را ببینید."
+
+#: ../../index.rst:80
+msgid "Installation"
+msgstr "نصب"
+
+#: ../../index.rst:86
+msgid "For optional extras (Redis, MongoDB, proxy, speed-ups, i18n):"
+msgstr "برای افزونه‌های اختیاری (Redis، MongoDB، پروکسی، شتاب‌دهنده‌ها، i18n):"
+
+#: ../../index.rst:92
+msgid "See :doc:`installation` for the full installation guide."
+msgstr "راهنمای کامل نصب را در :doc:`installation` ببینید."
+
+#: ../../index.rst:96
+msgid "Table of contents"
+msgstr "فهرست مطالب"
+

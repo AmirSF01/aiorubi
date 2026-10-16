@@ -1,0 +1,145 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tutorial/05_files.rst:5
+msgid "5. Sending & downloading files"
+msgstr "۵. ارسال و دانلود فایل‌ها"
+
+#: ../../tutorial/05_files.rst:7
+msgid "Rubika bots can send images, videos, voices, music, gifs and generic files — and receive them. aiorubi wraps the whole upload/download dance behind a handful of methods."
+msgstr "بات‌های روبیکا می‌توانند تصویر، ویدیو، ویس، موسیقی، گیف و فایل عمومی بفرستند — و دریافت کنند. aiorubi تمام رقص آپلود/دانلود را پشت چند متد مخفی می‌کند."
+
+#: ../../tutorial/05_files.rst:13
+msgid "Sending files"
+msgstr "ارسال فایل‌ها"
+
+#: ../../tutorial/05_files.rst:15
+msgid "The universal method is :meth:`~aiorubi.client.bot.Bot.send_file`. Its first argument is a ``chat_id``; the second is either:"
+msgstr "متد همه‌کاره :meth:`~aiorubi.client.bot.Bot.send_file` است. آرگومان اول آن ``chat_id`` است؛ آرگومان دوم یکی از این‌ها:"
+
+#: ../../tutorial/05_files.rst:19
+msgid "a ``file_id`` string (something you received earlier), or"
+msgstr "یک رشتهٔ ``file_id`` (چیزی که قبلاً دریافت کرده‌اید)، یا"
+
+#: ../../tutorial/05_files.rst:20
+msgid "an :class:`~aiorubi.types.input_file.InputFile` subclass wrapping local bytes — ``FSInputFile`` for filesystem paths, ``BufferedInputFile`` for in-memory bytes."
+msgstr "یک زیرکلاس :class:`~aiorubi.types.input_file.InputFile` که بایت‌های لوکال را در بر می‌گیرد — ``FSInputFile`` برای مسیرهای فایل‌سیستم، ``BufferedInputFile`` برای بایت‌های درون حافظه."
+
+#: ../../tutorial/05_files.rst:35
+msgid "Typed shortcuts"
+msgstr "میان‌برهای تایپ‌دار"
+
+#: ../../tutorial/05_files.rst:37
+msgid "Six convenience methods pick the right ``FileType`` for you:"
+msgstr "شش متد راحتی، ``FileType`` درست را برای شما انتخاب می‌کنند:"
+
+#: ../../tutorial/05_files.rst:48
+msgid "Each also accepts the usual ``text``, ``inline_keypad``, ``chat_keypad``, ``reply_to_message_id`` … keyword arguments."
+msgstr "هرکدام آرگومان‌های کلیدواژه‌ای همیشگی ``text``، ``inline_keypad``، ``chat_keypad``، ``reply_to_message_id`` و … را هم می‌پذیرند."
+
+#: ../../tutorial/05_files.rst:53
+msgid "Sending files via shortcuts on Message"
+msgstr "ارسال فایل با میان‌برهای Message"
+
+#: ../../tutorial/05_files.rst:55
+msgid "Inside a handler the ``reply_*`` / ``answer_*`` shortcuts save you from repeating the ``chat_id``:"
+msgstr "داخل هندلر، میان‌برهای ``reply_*`` / ``answer_*`` شما را از تکرار ``chat_id`` معاف می‌کنند:"
+
+#: ../../tutorial/05_files.rst:69
+msgid "Downloading files"
+msgstr "دانلود فایل‌ها"
+
+#: ../../tutorial/05_files.rst:71
+msgid "To download content the user sent you, pass the file object (or its ``file_id``) to :meth:`~aiorubi.client.bot.Bot.download`:"
+msgstr "برای دانلود محتوایی که کاربر فرستاده، شیء فایل (یا ``file_id`` آن) را به :meth:`~aiorubi.client.bot.Bot.download` بدهید:"
+
+#: ../../tutorial/05_files.rst:87
+msgid "Under the hood ``download`` resolves the ``file_id`` into a temporary URL via ``getFile`` and streams the response in 64 KB chunks."
+msgstr "در پشت صحنه، ``download`` با ``getFile`` مقدار ``file_id`` را به یک URL موقت تبدیل می‌کند و پاسخ را در chunkهای ۶۴ کیلوبایتی پخش می‌کند."
+
+#: ../../tutorial/05_files.rst:90
+msgid "The lower-level :meth:`~aiorubi.client.bot.Bot.download_file` accepts a URL directly and is what ``download`` calls internally."
+msgstr "متد سطح‌پایین‌تر :meth:`~aiorubi.client.bot.Bot.download_file` مستقیماً URL می‌پذیرد و همان چیزی است که ``download`` داخلی صدا می‌زند."
+
+#: ../../tutorial/05_files.rst:96
+msgid "Where file metadata lives"
+msgstr "متادیتای فایل کجاست"
+
+#: ../../tutorial/05_files.rst:98
+msgid "The :class:`~aiorubi.types.file.File` object on ``message.file`` carries:"
+msgstr "شیء :class:`~aiorubi.types.file.File` روی ``message.file`` این‌ها را حمل می‌کند:"
+
+#: ../../tutorial/05_files.rst:105
+msgid "Field"
+msgstr "فیلد"
+
+#: ../../tutorial/05_files.rst:106
+msgid "Meaning"
+msgstr "معنا"
+
+#: ../../tutorial/05_files.rst:107
+msgid "``file_id``"
+msgstr "``file_id``"
+
+#: ../../tutorial/05_files.rst:108
+msgid "the id you can re-use to resend or download"
+msgstr "شناسه‌ای که برای ارسال دوباره یا دانلود می‌توانید دوباره استفاده کنید"
+
+#: ../../tutorial/05_files.rst:109
+msgid "``file_name``"
+msgstr "``file_name``"
+
+#: ../../tutorial/05_files.rst:110
+msgid "original name, if the client sent one"
+msgstr "نام اصلی، اگر کلاینت فرستاده باشد"
+
+#: ../../tutorial/05_files.rst:111
+msgid "``size``"
+msgstr "``size``"
+
+#: ../../tutorial/05_files.rst:112
+msgid "size in bytes"
+msgstr "اندازه به بایت"
+
+#: ../../tutorial/05_files.rst:116
+msgid "``file_id`` strings are stable — store them in your database to avoid re-uploading the same content later."
+msgstr "رشته‌های ``file_id`` پایدارند — آن‌ها را در دیتابیس ذخیره کنید تا بعداً مجبور به آپلود دوبارهٔ همان محتوا نشوید."
+
+#: ../../tutorial/05_files.rst:121
+msgid "Limits and gotchas"
+msgstr "محدودیت‌ها و نکات"
+
+#: ../../tutorial/05_files.rst:123
+msgid "Always guard media handlers with a filter such as ``F.file`` — otherwise plain-text updates will raise ``AttributeError`` inside your handler body."
+msgstr "هندلرهای رسانه را همیشه با فیلتری مثل ``F.file`` محافظت کنید — وگرنه آپدیت‌های متنی ساده داخل بدنهٔ هندلر ``AttributeError`` پرتاب می‌کنند."
+
+#: ../../tutorial/05_files.rst:126
+msgid "``FileType`` for *sending* must match the content: sending an MP3 with ``send_image`` will confuse the Rubika client apps."
+msgstr "``FileType`` برای *ارسال* باید با محتوا بخواند: فرستادن MP3 با ``send_image`` اپ‌های کلاینت روبیکا را گیج می‌کند."
+
+#: ../../tutorial/05_files.rst:128
+msgid "``download`` returns ``None`` when you gave a path, and a ``BinaryIO`` when you didn't — type your variables accordingly."
+msgstr "``download`` وقتی مسیر داده باشید ``None`` برمی‌گرداند و وقتی نداده باشید ``BinaryIO`` — متغیرهایتان را متناسب تایپ کنید."
+
+#: ../../tutorial/05_files.rst:133
+msgid "Recap"
+msgstr "جمع‌بندی"
+
+#: ../../tutorial/05_files.rst:135
+msgid "You can now upload local files, resend by ``file_id``, use the typed ``send_*`` shortcuts, and download received files either to disk or to memory. Next: finite state machines — the memory of your bot."
+msgstr "الان می‌توانید فایل‌های لوکال آپلود کنید، با ``file_id`` دوباره بفرستید، از میان‌برهای تایپ‌دار ``send_*`` استفاده کنید و فایل‌های دریافتی را روی دیسک یا در حافظه دانلود کنید. بعدی: ماشین‌های حالت متناهی — حافظهٔ بات شما."
+

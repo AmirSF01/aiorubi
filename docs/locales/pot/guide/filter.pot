@@ -1,0 +1,305 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../guide/filter.rst:3
+msgid "Filters"
+msgstr ""
+
+#: ../../guide/filter.rst:5
+msgid "Filters decide whether an update should reach a handler. Every observer call — ``@dp.new_message(...)``, ``@router.inline_message(...)`` — accepts an arbitrary number of filters as positional arguments. All filters must pass for the handler to be triggered, and the observer stops propagation at the **first** matching handler."
+msgstr ""
+
+#: ../../guide/filter.rst:18
+msgid "Built-in filters"
+msgstr ""
+
+#: ../../guide/filter.rst:20
+msgid "All of these live in :mod:`aiorubi.filters` (re-exported from ``aiorubi.filters.command``, ``...state``, etc.): ``Command``, ``CommandStart``, ``CommandObject``, ``StateFilter``, ``MagicData``, ``ExceptionTypeFilter``, ``ExceptionMessageFilter``, the combinators ``and_f`` / ``or_f`` / ``invert_f``, and the base class ``Filter`` (alias ``BaseFilter``)."
+msgstr ""
+
+#: ../../guide/filter.rst:28
+msgid "Command"
+msgstr ""
+
+#: ../../guide/filter.rst:30
+msgid "`aiorubi.filters.command.Command(*values, commands=None, prefix=\"/\", ignore_case=False, ignore_mention=False, magic=None)`"
+msgstr ""
+
+#: ../../guide/filter.rst:32
+msgid "Matches text messages that start with one of the given commands. Works only with :class:`~aiorubi.types.message.Message` events that have a ``text``."
+msgstr ""
+
+#: ../../guide/filter.rst:35
+msgid "``values`` / ``commands`` — command names (``\"start\"``) or compiled regular expressions; ``BotCommand`` objects are accepted too."
+msgstr ""
+
+#: ../../guide/filter.rst:37
+msgid "``prefix`` — allowed prefix characters, default ``\"/\"``. Pass ``\"/!\"`` to accept both ``/start`` and ``!start``."
+msgstr ""
+
+#: ../../guide/filter.rst:39
+msgid "``ignore_case`` — case-fold matching (does not apply to regexp patterns)."
+msgstr ""
+
+#: ../../guide/filter.rst:40
+msgid "``ignore_mention`` — by default a command addressed to another bot (``/start@other_bot``) does not match; set ``True`` to ignore the mention."
+msgstr ""
+
+#: ../../guide/filter.rst:43
+msgid "``magic`` — an extra :class:`~aiorubi.utils.magic_filter.MagicFilter` applied to the parsed :class:`~aiorubi.filters.command.CommandObject`."
+msgstr ""
+
+#: ../../guide/filter.rst:46
+msgid "When the filter passes it injects the ``command`` keyword argument — a frozen dataclass with ``prefix``, ``command``, ``mention``, ``args``, ``regexp_match`` and the helpers ``.mentioned`` and ``.text``:"
+msgstr ""
+
+#: ../../guide/filter.rst:56
+msgid ":class:`~aiorubi.filters.command.CommandStart` is a shortcut for ``Command(\"start\")`` with deep-link validation: ``CommandStart(deep_link=True, deep_link_encoded=True)`` requires a payload argument and base64-decodes it."
+msgstr ""
+
+#: ../../guide/filter.rst:62
+msgid "StateFilter"
+msgstr ""
+
+#: ../../guide/filter.rst:64
+msgid "`aiorubi.filters.state.StateFilter(*states)`"
+msgstr ""
+
+#: ../../guide/filter.rst:66
+msgid "Checks the update against the current FSM state (see :doc:`fsm`). Accepts any mix of :class:`~aiorubi.fsm.state.State` objects, ``StatesGroup`` classes/instances, raw strings, ``None`` and the ``\"*\"`` wildcard — at least one is required:"
+msgstr ""
+
+#: ../../guide/filter.rst:79
+msgid "Subclassing a ``StatesGroup`` includes the parent's states in the check. Passing a :class:`~aiorubi.fsm.state.State` as decorator filter is equivalent to the plain ``Form.name`` shorthand shown in :doc:`fsm`."
+msgstr ""
+
+#: ../../guide/filter.rst:84
+msgid "CallbackData (ButtonId)"
+msgstr ""
+
+#: ../../guide/filter.rst:86
+msgid "Rubika inline keypads carry a ``button_id`` string in the ``aux_data`` of an :class:`~aiorubi.types.inline_message.InlineMessage`. The :mod:`aiorubi.filters.callback_data` module provides a structured wrapper for it:"
+msgstr ""
+
+#: ../../guide/filter.rst:91
+msgid "``aiorubi.filters.callback_data.ButtonId``"
+msgstr ""
+
+#: ../../guide/filter.rst:93
+msgid "A pydantic model base class. Subclass it with a required ``prefix=`` keyword and declare the payload fields; then use ``.pack()`` when building keypads and ``.filter()`` as the handler filter:"
+msgstr ""
+
+#: ../../guide/filter.rst:117
+msgid "``Nav.filter(rule=None)`` returns an :class:`~aiorubi.filters.callback_data.InlineMessageFilter` which unpacks the incoming ``button_id`` and injects it as the ``button_id`` argument. Encodable field types: ``str``, ``int``, ``float``, ``bool``, ``Enum``, ``UUID``, ``Decimal``, ``Fraction`` and ``None`` (optional fields). The packed id must stay under 64 bytes."
+msgstr ""
+
+#: ../../guide/filter.rst:125
+msgid "MagicData"
+msgstr ""
+
+#: ../../guide/filter.rst:127
+msgid "`aiorubi.filters.magic_data.MagicData(magic_data: MagicFilter)`"
+msgstr ""
+
+#: ../../guide/filter.rst:129
+msgid "Resolves a magic-filter expression against the whole handler *context* — the event (as ``F.event``) plus every keyword the dispatcher provides (``bot``, ``state``, ``raw_state``, ``event_chat``, ``event_from_user``, …):"
+msgstr ""
+
+#: ../../guide/filter.rst:142
+msgid "ExceptionTypeFilter / ExceptionMessageFilter"
+msgstr ""
+
+#: ../../guide/filter.rst:144
+msgid "For the ``error`` observer, whose event is an :class:`~aiorubi.types.error_event.ErrorEvent`:"
+msgstr ""
+
+#: ../../guide/filter.rst:157
+msgid "``ExceptionMessageFilter`` injects the regexp match as ``match_exception``."
+msgstr ""
+
+#: ../../guide/filter.rst:161
+msgid "MagicFilter — the ``F`` object"
+msgstr ""
+
+#: ../../guide/filter.rst:163
+msgid "``F`` (exported from :mod:`aiorubi`) is a :class:`aiorubi.utils.magic_filter.MagicFilter` instance. Indexing or calling attributes on it *builds* a filter expression; the expression is resolved against the event when a filter check runs:"
+msgstr ""
+
+#: ../../guide/filter.rst:180
+msgid "The result of any expression is a valid filter, so you can mix ``F`` with the built-ins freely."
+msgstr ""
+
+#: ../../guide/filter.rst:184
+msgid "Storing results with ``as_()``"
+msgstr ""
+
+#: ../../guide/filter.rst:186
+msgid "aiorubi extends the upstream magic-filter with ``as_(name)``: when the filter passes, the resolved value is injected into the handler under ``name``:"
+msgstr ""
+
+#: ../../guide/filter.rst:197
+msgid "Writing custom filters"
+msgstr ""
+
+#: ../../guide/filter.rst:200
+msgid "Async and sync function filters"
+msgstr ""
+
+#: ../../guide/filter.rst:202
+msgid "The simplest filter is a function. It receives the event plus the same contextual keyword arguments as a handler and returns ``bool`` — or a ``dict`` whose entries are injected into the handler:"
+msgstr ""
+
+#: ../../guide/filter.rst:213
+msgid "Synchronous functions work too — they are executed in a thread via :func:`asyncio.to_thread`, so long CPU-bound checks do not block the loop."
+msgstr ""
+
+#: ../../guide/filter.rst:217
+msgid "Class-based filters"
+msgstr ""
+
+#: ../../guide/filter.rst:219
+msgid "Subclass :class:`~aiorubi.filters.base.Filter` and override the async ``__call__``. Constructor arguments make the filter configurable and instances are reusable:"
+msgstr ""
+
+#: ../../guide/filter.rst:243
+msgid "Returning ``False`` skips the handler; returning ``True`` passes; returning a ``dict`` passes **and** merges the entries into the handler kwargs."
+msgstr ""
+
+#: ../../guide/filter.rst:246
+msgid "Lambdas and ``F`` both work as drop-in callables — the dispatcher detects ``MagicFilter`` instances (including the plain ``magic_filter`` package object) automatically."
+msgstr ""
+
+#: ../../guide/filter.rst:251
+msgid "Combining filters"
+msgstr ""
+
+#: ../../guide/filter.rst:253
+msgid "**Positional arguments** on an observer are combined with logical AND: all must pass."
+msgstr ""
+
+#: ../../guide/filter.rst:255
+msgid "``&`` / ``|`` / ``~`` on magic-filter expressions build combined expressions."
+msgstr ""
+
+#: ../../guide/filter.rst:257
+msgid "``and_f``, ``or_f`` and ``invert_f`` combine arbitrary filters (class-based or functions):"
+msgstr ""
+
+#: ../../guide/filter.rst:267
+msgid "``~filter`` (invert) works on any :class:`~aiorubi.filters.base.Filter` instance."
+msgstr ""
+
+#: ../../guide/filter.rst:271
+msgid "Filter order and short-circuiting"
+msgstr ""
+
+#: ../../guide/filter.rst:273
+msgid "Two independent short-circuits are at play:"
+msgstr ""
+
+#: ../../guide/filter.rst:275
+msgid "**Within one handler** — filters are checked in declaration order and the check stops at the first failure. Put cheap filters first:"
+msgstr ""
+
+#: ../../guide/filter.rst:284
+msgid "**Within one observer** — handlers are evaluated in registration order and propagation stops at the first fully matching handler. A handler can pass control to the next one by raising :class:`~aiorubi.dispatcher.event.bases.SkipHandler`. Router-level filters (``observer.filter(...)``) are checked before handler filters."
+msgstr ""
+
+#: ../../guide/filter.rst:291
+msgid "How filters receive data"
+msgstr ""
+
+#: ../../guide/filter.rst:293
+msgid "Every filter call receives ``(event, **context)``. The context is built by the middleware chain and includes at least:"
+msgstr ""
+
+#: ../../guide/filter.rst:300
+msgid "Key"
+msgstr ""
+
+#: ../../guide/filter.rst:301
+msgid "Provided by"
+msgstr ""
+
+#: ../../guide/filter.rst:302
+msgid "``bot``"
+msgstr ""
+
+#: ../../guide/filter.rst:303
+msgid "The :class:`~aiorubi.client.bot.Bot` instance (always present)."
+msgstr ""
+
+#: ../../guide/filter.rst:304
+msgid "``event_update``"
+msgstr ""
+
+#: ../../guide/filter.rst:305
+msgid "The raw :class:`~aiorubi.types.update.Update` envelope."
+msgstr ""
+
+#: ../../guide/filter.rst:306
+msgid "``event_context``, ``event_from_user``, ``event_chat``"
+msgstr ""
+
+#: ../../guide/filter.rst:307
+msgid ":class:`~aiorubi.dispatcher.middlewares.user_context.UserContextMiddleware`."
+msgstr ""
+
+#: ../../guide/filter.rst:308
+msgid "``state``, ``raw_state``, ``fsm_storage``"
+msgstr ""
+
+#: ../../guide/filter.rst:309
+msgid "The FSM middleware (unless FSM is disabled) — see :doc:`fsm`."
+msgstr ""
+
+#: ../../guide/filter.rst:310
+msgid "``scenes``"
+msgstr ""
+
+#: ../../guide/filter.rst:311
+msgid "The scenes middleware, when a :class:`~aiorubi.fsm.scene.SceneRegistry` is installed — see :doc:`scenes`."
+msgstr ""
+
+#: ../../guide/filter.rst:314
+msgid "dict results of earlier filters"
+msgstr ""
+
+#: ../../guide/filter.rst:315
+msgid "e.g. ``command``, ``button_id``, ``match_exception``."
+msgstr ""
+
+#: ../../guide/filter.rst:317
+msgid "Type your filter's ``__call__`` with only the parameters it needs — any declared parameter name is matched from the context, exactly like handler dependency injection."
+msgstr ""
+
+#: ../../guide/filter.rst:322
+msgid "See also"
+msgstr ""
+
+#: ../../guide/filter.rst:324
+msgid ":doc:`fsm` — state filters and the ``raw_state`` value."
+msgstr ""
+
+#: ../../guide/filter.rst:325
+msgid ":doc:`scenes` — scenes use the same filter syntax inside ``@scene.on.new_message(...)``."
+msgstr ""
+
+#: ../../guide/filter.rst:327
+msgid ":doc:`dispatcher` — observer registration order and router filters."
+msgstr ""

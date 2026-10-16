@@ -1,0 +1,173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tutorial/09_webhook.rst:5
+msgid "9. Deployment: polling vs webhook"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:7
+msgid "So far the bot has been running with **long polling** — the process asks Rubika \"anything new?\" in a loop. That is perfect for development. In production you usually want a **webhook**: Rubika pushes each update to *your* HTTPS endpoint as it happens."
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:14
+msgid "Polling — the easy way"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:16
+msgid "Nothing to configure: the default ``await dp.start_polling(bot)`` already includes retry-with-backoff, clock-skew-safe offsets and graceful shutdown. Optional knobs:"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:32
+msgid "Webhook — the production way"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:34
+msgid "Rubika delivers updates via HTTPS POST to an endpoint you register:"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:45
+msgid "The endpoint must be:"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:47
+msgid "reachable from the public internet,"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:48
+msgid "served over HTTPS with a valid certificate,"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:49
+msgid "fast — Rubika waits up to **60 seconds**, otherwise it re-sends the update (aiorubi's default answer timeout is 55 s and slow handlers are moved to the background automatically)."
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:55
+msgid "Minimal aiohttp server"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:57
+msgid "The library ships a small aiohttp-based webhook server. The sketch below shows the complete wiring:"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:93
+msgid "For a production-grade setup prefer the built-in :class:`~aiorubi.webhook.aiohttp_server.SimpleRequestHandler`, which resolves the bot, closes the session on shutdown and (optionally) processes updates in the background:"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:122
+msgid "``feed_raw_update`` returns after the handler chain *starts* processing; ``feed_webhook_update`` additionally enforces the 55-second answer window and returns a ``RubikaMethod`` — but unlike Telegram, Rubika does **not** support answering an update by returning an API call in the HTTP response (the webhook body is always ``{\"status\": \"OK\"}``), so the dispatcher makes that call silently on your behalf."
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:132
+msgid "Behind a reverse proxy"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:134
+msgid "In production, terminate TLS with nginx or Caddy and forward to the app on localhost. Make sure the proxy passes the raw body untouched and sets no ``Transfer-Encoding`` that aiohttp cannot parse."
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:138
+msgid "Example nginx fragment:"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:150
+msgid "Choosing between them"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:157
+msgid "Polling"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:158
+msgid "Webhook"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:159
+msgid "Setup effort"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:160
+msgid "zero"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:161
+msgid "needs HTTPS + public host"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:162
+msgid "Latency"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:163
+msgid "up to ``polling_interval``"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:164
+msgid "instant push"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:165
+msgid "Throughput"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:166
+msgid "bounded by loop"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:167
+msgid "scales with server"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:168
+msgid "Local development"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:169
+msgid "✅ works behind NAT"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:170
+msgid "needs a tunnel (ngrok…)"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:172
+msgid "Rule of thumb: develop with polling, ship with webhook."
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:176
+msgid "Recap"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:178
+msgid "The tutorial is complete. You have a bot that greets, parses commands, shows keypads, exchanges files, remembers conversation state, is split into modules, observes its own errors, and can be deployed either by polling or webhook."
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:183
+msgid "Where to go next:"
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:185
+msgid ":doc:`/guide/index` — every concept in depth."
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:186
+msgid ":doc:`/api/index` — the full API reference."
+msgstr ""
+
+#: ../../tutorial/09_webhook.rst:187
+msgid ":doc:`/migration-from-aiogram` — bring your aiogram bots over."
+msgstr ""

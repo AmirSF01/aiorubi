@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tutorial/06_fsm.rst:5
+msgid "6. Finite State Machine"
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:7
+msgid "Our bot can talk, but it cannot *remember*. A note-taking bot needs to know that \"the next message the user sends is the note's body\". That is exactly what the **FSM** (Finite State Machine) is for."
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:13
+msgid "Declaring states"
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:15
+msgid "States are declared as a :class:`~aiorubi.fsm.state.StatesGroup`:"
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:25
+msgid "Each attribute becomes a :class:`~aiorubi.fsm.state.State` whose full name is ``\"Group:state\"``. These objects are used as filters and as values for ``state.set_state()``."
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:31
+msgid "Reading and writing state"
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:33
+msgid "Every handler may accept a ``state`` keyword argument — the :class:`~aiorubi.fsm.context.FSMContext` for this user+chat:"
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:64
+msgid "The ``state`` filter"
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:66
+msgid "Passing a ``State`` object as a filter means \"run this handler only when the user is in that state\":"
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:74
+msgid "This is sugar for ``StateFilter(NewNote.title)``. Two special values exist:"
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:77
+msgid "``default_state`` (importable from ``aiorubi.fsm.state``) — the user is in *no* state;"
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:79
+msgid "``any_state`` — matches regardless of state."
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:83
+msgid "Cancelling a flow"
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:85
+msgid "A flow that cannot be cancelled traps the user. Add an escape hatch:"
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:99
+msgid "Handlers fire **in registration order**, so the ``/cancel`` escape hatch must be registered **before** the state-bound handlers — otherwise a state handler (e.g. ``NewNote.title``) may consume the message first. A catch-all handler with no filters must always stay registered last."
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:107
+msgid "FSM data — the per-user dict"
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:109
+msgid "``state.update_data(**kw)`` merges into a per-user dictionary that you can read back with ``await state.get_data()``:"
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:118
+msgid "The data travels with the storage — the default :class:`~aiorubi.fsm.storage.memory.MemoryStorage` keeps it in RAM (lost on restart). For production use :class:`~aiorubi.fsm.storage.redis.RedisStorage` or :class:`~aiorubi.fsm.storage.mongo.MongoStorage`, described in :doc:`/guide/storages`."
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:127
+msgid "FSM strategy"
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:129
+msgid "The dispatcher argument ``fsm_strategy`` decides *which* user a state belongs to:"
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:138
+msgid "The default ``USER_IN_CHAT`` gives every user their own state per chat — the right choice for almost every bot."
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:143
+msgid "Recap"
+msgstr ""
+
+#: ../../tutorial/06_fsm.rst:145
+msgid "You can now declare state groups, gate handlers on the current state, carry data between steps with ``update_data``/``get_data``, and cancel flows safely. Next: organising a growing bot with routers."
+msgstr ""

@@ -1,0 +1,415 @@
+/* aiorubi docs — bilingual (EN/FA) support
+   Responsive + RTL polish for the Persian build. */
+
+/* ==========================================================================
+   1. RTL layout — applies on pages served with lang="fa"
+   ========================================================================== */
+html[lang="fa"],
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[lang="fa"] body,
+html[dir="rtl"] body {
+  direction: rtl;
+}
+
+html[lang="fa"] .sidebar-drawer,
+html[dir="rtl"] .sidebar-drawer {
+  direction: rtl;
+}
+
+html[lang="fa"] .toc-drawer,
+html[dir="rtl"] .toc-drawer {
+  direction: rtl;
+}
+
+html[lang="fa"] article,
+html[dir="rtl"] article {
+  text-align: right;
+  line-height: 2;
+  word-wrap: break-word;
+}
+
+/* headings keep a comfortable Persian rhythm */
+html[lang="fa"] h1,
+html[lang="fa"] h2,
+html[lang="fa"] h3,
+html[lang="fa"] h4 {
+  line-height: 1.7;
+  letter-spacing: 0;
+}
+
+/* ==========================================================================
+   2. Typography — self-hosted Vazirmatn for fa pages
+   ========================================================================== */
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("fonts/Vazirmatn-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("fonts/Vazirmatn-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("fonts/Vazirmatn-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html[lang="fa"] body,
+html[lang="fa"] .sidebar-drawer,
+html[lang="fa"] .toc-drawer,
+html[lang="fa"] .related-pages,
+html[lang="fa"] .admonition,
+html[lang="fa"] caption,
+html[lang="fa"] th,
+html[lang="fa"] td,
+html[dir="rtl"] body,
+html[dir="rtl"] .sidebar-drawer,
+html[dir="rtl"] .toc-drawer {
+  font-family: "Vazirmatn", "Vazir", Tahoma, sans-serif;
+}
+
+/* slightly smaller body size on fa so lines don't overflow early */
+html[lang="fa"] {
+  font-size: 0.98rem;
+}
+
+/* ==========================================================================
+   3. Code & literals stay LTR, readable inside RTL prose
+   ========================================================================== */
+html[lang="fa"] pre,
+html[lang="fa"] code,
+html[lang="fa"] kbd,
+html[lang="fa"] samp,
+html[dir="rtl"] pre,
+html[dir="rtl"] code,
+html[dir="rtl"] kbd,
+html[dir="rtl"] samp {
+  direction: ltr;
+  unicode-bidi: embed;
+  text-align: left;
+}
+
+/* inline code inside RTL prose: keep latin identifiers readable */
+html[lang="fa"] p code,
+html[lang="fa"] li code,
+html[lang="fa"] td code,
+html[lang="fa"] th code,
+html[lang="fa"] dt code,
+html[dir="rtl"] p code,
+html[dir="rtl"] li code,
+html[dir="rtl"] td code {
+  unicode-bidi: plaintext;
+  display: inline-block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+/* long code blocks: horizontal scroll instead of breaking layout */
+html[lang="fa"] .highlight,
+html[dir="rtl"] .highlight {
+  direction: ltr;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+html[lang="fa"] pre,
+html[dir="rtl"] pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* ==========================================================================
+   4. Responsive tables — scroll, not overflow
+   ========================================================================== */
+html[lang="fa"] .docutils table,
+html[lang="fa"] table.docutils,
+html[dir="rtl"] table.docutils {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+html[lang="fa"] table.docutils th,
+html[dir="rtl"] table.docutils th {
+  text-align: right;
+}
+
+html[lang="fa"] table.docutils td,
+html[dir="rtl"] table.docutils td {
+  vertical-align: top;
+}
+
+/* narrow screens: tighter cell padding */
+@media (max-width: 480px) {
+  html[lang="fa"] table.docutils th,
+  html[lang="fa"] table.docutils td,
+  html[dir="rtl"] table.docutils th,
+  html[dir="rtl"] table.docutils td {
+    padding-block: 0.35rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* ==========================================================================
+   5. Admonitions, quotes & lists in RTL
+   ========================================================================== */
+html[lang="fa"] .admonition-title,
+html[dir="rtl"] .admonition-title {
+  text-align: right;
+}
+
+html[lang="fa"] .admonition,
+html[dir="rtl"] .admonition {
+  border-inline-start: none;
+  border-inline-end: 0.2rem solid var(--color-admonition-border, currentColor);
+}
+
+html[lang="fa"] blockquote,
+html[dir="rtl"] blockquote {
+  border-inline-start: none;
+  border-inline-end: 0.2rem solid var(--color-background-border);
+  padding-inline-start: 0;
+  padding-inline-end: 1rem;
+}
+
+html[lang="fa"] ul,
+html[lang="fa"] ol,
+html[dir="rtl"] ul,
+html[dir="rtl"] ol {
+  padding-inline-start: 1.6rem;
+  padding-inline-end: 0;
+}
+
+/* ==========================================================================
+   6. Header, related-pages & misc RTL fixes
+   ========================================================================== */
+html[lang="fa"] .related-pages a.next-page,
+html[lang="fa"] .related-pages a.prev-page,
+html[dir="rtl"] .related-pages a {
+  text-align: right;
+}
+
+/* flip next/prev arrow direction on fa pages */
+html[lang="fa"] .related-pages .next-page .page-icon,
+html[dir="rtl"] .related-pages .next-page .page-icon {
+  transform: scaleX(-1);
+}
+
+html[lang="fa"] .sidebar-brand-text,
+html[dir="rtl"] .sidebar-brand-text {
+  letter-spacing: 0;
+}
+
+/* sidebar nav: proper alignment + indent for nested toctrees */
+html[lang="fa"] .sidebar-tree ul,
+html[dir="rtl"] .sidebar-tree ul {
+  padding-inline-start: 1rem;
+  padding-inline-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: unset;
+}
+
+html[lang="fa"] .sidebar-tree li,
+html[dir="rtl"] .sidebar-tree li {
+  text-align: right;
+}
+
+html[lang="fa"] .caption-text,
+html[dir="rtl"] .caption-text {
+  text-align: right;
+}
+
+/* search input placeholder alignment */
+html[lang="fa"] .sidebar-search,
+html[dir="rtl"] .sidebar-search {
+  text-align: right;
+}
+
+/* headerlink (¶ anchors) — keep on the visual left in RTL */
+html[lang="fa"] h1 .headerlink,
+html[lang="fa"] h2 .headerlink,
+html[lang="fa"] h3 .headerlink,
+html[dir="rtl"] h1 .headerlink,
+html[dir="rtl"] h2 .headerlink,
+html[dir="rtl"] h3 .headerlink {
+  float: left;
+  margin-inline-end: 0.3rem;
+}
+
+/* ==========================================================================
+   7. Language switcher: visible pill buttons + floating fallback
+   ========================================================================== */
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin-inline-end: 0.6rem;
+  font-family: "Vazirmatn", Tahoma, sans-serif;
+}
+
+.language-switcher a {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none !important;
+  color: var(--color-foreground-secondary);
+  background: var(--color-background-secondary);
+  border: 1px solid var(--color-background-border);
+  white-space: nowrap;
+}
+
+.language-switcher a:hover {
+  color: var(--color-brand-primary);
+  border-color: var(--color-brand-primary);
+}
+
+.language-switcher a.active {
+  color: #fff;
+  background: var(--color-brand-primary);
+  border-color: var(--color-brand-primary);
+}
+
+.language-switcher-float {
+  position: fixed;
+  bottom: 1.1rem;
+  right: 1.1rem;
+  z-index: 9999;
+  background: var(--color-background-primary);
+  border: 1px solid var(--color-background-border);
+  border-radius: 999px;
+  padding: 0.3rem 0.45rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+/* small screens: shrink switcher so it never crowds the header */
+@media (max-width: 671px) {
+  .language-switcher a {
+    padding: 0.15rem 0.5rem;
+    font-size: 0.72rem;
+  }
+  .language-switcher {
+    margin-inline-end: 0.3rem;
+  }
+}
+
+/* ==========================================================================
+   8. Small-screen (mobile) responsive polish — fa only
+   ========================================================================== */
+@media (max-width: 671px) {
+  html[lang="fa"] article,
+  html[dir="rtl"] article {
+    line-height: 1.95;
+  }
+
+  /* headings shouldn't wrap awkwardly on narrow phones */
+  html[lang="fa"] h1 {
+    font-size: 1.55rem;
+  }
+  html[lang="fa"] h2 {
+    font-size: 1.3rem;
+  }
+  html[lang="fa"] h3 {
+    font-size: 1.12rem;
+  }
+
+  /* keep long URLs / identifiers from overflowing */
+  html[lang="fa"] article a,
+  html[dir="rtl"] article a {
+    overflow-wrap: anywhere;
+  }
+
+  html[lang="fa"] .highlight pre,
+  html[dir="rtl"] .highlight pre {
+    font-size: 0.78rem;
+    padding: 0.6rem;
+  }
+}
+
+/* very narrow (<380px): give the header room for toggle + switcher + toc icon */
+@media (max-width: 380px) {
+  .mobile-header .brand {
+    font-size: 0.85rem;
+  }
+}
+
+/* ==========================================================================
+   9. Dark-mode safety for switcher & floating fallback
+   ========================================================================== */
+@media (prefers-color-scheme: dark) {
+  html[data-theme="auto"] .language-switcher-float {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+  }
+}
+html[data-theme="dark"] .language-switcher a {
+  background: var(--color-background-secondary);
+}
+html[data-theme="dark"] .language-switcher-float {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   10. API signatures (python domain .sig) — always LTR code, not RTL prose
+   ========================================================================== */
+html[lang="fa"] dt.sig,
+html[dir="rtl"] dt.sig {
+  direction: ltr;
+  text-align: left;
+}
+
+/* signature internals: keep the exact token order of the code */
+html[lang="fa"] dt.sig .sig-prename,
+html[lang="fa"] dt.sig .sig-name,
+html[lang="fa"] dt.sig .sig-paren,
+html[lang="fa"] dt.sig .sig-param,
+html[lang="fa"] dt.sig .property,
+html[lang="fa"] dt.sig .optional,
+html[dir="rtl"] dt.sig .sig-prename,
+html[dir="rtl"] dt.sig .sig-name,
+html[dir="rtl"] dt.sig .sig-paren,
+html[dir="rtl"] dt.sig .sig-param,
+html[dir="rtl"] dt.sig .property {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* property word (class / static / async) sits BEFORE the name in code order */
+html[lang="fa"] dt.sig .property,
+html[dir="rtl"] dt.sig .property {
+  margin-inline-end: 0.35em;
+}
+
+/* viewcode link + anchor link inside the signature line: right side, rtl ok */
+html[lang="fa"] dt.sig a.headerlink,
+html[lang="fa"] dt.sig .viewcode-link,
+html[dir="rtl"] dt.sig a.headerlink,
+html[dir="rtl"] dt.sig .viewcode-link {
+  unicode-bidi: plaintext;
+}
+
+/* field-list dt terms (Parameters / Returns ...) stay rtl prose */
+html[lang="fa"] dl.field-list dt,
+html[dir="rtl"] dl.field-list dt {
+  direction: rtl;
+  text-align: left;
+}
+
+/* object descriptions (dd) keep Persian prose direction */
+html[lang="fa"] dd,
+html[dir="rtl"] dd {
+  direction: rtl;
+}

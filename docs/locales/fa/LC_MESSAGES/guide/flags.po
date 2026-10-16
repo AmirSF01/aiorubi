@@ -1,0 +1,130 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../guide/flags.rst:3
+msgid "Flags"
+msgstr "فلگ‌ها"
+
+#: ../../guide/flags.rst:5
+msgid "Flags are small pieces of metadata attached to a handler *at registration time* and readable from middlewares, other handlers of the same dispatch, and utility code. Where middlewares inject per-update data, flags carry per-handler configuration."
+msgstr "فلگ‌ها قطعه‌های کوچک متادیتا هستند که *هنگام ثبت* به هندلر وصل می‌شوند و از میان‌افزارها، هندلرهای دیگرِ همان dispatch و کدهای کمکی قابل خواندن‌اند. میان‌افزارها دادهٔ هر-آپدیت تزریق می‌کنند؛ فلگ‌ها پیکربندی هر-هندلر را حمل می‌کنند."
+
+#: ../../guide/flags.rst:11
+msgid "Declaring flags"
+msgstr "اعلان فلگ‌ها"
+
+#: ../../guide/flags.rst:13
+msgid "The global ``flags`` object (exported from :mod:`aiorubi`) generates a flag decorator for any attribute name:"
+msgstr "شیء سراسری ``flags`` (صادرشده از :mod:`aiorubi`) برای هر نام ویژگی یک دکوریتور فلگ می‌سازد:"
+
+#: ../../guide/flags.rst:24
+#, python-brace-format
+msgid "``flags.<name>`` with no call simply marks the handler with ``{\"<name>\": True}``. To attach a value, call the decorator:"
+msgstr "``flags.<name>`` بدون فراخوانی، هندلر را ساده با ``{\\\"<name>\\\": True}`` علامت می‌زند. برای وصل‌کردن مقدار، دکوریتور را صدا بزنید:"
+
+#: ../../guide/flags.rst:34
+msgid "Keyword form builds an :class:`AttrDict` value — useful for grouped settings:"
+msgstr "فرم کلیدواژه‌ای یک مقدار :class:`AttrDict` می‌سازد — برای تنظیمات گروهی مفید است:"
+
+#: ../../guide/flags.rst:42
+msgid "The decorator is chainable: multiple ``@flags.*`` lines stack, and re-declaring the same name replaces its value."
+msgstr "دکوریتور قابل زنجیره‌شدن است: چند خط ``@flags.*`` روی هم سوار می‌شوند و اعلان دوبارهٔ همان نام، مقدارش را جایگزین می‌کند."
+
+#: ../../guide/flags.rst:45
+msgid "Flags may also be attached to any callable — class-based handlers included:"
+msgstr "فلگ‌ها را می‌توان به هر فراخوانی‌پذیری هم وصل کرد — از جمله هندلرهای کلاس‌محور:"
+
+#: ../../guide/flags.rst:55
+msgid "Reading flags"
+msgstr "خواندن فلگ‌ها"
+
+#: ../../guide/flags.rst:57
+msgid "Three helpers live in :mod:`aiorubi.dispatcher.flags`:"
+msgstr "سه کمکی در :mod:`aiorubi.dispatcher.flags` زندگی می‌کنند:"
+
+#: ../../guide/flags.rst:59
+msgid "``extract_flags(obj)`` — all flags of a handler."
+msgstr "``extract_flags(obj)`` — همهٔ فلگ‌های یک هندلر."
+
+#: ../../guide/flags.rst:60
+msgid "``get_flag(handler, name, default=None)`` — one flag."
+msgstr "``get_flag(handler, name, default=None)`` — یک فلگ."
+
+#: ../../guide/flags.rst:61
+msgid "``check_flags(handler, magic)`` — query flags with a magic-filter expression, e.g. ``check_flags(handler, F.admin_only)``."
+msgstr "``check_flags(handler, magic)`` — پرس‌وجوی فلگ‌ها با یک عبارت فیلتر-جادویی، مثلاً ``check_flags(handler, F.admin_only)``."
+
+#: ../../guide/flags.rst:64
+msgid "Inside a middleware the handler object is available under the ``\"handler\"`` key of ``data``:"
+msgstr "داخل میان‌افزار، شیء هندلر زیر کلید ``\\\"handler\\\"`` در ``data`` در دسترس است:"
+
+#: ../../guide/flags.rst:76
+msgid "Because flags are stored on the handler object (``handler.flags``), they cost nothing per update until read."
+msgstr "چون فلگ‌ها روی شیء هندلر ذخیره می‌شوند (``handler.flags``)، تا وقتی خوانده نشوند هیچ هزینه‌ای برای هر آپدیت ندارند."
+
+#: ../../guide/flags.rst:80
+msgid "Built-in flag usage"
+msgstr "کاربرد فلگ‌های داخلی"
+
+#: ../../guide/flags.rst:82
+msgid "Filters can contribute flags at registration time: :class:`~aiorubi.filters.command.Command` appends itself to the ``commands`` flag (``update_handler_flags``) — used by command-listing tooling."
+msgstr "فیلترها می‌توانند هنگام ثبت، فلگ اضافه کنند: :class:`~aiorubi.filters.command.Command` خودش را به فلگ ``commands`` (``update_handler_flags``) می‌چسباند — توسط ابزارهای فهرست‌کردن دستورها استفاده می‌شود."
+
+#: ../../guide/flags.rst:86
+msgid "The ``chat_action`` flag is recognised by aiogram-compatible tooling; aiorubi does not ship a built-in runner for it (no chat-action API on Rubika), but the flag slot is reserved."
+msgstr "فلگ ``chat_action`` توسط ابزارهای سازگار با aiogram شناخته می‌شود؛ aiorubi اجراکنندهٔ داخلی برایش ندارد (روی روبیکا API چت-اکشن وجود ندارد)، ولی جای فلگ رزرو شده است."
+
+#: ../../guide/flags.rst:91
+msgid "Writing flag-driven extensions"
+msgstr "نوشتن افزونه‌های فلگ‌محور"
+
+#: ../../guide/flags.rst:93
+msgid "Flags shine when combined with middlewares or the observer registry to build conventions:"
+msgstr "فلگ‌ها وقتی با میان‌افزارها یا رجیستری ناظر ترکیب شوند تا قاعدهٔ عام بسازند، می‌درخشند:"
+
+#: ../../guide/flags.rst:112
+msgid "Notes and pitfalls"
+msgstr "نکات و دام‌ها"
+
+#: ../../guide/flags.rst:114
+msgid "Flag names must not start with an underscore — ``flags._private`` raises :class:`AttributeError`."
+msgstr "نام فلگ نباید با آندرلاین شروع شود — ``flags._private`` باعث :class:`AttributeError` می‌شود."
+
+#: ../../guide/flags.rst:116
+msgid "``@flags.x`` and ``@flags.x(...)`` both return the original callable, so flag decorators never change the handler's signature or break :doc:`argument injection <handlers>`."
+msgstr "``@flags.x`` و ``@flags.x(...)`` هر دو فراخوانی‌پذیر اصلی را برمی‌گردانند، پس دکوریتورهای فلگ هرگز امضای هندلر را تغییر نمی‌دهند و :doc:`تزریق آرگومان <handlers>` را نمی‌شکنند."
+
+#: ../../guide/flags.rst:119
+msgid "Flags are registration-time only: changing them at runtime means mutating ``handler.flags`` directly (supported, but unusual)."
+msgstr "فلگ‌ها فقط مالِ زمان ثبت‌اند: تغییرشان در زمان اجرا یعنی دستکاری مستقیم ``handler.flags`` (پشتیبانی می‌شود ولی غیرمعمول است)."
+
+#: ../../guide/flags.rst:121
+msgid "Order with the observer decorator matters — put ``@dp.new_message(...)`` *above* the flags so the flags are already attached when the handler is registered (decorators apply bottom-up)."
+msgstr "ترتیب با دکوریتور ناظر مهم است — ``@dp.new_message(...)`` را *بالای* فلگ‌ها بگذارید تا هنگام ثبت هندلر، فلگ‌ها از قبل وصل باشند (دکوریتورها از پایین به بالا اعمال می‌شوند)."
+
+#: ../../guide/flags.rst:126
+msgid "See also"
+msgstr "همچنین ببینید"
+
+#: ../../guide/flags.rst:128
+msgid ":doc:`middlewares` — the usual consumers of flags."
+msgstr ":doc:`middlewares` — مصرف‌کننده‌های معمول فلگ‌ها."
+
+#: ../../guide/flags.rst:129
+msgid ":doc:`filter` — MagicFilter, which ``check_flags`` reuses."
+msgstr ":doc:`filter` — MagicFilter که ``check_flags`` دوباره استفاده‌اش می‌کند."
+

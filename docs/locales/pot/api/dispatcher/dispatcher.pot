@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/dispatcher/dispatcher.rst:3
+msgid "Dispatcher"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher:1
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.__init__:1
+msgid "Root router"
+msgstr ""
+
+#: ../../api/dispatcher/dispatcher.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.__init__:3
+msgid "Storage for FSM"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.__init__:4
+msgid "FSM strategy"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.__init__:5
+msgid "Events isolation"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.__init__:6
+msgid "Disable FSM, note that if you disable FSM then you should not use storage and events isolation"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.__init__:8
+msgid "Other arguments, will be passed as keyword arguments to handlers"
+msgstr ""
+
+#: ../../api/dispatcher/dispatcher.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.feed_raw_update:1
+msgid "Main entry point for incoming updates with automatic Dict->Update serializer"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.feed_update:1
+msgid "Main entry point for incoming updates Response of this method can be used as Webhook response"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.parent_router:1
+msgid "Dispatcher has no parent router and can't be included to any other routers or dispatchers"
+msgstr ""
+
+#: ../../api/dispatcher/dispatcher.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.run_polling:1
+msgid "Run many bots with polling"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.run_polling:3
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.start_polling:3
+msgid "Bot instances (one or more)"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.run_polling:4
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.start_polling:4
+msgid "Maximum number of updates to fetch per request"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.run_polling:5
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.start_polling:5
+msgid "Delay between polling requests when no updates are available"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.run_polling:6
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.start_polling:6
+msgid "Run task for each event and no wait result"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.run_polling:7
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.start_polling:7
+msgid "backoff-retry config"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.run_polling:8
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.start_polling:8
+msgid "handle signals (SIGINT/SIGTERM)"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.run_polling:9
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.start_polling:9
+msgid "close bot sessions on shutdown"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.run_polling:10
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.start_polling:10
+msgid "Maximum number of concurrent updates to process (None = no limit), used only if handle_as_tasks is True"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.run_polling:12
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.start_polling:12
+msgid "contextual data"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.silent_call_request:1
+msgid "Simulate answer into WebHook"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.start_polling:1
+msgid "Polling runner"
+msgstr ""
+
+#: ../../../aiorubi/dispatcher/dispatcher.py:docstring of aiorubi.dispatcher.dispatcher.Dispatcher.stop_polling:1
+msgid "Execute this method if you want to stop polling programmatically"
+msgstr ""

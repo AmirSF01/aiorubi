@@ -1,0 +1,165 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tutorial/04_keypads.rst:5
+msgid "4. Keypads"
+msgstr "۴. کیبوردها"
+
+#: ../../tutorial/04_keypads.rst:7
+msgid "Keypads are Rubika's answer to keyboards. There are two display modes, both described by a single class :class:`~aiorubi.types.keypad.Keypad`:"
+msgstr "کیبوردها پاسخ روبیکا به کیبوردهای تلگرامی هستند. دو حالت نمایش وجود دارد که هر دو با یک کلاس توصیف می‌شوند :class:`~aiorubi.types.keypad.Keypad`:"
+
+#: ../../tutorial/04_keypads.rst:11
+msgid "**inline keypad** — buttons shown under a specific message (like aiogram's inline keyboard),"
+msgstr "**کیبورد درون‌خطی** — دکمه‌هایی که زیر یک پیام مشخص نمایش داده می‌شوند (مثل کیبورد inline در aiogram)،"
+
+#: ../../tutorial/04_keypads.rst:13
+msgid "**chat keypad** — buttons pinned at the bottom of the chat (like aiogram's reply keyboard)."
+msgstr "**کیبورد چت** — دکمه‌هایی که پایین چت پین می‌شوند (مثل reply keyboard در aiogram)."
+
+#: ../../tutorial/04_keypads.rst:18
+msgid "Anatomy of a keypad"
+msgstr "کالبدشکافی یک کیبورد"
+
+#: ../../tutorial/04_keypads.rst:20
+msgid "A keypad is a list of rows; each row is a list of buttons:"
+msgstr "کیبورد فهرستی از ردیف‌هاست؛ هر ردیف فهرستی از دکمه‌ها:"
+
+#: ../../tutorial/04_keypads.rst:40
+msgid "``Button`` needs three things: a unique ``id`` (what you will receive in ``aux_data.button_id`` when tapped), a ``type`` (e.g. ``\"Simple\"``) and the ``button_text`` shown to the user."
+msgstr "``Button`` به سه چیز نیاز دارد: یک ``id`` یکتا (چیزی که هنگام کلیک در ``aux_data.button_id`` دریافت می‌کنید)، یک ``type`` (مثلاً ``\"Simple\"``) و ``button_text`` که به کاربر نمایش داده می‌شود."
+
+#: ../../tutorial/04_keypads.rst:46
+msgid "Handling button clicks — inline_message"
+msgstr "مدیریت کلیک دکمه‌ها — inline_message"
+
+#: ../../tutorial/04_keypads.rst:48
+msgid "When the user taps an *inline* button, Rubika sends an ``InlineMessage`` update and your ``inline_message`` observer fires. The tapped button's id arrives in ``aux_data.button_id``:"
+msgstr "وقتی کاربر روی یک دکمهٔ *درون‌خطی* کلیک می‌کند، روبیکا یک آپدیت ``InlineMessage`` می‌فرستد و ناظر ``inline_message`` شما اجرا می‌شود. شناسهٔ دکمهٔ کلیک‌شده در ``aux_data.button_id`` می‌رسد:"
+
+#: ../../tutorial/04_keypads.rst:60
+msgid "A ``CallbackData`` factory is **not** currently shipped with aiorubi — the package exposes ``Command``, ``CommandStart``, ``CommandObject``, ``StateFilter``, ``MagicData``, ``ExceptionTypeFilter``, ``ExceptionMessageFilter``, the combinators ``and_f`` / ``or_f`` / ``invert_f`` and the ``Filter`` base class. For typed callback data, route on ``aux_data.button_id`` values directly (as shown above), or write your own small factory filter on top of :class:`~aiorubi.filters.base.Filter`."
+msgstr "یک کارخانهٔ ``CallbackData`` فعلاً **با** aiorubi عرضه نشده — پکیج ``Command``، ``CommandStart``، ``CommandObject``، ``StateFilter``، ``MagicData``، ``ExceptionTypeFilter``، ``ExceptionMessageFilter``، ترکیب‌کننده‌های ``and_f`` / ``or_f`` / ``invert_f`` و کلاس پایهٔ ``Filter`` را ارائه می‌دهد. برای دادهٔ callback تایپ‌دار، مستقیماً روی مقادیر ``aux_data.button_id`` مسیریابی کنید (مثل بالا) یا کارخانهٔ فیلتر کوچک خودتان را روی :class:`~aiorubi.filters.base.Filter` بنویسید."
+
+#: ../../tutorial/04_keypads.rst:69
+msgid "Filtering on the button id is the simplest way to route clicks. The full filter toolkit is described in :doc:`/guide/filter`."
+msgstr "فیلترکردن روی شناسهٔ دکمه ساده‌ترین راه مسیریابی کلیک‌هاست. جعبه‌ابزار کامل فیلترها در :doc:`/guide/filter` توضیح داده شده است."
+
+#: ../../tutorial/04_keypads.rst:74
+msgid "``InlineMessage`` is *not* a ``Message``. It has ``sender_id``, ``chat_id``, ``aux_data`` and an ``aux_data.button_id``, but no ``text`` and no ``reply()`` shortcuts. Use ``await call.answer(...)`` to respond."
+msgstr "``InlineMessage`` یک ``Message`` *نیست*. ``sender_id``، ``chat_id``، ``aux_data`` و ``aux_data.button_id`` دارد، ولی نه ``text`` دارد و نه میان‌برهای ``reply()``. برای پاسخ از ``await call.answer(...)`` استفاده کنید."
+
+#: ../../tutorial/04_keypads.rst:81
+msgid "Chat keypad"
+msgstr "کیبورد چت"
+
+#: ../../tutorial/04_keypads.rst:83
+msgid "A *chat keypad* replaces the user's typing area with buttons. Send it via the ``chat_keypad`` keyword:"
+msgstr "یک *کیبورد چت* ناحیهٔ تایپ کاربر را با دکمه‌ها جایگزین می‌کند. با کلیدواژهٔ ``chat_keypad`` بفرستید:"
+
+#: ../../tutorial/04_keypads.rst:102
+msgid "When the user taps a chat keypad button, the bot receives a regular ``new_message`` update whose ``aux_data.button_id`` holds the button id — so the same ``Button.id`` routing applies:"
+msgstr "وقتی کاربر روی دکمهٔ کیبورد چت کلیک می‌کند، بات یک آپدیت معمولی ``new_message`` می‌گیرد که ``aux_data.button_id`` آن شناسهٔ دکمه را دارد — پس همان مسیریابی ``Button.id`` صادق است:"
+
+#: ../../tutorial/04_keypads.rst:114
+msgid "Removing a chat keypad"
+msgstr "حذف کیبورد چت"
+
+#: ../../tutorial/04_keypads.rst:116
+msgid "There is no \"remove keyboard\" object. Instead call :meth:`~aiorubi.client.bot.Bot.remove_chat_keypad`:"
+msgstr "شیء «حذف کیبورد» وجود ندارد. به‌جایش :meth:`~aiorubi.client.bot.Bot.remove_chat_keypad` را صدا بزنید:"
+
+#: ../../tutorial/04_keypads.rst:125
+msgid "The rich button family"
+msgstr "خانوادهٔ دکمه‌های غنی"
+
+#: ../../tutorial/04_keypads.rst:127
+msgid "Besides plain ``Button``, Rubika ships interactive button types. All of them live in ``aiorubi.types``:"
+msgstr "علاوه بر ``Button`` ساده، روبیکا انواع دکمهٔ تعاملی دارد. همه در ``aiorubi.types`` زندگی می‌کنند:"
+
+#: ../../tutorial/04_keypads.rst:134
+msgid "Class"
+msgstr "کلاس"
+
+#: ../../tutorial/04_keypads.rst:135
+msgid "Purpose"
+msgstr "کاربرد"
+
+#: ../../tutorial/04_keypads.rst:136
+msgid "``ButtonSelection``"
+msgstr "``ButtonSelection``"
+
+#: ../../tutorial/04_keypads.rst:137
+msgid "a menu of options with search support"
+msgstr "منویی از گزینه‌ها با پشتیبانی جست‌وجو"
+
+#: ../../tutorial/04_keypads.rst:138
+msgid "``ButtonCalendar``"
+msgstr "``ButtonCalendar``"
+
+#: ../../tutorial/04_keypads.rst:139
+msgid "a date picker"
+msgstr "انتخابگر تاریخ"
+
+#: ../../tutorial/04_keypads.rst:140
+msgid "``ButtonNumberPicker``"
+msgstr "``ButtonNumberPicker``"
+
+#: ../../tutorial/04_keypads.rst:141
+msgid "up/down number picker"
+msgstr "انتخابگر عدد بالا/پایین"
+
+#: ../../tutorial/04_keypads.rst:142
+msgid "``ButtonStringPicker``"
+msgstr "``ButtonStringPicker``"
+
+#: ../../tutorial/04_keypads.rst:143
+msgid "string picker"
+msgstr "انتخابگر رشته"
+
+#: ../../tutorial/04_keypads.rst:144
+msgid "``ButtonTextbox``"
+msgstr "``ButtonTextbox``"
+
+#: ../../tutorial/04_keypads.rst:145
+msgid "free-text input with a keypad type"
+msgstr "ورودی متن آزاد با نوع کیبورد"
+
+#: ../../tutorial/04_keypads.rst:146
+msgid "``ButtonLocation``"
+msgstr "``ButtonLocation``"
+
+#: ../../tutorial/04_keypads.rst:147
+msgid "\"share my location\" button"
+msgstr "دکمهٔ «اشتراک موقعیت من»"
+
+#: ../../tutorial/04_keypads.rst:149
+msgid "Example — a number picker for quantity:"
+msgstr "مثال — انتخابگر عدد برای تعداد:"
+
+#: ../../tutorial/04_keypads.rst:168
+msgid "Consult the API reference for the exact constructor arguments of each button class."
+msgstr "برای آرگومان‌های دقیق سازندهٔ هر کلاس دکمه، به مرجع API مراجعه کنید."
+
+#: ../../tutorial/04_keypads.rst:173
+msgid "Recap"
+msgstr "جمع‌بندی"
+
+#: ../../tutorial/04_keypads.rst:175
+msgid "You can now attach interactive keypads to messages, react to inline button clicks via the ``inline_message`` observer, pin a chat keypad with ``edit_chat_keypad``, and remove it with ``remove_chat_keypad``. Next: sending and downloading files."
+msgstr "الان می‌توانید کیبوردهای تعاملی را به پیام‌ها وصل کنید، به کلیک دکمه‌های درون‌خطی با ناظر ``inline_message`` واکنش نشان دهید، با ``edit_chat_keypad`` کیبورد چت پین کنید و با ``remove_chat_keypad`` حذفش کنید. بعدی: ارسال و دانلود فایل‌ها."
+

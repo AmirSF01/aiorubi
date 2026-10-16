@@ -1,0 +1,93 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/exceptions.rst:3
+msgid "Exceptions"
+msgstr "استثناها"
+
+#: aiorubi.exceptions.AiorubiError:1 of
+msgid "Base exception for all aiorubi errors."
+msgstr "استثنای پایه برای همهٔ خطاهای aiorubi."
+
+#: aiorubi.exceptions.CallbackAnswerException:1 of
+msgid "Exception for callback answer."
+msgstr "استثنای مربوط به پاسخ دکمه (callback)."
+
+#: aiorubi.exceptions.ClientDecodeError:1 of
+msgid "Exception raised when client can't decode response. (Malformed response, etc.)"
+msgstr "وقتی کلاینت نتواند پاسخ را کدگشایی کند پرتاب می‌شود. (پاسخ بدشکل و امثال آن)"
+
+#: ../../api/exceptions.rst aiorubi.exceptions.ClientDecodeError
+#: aiorubi.exceptions.DataNotDictLikeError
+#: aiorubi.exceptions.RubikaInvalidAccess aiorubi.exceptions.RubikaInvalidInput
+#: aiorubi.exceptions.RubikaServerError aiorubi.exceptions.RubikaTooRequests
+#: aiorubi.exceptions.UnsupportedKeywordArgument of
+msgid "Parameters"
+msgstr "پارامترها"
+
+#: ../../api/exceptions.rst aiorubi.exceptions.ClientDecodeError
+#: aiorubi.exceptions.DataNotDictLikeError
+#: aiorubi.exceptions.RubikaInvalidAccess aiorubi.exceptions.RubikaInvalidInput
+#: aiorubi.exceptions.RubikaServerError aiorubi.exceptions.RubikaTooRequests
+#: aiorubi.exceptions.UnsupportedKeywordArgument of
+msgid "Return type"
+msgstr "نوع بازگشتی"
+
+#: aiorubi.exceptions.DataNotDictLikeError:1 of
+msgid "Exception raised when data is not dict-like."
+msgstr "وقتی داده dict-like نباشد پرتاب می‌شود."
+
+#: aiorubi.exceptions.DetailedAiorubiError:1 of
+msgid "Base exception for all aiorubi errors with detailed message."
+msgstr "استثنای پایه برای همهٔ خطاهای aiorubi همراه با پیام تفصیلی."
+
+#: aiorubi.exceptions.RubikaAPIError:1 of
+msgid "Base exception for all Rubika API errors."
+msgstr "استثنای پایه برای همهٔ خطاهای API روبیکا."
+
+#: aiorubi.exceptions.RubikaInvalidAccess:1 of
+msgid "Exception raised when the bot does not have permission to perform the requested action."
+msgstr "وقتی بات اجازهٔ انجام عمل درخواستی را نداشته باشد پرتاب می‌شود."
+
+#: aiorubi.exceptions.RubikaInvalidInput:1 of
+msgid "Exception raised when request is malformed."
+msgstr "وقتی درخواست بدشکل باشد پرتاب می‌شود."
+
+#: aiorubi.exceptions.RubikaNetworkError:1 of
+msgid "Base exception for all Rubika network errors."
+msgstr "استثنای پایه برای همهٔ خطاهای شبکهٔ روبیکا."
+
+#: aiorubi.exceptions.RubikaServerError:1 of
+msgid "Exception raised when Rubika server returns 5xx HTTP error or \"status\": \"SERVER_ERROR\"."
+msgstr "وقتی سرور روبیکا خطای HTTP 5xx یا \"status\": \"SERVER_ERROR\" برگرداند پرتاب می‌شود."
+
+#: aiorubi.exceptions.RubikaTooRequests:1 of
+msgid "Exception raised when the Rubika API returns a \"TOO_REQUESTS\" status, meaning the bot has sent too many requests in a short time."
+msgstr "وقتی API روبیکا وضعیت \"TOO_REQUESTS\" برگرداند پرتاب می‌شود؛ یعنی بات در مدت کوتاهی درخواست‌های زیادی فرستاده است."
+
+#: aiorubi.exceptions.RubikaTooRequests:4 of
+msgid "Note: Rubika does not provide a 'retry_after' value, so the client must manage timing between requests based on experience."
+msgstr "نکته: روبیکا مقدار 'retry_after' ارائه نمی‌دهد، پس کلاینت باید زمان‌بندی بین درخواست‌ها را بر اساس تجربه مدیریت کند."
+
+#: aiorubi.exceptions.SceneException:1 of
+msgid "Exception for scenes."
+msgstr "استثنای مربوط به صحنه‌ها."
+
+#: aiorubi.exceptions.UnsupportedKeywordArgument:1 of
+msgid "Exception raised when a keyword argument is passed as filter."
+msgstr "وقتی یک آرگومان کلیدواژه‌ای به‌عنوان فیلتر پاس داده شود پرتاب می‌شود."
+

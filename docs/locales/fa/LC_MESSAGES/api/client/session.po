@@ -1,0 +1,155 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/client/session.rst:3
+msgid "Session"
+msgstr "سشن"
+
+#: ../../api/client/session.rst:5
+msgid "HTTP session layer used by :class:`~aiorubi.client.bot.Bot` to talk to the Rubika Bot API."
+msgstr "لایهٔ سشن HTTP که :class:`~aiorubi.client.bot.Bot` برای صحبت با Rubika Bot API استفاده می‌کند."
+
+#: ../../api/client/session.rst:9
+msgid "Base session"
+msgstr "سشن پایه"
+
+#: aiorubi.client.session.base.BaseSession:1 of
+msgid "This is base class for all HTTP sessions in aiorubi."
+msgstr "این کلاس پایهٔ همهٔ سشن‌های HTTP در aiorubi است."
+
+#: aiorubi.client.session.base.BaseSession:3 of
+msgid "If you want to create your own session, you must inherit from this class."
+msgstr "اگر می‌خواهید سشن خودتان را بسازید، باید از این کلاس ارث ببرید."
+
+#: ../../api/client/session.rst
+#: aiorubi.client.session.aiohttp.AiohttpSession.stream_content
+#: aiorubi.client.session.aiohttp.AiohttpSession.upload_file
+#: aiorubi.client.session.base.BaseSession.__call__
+#: aiorubi.client.session.base.BaseSession.check_response
+#: aiorubi.client.session.base.BaseSession.prepare_value
+#: aiorubi.client.session.base.BaseSession.stream_content
+#: aiorubi.client.session.middlewares.manager.RequestMiddlewareManager.register
+#: of
+msgid "Parameters"
+msgstr "پارامترها"
+
+#: aiorubi.client.session.base.BaseSession.__call__:1 of
+msgid "Call self as a function."
+msgstr "خود را به‌عنوان تابع فراخوانی کن."
+
+#: ../../api/client/session.rst
+#: aiorubi.client.session.aiohttp.AiohttpSession.close
+#: aiorubi.client.session.aiohttp.AiohttpSession.stream_content
+#: aiorubi.client.session.aiohttp.AiohttpSession.upload_file
+#: aiorubi.client.session.base.BaseSession.__call__
+#: aiorubi.client.session.base.BaseSession.check_response
+#: aiorubi.client.session.base.BaseSession.close
+#: aiorubi.client.session.base.BaseSession.prepare_value
+#: aiorubi.client.session.base.BaseSession.stream_content
+#: aiorubi.client.session.middlewares.manager.RequestMiddlewareManager.register
+#: of
+msgid "Return type"
+msgstr "نوع بازگشتی"
+
+#: aiorubi.client.session.base.BaseSession.check_response:1 of
+msgid "Check response status"
+msgstr "بررسی وضعیت پاسخ"
+
+#: aiorubi.client.session.aiohttp.AiohttpSession.close:1
+#: aiorubi.client.session.base.BaseSession.close:1 of
+msgid "Close client session"
+msgstr "بستن سشن کلاینت"
+
+#: aiorubi.client.session.aiohttp.AiohttpSession.make_request:1
+#: aiorubi.client.session.base.BaseSession.make_request:1 of
+msgid "Make request to Rubika Bot API"
+msgstr "ارسال درخواست به Rubika Bot API"
+
+#: aiorubi.client.session.aiohttp.AiohttpSession.make_request:3
+#: aiorubi.client.session.base.BaseSession.make_request:3 of
+msgid "Bot instance"
+msgstr "نمونهٔ بات"
+
+#: aiorubi.client.session.aiohttp.AiohttpSession.make_request:4
+#: aiorubi.client.session.base.BaseSession.make_request:4 of
+msgid "Method instance"
+msgstr "نمونهٔ متد"
+
+#: aiorubi.client.session.aiohttp.AiohttpSession.make_request:5
+#: aiorubi.client.session.base.BaseSession.make_request:5 of
+msgid "Request timeout"
+msgstr "تایم‌اوت درخواست"
+
+#: ../../api/client/session.rst
+msgid "Returns"
+msgstr "بازگشت‌ها"
+
+#: ../../api/client/session.rst
+msgid "Raises"
+msgstr "پرتاب‌ها"
+
+#: aiorubi.client.session.base.BaseSession.prepare_value:1 of
+msgid "Prepare value before send"
+msgstr "آماده‌سازی مقدار قبل از ارسال"
+
+#: aiorubi.client.session.aiohttp.AiohttpSession.stream_content:1
+#: aiorubi.client.session.base.BaseSession.stream_content:1 of
+msgid "Stream reader"
+msgstr "خوانندهٔ استریم"
+
+#: ../../api/client/session.rst:16
+msgid "aiohttp implementation"
+msgstr "پیاده‌سازی aiohttp"
+
+#: aiorubi.client.session.aiohttp.AiohttpSession.__init__:1 of
+msgid "Client session based on aiohttp."
+msgstr "سشن کلاینت مبتنی بر aiohttp."
+
+#: aiorubi.client.session.aiohttp.AiohttpSession.__init__:3 of
+msgid "The proxy to be used for requests. Default is None."
+msgstr "پروکسی مورد استفاده برای درخواست‌ها. پیش‌فرض None است."
+
+#: aiorubi.client.session.aiohttp.AiohttpSession.__init__:4 of
+msgid "The total number of simultaneous connections. Default is 100."
+msgstr "تعداد کل اتصال‌های همزمان. پیش‌فرض ۱۰۰ است."
+
+#: aiorubi.client.session.aiohttp.AiohttpSession.__init__:5 of
+msgid "Additional keyword arguments."
+msgstr "آرگومان‌های کلیدواژه‌ای اضافی."
+
+#: aiorubi.client.session.aiohttp.AiohttpSession.upload_file:1 of
+msgid "Uploads a file to Rubika's storage using the provided upload_url."
+msgstr "فایل را با upload_url داده‌شده به فضای ذخیره‌سازی روبیکا آپلود می‌کند."
+
+#: ../../api/client/session.rst:23
+msgid "Session middlewares"
+msgstr "میان‌افزارهای سشن"
+
+#: aiorubi.client.session.middlewares.base.BaseRequestMiddleware:1 of
+msgid "Generic middleware class"
+msgstr "کلاس میان‌افزار عمومی"
+
+#: aiorubi.client.session.middlewares.manager.RequestMiddlewareManager.register:1
+#: of
+msgid "Register a virtual subclass of an ABC."
+msgstr "ثبت یک زیرکلاس مجازی از یک ABC."
+
+#: aiorubi.client.session.middlewares.manager.RequestMiddlewareManager.register:3
+#: of
+msgid "Returns the subclass, to allow usage as a class decorator."
+msgstr "زیرکلاس را برمی‌گرداند تا بتوان از آن به‌عنوان دکوریتور کلاس استفاده کرد."
+

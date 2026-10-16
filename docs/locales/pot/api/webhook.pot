@@ -1,0 +1,116 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../api/webhook.rst:3
+msgid "Webhook"
+msgstr ""
+
+#: ../../api/webhook.rst:5
+msgid "Webhook support built on top of aiohttp."
+msgstr ""
+
+#: ../../api/webhook.rst:0
+msgid "Parameters"
+msgstr ""
+
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.SimpleRequestHandler.__init__:1
+msgid "Handler for single Bot instance"
+msgstr ""
+
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.SimpleRequestHandler.__init__:3
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.TokenBasedRequestHandler.__init__:9
+msgid "instance of :class:`aiorubi.dispatcher.dispatcher.Dispatcher`"
+msgstr ""
+
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.SimpleRequestHandler.__init__:4
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.TokenBasedRequestHandler.__init__:10
+msgid "immediately responds to the Rubika instead of a waiting end of handler process"
+msgstr ""
+
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.SimpleRequestHandler.__init__:6
+msgid "instance of :class:`aiorubi.client.bot.Bot`"
+msgstr ""
+
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.SimpleRequestHandler.close:0
+#: ../../api/webhook.rst:0
+msgid "Return type"
+msgstr ""
+
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.SimpleRequestHandler.close:1
+msgid "Close bot session"
+msgstr ""
+
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.SimpleRequestHandler.resolve_bot:1
+msgid "This method should be implemented in subclasses of this class."
+msgstr ""
+
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.SimpleRequestHandler.resolve_bot:3
+msgid "Resolve Bot instance from request."
+msgstr ""
+
+#: ../../api/webhook.rst:0
+msgid "Returns"
+msgstr ""
+
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.SimpleRequestHandler.resolve_bot:6
+msgid "Bot instance"
+msgstr ""
+
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.TokenBasedRequestHandler.__init__:1
+msgid "Handler that supports multiple bots the context will be resolved from path variable 'bot_token'"
+msgstr ""
+
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.TokenBasedRequestHandler.__init__:6
+msgid "This handler is not recommended in due to token is available in URL and can be logged by reverse proxy server or other middleware."
+msgstr ""
+
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.TokenBasedRequestHandler.__init__:12
+msgid "kwargs that will be passed to new Bot instance"
+msgstr ""
+
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.TokenBasedRequestHandler.register:1
+msgid "Validate path, register route and shutdown callback"
+msgstr ""
+
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.TokenBasedRequestHandler.register:3
+msgid "instance of aiohttp Application"
+msgstr ""
+
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.TokenBasedRequestHandler.register:4
+msgid "route paths"
+msgstr ""
+
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.TokenBasedRequestHandler.resolve_bot:1
+msgid "Get bot token from a path and create or get from cache Bot instance"
+msgstr ""
+
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.setup_application:1
+msgid "This function helps to configure a startup-shutdown process"
+msgstr ""
+
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.setup_application:3
+msgid "aiohttp application"
+msgstr ""
+
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.setup_application:4
+msgid "aiorubi dispatcher"
+msgstr ""
+
+#: ../../../aiorubi/webhook/aiohttp_server.py:docstring of aiorubi.webhook.aiohttp_server.setup_application:5
+msgid "additional data"
+msgstr ""

@@ -1,0 +1,213 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../guide/handlers.rst:3
+msgid "Handlers"
+msgstr ""
+
+#: ../../guide/handlers.rst:5
+msgid "A handler is the code that runs when an update passes all filters of one observer. Handlers are plain ``async`` callables registered on an observer with either the decorator or the ``register`` form (see :doc:`router`)."
+msgstr ""
+
+#: ../../guide/handlers.rst:17
+msgid "Argument injection"
+msgstr ""
+
+#: ../../guide/handlers.rst:19
+msgid "Handlers do not receive a fixed positional list — aiorubi inspects the signature and passes only the names the handler declares, drawn from the update context. Declare exactly what you need:"
+msgstr ""
+
+#: ../../guide/handlers.rst:27
+msgid "Name"
+msgstr ""
+
+#: ../../guide/handlers.rst:28
+msgid "Value"
+msgstr ""
+
+#: ../../guide/handlers.rst:29
+msgid "``message``, ``inline_message``, ``event``"
+msgstr ""
+
+#: ../../guide/handlers.rst:30
+msgid "The event object for the observer (a :class:`~aiorubi.types.message.Message`, an :class:`~aiorubi.types.inline_message.InlineMessage`, …)."
+msgstr ""
+
+#: ../../guide/handlers.rst:33
+msgid "``bot``"
+msgstr ""
+
+#: ../../guide/handlers.rst:34
+msgid "The :class:`~aiorubi.client.bot.Bot` instance."
+msgstr ""
+
+#: ../../guide/handlers.rst:35
+msgid "``event_update``"
+msgstr ""
+
+#: ../../guide/handlers.rst:36
+msgid "The raw :class:`~aiorubi.types.update.Update` envelope."
+msgstr ""
+
+#: ../../guide/handlers.rst:37
+msgid "``state`` / ``raw_state``"
+msgstr ""
+
+#: ../../guide/handlers.rst:38
+msgid "The FSM context / state string (see :doc:`fsm`)."
+msgstr ""
+
+#: ../../guide/handlers.rst:39
+msgid "``scenes``"
+msgstr ""
+
+#: ../../guide/handlers.rst:40
+msgid "The :class:`~aiorubi.fsm.scene.ScenesManager`, when scenes are installed (see :doc:`scenes`)."
+msgstr ""
+
+#: ../../guide/handlers.rst:42
+msgid "``command``"
+msgstr ""
+
+#: ../../guide/handlers.rst:43
+msgid "The :class:`~aiorubi.filters.command.CommandObject`, injected by the ``Command`` filter."
+msgstr ""
+
+#: ../../guide/handlers.rst:45
+msgid "``button_id``"
+msgstr ""
+
+#: ../../guide/handlers.rst:46
+msgid "The unpacked ``ButtonId``, injected by ``ButtonId.filter()``."
+msgstr ""
+
+#: ../../guide/handlers.rst:47
+msgid "any workflow-data key"
+msgstr ""
+
+#: ../../guide/handlers.rst:48
+msgid "Values from ``Dispatcher(**kwargs)`` / ``dp[\"key\"] = ...``."
+msgstr ""
+
+#: ../../guide/handlers.rst:49
+msgid "``**kwargs``"
+msgstr ""
+
+#: ../../guide/handlers.rst:50
+msgid "Everything at once."
+msgstr ""
+
+#: ../../guide/handlers.rst:58
+msgid "Unknown declared names are simply not passed; a handler that declares a name absent from the context gets nothing for it — use ``**kwargs`` or a default value if you are unsure."
+msgstr ""
+
+#: ../../guide/handlers.rst:62
+msgid "The first positional parameter conventionally receives the event, but the mechanism is name-based: ``(message)`` and ``(msg=message)``-style names only matter for readability. Anything your handler does not declare is not passed at all."
+msgstr ""
+
+#: ../../guide/handlers.rst:68
+msgid "Message shortcuts"
+msgstr ""
+
+#: ../../guide/handlers.rst:70
+msgid ":class:`~aiorubi.types.message.Message` carries shortcuts that build and bind API calls:"
+msgstr ""
+
+#: ../../guide/handlers.rst:84
+msgid "All of them accept the keyword arguments of the underlying ``Bot.send_message`` / ``Bot.send_file`` (``inline_keypad=``, ``chat_keypad=``, ``metadata=``, …). :class:`InlineMessage` provides ``answer(text, **kwargs)`` for reacting to button clicks."
+msgstr ""
+
+#: ../../guide/handlers.rst:90
+msgid "Class-based handlers"
+msgstr ""
+
+#: ../../guide/handlers.rst:92
+msgid "Subclass :class:`~aiorubi.handlers.base.BaseHandler` and implement ``handle()``. The class is registered like a function; instantiation happens per update:"
+msgstr ""
+
+#: ../../guide/handlers.rst:107
+msgid "Available inside ``handle()``:"
+msgstr ""
+
+#: ../../guide/handlers.rst:109
+msgid "``self.event`` — the event object."
+msgstr ""
+
+#: ../../guide/handlers.rst:110
+msgid "``self.data`` — the whole context dict (including ``state``, filters' injected values, workflow data)."
+msgstr ""
+
+#: ../../guide/handlers.rst:112
+msgid "``self.bot`` — shortcut property for ``self.data[\"bot\"]``."
+msgstr ""
+
+#: ../../guide/handlers.rst:113
+msgid "``self.update`` — the raw :class:`~aiorubi.types.update.Update` envelope."
+msgstr ""
+
+#: ../../guide/handlers.rst:115
+msgid "Class-based handlers are convenient when a handler needs constructor-time configuration shared across updates:"
+msgstr ""
+
+#: ../../guide/handlers.rst:128
+msgid "Controlling propagation"
+msgstr ""
+
+#: ../../guide/handlers.rst:130
+msgid "Return normally — the observer stops; no other handler runs."
+msgstr ""
+
+#: ../../guide/handlers.rst:131
+msgid "Raise :class:`~aiorubi.dispatcher.event.bases.SkipHandler` (or call ``skip()``) — the observer continues with the *next* handler:"
+msgstr ""
+
+#: ../../guide/handlers.rst:143
+msgid "Returning a :class:`~aiorubi.methods.base.RubikaMethod` from a webhook dispatch answers the webhook with that method."
+msgstr ""
+
+#: ../../guide/handlers.rst:146
+msgid "A handler may also be registered with no filters at all — it then matches every event of that observer and is typically used as the fallback:"
+msgstr ""
+
+#: ../../guide/handlers.rst:156
+msgid "Error handlers"
+msgstr ""
+
+#: ../../guide/handlers.rst:158
+msgid "Exceptions escaping any handler are caught by the built-in :class:`~aiorubi.dispatcher.middlewares.error.ErrorsMiddleware` and routed to the ``error`` observer. The event there is an :class:`~aiorubi.types.error_event.ErrorEvent` wrapping ``exception`` and the original ``update``:"
+msgstr ""
+
+#: ../../guide/handlers.rst:172
+msgid "Combine with :class:`~aiorubi.filters.exception.ExceptionTypeFilter` / ``ExceptionMessageFilter`` (see :doc:`filter`) to specialise."
+msgstr ""
+
+#: ../../guide/handlers.rst:176
+msgid "See also"
+msgstr ""
+
+#: ../../guide/handlers.rst:178
+msgid ":doc:`filter` — everything about filters."
+msgstr ""
+
+#: ../../guide/handlers.rst:179
+msgid ":doc:`fsm` — the ``state`` argument in detail."
+msgstr ""
+
+#: ../../guide/handlers.rst:180
+msgid ":doc:`middlewares` — wrapping handlers with cross-cutting logic."
+msgstr ""

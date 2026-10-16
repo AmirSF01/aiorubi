@@ -1,0 +1,309 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../guide/scenes.rst:3
+msgid "Scenes"
+msgstr ""
+
+#: ../../guide/scenes.rst:5
+msgid "Scenes are a higher-level abstraction over the FSM (see :doc:`fsm`) for complex multi-step dialogs. A **scene** is a named state with its own handlers, and a **wizard** moves the user between scenes. Where plain FSM gives you *states*, scenes give you *rooms*: each room decides which messages it listens to and where to go next."
+msgstr ""
+
+#: ../../guide/scenes.rst:11
+msgid "The scene machinery lives in :mod:`aiorubi.fsm.scene` and is a direct port of the aiogram 3.x scenes API — ``Scene``, ``SceneWizard``, ``ScenesManager`` and the ``on`` marker."
+msgstr ""
+
+#: ../../guide/scenes.rst:16
+msgid "The four moving parts"
+msgstr ""
+
+#: ../../guide/scenes.rst:22
+msgid "Class"
+msgstr ""
+
+#: ../../guide/scenes.rst:23
+msgid "Role"
+msgstr ""
+
+#: ../../guide/scenes.rst:24
+msgid ":class:`~aiorubi.fsm.scene.Scene`"
+msgstr ""
+
+#: ../../guide/scenes.rst:25
+msgid "Base class; you subclass it. Collects handlers and actions declared on the class into ``__scene_config__``."
+msgstr ""
+
+#: ../../guide/scenes.rst:27
+msgid ":class:`~aiorubi.fsm.scene.SceneWizard`"
+msgstr ""
+
+#: ../../guide/scenes.rst:28
+msgid "Injected into every scene instance as ``self.wizard``; performs transitions (``goto``, ``leave``, ``exit``, ``back``, ``retake``) and data access."
+msgstr ""
+
+#: ../../guide/scenes.rst:31
+msgid ":class:`~aiorubi.fsm.scene.ScenesManager`"
+msgstr ""
+
+#: ../../guide/scenes.rst:32
+msgid "Created per update by the scenes middleware; enters/exits scenes and exposes ``manager.history``."
+msgstr ""
+
+#: ../../guide/scenes.rst:34
+msgid ":class:`~aiorubi.fsm.scene.SceneRegistry`"
+msgstr ""
+
+#: ../../guide/scenes.rst:35
+msgid "Maps state strings to scene classes and mounts the middleware on a router/dispatcher."
+msgstr ""
+
+#: ../../guide/scenes.rst:39
+msgid "Declaring a scene"
+msgstr ""
+
+#: ../../guide/scenes.rst:50
+msgid "Key points:"
+msgstr ""
+
+#: ../../guide/scenes.rst:52
+msgid "``state=`` assigns the FSM state string for the whole scene (``\"dialog\"`` here). It is stored via the ordinary FSM pipeline, so all :doc:`storages <storages>` work unchanged."
+msgstr ""
+
+#: ../../guide/scenes.rst:55
+msgid "``@on.new_message(...)`` marks a handler inside the scene — it is registered only while the scene's state is active. Available markers: ``on.new_message``, ``on.updated_message``, ``on.removed_message``, ``on.inline_message``. Every marker accepts the same filters as the regular observers (``Command``, ``F``, custom filters — see :doc:`filter`)."
+msgstr ""
+
+#: ../../guide/scenes.rst:61
+msgid "Handlers are plain methods: ``self`` is the scene instance, and the dispatcher-injected arguments (``message``, ``state``, …) follow the usual rules."
+msgstr ""
+
+#: ../../guide/scenes.rst:65
+msgid "The ``after=`` argument schedules a transition that runs *after* the handler returns: ``after=After.exit()``, ``after=After.back()`` or ``after=After.goto(OtherScene)``."
+msgstr ""
+
+#: ../../guide/scenes.rst:70
+msgid "Scene configuration"
+msgstr ""
+
+#: ../../guide/scenes.rst:72
+msgid "Class keyword arguments (also inherited from parent scene classes):"
+msgstr ""
+
+#: ../../guide/scenes.rst:74
+msgid "``state: str | None`` — the FSM state of the scene."
+msgstr ""
+
+#: ../../guide/scenes.rst:75
+msgid "``reset_data_on_enter: bool | None`` — wipe the FSM data when the scene is entered."
+msgstr ""
+
+#: ../../guide/scenes.rst:77
+msgid "``reset_history_on_enter: bool | None`` — clear the scene history when the scene is entered."
+msgstr ""
+
+#: ../../guide/scenes.rst:79
+msgid "``inline_message_without_state: bool | None`` — allow inline-message handlers to fire even when the state no longer matches."
+msgstr ""
+
+#: ../../guide/scenes.rst:89
+msgid "SceneWizard"
+msgstr ""
+
+#: ../../guide/scenes.rst:91
+msgid "Transitions (all coroutines):"
+msgstr ""
+
+#: ../../guide/scenes.rst:93
+msgid "``await wizard.enter(**kwargs)`` — (re)enter the current scene: applies the ``reset_*_on_enter`` flags, sets the scene state and fires the ``enter`` action."
+msgstr ""
+
+#: ../../guide/scenes.rst:96
+msgid "``await wizard.leave(**kwargs)`` — snapshot the current state+data into the history and fire the ``leave`` action."
+msgstr ""
+
+#: ../../guide/scenes.rst:98
+msgid "``await wizard.goto(scene, **kwargs)`` — ``leave()`` the current scene, then enter ``scene`` (a ``Scene`` subclass, a ``State`` or a state string)."
+msgstr ""
+
+#: ../../guide/scenes.rst:101
+msgid "``await wizard.exit(**kwargs)`` — clear the history, fire the ``exit`` action, then reset the FSM state to ``None`` (leave the scene world)."
+msgstr ""
+
+#: ../../guide/scenes.rst:103
+msgid "``await wizard.back(**kwargs)`` — leave the current scene *without* snapshotting and roll the history back to the previous record, re-entering that scene with its saved state and data."
+msgstr ""
+
+#: ../../guide/scenes.rst:106
+msgid "``await wizard.retake(**kwargs)`` — re-enter the current scene (re-runs its ``enter`` action)."
+msgstr ""
+
+#: ../../guide/scenes.rst:109
+msgid "Data shortcuts (they operate on the scene's FSM context):"
+msgstr ""
+
+#: ../../guide/scenes.rst:111
+msgid "``wizard.get_data()``, ``wizard.set_data(mapping)``, ``wizard.update_data(mapping=None, **kwargs)``, ``wizard.get_value(key, default=None)``, ``wizard.clear_data()``."
+msgstr ""
+
+#: ../../guide/scenes.rst:116
+msgid "Actions"
+msgstr ""
+
+#: ../../guide/scenes.rst:118
+msgid "Handlers can also be *actions* — they run on transitions instead of updates. Declare them with the same marker objects:"
+msgstr ""
+
+#: ../../guide/scenes.rst:140
+msgid "``on.new_message.enter(SomeOtherScene)`` additionally jumps to the target scene after the handler runs. Plain handlers can be chained with transitions too: ``@on.new_message(F.text == \"next\").enter(NextScene)``, ``.leave()``, ``.exit()``, ``.back()``."
+msgstr ""
+
+#: ../../guide/scenes.rst:146
+msgid "ScenesManager and entering scenes"
+msgstr ""
+
+#: ../../guide/scenes.rst:148
+msgid "The :class:`~aiorubi.fsm.scene.ScenesManager` is injected into handlers as the ``scenes`` argument once a registry is installed. Its methods:"
+msgstr ""
+
+#: ../../guide/scenes.rst:151
+msgid "``await scenes.enter(scene, **kwargs)`` — if another scene is active it is *exited* first, then the requested scene is entered. ``scene`` may be ``None`` to reset to the default (no-scene) state."
+msgstr ""
+
+#: ../../guide/scenes.rst:154
+msgid "``await scenes.close(**kwargs)`` — exit the active scene, if any."
+msgstr ""
+
+#: ../../guide/scenes.rst:156
+msgid "Two ways to start a scene:"
+msgstr ""
+
+#: ../../guide/scenes.rst:158
+msgid "**Registry** — register all scenes up-front:"
+msgstr ""
+
+#: ../../guide/scenes.rst:168
+msgid "**Entry handler** — turn a scene into a handler with ``Scene.as_handler()`` and attach it to a command:"
+msgstr ""
+
+#: ../../guide/scenes.rst:180
+msgid "or the one-liner equivalent:"
+msgstr ""
+
+#: ../../guide/scenes.rst:187
+msgid "HistoryManager"
+msgstr ""
+
+#: ../../guide/scenes.rst:189
+msgid "Every :class:`~aiorubi.fsm.scene.ScenesManager` owns a :class:`~aiorubi.fsm.scene.HistoryManager` (``manager.history``) that remembers the last 10 scene snapshots — each a ``MemoryStorageRecord(state=..., data=...)``. Snapshots are stored in the FSM storage under the ``scenes_history`` destiny, so they survive restarts with persistent storages."
+msgstr ""
+
+#: ../../guide/scenes.rst:196
+msgid "``await manager.history.snapshot()`` — push the *current* state and data (done automatically by ``wizard.leave()``)."
+msgstr ""
+
+#: ../../guide/scenes.rst:198
+msgid "``await manager.history.rollback() -> str | None`` — pop the latest snapshot and restore it (used by ``wizard.back()``)."
+msgstr ""
+
+#: ../../guide/scenes.rst:200
+msgid "``await manager.history.get()`` / ``.all()`` — peek at the last / all records without removing them."
+msgstr ""
+
+#: ../../guide/scenes.rst:202
+msgid "``await manager.history.clear()`` — forget the history (used by ``wizard.exit()`` and ``reset_history_on_enter``)."
+msgstr ""
+
+#: ../../guide/scenes.rst:206
+msgid "Mounting scenes: as_router and as_handler"
+msgstr ""
+
+#: ../../guide/scenes.rst:208
+msgid "``Scene.as_router(name=None)`` returns a :class:`~aiorubi.dispatcher.router.Router` with the scene's handlers bound to its state via :class:`~aiorubi.filters.state.StateFilter`. Include it manually when you prefer explicit wiring:"
+msgstr ""
+
+#: ../../guide/scenes.rst:218
+msgid "``Scene.as_handler(**kwargs)`` returns an async entry-point handler that enters the scene (see above). ``SceneRegistry.add(..., router=...)`` / ``registry.register(...)`` combine registration with router inclusion; a ``SceneException`` is raised if two scenes share one state string."
+msgstr ""
+
+#: ../../guide/scenes.rst:224
+msgid "Full example — a multi-step form"
+msgstr ""
+
+#: ../../guide/scenes.rst:226
+msgid "form_bot.py"
+msgstr ""
+
+#: ../../guide/scenes.rst:298
+msgid "What happens, step by step:"
+msgstr ""
+
+#: ../../guide/scenes.rst:300
+msgid "``/form`` — the entry handler calls ``scenes.enter(Form)``. The scene's ``enter`` action greets the user and the FSM state becomes ``\"form\"``."
+msgstr ""
+
+#: ../../guide/scenes.rst:302
+msgid "The user's next message is matched by the ``F.text`` handler of the active scene (``Form``); ``goto(FormAge)`` snapshots ``Form`` into the history and enters the age scene, whose ``enter`` action (if any) fires."
+msgstr ""
+
+#: ../../guide/scenes.rst:305
+msgid "``/back`` in the age scene calls ``wizard.back()``: the age scene is left *without* snapshotting, the last history record (``Form`` with its data) is rolled back and ``Form`` is re-entered."
+msgstr ""
+
+#: ../../guide/scenes.rst:308
+msgid "``/cancel`` or finishing the last step calls ``wizard.exit()``: the history is cleared, the ``exit`` action says goodbye, and the FSM state is reset to ``None`` — the user is back in the \"no scene\" world."
+msgstr ""
+
+#: ../../guide/scenes.rst:313
+msgid "Error handling"
+msgstr ""
+
+#: ../../guide/scenes.rst:315
+msgid "Scene errors raise :class:`~aiorubi.exceptions.SceneException` (a subclass of :class:`~aiorubi.exceptions.AiorubiError`), for example:"
+msgstr ""
+
+#: ../../guide/scenes.rst:318
+msgid "a scene state is not registered (``Scene ... is not registered``);"
+msgstr ""
+
+#: ../../guide/scenes.rst:319
+msgid "a duplicate state is registered in one registry;"
+msgstr ""
+
+#: ../../guide/scenes.rst:320
+msgid "a scene handler runs without the FSM pipeline (``Scene context key 'state' is not available...``) — this happens when ``disable_fsm=True``."
+msgstr ""
+
+#: ../../guide/scenes.rst:324
+msgid "Handle them in an :doc:`error handler <handlers>`:"
+msgstr ""
+
+#: ../../guide/scenes.rst:335
+msgid "See also"
+msgstr ""
+
+#: ../../guide/scenes.rst:337
+msgid ":doc:`fsm` — states, contexts and storages underneath."
+msgstr ""
+
+#: ../../guide/scenes.rst:338
+msgid ":doc:`storages` — where scene snapshots live (``scenes_history`` destiny)."
+msgstr ""
+
+#: ../../guide/scenes.rst:340
+msgid ":doc:`filter` — the filters accepted by ``@on.*`` decorators."
+msgstr ""

@@ -1,0 +1,174 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tutorial/09_webhook.rst:5
+msgid "9. Deployment: polling vs webhook"
+msgstr "۹. استقرار: پولینگ یا وب‌هوک"
+
+#: ../../tutorial/09_webhook.rst:7
+msgid "So far the bot has been running with **long polling** — the process asks Rubika \"anything new?\" in a loop. That is perfect for development. In production you usually want a **webhook**: Rubika pushes each update to *your* HTTPS endpoint as it happens."
+msgstr "تا اینجا بات با **پولینگ بلند** اجرا می‌شد — پروسه در یک حلقه از روبیکا می‌پرسد «چیزی جدید هست؟». برای توسعه عالی است. در production معمولاً یک **وب‌هوک** می‌خواهید: روبیکا هر آپدیت را لحظهٔ وقوع به endpoint HTTPS *شما* push می‌کند."
+
+#: ../../tutorial/09_webhook.rst:14
+msgid "Polling — the easy way"
+msgstr "پولینگ — راه ساده"
+
+#: ../../tutorial/09_webhook.rst:16
+msgid "Nothing to configure: the default ``await dp.start_polling(bot)`` already includes retry-with-backoff, clock-skew-safe offsets and graceful shutdown. Optional knobs:"
+msgstr "چیزی برای پیکربندی نیست: ``await dp.start_polling(bot)`` پیش‌فرض از قبل retry-with-backoff، آفست‌های امن نسبت به اختلاف ساعت و خاموشی تمیز را شامل می‌شود. تنظیمات اختیاری:"
+
+#: ../../tutorial/09_webhook.rst:32
+msgid "Webhook — the production way"
+msgstr "وب‌هوک — راه production"
+
+#: ../../tutorial/09_webhook.rst:34
+msgid "Rubika delivers updates via HTTPS POST to an endpoint you register:"
+msgstr "روبیکا آپدیت‌ها را با HTTPS POST به endpointی که ثبت می‌کنید می‌رساند:"
+
+#: ../../tutorial/09_webhook.rst:45
+msgid "The endpoint must be:"
+msgstr "endpoint باید:"
+
+#: ../../tutorial/09_webhook.rst:47
+msgid "reachable from the public internet,"
+msgstr "از اینترنت عمومی قابل دسترس باشد،"
+
+#: ../../tutorial/09_webhook.rst:48
+msgid "served over HTTPS with a valid certificate,"
+msgstr "روی HTTPS با سرتیفیکیت معتبر سرو شود،"
+
+#: ../../tutorial/09_webhook.rst:49
+msgid "fast — Rubika waits up to **60 seconds**, otherwise it re-sends the update (aiorubi's default answer timeout is 55 s and slow handlers are moved to the background automatically)."
+msgstr "سریع باشد — روبیکا تا **۶۰ ثانیه** صبر می‌کند، وگرنه آپدیت را دوباره می‌فرستد (تایم‌اوت پاسخ پیش‌فرض aiorubi برابر ۵۵ ثانیه است و هندلرهای کند به‌طور خودکار به پس‌زمینه می‌روند)."
+
+#: ../../tutorial/09_webhook.rst:55
+msgid "Minimal aiohttp server"
+msgstr "سرور حداقلی aiohttp"
+
+#: ../../tutorial/09_webhook.rst:57
+msgid "The library ships a small aiohttp-based webhook server. The sketch below shows the complete wiring:"
+msgstr "کتابخانه یک سرور وب‌هوک کوچک مبتنی بر aiohttp دارد. طرح زیر سیم‌کشی کامل را نشان می‌دهد:"
+
+#: ../../tutorial/09_webhook.rst:93
+msgid "For a production-grade setup prefer the built-in :class:`~aiorubi.webhook.aiohttp_server.SimpleRequestHandler`, which resolves the bot, closes the session on shutdown and (optionally) processes updates in the background:"
+msgstr "برای راه‌اندازی production-grade، :class:`~aiorubi.webhook.aiohttp_server.SimpleRequestHandler` داخلی را ترجیح دهید که بات را resolve می‌کند، سشن را در خاموشی می‌بندد و (به‌صورت اختیاری) آپدیت‌ها را در پس‌زمینه پردازش می‌کند:"
+
+#: ../../tutorial/09_webhook.rst:122
+#, python-brace-format
+msgid "``feed_raw_update`` returns after the handler chain *starts* processing; ``feed_webhook_update`` additionally enforces the 55-second answer window and returns a ``RubikaMethod`` — but unlike Telegram, Rubika does **not** support answering an update by returning an API call in the HTTP response (the webhook body is always ``{\"status\": \"OK\"}``), so the dispatcher makes that call silently on your behalf."
+msgstr "``feed_raw_update`` بعد از *شروع* پردازش زنجیرهٔ هندلر برمی‌گردد؛ ``feed_webhook_update`` علاوه بر آن پنجرهٔ پاسخ ۵۵ ثانیه‌ای را اعمال می‌کند و یک ``RubikaMethod`` برمی‌گرداند — اما برخلاف تلگرام، روبیکا از پاسخ‌دادن به آپدیت با برگرداندن یک فراخوانی API در پاسخ HTTP پشتیبانی **نمی‌کند** (بدنهٔ وب‌هوک همیشه ``{\"status\": \"OK\"}`` است)، پس دیسپچر آن فراخوانی را بی‌سروصدا به‌نمایندگی از شما انجام می‌دهد."
+
+#: ../../tutorial/09_webhook.rst:132
+msgid "Behind a reverse proxy"
+msgstr "پشت reverse proxy"
+
+#: ../../tutorial/09_webhook.rst:134
+msgid "In production, terminate TLS with nginx or Caddy and forward to the app on localhost. Make sure the proxy passes the raw body untouched and sets no ``Transfer-Encoding`` that aiohttp cannot parse."
+msgstr "در production، TLS را با nginx یا Caddy terminate کنید و به اپ روی localhost فوروارد کنید. مطمئن شوید پروکسی بدنهٔ خام را دست‌نخورده رد می‌کند و هیچ ``Transfer-Encoding`` ای که aiohttp نتواند parse کند تنظیم نمی‌کند."
+
+#: ../../tutorial/09_webhook.rst:138
+msgid "Example nginx fragment:"
+msgstr "قطعهٔ نمونهٔ nginx:"
+
+#: ../../tutorial/09_webhook.rst:150
+msgid "Choosing between them"
+msgstr "انتخاب بین آن‌ها"
+
+#: ../../tutorial/09_webhook.rst:157
+msgid "Polling"
+msgstr "پولینگ"
+
+#: ../../tutorial/09_webhook.rst:158
+msgid "Webhook"
+msgstr "وب‌هوک"
+
+#: ../../tutorial/09_webhook.rst:159
+msgid "Setup effort"
+msgstr "زحمت راه‌اندازی"
+
+#: ../../tutorial/09_webhook.rst:160
+msgid "zero"
+msgstr "صفر"
+
+#: ../../tutorial/09_webhook.rst:161
+msgid "needs HTTPS + public host"
+msgstr "نیاز به HTTPS + هاست عمومی"
+
+#: ../../tutorial/09_webhook.rst:162
+msgid "Latency"
+msgstr "تأخیر"
+
+#: ../../tutorial/09_webhook.rst:163
+msgid "up to ``polling_interval``"
+msgstr "تا ``polling_interval``"
+
+#: ../../tutorial/09_webhook.rst:164
+msgid "instant push"
+msgstr "push لحظه‌ای"
+
+#: ../../tutorial/09_webhook.rst:165
+msgid "Throughput"
+msgstr "توان عملیاتی"
+
+#: ../../tutorial/09_webhook.rst:166
+msgid "bounded by loop"
+msgstr "محدود به حلقه"
+
+#: ../../tutorial/09_webhook.rst:167
+msgid "scales with server"
+msgstr "با سرور مقیاس می‌یابد"
+
+#: ../../tutorial/09_webhook.rst:168
+msgid "Local development"
+msgstr "توسعهٔ لوکال"
+
+#: ../../tutorial/09_webhook.rst:169
+msgid "✅ works behind NAT"
+msgstr "✅ پشت NAT کار می‌کند"
+
+#: ../../tutorial/09_webhook.rst:170
+msgid "needs a tunnel (ngrok…)"
+msgstr "نیاز به تونل (ngrok و …)"
+
+#: ../../tutorial/09_webhook.rst:172
+msgid "Rule of thumb: develop with polling, ship with webhook."
+msgstr "قاعدهٔ سرانگشتی: با پولینگ توسعه بده، با وب‌هوک منتشر کن."
+
+#: ../../tutorial/09_webhook.rst:176
+msgid "Recap"
+msgstr "جمع‌بندی"
+
+#: ../../tutorial/09_webhook.rst:178
+msgid "The tutorial is complete. You have a bot that greets, parses commands, shows keypads, exchanges files, remembers conversation state, is split into modules, observes its own errors, and can be deployed either by polling or webhook."
+msgstr "آموزش کامل شد. شما باتی دارید که سلام می‌کند، دستورها را parse می‌کند، کیبورد نشان می‌دهد، فایل رد و بدل می‌کند، حالت گفتگو را به یاد دارد، به ماژول‌ها تقسیم شده، خطاهای خودش را رصد می‌کند و هم با پولینگ و هم با وب‌هوک قابل استقرار است."
+
+#: ../../tutorial/09_webhook.rst:183
+msgid "Where to go next:"
+msgstr "از اینجا به کجا:"
+
+#: ../../tutorial/09_webhook.rst:185
+msgid ":doc:`/guide/index` — every concept in depth."
+msgstr ":doc:`/guide/index` — هر مفهوم با عمق."
+
+#: ../../tutorial/09_webhook.rst:186
+msgid ":doc:`/api/index` — the full API reference."
+msgstr ":doc:`/api/index` — مرجع کامل API."
+
+#: ../../tutorial/09_webhook.rst:187
+msgid ":doc:`/migration-from-aiogram` — bring your aiogram bots over."
+msgstr ":doc:`/migration-from-aiogram` — بات‌های aiogram خود را بیاورید."
+

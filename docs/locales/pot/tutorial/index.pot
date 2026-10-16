@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../tutorial/index.rst:3
+msgid "Tutorial"
+msgstr ""
+
+#: ../../tutorial/index.rst:5
+msgid "Welcome to the aiorubi tutorial! By the end of this 9-chapter journey you will have built a complete Rubika bot with commands, keypads, file handling, finite state machines, and a webhook deployment."
+msgstr ""
+
+#: ../../tutorial/index.rst:22
+msgid "To get the most out of this tutorial you need:"
+msgstr ""
+
+#: ../../tutorial/index.rst:24
+msgid "Python 3.10+"
+msgstr ""
+
+#: ../../tutorial/index.rst:25
+msgid "``pip install aiorubi``"
+msgstr ""
+
+#: ../../tutorial/index.rst:26
+msgid "A Rubika bot token from `@BotFather <https://rubika.ir/BotFather>`_."
+msgstr ""
+
+#: ../../tutorial/index.rst:28
+msgid "We recommend reading the chapters in order — each chapter builds on concepts from the previous one, and the running example (a \"note-taking bot\" that stores notes in FSM storage) grows chapter by chapter."
+msgstr ""
+
+#: ../../tutorial/index.rst:34
+msgid "All code in this tutorial is also available as a single file per chapter. Copy each chapter's code into ``bot.py`` and run ``python bot.py`` to see it live."
+msgstr ""
+
+#: ../../tutorial/index.rst:39
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../tutorial/index.rst:41
+msgid "If you have not yet installed aiorubi, follow :doc:`/installation` first. If you are already familiar with aiogram 3.x you can skim :doc:`/migration-from-aiogram` and jump to :doc:`01_intro`."
+msgstr ""

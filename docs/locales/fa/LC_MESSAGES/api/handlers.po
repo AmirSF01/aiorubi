@@ -1,0 +1,56 @@
+# Persian translations for aiorubi package.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: 2026-09-09 12:44+0000\n"
+"Last-Translator: Mehdi <mehdi@users.noreply.github.com>\n"
+"Language-Team: none\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Handlers"
+msgstr  "هندلرها"
+
+msgid "Class-based handler helpers."
+msgstr  "کمک‌هندلرهای مبتنی بر کلاس."
+
+msgid "Base class for all class-based handlers"
+msgstr  "کلاس پایه برای همهٔ هندلرهای کلاس‌محور"
+
+msgid "Parameters"
+msgstr  "پارامترها"
+
+msgid "Return type"
+msgstr  "نوع بازگشتی"
+
+msgid "Base class for message handlers"
+msgstr  "کلاس پایه برای هندلرهای پیام"
+
+msgid "Base class for inline message (button click) handlers."
+msgstr  "کلاس پایه برای هندلرهای پیام درون‌خطی (کلیک دکمه)."
+
+msgid "Example"
+msgstr  "مثال"
+
+msgid "Is alias for `event.aux_data.button_id`"
+msgstr  "مستعارِ `event.aux_data.button_id` است"
+
+msgid "Is alias for `event.chat_id`"
+msgstr  "مستعارِ `event.chat_id` است"
+
+msgid "Is alias for `event.sender_id`"
+msgstr  "مستعارِ `event.sender_id` است"
+
+msgid "Base class for poll handlers"
+msgstr  "کلاس پایه برای هندلرهای نظرسنجی"
+
+msgid "Base class for errors handlers"
+msgstr  "کلاس پایه برای هندلرهای خطا"
+

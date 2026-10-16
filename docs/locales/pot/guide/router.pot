@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2026, Amir S. Farahani
+# This file is distributed under the same license as the aiorubi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: aiorubi 1.2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-09 12:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../guide/router.rst:3
+msgid "Router"
+msgstr ""
+
+#: ../../guide/router.rst:5
+msgid "A :class:`~aiorubi.dispatcher.router.Router` groups handlers so a bot can be split into reusable modules — an admin module, a games module, a payments module — each mounted into the main dispatcher."
+msgstr ""
+
+#: ../../guide/router.rst:10
+msgid "Creating and registering handlers"
+msgstr ""
+
+#: ../../guide/router.rst:27
+msgid "Observers are the same as on the dispatcher: ``new_message``, ``updated_message``, ``removed_message``, ``inline_message``, ``started_bot``, ``stopped_bot`` and ``error`` / ``errors``, plus the lifecycle observers ``startup`` / ``shutdown``. All of them support the decorator and ``register`` forms and accept any :doc:`filters <filter>`."
+msgstr ""
+
+#: ../../guide/router.rst:35
+msgid "Including routers"
+msgstr ""
+
+#: ../../guide/router.rst:37
+msgid "Routers form a tree. The dispatcher is always the root; child routers are visited after the parent's own handlers:"
+msgstr ""
+
+#: ../../guide/router.rst:55
+msgid "``include_router`` attaches the child (setting its read-only ``parent_router``), and nesting works to any depth:"
+msgstr ""
+
+#: ../../guide/router.rst:62
+msgid "Both methods return the router, so chaining is possible. A :class:`RuntimeError` is raised when you try to include the dispatcher itself into anything."
+msgstr ""
+
+#: ../../guide/router.rst:67
+msgid "Propagation order"
+msgstr ""
+
+#: ../../guide/router.rst:69
+msgid "When an update arrives it flows depth-first through the tree in registration order:"
+msgstr ""
+
+#: ../../guide/router.rst:72
+msgid "outer middlewares of the matching observer, from root to leaf;"
+msgstr ""
+
+#: ../../guide/router.rst:73
+msgid "the root router's handlers (top to bottom);"
+msgstr ""
+
+#: ../../guide/router.rst:74
+msgid "each included router's handlers in inclusion order, recursing into their sub-routers."
+msgstr ""
+
+#: ../../guide/router.rst:77
+msgid "The **first handler whose filters all pass** wins; the remaining routers never see the update unless the handler raises :class:`~aiorubi.dispatcher.event.bases.SkipHandler`. Register the most specific routers first."
+msgstr ""
+
+#: ../../guide/router.rst:83
+msgid "Router-level filters"
+msgstr ""
+
+#: ../../guide/router.rst:85
+msgid "``observer.filter(...)`` attaches filters to *every* handler of that observer, checked before the handler's own filters — ideal for guards:"
+msgstr ""
+
+#: ../../guide/router.rst:95
+msgid "Router-level filters apply to all handlers registered on that observer of that router *and are not inherited* by included sub-routers (their observers are separate objects)."
+msgstr ""
+
+#: ../../guide/router.rst:100
+msgid "Observer name"
+msgstr ""
+
+#: ../../guide/router.rst:102
+msgid "Every observer has an ``event_name`` attribute; the ``resolve_used_update_types()`` method walks the whole tree and returns the event names that actually have handlers — polling and webhook helpers can use it to fetch only relevant update types."
+msgstr ""
+
+#: ../../guide/router.rst:108
+msgid "Lifecycle"
+msgstr ""
+
+#: ../../guide/router.rst:118
+msgid "Events emitted on the dispatcher (``dp.emit_startup()`` / ``dp.emit_shutdown()``) propagate through the whole tree, so each module manages its own resources."
+msgstr ""
+
+#: ../../guide/router.rst:123
+msgid "Chain helpers"
+msgstr ""
+
+#: ../../guide/router.rst:125
+msgid "``router.chain_head`` — iterate from the root down to *this* router."
+msgstr ""
+
+#: ../../guide/router.rst:126
+msgid "``router.chain_tail`` — iterate from *this* router down to the last sub-router."
+msgstr ""
+
+#: ../../guide/router.rst:129
+msgid "These generators power the middleware resolution and the propagation walk; you rarely need them directly, but they are handy for debugging the router tree."
+msgstr ""
+
+#: ../../guide/router.rst:134
+msgid "Typical project layout"
+msgstr ""
+
+#: ../../guide/router.rst:161
+msgid "Each module owns its filters, middlewares and lifecycle hooks — the entry point only wires them together."
+msgstr ""
+
+#: ../../guide/router.rst:165
+msgid "See also"
+msgstr ""
+
+#: ../../guide/router.rst:167
+msgid ":doc:`dispatcher` — the root router and its extra abilities."
+msgstr ""
+
+#: ../../guide/router.rst:168
+msgid ":doc:`middlewares` — middleware scoping per router/observer."
+msgstr ""
+
+#: ../../guide/router.rst:169
+msgid ":doc:`handlers` — writing the handlers themselves."
+msgstr ""
